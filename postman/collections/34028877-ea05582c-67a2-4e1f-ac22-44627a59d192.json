@@ -1,0 +1,3018 @@
+{
+	"info": {
+		"_postman_id": "34028877-ea05582c-67a2-4e1f-ac22-44627a59d192",
+		"name": "Sleeplyfe V2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Studies",
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "34028877-e0ea6cc8-c33a-4932-b38d-43d7be7b2b83"
+				},
+				{
+					"name": "Apnometer Studies",
+					"item": [
+						{
+							"name": "apnometer studies list",
+							"id": "34028877-1bd13912-b19e-4640-9bbe-8acb992c5d27",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "apnometer studies retrive",
+							"id": "34028877-0dfee7cf-1001-4cd3-8d92-86e7de563294",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "apnometer studies create",
+							"id": "34028877-0c10362d-a64c-4619-99dc-9ae91d16baad",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/studies/apnometer_studies/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"studies",
+										"apnometer_studies",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-df6ef48f-37cf-429f-8e8f-6d9f64a03b6c"
+				},
+				{
+					"name": "New AWT list",
+					"id": "34028877-7e517962-ae48-4b61-b37c-b33664660fce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/studies/AWT/list/?status=0",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"studies",
+								"AWT",
+								"list",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "34028877-61a9fc81-1b37-4964-834c-d6894c9bfac9"
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "Patient_Master",
+					"item": [
+						{
+							"name": "New Patient list",
+							"id": "34028877-dc7a4e02-3ad7-4788-8b5f-1f41d696f210",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient Create",
+							"id": "34028877-63b80b43-2b32-4576-b39c-9b4b2b845b5f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient_first_name\":\"raju \",\n    \"patient_last_name\":\"japan\",\n    \"patient_email\":\"japannnbv32132@mailinator.com\",\n    \"patient_phone_number\":\"123456789\",\n    \"patient_data_of_birth\":\"1999-01-01\",\n    \"patient_gender\":\"M\",\n    \"patient_alternate_phone_number\":\"123456789\",\n    \"patient_id\":\"\",\n    \"study_date\":\"2021-01-01\",\n    \"facility\":3,\n    \"doctor\":102,\n    \"patient_date_of_birth\":\"2000-01-01\",\n    // \"fax\":1,\n    \"address_line_1\":\"123\",\n    \"address_line_2\":\"123\",\n    \"city\":\"toronto\",\n    \"postal_code\":\"texas\",\n    \"country\":\"USA\",\n    \"WIP_state\":2,\n    \"day_in_WIP\":12\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient Update",
+							"id": "34028877-0e40b472-d8f9-4fd1-af7b-97225395e72f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/update/160/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"update",
+										"160",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient retrive",
+							"id": "34028877-3e1f3f4c-cd19-4911-89b4-0eb4cc661af6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/retrive/61/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"retrive",
+										"61",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "34028877-a2cacbf6-26de-4cb1-b418-9395d74b9c56",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-2bb4785c-fe62-4606-8573-8e016b5a8598"
+				},
+				{
+					"name": "Bulk Upload",
+					"item": [
+						{
+							"name": "New Patient bulk upload",
+							"id": "34028877-46e4a771-4e5b-445f-bd64-2d1c43993786",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"uuid": "f07bbd1d-c91b-4114-b279-20deeea04c35",
+											"src": "/home/bittu/Pictures/Sample_Patient_Upload (7) 3.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/bulk_create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"bulk_create",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-af31b802-0264-47e9-984e-5dabe51c3b28"
+				},
+				{
+					"name": "Patient Insurance",
+					"item": [
+						{
+							"name": "list insurance",
+							"id": "34028877-10050dbc-782e-48e4-9b70-9b82126f2240",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/insurance/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"insurance",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrive insurance",
+							"id": "34028877-4a65061f-cd6f-48ea-9aaa-4e2cc0534080",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/insurance/retrieve/155/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"insurance",
+										"retrieve",
+										"155",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Insurance",
+							"id": "34028877-00c47763-fd6f-4499-babc-e2c72dd9a633",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\":201,\n    \"insurance_type\":1,\n    \"insurance_carrier\":1,\n    \"insurance_policy_id\":\"test 123\",\n    \"insurance_group_id\":\"test 546\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/insurance/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"insurance",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Insurance",
+							"id": "34028877-d5cc5ecc-f8bc-4d88-b7fb-45fbdc3e5a9a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\": 196,\n    \"insurance_type\": 1,\n    \"insurance_carrier\": 273,\n    \"insurance_policy_id\": \"test4321\",\n    \"insurance_group_id\": \"test5432\",\n    \"policy_start_date\": \"1999-09-11\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/insurance/update/157/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"insurance",
+										"update",
+										"157",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-46c69b7a-17c1-4bc2-ab10-aee7af210ba5"
+				},
+				{
+					"name": "Patient Document",
+					"item": [
+						{
+							"name": "New Patient document list",
+							"id": "34028877-753ae9df-4759-4367-8211-afd6a4d33392",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/document/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"document",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient document retrive",
+							"id": "34028877-a95f7809-ae68-4c97-b0bb-cd95fa348aa7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/document/retrieve/86/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"document",
+										"retrieve",
+										"86",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient document create",
+							"id": "34028877-649137f7-ba74-4cc7-b3de-2cf442c3b053",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient",
+											"value": "",
+											"type": "text",
+											"uuid": "2dd804ef-70ca-40b5-9e4e-85a2375df4e4"
+										},
+										{
+											"key": "document_type",
+											"value": "",
+											"type": "text",
+											"uuid": "98a24c42-032c-445e-b4aa-b88e24d4f293"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}patient/document/create/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"document",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient document update",
+							"id": "34028877-8ad08f89-74b2-4b87-b176-dd216759b1e4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/document/update/86/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"document",
+										"update",
+										"86",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient document file",
+							"id": "34028877-75016de7-8366-4182-abc2-a133816b7a0e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pdf_url\":\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/document/file/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"document",
+										"file",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-463b7efb-d4dc-46c3-9b20-caadb8f0d0d5"
+				},
+				{
+					"name": "patient  height weight history",
+					"item": [
+						{
+							"name": "New Patient Height Widht list",
+							"id": "34028877-91ae8a71-59a4-41c2-8f5f-5e6e971f07d9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient Height Width retrive",
+							"id": "34028877-1b87e0e1-a2d2-43c0-aff8-9cd3adb34d3c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/height_weight_history/retrieve/51/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"height_weight_history",
+										"retrieve",
+										"51",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient Height Width create",
+							"id": "34028877-5ccc3c2b-0c11-4a38-a3d5-185448fe7b2a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\":60,\n    \"patient_weight\":120,\n    \"patient_weight_unit\":\"lb\",\n    \"patient_height\":150,\n    \"patient_height_unit\":\"in\",\n    \"patient_measurement_date\":\"2024-10-04\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/height_weight_history/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"height_weight_history",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Patient Height Width update",
+							"id": "34028877-cc7f07fd-a57b-4925-9beb-429bc196486b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\":61,\n    \"patient_weight\":161,\n    \"patient_weight_unit\":\"kg\",\n    \"patient_height\":162,\n    \"patient_height_unit\":\"in\",\n    \"patient_measurement_date\":\"2024-10-05\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/height_weight_history/update/81/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"height_weight_history",
+										"update",
+										"81",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-f57c7c84-d98f-462a-972d-5eb46fc7788c"
+				},
+				{
+					"name": "Patient Master Table",
+					"item": [
+						{
+							"name": "Work in Progress",
+							"item": [
+								{
+									"name": "New Work In Progress Create",
+									"id": "34028877-e6e55ca4-91de-4486-a6ac-ec1ed4e940df",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\"wip\": \"35-1 - Employee Device Rental\"},\n    {\"wip\": \"35-2 - Employee Rent\"}\n\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/work_in_progress/create/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"work_in_progress",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "New Work in Progress list",
+									"id": "34028877-1bfe240a-fc4f-424c-8526-024dc6863ba5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/work_in_progress/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"work_in_progress",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-dcd7381e-0699-4c89-9641-5d6b375fc361"
+						},
+						{
+							"name": "Minimum Collection Reasin",
+							"item": [
+								{
+									"name": "New Minimum collection reason list",
+									"id": "34028877-9033a480-9dbf-4a8c-988e-84981974c336",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								},
+								{
+									"name": "New Minimum collection reason create",
+									"id": "34028877-43132abf-9270-437e-bf79-d82783a16f67",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mcr\": \"Insurance Denial\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/minimum_collection_reason/create/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"minimum_collection_reason",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-db8a440e-42f0-482e-b16f-44aba35c750b"
+						},
+						{
+							"name": "New patient diagnisis code",
+							"id": "34028877-24094249-e144-47e0-aa86-42f4c6884166",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient_diagnosis/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient_diagnosis",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New patient branch office",
+							"id": "34028877-a50415b5-709a-4e15-8aad-40092eff0a8d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/branch_office/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"branch_office",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New patient contanct relationship",
+							"id": "34028877-cfcdffb4-5ad7-4820-bbec-6f4037ab501e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/contact_relationship/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"contact_relationship",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New patient preferred method",
+							"id": "34028877-6ea1a62d-9172-4667-8985-668e88a35433",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New patient Referral Provider",
+							"id": "34028877-e7472bd2-4825-4c0d-b993-7f392ffb9df8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/referral_provider_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"referral_provider_list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New patient Rendering provider",
+							"id": "34028877-5e83e702-811d-4f98-85a0-acdf6fcccbcb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Marketing Referral Type",
+							"id": "34028877-7b14dcc7-4caf-4a22-b79f-c952d47d5bca",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/marketing_referral_type_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"marketing_referral_type_list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Funtional Ability List",
+							"id": "34028877-9202cdad-92e2-4b82-998d-63ff47f1a705",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/funtional_ability_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"funtional_ability_list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Sleep Coach List",
+							"id": "34028877-1381944f-847f-422c-b1df-2100c8589f72",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "New Insurance claim filling code",
+							"id": "34028877-286e8e4d-b4e4-4e78-9460-c83899198415",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/insurance_claim_filling_code/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"insurance_claim_filling_code",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Insurance secoundary type code",
+							"id": "34028877-50ee8037-bb32-44c5-99e6-4fd6e05bfbc2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/insurance_secondary_type_code/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"insurance_secondary_type_code",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Policy relationship",
+							"id": "34028877-4d6b465f-cd4b-48f1-b21b-10adc5dfd019",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/policy_relationship/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"policy_relationship",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Insurance Type code",
+							"id": "34028877-e0bcb32e-3757-4167-80ee-8d5f1250ebb6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/insurance_type_code/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"insurance_type_code",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-0c0238d3-e86c-4c70-9b8e-1a026f73ff72"
+				},
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "34028877-f34aa4c3-0971-4058-ba67-82dce292f2ce"
+				},
+				{
+					"name": "Patient Appoinment",
+					"item": [
+						{
+							"name": "New Appointment list",
+							"id": "34028877-a6cc080d-db18-4b1c-b874-224737ee7fd5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/appointment/list/?end_time=11:33:00",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"appointment",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "appointment_date",
+											"value": "2025-09-10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_time",
+											"value": "11:23:00",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "end_time",
+											"value": "11:33:00",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Appoinment Retrive",
+							"id": "34028877-d796d450-7d56-4c16-8080-3e94944da72b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/appointment/retrive/47/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"appointment",
+										"retrive",
+										"47",
+										""
+									],
+									"query": [
+										{
+											"key": "appointment_date",
+											"value": null,
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Appointment Create",
+							"id": "34028877-f7682148-2350-41e9-8ca2-500c6326b3db",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"patient\": 61,\n  \"sleep_coach\": 499,\n  \"appointment_date\": \"2024-09-30\",\n  \"start_time\": \"11:23:00\",\n  \"end_time\": \"11:33:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/appointment/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"appointment",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Appointment Update",
+							"id": "34028877-56367c55-8867-4e8b-888f-446adaf8a902",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"appointment_date\": \"2024-09-02\",\n     \"appointment_status\": 2,\n     \"sleep_coach\":591\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/appointment/update/54/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"appointment",
+										"update",
+										"54",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-959cde3d-429c-4894-a508-3d867a34ec6a"
+				},
+				{
+					"name": "Responsibility",
+					"item": [
+						{
+							"name": "Resposibiilty create",
+							"id": "34028877-7ef12898-a548-4009-a972-e580cced56ee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\":198,\n    \"sleep_coach\":737,\n    \"patient_responsibility\":\"test\",\n    \"patient_portion_required\":\"test\",\n    \"patient_portion_collected\":\"test\",\n    \"minimum_collection_reason\":\"test\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/responsibility/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"responsibility",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resposibility update",
+							"id": "34028877-2d1e2e78-d3c4-4b87-9df5-1c38a260886c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\":198,\n    \"sleep_coach\":736,\n    \"patient_responsibility\":\"rvrt1\",\n    \"patient_portion_required\":\"tes1t\",\n    \"patient_portion_collected\":\"tes1t\",\n    \"minimum_collection_reason\":\"test1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}responsibility/update/198/",
+									"host": [
+										"{{local}}responsibility"
+									],
+									"path": [
+										"update",
+										"198",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Responsiblity retrive",
+							"id": "34028877-fe44a1ba-5eef-407b-b285-4b4e01bc6393",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/responsibility/retrieve/198/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"responsibility",
+										"retrieve",
+										"198",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-1099cde3-c6d8-4781-a963-2800e4eec175"
+				},
+				{
+					"name": "Patient Precallpreparatinos",
+					"item": [
+						{
+							"name": "precallpreparation list",
+							"id": "34028877-468ad4be-e975-438e-b318-9e35e75569e2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/pre_call_preparation/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"pre_call_preparation",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "precallpreparation retrive",
+							"id": "34028877-0533ebb8-75e1-4231-8c09-e56ef6361ac9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/pre_call_preparation/retrieve/216/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"pre_call_preparation",
+										"retrieve",
+										"216",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Precallpreparation without list",
+							"id": "34028877-d89378dd-75bc-49f0-bed4-61a6b9d9d732",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/pre_call_item_preparation/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"pre_call_item_preparation",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Precallpreparation Create",
+							"id": "34028877-a33e8ff5-fbcb-4e51-9332-192f0cd6049c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\" : 216,\n    \"items\": [1,2,3,4,5,6]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}patient/pre_call_preparation/create/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"pre_call_preparation",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Precallpreparation update",
+							"id": "34028877-d09e2bce-f24a-44d7-8166-f13ae8ee6e4e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient\" : 216,\n    \"items\": [1,2,3,4,5,6]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}patient/pre_call_preparation/update/66/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"pre_call_preparation",
+										"update",
+										"66",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Precallprepartionitem list",
+							"id": "34028877-e3fa3e04-6ca4-4667-af2a-169afa87d27e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/pre_call_item_preparation/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"pre_call_item_preparation",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-43e06c3b-7d1f-4f99-986a-3e9e64ee44e9"
+				},
+				{
+					"name": "Script",
+					"item": [
+						{
+							"name": "New Request",
+							"id": "34028877-ac23b82c-ef3d-444d-99ee-a4d448bb64e1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-340a064c-dbd7-4e94-9ee7-5ce1354d31a6"
+				},
+				{
+					"name": "CallTypeSelection Copy",
+					"item": [
+						{
+							"name": "Script",
+							"item": [
+								{
+									"name": "Call Script",
+									"id": "34028877-fe4c0fe1-5e6d-4bdf-92a7-27e96a9f4b80",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}patient/call_script/retrieve/1/",
+											"host": [
+												"{{local}}patient"
+											],
+											"path": [
+												"call_script",
+												"retrieve",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Call Script Update",
+									"id": "34028877-e6fdb350-5c90-4b91-87bd-2711a1b27205",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "       { \n        \"call_script_text\": \"Good morning/afternoon, this is (NAME), and I am calling on behalf of Dr. Sarah Mitchell's office. How are you today?\\r\\n\\r\\nYou had a visit with Dr. Sarah Mitchell on March 15, 2025. (Pause for any response) He/She has deemed it necessary due to your snoring, sleep disruption, daytime fatigue to order a sleep study. Since sleep affects so much of our health, we want to make sure we get you set up and taken care of. Your insurance does cover your study and your responsibility for the test is $485.00.\\r\\n\\r\\n[EXPLAIN INSURANCE BREAKDOWN HERE. USE THE QUOTE PROVIDED IN CHART.]\\r\\n\\r\\nThis test is done in the comfort of your own home and surroundings. I will set you up with a sleep coach that goes over everything from how to apply the equipment to any questions you have about the process. The machine is sent to you so it's easy to understand. The earliest I have available to allow time for the machine to get to you is (DATE AND TIME). If that day does not work for you, we can choose another day and time. What works best for you? (Allow for response)\\r\\n\\r\\nOk great, I have you set up that day and I can take your patient responsibility at this time.\\r\\n\\r\\n[SELECT PAYMENT OPTION 1-4 BASED ON PATIENT RESPONSE]\\r\\n\\r\\n[VERIFY PATIENT ADDRESS AND EMAIL]\\r\\n\\r\\n(Tech's name) will be your Certified Sleep Coach. He/She will personally set you up and make sure everything is comfortable. He/She will be setting up the virtual meeting with instructions to be emailed to you on the day of your appointment. Please make sure to check your email before your appointment – if you don't see it in your inbox, be sure to look in your junk and spam folders!\\r\\n\\r\\nPlease wait until (Sleep Coach) calls you on (scheduled date and time) for your virtual appointment to open the box.\\r\\n\\r\\nAlso, we do have a 24-hour cancellation and rescheduling policy, so please make sure to jot down this appointment in your calendar. Do you have any questions for me?\"\n\n       }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}patient/call_script/update/1/",
+											"host": [
+												"{{local}}patient"
+											],
+											"path": [
+												"call_script",
+												"update",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Call Script Create",
+									"id": "34028877-7d1c27eb-6d86-4833-85ba-b603e1619967",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"call_type\":1,\n    \"call_script_text\":\"callscript\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}patient/call_script/create/",
+											"host": [
+												"{{local}}patient"
+											],
+											"path": [
+												"call_script",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-3a259199-958b-4c03-a168-d42e7a8079cc"
+						},
+						{
+							"name": "Types Of call",
+							"item": [
+								{
+									"name": "calltypeselection",
+									"id": "34028877-3a8f38b8-c012-44c7-b5bb-36e3ec7be71a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/patient/call_type/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_type",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Call type update",
+									"id": "34028877-34b8cfcd-7567-48d1-a2b3-5c6c69bf1671",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    // \"call_type_id\": 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/patient/call_type/update/64/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_type",
+												"update",
+												"64",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "patient  call retrive",
+									"id": "34028877-68f46a5b-138b-4889-8727-7e49a47ebf37",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/patient/call_type/retrieve/216/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_type",
+												"retrieve",
+												"216",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-4565e026-302e-4a6b-a807-3f62ee736a8e"
+						},
+						{
+							"name": "Call Notes",
+							"item": [
+								{
+									"name": "Call Notes List",
+									"id": "34028877-4efb365a-f618-4acd-8659-d8873054d271",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/patient/call_notes/list/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_notes",
+												"list",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Call Notes Create",
+									"id": "34028877-7f8b7912-c450-4119-a8e3-0f33431750cb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"patient\" : 66,\n    \"call_notes\": \"Hello Rv?\"\n\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/patient/call_notes/create/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_notes",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Call Notes List",
+									"id": "34028877-31b70998-51e7-489b-af25-f6c9e1df7d38",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								},
+								{
+									"name": "Call Notes Update",
+									"id": "34028877-77b4c592-9b81-4744-aeef-ccd757ba928e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n      \"call_notes\": \"Hello How Are you Handsome I?\"\n    //   \"call_type\" : 1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/patient/call_notes/update/32/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_notes",
+												"update",
+												"32",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Patient Wise Notes",
+									"id": "34028877-2434ad56-62cd-4898-aa66-34550a263348",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/patient/call_notes/216/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_notes",
+												"216",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-bb30c681-1d28-4b72-9c22-3b777ae77fb5"
+						},
+						{
+							"name": "Summary Call Notes",
+							"item": [
+								{
+									"name": "Call Notes Create",
+									"id": "34028877-f6c6628b-27c1-42cb-903a-ec9b20d17181",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"patient\" : 215,\n    // \"call_type\" : 2,\n    \"call_summary_notes\": \"Hello How Are you Handsome I Need to meet you at the specific place can you come here for me  ?\"\n\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/patient/call_summary_notes/create/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_summary_notes",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Patient Id Wise Summary Call notes",
+									"id": "34028877-ee669ea7-7139-4506-a9e5-8eef827862f8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/patient/call_summary_notes/calltype_id_wise_summary_notes/216/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_summary_notes",
+												"calltype_id_wise_summary_notes",
+												"216",
+												""
+											],
+											"query": [
+												{
+													"key": "patient_id",
+													"value": "216",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Call Type Id Wise Summary Call",
+									"id": "34028877-02ffe004-cd34-4890-aa27-94b302c5819c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/patient/call_summary_notes/calltype_id_wise_summary_notes/61/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient",
+												"call_summary_notes",
+												"calltype_id_wise_summary_notes",
+												"61",
+												""
+											],
+											"query": [
+												{
+													"key": "patient_id",
+													"value": "60",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete Summary  Call Create",
+									"id": "34028877-a5d1b7b4-8349-4893-8356-682bb49966d7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\n    \"call_type_id\" : 4,\n    \"call_script_text\" : \"THIS IS TEST\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}patient/call_summary_notes/delete/4/",
+											"host": [
+												"{{local}}patient"
+											],
+											"path": [
+												"call_summary_notes",
+												"delete",
+												"4",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Summary Call Notes Update",
+									"id": "34028877-fddcf8bb-7364-4635-9d91-b7d361f4e76d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"call_summary_notes\": \" I Need to meet gdfgdgdgdgdgdgd at the specific place can you come here for me  ?\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}patient/call_summary_notes/update/4/",
+											"host": [
+												"{{local}}patient"
+											],
+											"path": [
+												"call_summary_notes",
+												"update",
+												"4",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-9323ac62-110c-4ba6-bf13-ff0c7a487648"
+						}
+					],
+					"id": "34028877-d3a6ba40-f4cd-4bf3-8d8e-46b785ec4196"
+				},
+				{
+					"name": "Objection Handling",
+					"item": [
+						{
+							"name": "Objection Type",
+							"id": "34028877-0cad1af7-5c60-45f0-87af-457e1052288c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/objection_handling/type/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"objection_handling",
+										"type",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get the Objection value",
+							"id": "34028877-fad538b1-1c5a-4018-b72e-0b841cff3005",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/objection_handling/retrieve/2/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"objection_handling",
+										"retrieve",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-7b516408-2ed4-421a-8cb4-cb29a82d714a"
+				},
+				{
+					"name": "RIng Central SMS Copy",
+					"item": [
+						{
+							"name": "Send RingCentral SMS",
+							"id": "34028877-77ecb8c4-bdd8-46a3-961e-3a26fa25982e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient_id\": \"216\",\n    \"message\": \"this is testing SleepLyfe TEST\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/ringcentral_send_sms/opti_call/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"ringcentral_send_sms",
+										"opti_call",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-07afac09-45bb-4678-a084-54d5eb34eb2b"
+				},
+				{
+					"name": "Post Call Action Copy",
+					"item": [
+						{
+							"name": "postcall action",
+							"id": "34028877-3b54df77-c74e-4f62-b0c0-c9b9c15fc49f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}patient/postcall_action/list/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"postcall_action",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Main Call List",
+							"id": "34028877-d5a28e74-8bff-4927-bcf0-ff68bcd45234",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/maincall_action/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"maincall_action",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Call Outcome",
+							"id": "34028877-ed2a5850-191f-4e27-b86c-2a9a29f5bac1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer <your_token_here>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"main_action\": 1,\n    \"sub_action\": 4,\n    \"patient\": 66,\n    \"other\": \"Hi this is test\",\n    // \"call_type\": 3,\n    \"date_time\": \"2025-09-09T11:52:32Z\"\n}   ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/maincall_action/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"maincall_action",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Wise Call Outcome",
+							"id": "34028877-cd71f78d-0cdd-46dc-86ee-fb40f130e27f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/maincall_action/patient_wise_calloutcome/?patient_id=216",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"maincall_action",
+										"patient_wise_calloutcome",
+										""
+									],
+									"query": [
+										{
+											"key": "call_type_id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "patient_id",
+											"value": "216"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient Wise update",
+							"id": "34028877-67d89a0e-866a-4f7c-a0b3-d1d36fc06c26",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "main_action",
+											"value": "2",
+											"type": "text",
+											"uuid": "71efefaa-ab9b-4ef2-b6ce-6337ee58af5e"
+										},
+										{
+											"key": "sub_action",
+											"value": "4",
+											"type": "text",
+											"uuid": "4c628018-70d0-4c57-894b-bdfa20c0a442"
+										},
+										{
+											"key": "call_type",
+											"value": "2",
+											"type": "text",
+											"uuid": "62912140-0585-40e4-82fb-e5ac03a40b9a"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}patient/Maincall_action/update/60/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"Maincall_action",
+										"update",
+										"60",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AI Script",
+							"id": "34028877-01c8213f-630d-47d2-99db-37112b50c253",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "script",
+											"value": "requires in-clinic study",
+											"type": "text",
+											"uuid": "dd0f1a56-878e-499c-99ee-c03140d9c21a"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}patient/ai_script/create/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"ai_script",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-8392683d-a68a-4e00-b041-7a7caea58e86"
+				}
+			],
+			"id": "34028877-4c1d5701-f566-4f1a-a878-b614df718d71"
+		},
+		{
+			"name": "Ringcentral",
+			"item": [
+				{
+					"name": "New sub document type",
+					"id": "34028877-191ccbec-42ca-4fb5-a6ca-dd428a4fbba1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}v2/patient/document/sublist/?document_type=[2,2,2,3]",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"patient",
+								"document",
+								"sublist",
+								""
+							],
+							"query": [
+								{
+									"key": "document_type",
+									"value": "[2,2,2,3]",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "34028877-82e7fe6b-9750-407b-91ac-6672bfab5bcf"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "34028877-9961ea66-bd97-4293-bf27-1c06ed46b52a"
+		}
+	],
+	"variable": [
+		{
+			"key": "auth",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "local",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
