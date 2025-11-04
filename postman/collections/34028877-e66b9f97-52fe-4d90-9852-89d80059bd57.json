@@ -1,0 +1,1055 @@
+{
+	"info": {
+		"_postman_id": "34028877-e66b9f97-52fe-4d90-9852-89d80059bd57",
+		"name": "New Sleeplyfe API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Studies",
+			"item": [
+				{
+					"name": "Master Data",
+					"item": [
+						{
+							"name": "Clinic History",
+							"item": [
+								{
+									"name": "List Clinic History",
+									"id": "34028877-d1131fb6-23ae-47bc-9015-62e199e4bf43",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}studies/AWT/clinic_history",
+											"host": [
+												"{{local}}studies"
+											],
+											"path": [
+												"AWT",
+												"clinic_history"
+											]
+										},
+										"description": "### Get Clinic History\n\nThis endpoint retrieves the clinic history associated with a specific study. It is an HTTP GET request made to the `/studies/AWT/clinic_history` endpoint.\n\n#### Request Parameters\n\nThere are no request parameters required for this endpoint.\n\n#### Expected Response\n\nUpon a successful request, the response will return a JSON object with the following structure:\n\n- **status** (boolean): Indicates the success of the request.\n    \n- **message** (string): A message providing additional information about the request (if any).\n    \n- **data** (array): An array containing the clinic history records. Each record includes:\n    \n    - **id** (integer): The unique identifier for the clinic history entry.\n        \n    - **history_name** (string): The name of the clinic history.\n        \n\n#### Example Response\n\n``` json\n{\n  \"status\": true,\n  \"message\": \"\",\n  \"data\": [\n    {\n      \"id\": 0,\n      \"history_name\": \"\"\n    }\n  ]\n}\n\n ```\n\n#### Notes\n\n- Ensure that the endpoint is accessed with the correct permissions to retrieve the clinic history.\n    \n- The `data` array may contain multiple entries depending on the available clinic history records."
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-a3efd9ec-cd94-4c85-9813-4bedef73b836"
+						},
+						{
+							"name": "Diagnosis Code",
+							"item": [
+								{
+									"name": "List Diagnosis Code",
+									"id": "34028877-21262358-ce0f-4f66-bf8f-5c9ec915975f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}studies/AWT/diagnosis_code",
+											"host": [
+												"{{local}}studies"
+											],
+											"path": [
+												"AWT",
+												"diagnosis_code"
+											]
+										},
+										"description": "**Get Diagnosis Code**  \n  \nThis endpoint retrieves the diagnosis codes associated with a specific study. It is an HTTP GET request made to the `/studies/AWT/diagnosis_code` endpoint.\n\n**Request Parameters**  \n  \nThere are no request parameters required for this endpoint.\n\n**Expected Response**  \n  \nUpon a successful request, the response will return a JSON object with the following structure:\n\n- `status` (boolean): Indicates the success of the request.\n    \n- `message` (string): A message providing additional information about the request (if any).\n    \n- `data` (array): An array containing the diagnosis code records. Each record includes:\n    \n    - `id` (integer): The unique identifier for the diagnosis code entry.\n        \n    - `diagnosis_name` (string): The name of the diagnosis.\n        \n\n**Example Response**\n\n**JSON**\n\n```\n{\n  \"status\": true,\n  \"message\": \"Diagnosis Code\",\n  \"data\": [\n    {\n      \"id\": 0,\n      \"diagnosis_name\": \"\"\n    },\n  ]\n}\n\n ```\n\n**Notes**\n\n- Ensure that the endpoint is accessed with the correct permissions to retrieve the diagnosis codes.\n    \n- The `data` array may contain multiple entries depending on the available diagnosis code records."
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-d212c40d-1b4b-4073-9066-65fca6894d10"
+						},
+						{
+							"name": "Tobacco Use Code",
+							"item": [
+								{
+									"name": "List Tobacco Use Code",
+									"id": "34028877-bdace5bc-e87c-4eb8-bb31-fdf289f6f8fe",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}studies/AWT/tobacco_use_code",
+											"host": [
+												"{{local}}studies"
+											],
+											"path": [
+												"AWT",
+												"tobacco_use_code"
+											]
+										},
+										"description": "**Get Tobacco Use Code**  \n  \nThis endpoint retrieves the tobacco use codes associated with a specific study. It is an HTTP GET request made to the `/studies/AWT/tobacco_use_code` endpoint.\n\n**Request Parameters**  \n  \nThere are no request parameters required for this endpoint.\n\n**Expected Response**  \n  \nUpon a successful request, the response will return a JSON object with the following structure:\n\n- `status` (boolean): Indicates the success of the request.\n    \n- `message` (string): A message providing additional information about the request (if any).\n    \n- `data` (array): An array containing the tobacco use code records. Each record includes:\n    \n    - `id` (integer): The unique identifier for the tobacco use code entry.\n        \n    - `tobacco_use` (string): The type of tobacco use.\n        \n\n**Example Response**\n\n**JSON**\n\n```\n{\n  \"status\": true,\n  \"message\": \"Tobacco Use Code\",\n  \"data\": [\n    {\n      \"id\": 0,\n      \"tobacco_use\": \"\"\n    }\n  ]\n}\n\n ```\n\n**Notes**\n\n- Ensure that the endpoint is accessed with the correct permissions to retrieve the tobacco use codes.\n    \n- The `data` array may contain multiple entries depending on the available tobacco use code records."
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-ef1fa01f-3c5b-45e2-96c3-073560505d25"
+						},
+						{
+							"name": "Alcohole Use Code",
+							"item": [
+								{
+									"name": "List Alcohole Use Code",
+									"id": "34028877-6f310dc6-c657-45f3-b035-9aa83ea50f70",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}studies/AWT/alcohole_use_code",
+											"host": [
+												"{{local}}studies"
+											],
+											"path": [
+												"AWT",
+												"alcohole_use_code"
+											]
+										},
+										"description": "**Get Alcohol Use Code**  \n  \nThis endpoint retrieves the alcohol use codes associated with a specific study. It is an HTTP GET request made to the `/studies/AWT/alcohole_use_code` endpoint.\n\n**Request Parameters**  \n  \nThere are no request parameters required for this endpoint.\n\n**Expected Response**  \n  \nUpon a successful request, the response will return a JSON object with the following structure:\n\n- `status` (boolean): Indicates the success of the request.\n    \n- `message` (string): A message providing additional information about the request (if any).\n    \n- `data` (array): An array containing the alcohol use code records. Each record includes:\n    \n    - `id` (integer): The unique identifier for the alcohol use code entry.\n        \n    - `alcohole_use` (string): The type of alcohol use.\n        \n\n**Example Response**\n\n**JSON**\n\n```\n{\n  \"status\": true,\n  \"message\": \"Alcohole Use Code\",\n  \"data\": [\n    {\n      \"id\": 0,\n      \"alcohole_use\": \"\"\n    }\n  ]\n}\n\n ```\n\n**Notes**\n\n- Ensure that the endpoint is accessed with the correct permissions to retrieve the alcohol use codes.\n    \n- The `data` array may contain multiple entries depending on the available alcohol use code records."
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-a2da694d-0932-4f12-a4d0-91bd11f963e7"
+						},
+						{
+							"name": "Insurance Carrier",
+							"item": [
+								{
+									"name": "List Insurance Carrier",
+									"id": "34028877-067f405c-0255-4aa7-8bec-acd58e25a35a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}studies/AWT/insurancecarrier",
+											"host": [
+												"{{local}}studies"
+											],
+											"path": [
+												"AWT",
+												"insurancecarrier"
+											]
+										},
+										"description": "**Get Insurance Carrier**  \n  \nThis endpoint retrieves the insurance carrier data associated with a specific study. It is an HTTP GET request made to the `/studies/AWT/insurancecarrier` endpoint.\n\n**Request Parameters**  \n  \nThere are no request parameters required for this endpoint.\n\n**Expected Response**  \n  \nUpon a successful request, the response will return a JSON object with the following structure:\n\n- `status` (boolean): Indicates the success of the request.\n    \n- `message` (string): A message providing additional information about the request (if any).\n    \n- `data` (array): An array containing the insurance carrier records. Each record includes:\n    \n    - `id` (integer): The unique identifier for the insurance carrier entry.\n        \n    - `name` (string): The name of the insurance carrier.\n        \n    - `brightree_payor_key` (string or null): The Brightree payor key associated with the carrier (if any).\n        \n\n**Example Response**\n\n**JSON**\n\n```\n{\n  \"status\": true,\n  \"message\": \"Insurance Carrier data\",\n  \"data\": [\n    {\n      \"id\": 0,\n      \"name\": \"\",\n      \"brightree_payor_key\": null\n    }\n  ]\n}\n\n ```\n\n**Notes**\n\n- Ensure that the endpoint is accessed with the correct permissions to retrieve the insurance carrier data.\n    \n- The `data` array may contain multiple entries depending on the available insurance carriers."
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-bae1878c-c8ec-4d40-845d-df1323e40ed1"
+						},
+						{
+							"name": "AWT Record Template",
+							"item": [
+								{
+									"name": "List AWT Record Template",
+									"id": "34028877-54159e0b-5821-456d-b3e3-365f1fd7d5a1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}studies/AWT/template",
+											"host": [
+												"{{local}}studies"
+											],
+											"path": [
+												"AWT",
+												"template"
+											]
+										},
+										"description": "**Get Program Template Data**  \n  \nThis endpoint retrieves the AWT program template data associated with a specific study. It is an HTTP GET request made to the `/studies/AWT/template` endpoint.\n\n**Request Parameters**  \n  \nThere are no request parameters required for this endpoint.\n\n**Expected Response**  \n  \nUpon a successful request, the response will return a JSON object with the following structure:\n\n- `status` (boolean): Indicates the success of the request.\n    \n- `message` (string): A message providing additional information about the request (if any).\n    \n- `total_page` (integer): The total number of pages available.\n    \n- `count` (integer): The total number of records available.\n    \n- `current_page` (integer): The current page number.\n    \n- `data` (array): An array containing the program template records. Each record includes:\n    \n    - `id` (integer): The unique identifier for the program template entry.\n        \n    - `doctor_name` (string): The name of the doctor.\n        \n    - `doctor_suffix` (string): The suffix of the doctor, if any.\n        \n    - `doctor_id` (integer): The unique identifier for the doctor.\n        \n    - `created_at` (string): The date and time when the record was created.\n        \n    - `updated_at` (string): The date and time when the record was last updated (if any).\n        \n\n**Example Response**\n\n**JSON**\n\n```\n{\n  \"status\": true,\n  \"message\": \"AWT Program Template Data\",\n  \"total_page\": 1,\n  \"count\": 1,\n  \"current_page\": 1,\n  \"data\": [\n    {\n      \"id\": 0,\n      \"doctor_name\": \"\",\n      \"doctor_suffix\": \"\",\n      \"doctor_id\": 0,\n      \"created_at\": \"\",\n      \"updated_at\": \"\"\n    }\n  ]\n}\n\n ```\n\n**Notes**\n\n- Ensure that the endpoint is accessed with the correct permissions to retrieve the program template data.\n    \n- Pagination fields (`total_page`, `count`, `current_page`) should be used to navigate through multiple records.\n    \n- The `data` array may contain multiple entries depending on the available program templates."
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-068ad9ac-f31b-4760-9fca-04f1749b1c58"
+						},
+						{
+							"name": "Chief Complaint",
+							"item": [
+								{
+									"name": "List Chief Complaint",
+									"id": "34028877-7c466f7d-8c34-40d1-8362-d8e1fe613552",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}studies/AWT/chiefcomplaint",
+											"host": [
+												"{{local}}studies"
+											],
+											"path": [
+												"AWT",
+												"chiefcomplaint"
+											]
+										},
+										"description": "**Get Chief Complaint Code**  \n  \nThis endpoint retrieves the chief complaint codes associated with a specific study. It is an HTTP GET request made to the `/studies/AWT/chiefcomplaint` endpoint.\n\n**Request Parameters**  \n  \nThere are no request parameters required for this endpoint.\n\n**Expected Response**  \n  \nUpon a successful request, the response will return a JSON object with the following structure:\n\n- `status` (boolean): Indicates the success of the request.\n    \n- `message` (string): A message providing additional information about the request (if any).\n    \n- `data` (array): An array containing the chief complaint code records. Each record includes:\n    \n    - `id` (integer): The unique identifier for the chief complaint entry.\n        \n    - `chief_complaint` (string): The description of the chief complaint.\n        \n\n**Example Response**\n\n**JSON**\n\n```\n{\n  \"status\": true,\n  \"message\": \"Chief Complaint Code\",\n  \"data\": [\n    {\n      \"id\": 0,\n      \"chief_complaint\": \"\"\n    }\n  ]\n}\n\n ```\n\n**Notes**\n\n- Ensure that the endpoint is accessed with the correct permissions to retrieve the chief complaint codes.\n    \n- The `data` array may contain multiple entries depending on the available chief complaint records."
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-bf226de6-c873-4638-af20-e7126f823848"
+						}
+					],
+					"id": "34028877-6939220c-6ca1-4c70-9ea8-6d82de308c5e"
+				},
+				{
+					"name": "New AWT",
+					"item": [
+						{
+							"name": "List New AWT",
+							"id": "34028877-ce56ee52-17ed-4902-a358-cb7e9c074de4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}studies/NewAWT/list/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"NewAWT",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "search",
+											"value": "12/16/1988",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "study_date",
+											"value": "2024-04-17",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ordering",
+											"value": "-id",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "is_awt_report_signature",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "is_new_received_referral",
+											"value": "false",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "facilities",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "doctor",
+											"value": "102",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_date",
+											"value": "2024-06-25",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "end_date",
+											"value": "2024-06-30",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "result__in",
+											"value": "Negative",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"description": "# Get AWT Studies List\n\nThis endpoint retrieves the list of AWT studies with support for pagination, filtering, and ordering.\n\n**Endpoint**:  \n`GET /studies/NewAWT/list/`\n\n---\n\n## Request Parameters\n\n| Parameter | Type | Description | Example |\n| --- | --- | --- | --- |\n| `page` | integer | Page number for pagination. | `page=1` |\n| `page_size` | integer | Number of records per page. | `page_size=10` |\n| `search` | string | Search term (e.g., patient details, DOB). | `search=12/16/1988` |\n| `study_date` | date | Filter by study date (YYYY-MM-DD). | `study_date=2024-04-17` |\n| `ordering` | string | Field for sorting. Use `-` prefix for descending. | `ordering=-id` |\n| `status` | integer | Filter by study status. | `status=0` |\n| `is_awt_report_signature` | boolean | Filter by report signature status. | `is_awt_report_signature=true` |\n| `is_new_received_referral` | boolean | Filter by referral status. | `is_new_received_referral=false` |\n| `facilities` | integer | Filter by facility ID. | `facilities=1` |\n| `doctor` | integer | Filter by doctor ID. | `doctor=102` |\n| `start_date` | date | Filter studies created after a specific date. | `start_date=2024-06-25` |\n| `end_date` | date | Filter studies created before a specific date. | `end_date=2024-06-30` |\n| `result__in` | string | Filter by study results. | `result__in=Negative` |\n\n---\n\n## Expected Response\n\nOn success, the API returns a JSON object with pagination details and a list of AWT study records.\n\n### Response Fields\n\n- **status** _(boolean)_: Indicates success.\n    \n- **message** _(string)_: Additional info.\n    \n- **total_page** _(integer)_: Total available pages.\n    \n- **count** _(integer)_: Total records.\n    \n- **current_page** _(integer)_: Current page number.\n    \n- **data** _(array)_: List of study objects. Each study includes:\n    \n    - `id` _(integer)_: Study ID.\n        \n    - `patient_first_name` / `patient_last_name` _(string)_: Patient name.\n        \n    - `patient_date_of_birth` _(date)_: DOB.\n        \n    - `patient_phone_number` _(string)_: Phone number.\n        \n    - `patient_email` _(string)_: Email.\n        \n    - `patient_gender` _(string)_: Gender (M/F).\n        \n    - `patient_height` / `patient_weight` _(string)_: Measurements.\n        \n    - `height_unit` / `weight_unit` _(string)_: Units.\n        \n    - `study_date` _(date)_: Study date.\n        \n    - `physician_first_name` / `physician_last_name` _(string)_: Physician name.\n        \n    - `is_cash_pay` _(boolean)_: If cash pay.\n        \n    - `clinic_history` _(array)_: Linked clinic history IDs.\n        \n    - `diagnosis_code` _(array)_: Linked diagnosis codes.\n        \n    - `chief_complaint` _(array)_: Complaint codes.\n        \n    - `status` _(integer)_: Study status.\n        \n    - `assessment` / `plan` _(string)_: Notes.\n        \n    - `is_awt_signature` _(boolean)_: Whether AWT signed.\n        \n    - `awt_signature` _(string/base64)_: Signature image (if available).\n        \n    - `is_awt_report_signature` _(boolean)_: Whether report signed.\n        \n    - `result` _(string)_: Study result.\n        \n    - `auto_score` _(integer)_: Auto score value.\n        \n    - `created_at` / `updated_at` _(datetime)_: Timestamps.\n        \n    - `doctor` _(integer)_: Doctor ID.\n        \n    - `facilities` _(integer)_: Facility ID.\n        \n    - `insurance_carrier` _(integer|null)_: Insurance carrier ID.\n        \n    - `secoundary_insurance_carrier` _(integer|null)_: Secondary carrier ID.\n        \n    - `created_by` / `updated_by` _(integer|null)_: User IDs.\n        \n    - `address_1`, `address_2`, `city`, `state`, `postal_code`, `country` _(string)_: Address fields.\n        \n\n---\n\n## Example Response\n\n```\n{\n  \"status\": true,\n  \"message\": \"AWT studies Data\",\n  \"total_page\": 1,\n  \"count\": 1,\n  \"current_page\": 1,\n  \"data\": [\n    {\n      \"id\": 0,\n      \"record_status\": 0,\n      \"patient_first_name\": \"\",\n      \"patient_last_name\": \"\",\n      \"patient_date_of_birth\": \"\",\n      \"patient_phone_number\": \"\",\n      \"patient_email\": \"\",\n      \"patient_gender\": \"\",\n      \"patient_height\": \"\",\n      \"patient_weight\": \"\",\n      \"height_unit\": \"\",\n      \"weight_unit\": \"\",\n      \"study_date\": \"\",\n      \"physician_first_name\": \"\",\n      \"physician_last_name\": \"\",\n      \"is_cash_pay\": true,\n      \"status\": 0,\n      \"clinic_history\": [],\n      \"diagnosis_code\": [],\n      \"chief_complaint\": [],\n      \"family_history\": true,\n      \"social_history_tobacco_use\": \"\",\n      \"social_history_alcohole_use\": \"\",\n      \"assessment\": \"\",\n      \"plan\": \"\",\n      \"is_awt_signature\": false,\n      \"is_awt_report_signature\": false,\n      \"auto_score\": 0,\n      \"created_at\": \"\",\n      \"doctor\": 0,\n      \"facilities\": 0,\n      \"secoundary_insurance_carrier\": 0,\n      \"created_by\": 0\n    }\n  ]\n}\n\n ```\n\n---"
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve New AWT",
+							"id": "34028877-2a818e7d-0136-4cf5-abe9-9bd17f649ac8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}studies/NewAWT/394/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"NewAWT",
+										"394",
+										""
+									]
+								},
+								"description": "# Get AWT Study Detail\n\nThis endpoint retrieves the details of a specific AWT study by its **ID**.  \n  \nIt is an HTTP GET request made to the `/studies/NewAWT/{id}/` endpoint.\n\n---\n\n### Request Parameters\n\n- **id** (integer, required): The ID of the study to retrieve. Example: `/studies/NewAWT/411/`\n    \n\nOptional query parameters (for consistency with list endpoint, though not always required):\n\n- `page` (integer): Page number for pagination. Example: `page=1`.\n    \n- `page_size` (integer): Number of records per page. Example: `page_size=10`.\n    \n- `search` (string): Search term (e.g., patient details, DOB). Example: `search=john`.\n    \n- `study_date` (date): Filter by study date (YYYY-MM-DD). Example: `study_date=2024-04-17`.\n    \n- `ordering` (string): Field for sorting results. Example: `ordering=patient_email`.\n    \n\n---\n\n### Expected Response\n\nUpon a successful request, the response will return a JSON object with the following structure:\n\n- **status** (boolean): Indicates the success of the request.\n    \n- **message** (string): A message providing additional info.\n    \n- **data** (object): Detailed information about the study.\n    \n\nThe **data object** contains:\n\n- `id` (integer): Study ID\n    \n- `record_status` (integer): Record status\n    \n- `patient_first_name`, `patient_last_name` (string)\n    \n- `patient_date_of_birth` (date)\n    \n- `patient_phone_number`, `alternate_phone_number`, `patient_home_number`, `patient_email` (string)\n    \n- `patient_gender` (string, e.g., M/F)\n    \n- `patient_height`, `patient_weight` (string)\n    \n- `height_unit`, `weight_unit` (string)\n    \n- `BMI` (float or null)\n    \n- `study_date` (date)\n    \n- `physician_first_name`, `physician_last_name` (string)\n    \n- `is_cash_pay` (boolean)\n    \n- `insurance_policy_id`, `insurance_group_id`, `secoundary_insurance_policy_id`, `secoundary_insurance_group_id` (string)\n    \n- `clinic_history` (array of integers)\n    \n- `diagnosis_code` (array of integers)\n    \n- `chief_complaint` (array of integers)\n    \n- `family_history` (boolean)\n    \n- `social_history_tobacco_use`, `social_history_alcohole_use` (string)\n    \n- `physical_examination_general` (array of strings)\n    \n- `vital_signs_BP`, `vital_signs_HR`, `vital_signs_Temp`, `vital_signs_RR` (string)\n    \n- `assessment`, `plan` (string)\n    \n- `is_awt_signature`, `is_awt_report_signature` (boolean)\n    \n- `auto_score` (integer)\n    \n- `result` (string or null)\n    \n- `created_at`, `updated_at` (datetime)\n    \n- `address_1`, `address_2`, `city`, `state`, `postal_code`, `country` (string)\n    \n- `doctor` (integer), `doctor_name`, `doctor_phone`, `doctor_address1`, etc.\n    \n- `facilities` (integer), `facilities_name` (string)\n    \n- `insurance_carrier`, `secoundary_insurance_carrier` (integer or null), plus names\n    \n- `created_by`, `updated_by` (string or null)\n    \n- `age`, `gender`, `format_patient_phone_number`, `format_alternate_phone_number` (string)\n    \n\n---\n\n### Example Response\n\n```\n{\n  \"status\": true,\n  \"message\": \"AWT data retrieved successfully.\",\n  \"data\": {\n    \"id\": 0,\n    \"record_status\": 0,\n    \"patient_first_name\": \"\",\n    \"patient_last_name\": \"\",\n    \"patient_date_of_birth\": \"\",\n    \"patient_phone_number\": \"\",\n    \"alternate_phone_number\": \"\",\n    \"patient_home_number\": \"\",\n    \"patient_email\": \"\",\n    \"patient_gender\": \"\",\n    \"patient_height\": \"\",\n    \"patient_weight\": \"\",\n    \"height_unit\": \"\",\n    \"weight_unit\": \"\",\n    \"BMI\": null,\n    \"study_date\": \"\",\n    \"physician_first_name\": \"\",\n    \"physician_last_name\": \"\",\n    \"is_cash_pay\": false,\n    \"insurance_policy_id\": \"\",\n    \"insurance_group_id\": \"\",\n    \"secoundary_insurance_policy_id\": \"\",\n    \"secoundary_insurance_group_id\": \"\",\n    \"clinic_history\": [],\n    \"diagnosis_code\": [],\n    \"chief_complaint\": [],\n    \"family_history\": false,\n    \"social_history_tobacco_use\": \"\",\n    \"social_history_alcohole_use\": \"\",\n    \"physical_examination_general\": [],\n    \"vital_signs_BP\": \"\",\n    \"vital_signs_HR\": \"\",\n    \"vital_signs_Temp\": \"\",\n    \"vital_signs_RR\": \"\",\n    \"assessment\": \"\",\n    \"plan\": \"\",\n    \"is_awt_signature\": false,\n    \"is_awt_report_signature\": false,\n    \"auto_score\": 0,\n    \"result\": null,\n    \"created_at\": \"\",\n    \"updated_at\": null,\n    \"address_1\": \"\",\n    \"address_2\": \"\",\n    \"city\": \"\",\n    \"state\": \"\",\n    \"postal_code\": \"\",\n    \"country\": \"\",\n    \"doctor\": 0,\n    \"doctor_name\": \"\",\n    \"doctor_phone\": \"\",\n    \"doctor_address1\": \"\",\n    \"doctor_address2\": \"\",\n    \"doctor_city\": \"\",\n    \"doctor_state\": \"\",\n    \"doctor_postal_code\": \"\",\n    \"doctor_country\": \"\",\n    \"doctor_npi\": \"\",\n    \"doctor_suffix\": \"\",\n    \"doctor_title\": \"\",\n    \"facilities\": 0,\n    \"facilities_name\": \"\",\n    \"insurance_carrier\": null,\n    \"insurance_carrier_name\": \"\",\n    \"secoundary_insurance_carrier\": null,\n    \"secoundary_insurance_carrier_name\": \"\",\n    \"created_by\": \"\",\n    \"updated_by\": null,\n    \"gender\": \"\",\n    \"age\": 0,\n    \"format_patient_phone_number\": \"\",\n    \"format_alternate_phone_number\": \"\"\n  }\n}\n\n ```"
+							},
+							"response": []
+						},
+						{
+							"name": "Create New AWT",
+							"id": "34028877-5aa5ef57-00f8-4aa6-b0d7-01603d683e65",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_first_name",
+											"value": "rvtest",
+											"type": "text"
+										},
+										{
+											"key": "patient_last_name",
+											"value": "nikam",
+											"type": "text"
+										},
+										{
+											"key": "patient_date_of_birth",
+											"value": "1999-06-11",
+											"type": "text"
+										},
+										{
+											"key": "patient_phone_number",
+											"value": "14844145942",
+											"type": "text"
+										},
+										{
+											"key": "alternate_phone_number",
+											"value": "+111111111",
+											"type": "text"
+										},
+										{
+											"key": "patient_email",
+											"value": "rvtest23@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "patient_gender",
+											"value": "M",
+											"type": "text"
+										},
+										{
+											"key": "patient_height",
+											"value": "5.5",
+											"type": "text"
+										},
+										{
+											"key": "patient_weight",
+											"value": "170",
+											"type": "text"
+										},
+										{
+											"key": "weight_unit",
+											"value": "kg",
+											"type": "text"
+										},
+										{
+											"key": "height_unit",
+											"value": "in",
+											"type": "text"
+										},
+										{
+											"key": "study_date",
+											"value": "2024-05-06",
+											"type": "text"
+										},
+										{
+											"key": "physician_first_name",
+											"value": "john",
+											"type": "text"
+										},
+										{
+											"key": "physician_last_name",
+											"value": "devin",
+											"type": "text"
+										},
+										{
+											"key": "doctor",
+											"value": "102",
+											"type": "text"
+										},
+										{
+											"key": "is_cash_pay",
+											"value": "True",
+											"type": "text"
+										},
+										{
+											"key": "insurance_policy_id",
+											"value": "1234567890",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "insurance_group_id",
+											"value": "ABCDEFG",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "paylocity_employee_id",
+											"value": "EMP123",
+											"type": "text"
+										},
+										{
+											"key": "clinic_history",
+											"value": "[1, 2, 3]",
+											"type": "text"
+										},
+										{
+											"key": "diagnosis_code",
+											"value": "[1, 2, 4, 5]",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "medical_clinic_history",
+											"value": "[1, 2, 3, 4]",
+											"type": "text"
+										},
+										{
+											"key": "chief_complaint",
+											"value": "[1,2]",
+											"type": "text"
+										},
+										{
+											"key": "family_history",
+											"value": "True",
+											"type": "text"
+										},
+										{
+											"key": "social_history_tobacco_use",
+											"value": "Regulars",
+											"type": "text"
+										},
+										{
+											"key": "social_history_alcohole_use",
+											"value": "Regulars",
+											"type": "text"
+										},
+										{
+											"key": "physical_examination_general",
+											"value": "[\"Alert\"]",
+											"type": "text"
+										},
+										{
+											"key": "vital_signs_BP",
+											"value": "90",
+											"type": "text"
+										},
+										{
+											"key": "vital_signs_HR",
+											"value": "90",
+											"type": "text"
+										},
+										{
+											"key": "vital_signs_Temp",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "vital_signs_RR",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "assessment",
+											"value": "same assessment",
+											"type": "text"
+										},
+										{
+											"key": "plan",
+											"value": "same plan",
+											"type": "text"
+										},
+										{
+											"key": "insurance_carrier",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "facilities",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "secoundary_insurance_carrier",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "secoundary_insurance_policy_id",
+											"value": "fd",
+											"type": "text"
+										},
+										{
+											"key": "secoundary_insurance_group_id",
+											"value": "rer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}studies/NewAWT/create/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"NewAWT",
+										"create",
+										""
+									]
+								},
+								"description": "# Create New AWT Study\n\n### **Endpoint**\n\n```\nPOST {{local}}studies/NewAWT/create/\n\n ```\n\n### **Description**\n\nCreates a new AWT (At-Home Watch Test) study record for a patient, along with related physician, insurance, and medical history details.\n\n---\n\n## 🔹 **Request Body Parameters**\n\n| Field | Type | Description |\n| --- | --- | --- |\n| `patient_first_name` | string | Patient’s first name. |\n| `patient_last_name` | string | Patient’s last name. |\n| `patient_date_of_birth` | date (YYYY-MM-DD) | Patient’s date of birth. |\n| `patient_phone_number` | string | Patient’s phone number. |\n| `alternate_phone_number` | string | Alternate phone number. |\n| `patient_email` | string | Patient’s email address. |\n| `patient_gender` | string (`M`/`F`) | Gender of patient. |\n| `patient_height` | string | Patient’s height. |\n| `patient_weight` | string | Patient’s weight. |\n| `weight_unit` | string | Unit for weight (e.g., `kg`). |\n| `height_unit` | string | Unit for height (e.g., `in`). |\n| `study_date` | date (YYYY-MM-DD) | Date of the study. |\n| `physician_first_name` | string | Physician’s first name. |\n| `physician_last_name` | string | Physician’s last name. |\n| `doctor` | integer | Doctor ID from the system. |\n| `is_cash_pay` | boolean | Whether it’s a cash payment study. |\n| `insurance_policy_id` | string | Insurance policy number. |\n| `insurance_group_id` | string | Insurance group number. |\n| `paylocity_employee_id` | string | Employee ID (Paylocity). |\n| `clinic_history` | array of integers | List of clinic history IDs. |\n| `diagnosis_code` | array of integers | Diagnosis code IDs. |\n| `status` | integer | Status of the study. |\n| `medical_clinic_history` | array of integers | List of medical clinic history IDs. |\n| `chief_complaint` | array of integers | Chief complaint IDs. |\n| `family_history` | boolean | Whether family history exists. |\n| `social_history_tobacco_use` | string | Tobacco use history. |\n| `social_history_alcohole_use` | string | Alcohol use history. |\n| `physical_examination_general` | array of strings | General examination findings. |\n| `vital_signs_BP` | string | Blood pressure. |\n| `vital_signs_HR` | string | Heart rate. |\n| `vital_signs_Temp` | string | Temperature. |\n| `vital_signs_RR` | string | Respiration rate. |\n| `assessment` | string | Assessment notes. |\n| `plan` | string | Plan notes. |\n| `insurance_carrier` | integer | Insurance carrier ID. |\n| `facilities` | integer | Facility ID. |\n| `secoundary_insurance_carrier` | integer | Secondary insurance carrier ID. |\n| `secoundary_insurance_policy_id` | string | Secondary insurance policy ID. |\n| `secoundary_insurance_group_id` | string | Secondary insurance group ID. |\n\n---"
+							},
+							"response": []
+						},
+						{
+							"name": "Update New AWT",
+							"id": "34028877-4ef3f5bb-a6bd-407b-9749-8995ae6b710f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_first_name",
+											"value": "Test",
+											"type": "text"
+										},
+										{
+											"key": "patient_last_name",
+											"value": "Changes",
+											"type": "text"
+										},
+										{
+											"key": "patient_date_of_birth",
+											"value": "1999-06-11",
+											"type": "text"
+										},
+										{
+											"key": "patient_phone_number",
+											"value": "14844145260",
+											"type": "text"
+										},
+										{
+											"key": "alternate_phone_number",
+											"value": "+111111111",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "patient_email",
+											"value": "atrecadmin11@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "patient_gender",
+											"value": "M",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "patient_height",
+											"value": "5.5",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "patient_weight",
+											"value": "170",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "weight_unit",
+											"value": "kg",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "height_unit",
+											"value": "in",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "study_date",
+											"value": "2024-05-06",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "physician_first_name",
+											"value": "john",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "physician_last_name",
+											"value": "devin",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "doctor",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "is_cash_pay",
+											"value": "False",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "insurance_policy_id",
+											"value": "1234567890",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "insurance_group_id",
+											"value": "ABCDEFG",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "paylocity_employee_id",
+											"value": "EMP123",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "clinic_history",
+											"value": "[1, 2, 3, 4]",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "diagnosis_code",
+											"value": "[1, 2, 4, 5]",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "medical_clinic_history",
+											"value": "[1, 2, 3, 4]",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "chief_complaint",
+											"value": "[1,2]",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "family_history",
+											"value": "True",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "social_history_tobacco_use",
+											"value": "Regulars",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "social_history_alcohole_use",
+											"value": "Regulars",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "physical_examination_general",
+											"value": "[\"Alert\"]",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "vital_signs_BP",
+											"value": "90",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "vital_signs_HR",
+											"value": "90",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "vital_signs_Temp",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "vital_signs_RR",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "assessment",
+											"value": "same assessment",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "plan",
+											"value": "same plan",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "insurance_carrier",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "facilities",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}studies/NewAWT/update/411/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"NewAWT",
+										"update",
+										"411",
+										""
+									]
+								},
+								"description": "# Update AWT Study\n\n### **Endpoint**\n\n```\nPUT {{local}}studies/NewAWT/update/{id}/\n\n ```\n\n### **Description**\n\nUpdates an existing AWT (At-Home Watch Test) study record by providing the study ID in the URL and the fields to be updated in the request body.  \n  \nOnly the provided fields will be updated — unspecified fields will remain unchanged.\n\n---\n\n## 🔹 **Path Parameter**\n\n| Field | Type | Description |\n| --- | --- | --- |\n| `id` | integer | Unique ID of the AWT study to update. |\n\n---\n\n## 🔹 **Request Body Parameters**\n\n| Field | Type | Description |\n| --- | --- | --- |\n| `patient_first_name` | string | Patient’s first name. |\n| `patient_last_name` | string | Patient’s last name. |\n| `patient_date_of_birth` | date (YYYY-MM-DD) | Patient’s date of birth. |\n| `patient_phone_number` | string | Patient’s phone number. |\n| `alternate_phone_number` | string | Alternate phone number. |\n| `patient_email` | string | Patient’s email address. |\n| `patient_gender` | string (`M`/`F`) | Gender of patient. |\n| `patient_height` | string | Patient’s height. |\n| `patient_weight` | string | Patient’s weight. |\n| `weight_unit` | string | Unit for weight (e.g., `kg`). |\n| `height_unit` | string | Unit for height (e.g., `in`). |\n| `study_date` | date (YYYY-MM-DD) | Date of the study. |\n| `physician_first_name` | string | Physician’s first name. |\n| `physician_last_name` | string | Physician’s last name. |\n| `doctor` | integer | Doctor ID from system. |\n| `is_cash_pay` | boolean | Whether it’s a cash payment study. |\n| `insurance_policy_id` | string | Insurance policy number. |\n| `insurance_group_id` | string | Insurance group number. |\n| `paylocity_employee_id` | string | Employee ID (Paylocity). |\n| `clinic_history` | array of integers | List of clinic history IDs. |\n| `diagnosis_code` | array of integers | Diagnosis code IDs. |\n| `status` | integer | Status of the study. |\n| `medical_clinic_history` | array of integers | List of medical clinic history IDs. |\n| `chief_complaint` | array of integers | Chief complaint IDs. |\n| `family_history` | boolean | Whether family history exists. |\n| `social_history_tobacco_use` | string | Tobacco use history. |\n| `social_history_alcohole_use` | string | Alcohol use history. |\n| `physical_examination_general` | array of strings | General examination findings. |\n| `vital_signs_BP` | string | Blood pressure. |\n| `vital_signs_HR` | string | Heart rate. |\n| `vital_signs_Temp` | string | Temperature. |\n| `vital_signs_RR` | string | Respiration rate. |\n| `assessment` | string | Assessment notes. |\n| `plan` | string | Plan notes. |\n| `insurance_carrier` | integer | Insurance carrier ID. |\n| `facilities` | integer | Facility ID. |\n| `secoundary_insurance_carrier` | integer | Secondary insurance carrier ID. |\n| `secoundary_insurance_policy_id` | string | Secondary insurance policy ID. |\n| `secoundary_insurance_group_id` | string | Secondary insurance group ID. |"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete New AWT",
+							"id": "34028877-0f7886e0-5e43-4709-b3c6-283478ff8beb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}studies/NewAWT/delete/141/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"NewAWT",
+										"delete",
+										"141",
+										""
+									]
+								},
+								"description": "# Delete AWT Study\n\n### **Endpoint**\n\n```\nDELETE {{local}}studies/NewAWT/delete/{id}/\n\n ```\n\n### **Description**\n\nDeletes an existing AWT (At-Home Watch Test) study record by its unique ID.\n\nOnce deleted, the record cannot be recovered.\n\n---\n\n## 🔹 **Path Parameter**\n\n| Field | Type | Description |\n| --- | --- | --- |\n| `id` | integer | Unique ID of the AWT study to delete. |\n\n---\n\n## 🔹 **Response**\n\n### ✅ Success (200 OK)\n\n```\n{\n  \"status\": true,\n  \"message\": \"AWT Referral has been successfully deleted.\"\n}\n\n ```"
+							},
+							"response": []
+						},
+						{
+							"name": "New AWT PDF",
+							"id": "34028877-83e59e4d-2f8f-4c5b-a762-6c3b05f2eb49",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}studies/NewAWTPDF/394/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"NewAWTPDF",
+										"394",
+										""
+									]
+								},
+								"description": "# Get AWT Study PDF\n\n### **Endpoint**\n\n```\nGET {{local}}studies/NewAWTPDF/{id}/\n\n ```\n\n### **Description**\n\nRetrieves the PDF referral report for a specific AWT (At-Home Watch Test) study.  \n  \nThe endpoint returns a **download URL** for the generated PDF file.\n\n---\n\n## 🔹 **Path Parameter**\n\n| Field | Type | Description |\n| --- | --- | --- |\n| `id` | integer | Unique ID of the AWT study whose PDF report is requested. |\n\n---\n\n## 🔹 **Expected Response**\n\n### ✅ Success (200 OK)\n\n```\n{\n  \"status\": true,\n  \"download_url\": \"url\"\n}\n\n ```\n\n- `status` (boolean): Indicates if the request was successful.\n    \n- `download_url` (string): Direct URL to download the PDF file."
+							},
+							"response": []
+						},
+						{
+							"name": "Multiple Sign New AWT",
+							"id": "34028877-b26f912b-1b34-4899-a74a-675f86da8b13",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ids",
+											"value": "[]",
+											"type": "text",
+											"uuid": "f45debfb-cfb9-483e-b2e8-b7a636427c10"
+										},
+										{
+											"key": "awt_report_signature",
+											"type": "file",
+											"uuid": "841aea28-1860-4f64-9736-2e30b2e15cc8",
+											"value": null
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}studies/NewAWTPDF/multiple_sign/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"NewAWTPDF",
+										"multiple_sign",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"description": "# Bulk AWT Report Signature\n\n### **Endpoint**\n\n```\nPATCH {{local}}studies/NewAWTPDF/multiple_sign/\n\n ```\n\n### **Description**\n\nSigns multiple AWT reports at once by attaching a **digital signature image**.  \n  \nFor each prescription (AWT record ID), the endpoint updates the record with:\n\n- The uploaded signature image.\n    \n- The signature date/time.\n    \n- The signer’s IP address.\n    \n- Incentive update.\n    \n\n---\n\n## 🔹 **Request Body (Form-Data)**\n\n| Field | Type | Required | Description |\n| --- | --- | --- | --- |\n| `ids` | string (JSON array) | ✅ Yes | A JSON array of prescription IDs to sign. Example: `\"[1, 2, 3]\"`. |\n| `awt_report_signature` | file (image) | ✅ Yes | The signature image file to be applied. |\n\n---\n\n## 🔹 **Example Request (Form-Data)**\n\n```\nPATCH {{local}}studies/NewAWTPDF/multiple_sign/\n\n ```\n\n**Form-data:**\n\n- `ids`: `\"[411, 412, 413]\"`\n    \n- `awt_report_signature`: _signature.png_\n    \n\n---\n\n## 🔹 **Expected Response**\n\n### ✅ Success (200 OK)\n\n```\n{\n  \"status\": true,\n  \"message\": \"Awt report Signed\"\n}\n\n ```"
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-7628474c-ff77-4889-bc8b-7f04a3c06fd4"
+				}
+			],
+			"id": "34028877-85226405-7e4b-4ccd-a0ec-f2d67d0e45a5"
+		}
+	]
+}
