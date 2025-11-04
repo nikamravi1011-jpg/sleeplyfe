@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "44708599-39b3e5fa-0bd9-4abc-a090-8afc7c0c925a",
+		"name": "Auto RCM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auto apnometer",
+			"id": "44708599-beb1906e-3e45-4463-aa28-6c29705bb678",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MDczMjMwLCJpYXQiOjE3NDc5ODY4MzAsImp0aSI6ImFiZDk5NjE4YWY2OTRhODU5ZmM1OGExMjg5NjMzMDI4IiwidXNlcl9pZCI6MSwiZW1haWwiOiJuYXJlc2hAc2hyaWRhYXkuY29tIiwib3JnYW5pemF0aW9uX21vZHVsZXMiOltdfQ.nwZ2dTaFCafwGskbbJlK3c6rDHtPKdaqGUepZq3_ofQ"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sleeplyfedev.azureedge.net"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sleeplyfedev.azureedge.net/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"patient_prompt\": \"Generate a comprehensive health report for the following male patient: Name: kuldip Patel; Date of Birth: 26/11/1999; Age: 25 years; Height: 180 cm; Weight: 70 kg; BMI: 21.6 (calculated); Gender: Male. Include general health summary, vital statistics, and any observations relevant to age and body composition.\",\n    \"sleep_prompt\": \"Generate detailed synthetic sleep monitoring data for 3 daytime nap and five consecutive full nights, beginning on December 12th, 2023 (Day 1) and continue till December 14. For the daytime nap on Day, ensure the duration falls between 50 minutes and 2.5 hours. For each of the five nights from December 12th to December 16th, provide comprehensive nighttime sleep data. Include per-night sleep duration, sleep quality (e.g., efficiency, interruptions), sleep stages (light, deep, REM, awake), bedtime, wake time, and any notable anomalies such as apnea events or restlessness \\n(1) I need 1 night data start with 2 pm and 53 minutes data \\n(2) I need 2 night data start with 8 pm and 6 hrs data \\n(3) I need 3 night data start with 3 pm and 1 hrs data \\n(4) I need 4 night data start with  10 pm and 8 hrs data  \\n(5) I need 5 night data start with  1, 30 pm and 45 minutes data \\n(6) I need 6 night data start with  9 pm and 6 hrs data \\n(7) I need 7 night data start with  12 pm and 8 hrs data \\n(8) I need 8 night data start with  11 pm and 7 hrs data\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/generate_apnometer_report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"generate_apnometer_report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
