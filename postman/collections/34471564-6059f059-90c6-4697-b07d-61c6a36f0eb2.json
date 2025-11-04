@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "34471564-6059f059-90c6-4697-b07d-61c6a36f0eb2",
+		"name": "chatbot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "34471564-b5af3c95-6e7e-4c1a-a3fb-5b8fa472630a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "34471564-881d92c1-b02e-482b-ba48-dc93c4fbadc7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "34471564-d41eda2e-596b-4146-a4ca-62896923e5dc"
+		},
+		{
+			"name": "rag bot",
+			"id": "34471564-f686ed48-cfa7-4bf9-9286-9a97b11f4e37",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MDczMjMwLCJpYXQiOjE3NDc5ODY4MzAsImp0aSI6ImFiZDk5NjE4YWY2OTRhODU5ZmM1OGExMjg5NjMzMDI4IiwidXNlcl9pZCI6MSwiZW1haWwiOiJuYXJlc2hAc2hyaWRhYXkuY29tIiwib3JnYW5pemF0aW9uX21vZHVsZXMiOltdfQ.nwZ2dTaFCafwGskbbJlK3c6rDHtPKdaqGUepZq3_ofQ"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "https://sleeplyfedev.azureedge.net"
+					},
+					{
+						"key": "Referer",
+						"value": "https://sleeplyfedev.azureedge.net/"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "cross-site"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"136\", \"Google Chrome\";v=\"136\", \"Not.A/Brand\";v=\"99\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"uuid": "777ee14b-331e-4bbb-9d33-34bc00c97247",
+							"src": "/home/kuldip/Documents/delivery tickets 2/DeliveryTicketChap_IULO,_JUDITH.PDF"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/extract_patient/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"extract_patient",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chatbot get welcome",
+			"id": "34471564-fbc389be-44f3-4ec8-9f81-cdfea5a3610d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "34471564-03fa8ecb-8aa4-4236-8fbd-daa9115b5b9f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "https://sleeplyfe.atlassian.net/browse/SI-905\n\nSI-928\nhttps://sleeplyfe.atlassian.net/browse/SI-936\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		}
+	]
+}
