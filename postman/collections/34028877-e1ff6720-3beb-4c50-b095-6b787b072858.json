@@ -27024,6 +27024,32 @@
 			"id": "34028877-c5b9917b-8786-4f1a-8c4d-678554aa29ec"
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f2e6ff27-c564-40ac-b818-cda4e825a28a",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5c1e45ed-28c8-4548-a246-5caabcc423c6",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "auth_dev",
@@ -27031,23 +27057,19 @@
 		},
 		{
 			"key": "ocr",
-			"value": "http://127.0.0.1:8002/",
-			"type": "default"
+			"value": "http://127.0.0.1:8002/"
 		},
 		{
 			"key": "stage",
-			"value": "https://sleeplyfestage.iboon.in/api/",
-			"type": "default"
+			"value": "https://sleeplyfestage.iboon.in/api/"
 		},
 		{
 			"key": "master",
-			"value": "",
-			"type": "default"
+			"value": ""
 		},
 		{
 			"key": "local",
-			"value": "",
-			"type": "default"
+			"value": ""
 		}
 	]
 }
