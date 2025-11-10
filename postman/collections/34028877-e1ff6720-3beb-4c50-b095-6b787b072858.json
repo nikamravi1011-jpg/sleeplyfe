@@ -16772,9 +16772,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{dev_server}}payment_order/create/",
+									"raw": "{{local}}payment_order/create/",
 									"host": [
-										"{{dev_server}}payment_order"
+										"{{local}}payment_order"
 									],
 									"path": [
 										"create",
