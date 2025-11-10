@@ -24,7 +24,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -36,7 +39,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -277,7 +283,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						}
@@ -710,7 +719,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -933,7 +945,10 @@
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": ""
+										}
 									},
 									"response": []
 								},
@@ -1086,7 +1101,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -1130,7 +1148,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -1206,7 +1227,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -1436,7 +1460,7 @@
 									"query": [
 										{
 											"key": "appointment_date",
-											"value": null,
+											"value": "",
 											"type": "text",
 											"disabled": true
 										}
@@ -1895,7 +1919,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						}
@@ -2236,7 +2263,10 @@
 									},
 									"request": {
 										"method": "GET",
-										"header": []
+										"header": [],
+										"url": {
+											"raw": ""
+										}
 									},
 									"response": []
 								},
@@ -3002,13 +3032,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dev_server}}payment_order/check_payment/1229/",
+									"raw": "{{local}}payment_order/check_payment/61/",
 									"host": [
-										"{{dev_server}}payment_order"
+										"{{local}}payment_order"
 									],
 									"path": [
 										"check_payment",
-										"1229",
+										"61",
 										""
 									]
 								}
