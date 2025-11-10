@@ -3000,11 +3000,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}payment_order/create/",
+									"raw": "{{local}}v2/payment_order/create/",
 									"host": [
-										"{{local}}payment_order"
+										"{{local}}v2"
 									],
 									"path": [
+										"payment_order",
 										"create",
 										""
 									]
