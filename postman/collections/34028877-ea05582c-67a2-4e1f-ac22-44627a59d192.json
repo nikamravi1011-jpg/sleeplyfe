@@ -3032,11 +3032,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}payment_order/check_payment/61/",
+									"raw": "{{local}}v2/payment_order/check_payment/61/",
 									"host": [
-										"{{local}}payment_order"
+										"{{local}}v2"
 									],
 									"path": [
+										"payment_order",
 										"check_payment",
 										"61",
 										""
