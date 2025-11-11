@@ -1850,7 +1850,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\" : 216,\n    \"items\": [1,2,3,4,5,6]\n}",
+									"raw": "{\n    \"items\": [\n        1,\n        2\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1858,14 +1858,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}patient/pre_call_preparation/update/66/",
+									"raw": "{{local}}patient/pre_call_preparation/update/61/",
 									"host": [
 										"{{local}}patient"
 									],
 									"path": [
 										"pre_call_preparation",
 										"update",
-										"66",
+										"61",
 										""
 									]
 								}
