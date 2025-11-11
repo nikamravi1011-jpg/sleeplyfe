@@ -1850,7 +1850,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"items\": [\n        1,\n        2\n    ]\n}",
+									"raw": "{\n    \"items\": [\n        1,\n        2,\n        3,\n        4\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
