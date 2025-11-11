@@ -2908,14 +2908,14 @@
 									]
 								},
 								"url": {
-									"raw": "{{local}}patient/Maincall_action/update/60/",
+									"raw": "{{local}}patient/Maincall_action/update/61/",
 									"host": [
 										"{{local}}patient"
 									],
 									"path": [
 										"Maincall_action",
 										"update",
-										"60",
+										"61",
 										""
 									]
 								}
