@@ -16416,7 +16416,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"patient\" : 60,\n    \"call_type\" : 2,\n    \"call_notes\": \"Hello How Are you Handsome I Need to meet you at the specific place can you come here for me  ?\"\n\n}",
+											"raw": "{\n    \"patient\" : 60,\n    \"call_type\" : 1,\n    \"call_notes\": \"Hello How Are you Handsome I Need to meet you at the specific place can you come here for me  ?\"\n\n}",
 											"options": {
 												"raw": {
 													"language": "json"
