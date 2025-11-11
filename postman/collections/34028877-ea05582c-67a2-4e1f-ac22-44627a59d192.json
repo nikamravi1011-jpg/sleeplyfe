@@ -479,7 +479,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 196,\n    \"insurance_type\": 1,\n    \"insurance_carrier\": 273,\n    \"insurance_policy_id\": \"test4321\",\n    \"insurance_group_id\": \"test5432\",\n    \"policy_start_date\": \"1999-09-11\"\n}",
+									"raw": "{\n    \"patient\": 196,\n    \"insurance_type\": 2,\n    \"insurance_carrier\": 273,\n    \"insurance_policy_id\": \"test4321\",\n    \"insurance_group_id\": \"test5432\",\n    \"policy_start_date\": \"1999-09-11\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
