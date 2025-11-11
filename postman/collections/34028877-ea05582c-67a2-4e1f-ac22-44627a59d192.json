@@ -1739,7 +1739,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/patient/pre_call_preparation/retrieve/216/",
+									"raw": "{{local}}v2/patient/pre_call_preparation/retrieve/61/",
 									"host": [
 										"{{local}}v2"
 									],
@@ -1747,7 +1747,7 @@
 										"patient",
 										"pre_call_preparation",
 										"retrieve",
-										"216",
+										"61",
 										""
 									]
 								}
