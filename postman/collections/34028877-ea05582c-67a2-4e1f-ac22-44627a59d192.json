@@ -2300,7 +2300,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{local}}v2/patient/call_notes/update/32/",
+											"raw": "{{local}}v2/patient/call_notes/update/216/",
 											"host": [
 												"{{local}}v2"
 											],
@@ -2308,7 +2308,7 @@
 												"patient",
 												"call_notes",
 												"update",
-												"32",
+												"216",
 												""
 											]
 										}
