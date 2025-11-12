@@ -5110,16 +5110,40 @@
 			"id": "34028877-eb1a4693-ad36-437b-871f-03c293c3ed52"
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0b425aa5-0788-4126-97f1-365f3357db96",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6172093b-4475-49f2-8353-437d7b681ab2",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
 			"key": "auth",
-			"value": "",
-			"type": "default"
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYyOTI4NDE2LCJpYXQiOjE3NjI4NDIwMTYsImp0aSI6IjNhNjViNTQ1OWYzMzRmMTdiZWI4Zjk3YmJhMzMxZjJhIiwidXNlcl9pZCI6MSwiZW1haWwiOiJzbGVlcGx5ZmUxMjM1QHlvcG1haWwuY29tIiwidXNlcl9wZXJtaXNzaW9ucyI6W119.4k-hl24b2CxjJJk09JpX9Y96bWHeJlRcfC_LwzHbsyM"
 		},
 		{
 			"key": "local",
-			"value": "",
-			"type": "default"
+			"value": ""
 		}
 	]
 }
