@@ -3976,13 +3976,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_notes/detail/3/",
+									"raw": "{{local}}lead_notes/detail/84/",
 									"host": [
 										"{{local}}lead_notes"
 									],
 									"path": [
 										"detail",
-										"3",
+										"84",
 										""
 									]
 								}
@@ -4119,7 +4119,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -4318,7 +4321,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						},
@@ -4963,7 +4969,10 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				},
