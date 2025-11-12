@@ -44,6 +44,7 @@
 									"if (jsonData.data && jsonData.data.access) {",
 									"    // Set the access token in a global variable",
 									"    pm.globals.set(\"auth\", jsonData.data.access);",
+									"    pm.collectionVariables.set(\"auth\",jsonData.data.access)",
 									"    console.log(\"Access token set in global variable: \" + jsonData.data.access);",
 									"} else {",
 									"    console.log(\"Access token not found in response.\");",
@@ -27113,6 +27114,10 @@
 		},
 		{
 			"key": "local",
+			"value": ""
+		},
+		{
+			"key": "auth",
 			"value": ""
 		}
 	]
