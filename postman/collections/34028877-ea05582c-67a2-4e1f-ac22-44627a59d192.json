@@ -3820,11 +3820,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_funnel/list/",
+									"raw": "{{local}}v2/lead_funnel/list/",
 									"host": [
-										"{{local}}lead_funnel"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_funnel",
 										"list",
 										""
 									],
