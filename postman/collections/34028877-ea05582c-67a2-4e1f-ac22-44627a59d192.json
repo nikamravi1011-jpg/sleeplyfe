@@ -3413,13 +3413,14 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{local}}lead_source/delete/3/",
+											"raw": "{{local}}v2/lead_source/delete/37/",
 											"host": [
-												"{{local}}lead_source"
+												"{{local}}v2"
 											],
 											"path": [
+												"lead_source",
 												"delete",
-												"3",
+												"37",
 												""
 											],
 											"query": [
