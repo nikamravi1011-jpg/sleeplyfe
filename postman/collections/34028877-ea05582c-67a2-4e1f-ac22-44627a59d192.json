@@ -3708,11 +3708,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_status/list/",
+									"raw": "{{local}}v2/lead_status/list/",
 									"host": [
-										"{{local}}lead_status"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_status",
 										"list",
 										""
 									],
