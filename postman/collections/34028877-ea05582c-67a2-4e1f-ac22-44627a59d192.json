@@ -3330,14 +3330,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}v2/lead_source/detail/5/",
+											"raw": "{{local}}v2/lead_source/detail/12/",
 											"host": [
 												"{{local}}v2"
 											],
 											"path": [
 												"lead_source",
 												"detail",
-												"5",
+												"12",
 												""
 											],
 											"query": [
