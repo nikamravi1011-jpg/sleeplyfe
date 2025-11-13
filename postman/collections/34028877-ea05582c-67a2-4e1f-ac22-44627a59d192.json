@@ -3633,14 +3633,21 @@
 											}
 										},
 										"url": {
-											"raw": "{{local}}interested/update/15/",
+											"raw": "{{local}}interested/update/19/?interested=TEST",
 											"host": [
 												"{{local}}interested"
 											],
 											"path": [
 												"update",
-												"15",
+												"19",
 												""
+											],
+											"query": [
+												{
+													"key": "interested",
+													"value": "TEST",
+													"type": "text"
+												}
 											]
 										}
 									},
