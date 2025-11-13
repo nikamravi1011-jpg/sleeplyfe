@@ -3246,11 +3246,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}lead_source/page_wise_list/",
+											"raw": "{{local}}v2/lead_source/page_wise_list/",
 											"host": [
-												"{{local}}lead_source"
+												"{{local}}v2"
 											],
 											"path": [
+												"lead_source",
 												"page_wise_list",
 												""
 											],
