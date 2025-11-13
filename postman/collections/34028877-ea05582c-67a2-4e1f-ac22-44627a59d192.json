@@ -4657,11 +4657,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}lead_master/list/?assigned_to__username=mateginganzard&follow_up_date__lte=2025-08-31&follow_up_time__gte=06:43&follow_up_time__empty=true",
+							"raw": "{{local}}v2/lead_master/list/?assigned_to__username=mateginganzard&follow_up_date__lte=2025-08-31&follow_up_time__gte=06:43&follow_up_time__empty=true",
 							"host": [
-								"{{local}}lead_master"
+								"{{local}}v2"
 							],
 							"path": [
+								"lead_master",
 								"list",
 								""
 							],
