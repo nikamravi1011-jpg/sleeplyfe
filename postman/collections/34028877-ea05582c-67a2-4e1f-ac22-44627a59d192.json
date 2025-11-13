@@ -4749,7 +4749,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/lead_master/list_data/",
+							"raw": "{{local}}v2/lead_master/list_data/?priority__priority=High",
 							"host": [
 								"{{local}}v2"
 							],
@@ -4776,8 +4776,7 @@
 								},
 								{
 									"key": "priority__priority",
-									"value": "High",
-									"disabled": true
+									"value": "High"
 								},
 								{
 									"key": "assigned_to__user__username",
