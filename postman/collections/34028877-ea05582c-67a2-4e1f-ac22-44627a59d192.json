@@ -3460,11 +3460,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}interested/list/",
+											"raw": "{{local}}v2/interested/list/",
 											"host": [
-												"{{local}}interested"
+												"{{local}}v2"
 											],
 											"path": [
+												"interested",
 												"list",
 												""
 											],
