@@ -3379,13 +3379,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{local}}lead_source/update/3/",
+											"raw": "{{local}}v2/lead_source/update/37/",
 											"host": [
-												"{{local}}lead_source"
+												"{{local}}v2"
 											],
 											"path": [
+												"lead_source",
 												"update",
-												"3",
+												"37",
 												""
 											]
 										}
