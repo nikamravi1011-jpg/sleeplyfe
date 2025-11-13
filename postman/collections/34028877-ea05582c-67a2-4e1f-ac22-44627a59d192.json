@@ -4657,7 +4657,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/lead_master/list/",
+							"raw": "{{local}}v2/lead_master/list/?new_referrals__referrals=Referral 1–10&assigned_to__username=mateginganzard&follow_up_date__gte=2025-08-01&follow_up_date__lte=2025-08-31",
 							"host": [
 								"{{local}}v2"
 							],
@@ -4679,8 +4679,7 @@
 								},
 								{
 									"key": "new_referrals__referrals",
-									"value": "Referral 1–10",
-									"disabled": true
+									"value": "Referral 1–10"
 								},
 								{
 									"key": "priority__priority",
@@ -4689,8 +4688,7 @@
 								},
 								{
 									"key": "assigned_to__username",
-									"value": "mateginganzard",
-									"disabled": true
+									"value": "mateginganzard"
 								},
 								{
 									"key": "lead_type__lead_type",
@@ -4705,13 +4703,11 @@
 								},
 								{
 									"key": "follow_up_date__gte",
-									"value": "2025-08-01",
-									"disabled": true
+									"value": "2025-08-01"
 								},
 								{
 									"key": "follow_up_date__lte",
-									"value": "2025-08-31",
-									"disabled": true
+									"value": "2025-08-31"
 								},
 								{
 									"key": "follow_up_time__gte",
