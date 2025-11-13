@@ -4657,7 +4657,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/lead_master/list/?assigned_to__username=mateginganzard&follow_up_date__lte=2025-08-31&follow_up_time__gte=06:43&follow_up_time__empty=true",
+							"raw": "{{local}}v2/lead_master/list/",
 							"host": [
 								"{{local}}v2"
 							],
@@ -4689,7 +4689,8 @@
 								},
 								{
 									"key": "assigned_to__username",
-									"value": "mateginganzard"
+									"value": "mateginganzard",
+									"disabled": true
 								},
 								{
 									"key": "lead_type__lead_type",
@@ -4709,11 +4710,13 @@
 								},
 								{
 									"key": "follow_up_date__lte",
-									"value": "2025-08-31"
+									"value": "2025-08-31",
+									"disabled": true
 								},
 								{
 									"key": "follow_up_time__gte",
-									"value": "06:43"
+									"value": "06:43",
+									"disabled": true
 								},
 								{
 									"key": "follow_up_time__lte",
@@ -4722,7 +4725,8 @@
 								},
 								{
 									"key": "follow_up_time__empty",
-									"value": "true"
+									"value": "true",
+									"disabled": true
 								}
 							]
 						}
