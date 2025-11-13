@@ -4749,11 +4749,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev_server}}lead_master/list_data/?lead_type__lead_type=Broker&follow_up_date__gte=2025-07-29&follow_up_date__lte=2025-07-31",
+							"raw": "{{local}}v2/lead_master/list_data/",
 							"host": [
-								"{{dev_server}}lead_master"
+								"{{local}}v2"
 							],
 							"path": [
+								"lead_master",
 								"list_data",
 								""
 							],
@@ -4786,7 +4787,8 @@
 								},
 								{
 									"key": "lead_type__lead_type",
-									"value": "Broker"
+									"value": "Broker",
+									"disabled": true
 								},
 								{
 									"key": "last_name",
@@ -4796,11 +4798,13 @@
 								},
 								{
 									"key": "follow_up_date__gte",
-									"value": "2025-07-29"
+									"value": "2025-07-29",
+									"disabled": true
 								},
 								{
 									"key": "follow_up_date__lte",
-									"value": "2025-07-31"
+									"value": "2025-07-31",
+									"disabled": true
 								}
 							]
 						}
