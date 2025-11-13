@@ -3162,11 +3162,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}lead_source/list/",
+											"raw": "{{local}}v2/lead_source/list/",
 											"host": [
-												"{{local}}lead_source"
+												"{{local}}v2"
 											],
 											"path": [
+												"lead_source",
 												"list",
 												""
 											],
@@ -3174,6 +3175,11 @@
 												{
 													"key": "search",
 													"value": "03/05/2025",
+													"disabled": true
+												},
+												{
+													"key": "search",
+													"value": "as",
 													"disabled": true
 												}
 											]
