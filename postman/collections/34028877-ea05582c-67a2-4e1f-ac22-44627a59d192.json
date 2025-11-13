@@ -3296,11 +3296,12 @@
 											]
 										},
 										"url": {
-											"raw": "{{local}}lead_source/create/",
+											"raw": "{{local}}v2/lead_source/create/",
 											"host": [
-												"{{local}}lead_source"
+												"{{local}}v2"
 											],
 											"path": [
+												"lead_source",
 												"create",
 												""
 											]
