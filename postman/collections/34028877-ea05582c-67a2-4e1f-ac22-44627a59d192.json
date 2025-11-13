@@ -3861,11 +3861,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_type/list/",
+									"raw": "{{local}}v2/lead_type/list/",
 									"host": [
-										"{{local}}lead_type"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_type",
 										"list",
 										""
 									],
