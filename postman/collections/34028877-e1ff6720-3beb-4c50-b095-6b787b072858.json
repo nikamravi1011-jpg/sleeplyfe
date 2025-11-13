@@ -19445,19 +19445,19 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}total_lead/count/?filter_by=day",
+									"raw": "{{local}}v2/total_lead/count/?filter_by=day",
 									"host": [
-										"{{local}}total_lead"
+										"{{local}}v2"
 									],
 									"path": [
+										"total_lead",
 										"count",
 										""
 									],
 									"query": [
 										{
 											"key": "filter_by",
-											"value": "day",
-											"type": "text"
+											"value": "day"
 										}
 									]
 								}
@@ -19484,19 +19484,19 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}total_active_lead/count/?filter_by=week",
+									"raw": "{{local}}v2/total_active_lead/count/?filter_by=week",
 									"host": [
-										"{{local}}total_active_lead"
+										"{{local}}v2"
 									],
 									"path": [
+										"total_active_lead",
 										"count",
 										""
 									],
 									"query": [
 										{
 											"key": "filter_by",
-											"value": "week",
-											"type": "text"
+											"value": "week"
 										}
 									]
 								}
@@ -19580,8 +19580,29 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/lead_management/count/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"lead_management",
+										"count",
+										""
+									]
+								}
 							},
 							"response": []
 						}
@@ -20412,11 +20433,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}total_awt/count/",
+							"raw": "{{local}}v2/total_awt/count/",
 							"host": [
-								"{{local}}total_awt"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_awt",
 								"count",
 								""
 							],
@@ -23492,11 +23514,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}lead_master/list/?assigned_to__username=mateginganzard&follow_up_date__lte=2025-08-31&follow_up_time__gte=06:43&follow_up_time__empty=true",
+							"raw": "{{local}}v2/lead_master/list/",
 							"host": [
-								"{{local}}lead_master"
+								"{{local}}v2"
 							],
 							"path": [
+								"lead_master",
 								"list",
 								""
 							],
@@ -23523,7 +23546,8 @@
 								},
 								{
 									"key": "assigned_to__username",
-									"value": "mateginganzard"
+									"value": "mateginganzard",
+									"disabled": true
 								},
 								{
 									"key": "lead_type__lead_type",
@@ -23543,11 +23567,13 @@
 								},
 								{
 									"key": "follow_up_date__lte",
-									"value": "2025-08-31"
+									"value": "2025-08-31",
+									"disabled": true
 								},
 								{
 									"key": "follow_up_time__gte",
-									"value": "06:43"
+									"value": "06:43",
+									"disabled": true
 								},
 								{
 									"key": "follow_up_time__lte",
@@ -23556,7 +23582,8 @@
 								},
 								{
 									"key": "follow_up_time__empty",
-									"value": "true"
+									"value": "true",
+									"disabled": true
 								}
 							]
 						}
