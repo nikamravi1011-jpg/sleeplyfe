@@ -3583,13 +3583,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}interested/detail/15/",
+											"raw": "{{local}}v2/interested/detail/11/",
 											"host": [
-												"{{local}}interested"
+												"{{local}}v2"
 											],
 											"path": [
+												"interested",
 												"detail",
-												"15",
+												"11",
 												""
 											],
 											"query": [
