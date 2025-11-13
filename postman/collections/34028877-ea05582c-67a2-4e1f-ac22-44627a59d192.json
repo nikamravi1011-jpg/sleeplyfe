@@ -3902,11 +3902,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_org_type/list/",
+									"raw": "{{local}}v2/lead_org_type/list/",
 									"host": [
-										"{{local}}lead_org_type"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_org_type",
 										"list",
 										""
 									],
