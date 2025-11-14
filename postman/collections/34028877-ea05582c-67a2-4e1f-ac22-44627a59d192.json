@@ -4390,12 +4390,12 @@
 									]
 								},
 								"url": {
-									"raw": "{{local}}lead_facility/upadate/45/",
+									"raw": "{{local}}lead_facility/update/45/",
 									"host": [
 										"{{local}}lead_facility"
 									],
 									"path": [
-										"upadate",
+										"update",
 										"45",
 										""
 									]
