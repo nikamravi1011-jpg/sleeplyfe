@@ -4198,13 +4198,51 @@
 								"method": "POST",
 								"header": [],
 								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ravi",
+											"type": "text",
+											"uuid": "3e2a2abb-4237-4c88-87bc-f203cacee174"
+										},
+										{
+											"key": "address_1",
+											"value": "maninager",
+											"type": "text",
+											"uuid": "b966544c-04ae-4144-8c12-e0f6f52c3338"
+										},
+										{
+											"key": "city",
+											"value": "ahmedabad",
+											"type": "text",
+											"uuid": "1a43aedc-a6b6-49ca-bc57-cc87b8419e7d"
+										},
+										{
+											"key": "state",
+											"value": "gujr",
+											"type": "text",
+											"uuid": "8e0bcc14-0c16-4df8-91ba-b01a5a696cd6"
+										},
+										{
+											"key": "zip_code",
+											"value": "390990",
+											"type": "text",
+											"uuid": "4bf56bb8-5d50-441b-aff6-e74f83141a14"
+										},
+										{
+											"key": "phone",
+											"value": "11234567890",
+											"type": "text",
+											"uuid": "b771c19b-2e08-4d4b-a06c-7e125b65b859"
+										},
+										{
+											"key": "fax",
+											"value": "21223342212",
+											"type": "text",
+											"uuid": "850f9687-c877-4645-b332-8f58db9a41fa"
 										}
-									}
+									]
 								},
 								"url": {
 									"raw": "{{local}}lead_facility/create/",
