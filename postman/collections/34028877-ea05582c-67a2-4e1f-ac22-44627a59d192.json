@@ -3501,11 +3501,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}interested/page_wise_list/",
+											"raw": "{{local}}v2/interested/page_wise_list/",
 											"host": [
-												"{{local}}interested"
+												"{{local}}v2"
 											],
 											"path": [
+												"interested",
 												"page_wise_list",
 												""
 											],
