@@ -23514,12 +23514,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/lead_master/list/",
+							"raw": "{{local}}lead_master/list/",
 							"host": [
-								"{{local}}v2"
+								"{{local}}lead_master"
 							],
 							"path": [
-								"lead_master",
 								"list",
 								""
 							],
