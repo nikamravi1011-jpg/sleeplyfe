@@ -3700,46 +3700,6 @@
 							"response": []
 						},
 						{
-							"name": "Lead Status",
-							"id": "34028877-e599e416-bc03-4713-a2f3-4a25818574be",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}v2/lead_status/list/",
-									"host": [
-										"{{local}}v2"
-									],
-									"path": [
-										"lead_status",
-										"list",
-										""
-									],
-									"query": [
-										{
-											"key": "search",
-											"value": "03/05/2025",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Lead Priority",
 							"id": "34028877-573c9606-8676-473a-bcfb-33f55678ecfb",
 							"protocolProfileBehavior": {
@@ -5124,7 +5084,48 @@
 				},
 				{
 					"name": "Master Table",
-					"item": [],
+					"item": [
+						{
+							"name": "Lead Status",
+							"id": "34028877-e599e416-bc03-4713-a2f3-4a25818574be",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/lead_status/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"lead_status",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "03/05/2025",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"id": "34028877-331ad1c1-c22e-49ff-9ca4-ff9507fdaea4"
 				},
 				{
