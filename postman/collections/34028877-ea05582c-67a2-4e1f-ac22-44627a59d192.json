@@ -4411,10 +4411,28 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": ""
+									"raw": "{{local}}lead_facility/retrieve/45/",
+									"host": [
+										"{{local}}lead_facility"
+									],
+									"path": [
+										"retrieve",
+										"45",
+										""
+									]
 								}
 							},
 							"response": []
