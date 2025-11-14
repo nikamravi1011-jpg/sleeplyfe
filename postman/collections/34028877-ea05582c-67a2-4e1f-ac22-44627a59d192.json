@@ -4155,13 +4155,25 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_facility/list/",
+									"raw": "{{local}}lead_facility/list/?page_size=10&page=2",
 									"host": [
 										"{{local}}lead_facility"
 									],
 									"path": [
 										"list",
 										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"type": "text"
+										}
 									]
 								}
 							},
