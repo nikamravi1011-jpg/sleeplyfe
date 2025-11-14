@@ -4391,11 +4391,12 @@
 									]
 								},
 								"url": {
-									"raw": "{{local}}lead_facility/update/45/",
+									"raw": "{{local}}v2/lead_facility/update/45/",
 									"host": [
-										"{{local}}lead_facility"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_facility",
 										"update",
 										"45",
 										""
