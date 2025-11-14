@@ -4526,11 +4526,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}lead_provider/create/",
+									"raw": "{{local}}v2/lead_provider/create/",
 									"host": [
-										"{{local}}lead_provider"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_provider",
 										"create",
 										""
 									]
