@@ -3956,7 +3956,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/lead_notes/list/",
+									"raw": "{{local}}v2/lead_notes/list/?page_size=2&page=3",
 									"host": [
 										"{{local}}v2"
 									],
@@ -3976,6 +3976,16 @@
 											"value": "2",
 											"type": "text",
 											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "page",
+											"value": "3",
+											"type": "text"
 										}
 									]
 								}
