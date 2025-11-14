@@ -4245,11 +4245,12 @@
 									]
 								},
 								"url": {
-									"raw": "{{local}}lead_facility/create/",
+									"raw": "{{local}}v2/lead_facility/create/",
 									"host": [
-										"{{local}}lead_facility"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_facility",
 										"create",
 										""
 									]
@@ -4726,7 +4727,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/lead_master/list/?new_referrals__referrals=Referral 1–10&assigned_to__username=mateginganzard&follow_up_date__gte=2025-08-01&follow_up_date__lte=2025-08-31",
+									"raw": "{{local}}v2/lead_master/list/",
 									"host": [
 										"{{local}}v2"
 									],
@@ -4748,7 +4749,8 @@
 										},
 										{
 											"key": "new_referrals__referrals",
-											"value": "Referral 1–10"
+											"value": "Referral 1–10",
+											"disabled": true
 										},
 										{
 											"key": "priority__priority",
@@ -4757,7 +4759,8 @@
 										},
 										{
 											"key": "assigned_to__username",
-											"value": "mateginganzard"
+											"value": "mateginganzard",
+											"disabled": true
 										},
 										{
 											"key": "lead_type__lead_type",
@@ -4772,11 +4775,13 @@
 										},
 										{
 											"key": "follow_up_date__gte",
-											"value": "2025-08-01"
+											"value": "2025-08-01",
+											"disabled": true
 										},
 										{
 											"key": "follow_up_date__lte",
-											"value": "2025-08-31"
+											"value": "2025-08-31",
+											"disabled": true
 										},
 										{
 											"key": "follow_up_time__gte",
