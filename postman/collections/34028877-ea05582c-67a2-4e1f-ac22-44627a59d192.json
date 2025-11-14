@@ -4424,11 +4424,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_facility/retrieve/45/",
+									"raw": "{{local}}v2/lead_facility/retrieve/45/",
 									"host": [
-										"{{local}}lead_facility"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_facility",
 										"retrieve",
 										"45",
 										""
