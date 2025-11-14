@@ -4155,7 +4155,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/lead_facility/list/?page_size=10&page=2",
+									"raw": "{{local}}v2/lead_facility/list/?page_size=20&page=2",
 									"host": [
 										"{{local}}v2"
 									],
@@ -4167,7 +4167,7 @@
 									"query": [
 										{
 											"key": "page_size",
-											"value": "10"
+											"value": "20"
 										},
 										{
 											"key": "page",
