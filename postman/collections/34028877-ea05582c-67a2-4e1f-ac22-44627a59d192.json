@@ -4012,11 +4012,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_notes/detail/84/",
+									"raw": "{{local}}v2/lead_notes/detail/84/",
 									"host": [
-										"{{local}}lead_notes"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_notes",
 										"detail",
 										"84",
 										""
