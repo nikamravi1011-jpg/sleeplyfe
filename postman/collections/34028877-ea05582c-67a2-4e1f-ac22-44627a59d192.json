@@ -4131,13 +4131,14 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_notes/delete/3/",
+									"raw": "{{local}}v2/lead_notes/delete/91/",
 									"host": [
-										"{{local}}lead_notes"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_notes",
 										"delete",
-										"3",
+										"91",
 										""
 									]
 								}
