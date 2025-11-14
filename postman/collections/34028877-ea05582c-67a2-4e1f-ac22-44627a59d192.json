@@ -3956,18 +3956,19 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_notes/list/?lead__id=33",
+									"raw": "{{local}}v2/lead_notes/list/?lead__id=85",
 									"host": [
-										"{{local}}lead_notes"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_notes",
 										"list",
 										""
 									],
 									"query": [
 										{
 											"key": "lead__id",
-											"value": "33"
+											"value": "85"
 										},
 										{
 											"key": "search",
