@@ -4867,13 +4867,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}lead_master/delete/3/",
+									"raw": "{{local}}v2/lead_master/delete/88/",
 									"host": [
-										"{{local}}lead_master"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_master",
 										"delete",
-										"3",
+										"88",
 										""
 									],
 									"query": [
