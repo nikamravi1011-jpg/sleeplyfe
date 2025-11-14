@@ -4089,7 +4089,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"lead\":41,\n    \"note_reason\":1,\n    \"subject\": \"hii this is subject\",\n    \"lead_notes\": \"no notes\"\n}",
+									"raw": "{\n    // \"lead\":41,\n    \"note_reason\":1,\n    \"subject\": \"hii this is subject\",\n    \"lead_notes\": \"no notes\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4097,13 +4097,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}lead_notes/update/15/",
+									"raw": "{{local}}lead_notes/update/92/",
 									"host": [
 										"{{local}}lead_notes"
 									],
 									"path": [
 										"update",
-										"15",
+										"92",
 										""
 									]
 								}
