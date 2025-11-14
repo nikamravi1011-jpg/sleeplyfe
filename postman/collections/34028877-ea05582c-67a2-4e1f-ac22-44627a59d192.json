@@ -4475,11 +4475,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_provider/list/",
+									"raw": "{{local}}v2/lead_provider/list/",
 									"host": [
-										"{{local}}lead_provider"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_provider",
 										"list",
 										""
 									]
