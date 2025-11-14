@@ -4601,13 +4601,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}lead_provider/retrieve/23/",
+									"raw": "{{local}}lead_provider/retrieve/43/",
 									"host": [
 										"{{local}}lead_provider"
 									],
 									"path": [
 										"retrieve",
-										"23",
+										"43",
 										""
 									]
 								}
