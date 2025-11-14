@@ -3698,88 +3698,6 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "Lead Type",
-							"id": "34028877-313f6c1e-58b8-4ae5-840b-bbd4ca6cef9e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}v2/lead_type/list/",
-									"host": [
-										"{{local}}v2"
-									],
-									"path": [
-										"lead_type",
-										"list",
-										""
-									],
-									"query": [
-										{
-											"key": "search",
-											"value": "not",
-											"type": "text",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Lead Org Type",
-							"id": "34028877-fcfdca1b-5cbd-4dcd-af5e-43e273289b84",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}v2/lead_org_type/list/",
-									"host": [
-										"{{local}}v2"
-									],
-									"path": [
-										"lead_org_type",
-										"list",
-										""
-									],
-									"query": [
-										{
-											"key": "search",
-											"value": "not",
-											"type": "text",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "34028877-7aa010fe-ddc2-4e74-b976-9b8623df8491"
@@ -5110,6 +5028,88 @@
 									],
 									"path": [
 										"lead_funnel",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "not",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lead Type",
+							"id": "34028877-313f6c1e-58b8-4ae5-840b-bbd4ca6cef9e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/lead_type/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"lead_type",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "not",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lead Org Type",
+							"id": "34028877-fcfdca1b-5cbd-4dcd-af5e-43e273289b84",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/lead_org_type/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"lead_org_type",
 										"list",
 										""
 									],
