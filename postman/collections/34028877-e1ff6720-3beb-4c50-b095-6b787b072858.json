@@ -19632,11 +19632,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}total_organization_signature/count/",
+									"raw": "{{local}}v2/total_organization_signature/count/",
 									"host": [
-										"{{local}}total_organization_signature"
+										"{{local}}v2"
 									],
 									"path": [
+										"total_organization_signature",
 										"count",
 										""
 									],
@@ -19672,11 +19673,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}total_licence/count/?filter_by=month",
+									"raw": "{{local}}v2/total_licence/count/?filter_by=month",
 									"host": [
-										"{{local}}total_licence"
+										"{{local}}v2"
 									],
 									"path": [
+										"total_licence",
 										"count",
 										""
 									],
@@ -19710,11 +19712,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}total_pending_sign/count/?filter_by=month",
+									"raw": "{{local}}v2/total_pending_sign/count/?filter_by=month",
 									"host": [
-										"{{local}}total_pending_sign"
+										"{{local}}v2"
 									],
 									"path": [
+										"total_pending_sign",
 										"count",
 										""
 									],
@@ -19748,11 +19751,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}total_fully_sign/count/?filter_by=week",
+									"raw": "{{local}}v2/total_fully_sign/count/?filter_by=week",
 									"host": [
-										"{{local}}total_fully_sign"
+										"{{local}}v2"
 									],
 									"path": [
+										"total_fully_sign",
 										"count",
 										""
 									],
@@ -19786,19 +19790,19 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}activated_trail_licence/count/?filter_by=year",
+									"raw": "{{local}}v2/activated_trail_licence/count/?filter_by=year",
 									"host": [
-										"{{local}}activated_trail_licence"
+										"{{local}}v2"
 									],
 									"path": [
+										"activated_trail_licence",
 										"count",
 										""
 									],
 									"query": [
 										{
 											"key": "filter_by",
-											"value": "year",
-											"type": "text"
+											"value": "year"
 										}
 									]
 								}
@@ -19812,8 +19816,29 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/expired_trail_licence/count/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"expired_trail_licence",
+										"count",
+										""
+									]
+								}
 							},
 							"response": []
 						},
@@ -19837,11 +19862,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}total_subscription_plan/count/?filter_by=day",
+									"raw": "{{local}}v2/total_subscription_plan/count/?filter_by=day",
 									"host": [
-										"{{local}}total_subscription_plan"
+										"{{local}}v2"
 									],
 									"path": [
+										"total_subscription_plan",
 										"count",
 										""
 									],
@@ -19875,11 +19901,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}action_required/count/",
+									"raw": "{{local}}v2/action_required/count/",
 									"host": [
-										"{{local}}action_required"
+										"{{local}}v2"
 									],
 									"path": [
+										"action_required",
 										"count",
 										""
 									]
@@ -19894,8 +19921,28 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{local}}organization/trail_ending_mail/67",
+									"host": [
+										"{{local}}organization"
+									],
+									"path": [
+										"trail_ending_mail",
+										"67"
+									]
+								}
 							},
 							"response": []
 						}
