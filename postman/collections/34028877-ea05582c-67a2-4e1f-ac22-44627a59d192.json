@@ -3956,7 +3956,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/lead_notes/list/?lead__id=85",
+									"raw": "{{local}}v2/lead_notes/list/",
 									"host": [
 										"{{local}}v2"
 									],
@@ -3968,7 +3968,8 @@
 									"query": [
 										{
 											"key": "lead__id",
-											"value": "85"
+											"value": "85",
+											"disabled": true
 										},
 										{
 											"key": "search",
