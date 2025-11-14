@@ -4627,56 +4627,6 @@
 								}
 							},
 							"response": []
-						},
-						{
-							"name": "New Request",
-							"id": "34028877-61cf6c5a-8ce0-40d1-b745-57b127f208a5",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "lead_organization",
-											"value": "106",
-											"type": "text",
-											"uuid": "d7f2ae18-59c2-4ddd-b7ff-45e3cc3593ce"
-										},
-										{
-											"key": "zip_code",
-											"value": "100002",
-											"type": "text",
-											"uuid": "0d6e41f4-11ba-4a8b-a026-d57032233dba"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{local}}lead_facility/update/45/",
-									"host": [
-										"{{local}}lead_facility"
-									],
-									"path": [
-										"update",
-										"45",
-										""
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "34028877-8fdc8549-4e8d-4187-8473-bea72971f34b"
