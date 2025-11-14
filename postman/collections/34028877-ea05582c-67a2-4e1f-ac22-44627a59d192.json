@@ -3635,11 +3635,12 @@
 											}
 										},
 										"url": {
-											"raw": "{{local}}interested/update/19/",
+											"raw": "{{local}}v2/interested/update/19/",
 											"host": [
-												"{{local}}interested"
+												"{{local}}v2"
 											],
 											"path": [
+												"interested",
 												"update",
 												"19",
 												""
