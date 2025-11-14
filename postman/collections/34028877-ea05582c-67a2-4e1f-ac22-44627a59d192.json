@@ -4055,11 +4055,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}lead_notes/create/",
+									"raw": "{{local}}v2/lead_notes/create/",
 									"host": [
-										"{{local}}lead_notes"
+										"{{local}}v2"
 									],
 									"path": [
+										"lead_notes",
 										"create",
 										""
 									]
