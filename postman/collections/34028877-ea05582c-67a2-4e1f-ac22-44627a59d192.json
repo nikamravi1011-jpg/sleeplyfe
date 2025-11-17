@@ -3324,19 +3324,18 @@
 											"formdata": [
 												{
 													"key": "lead_source",
-													"value": "xyz",
+													"value": "xyz12",
 													"type": "text",
 													"uuid": "3e5ad802-6968-4de5-8e8c-ec1e6793f4ab"
 												}
 											]
 										},
 										"url": {
-											"raw": "{{local}}v2/lead_source/create/",
+											"raw": "{{local}}lead_source/create/",
 											"host": [
-												"{{local}}v2"
+												"{{local}}lead_source"
 											],
 											"path": [
-												"lead_source",
 												"create",
 												""
 											]
