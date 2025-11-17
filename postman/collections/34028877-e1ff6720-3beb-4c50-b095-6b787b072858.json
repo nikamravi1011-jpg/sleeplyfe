@@ -19934,11 +19934,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}organization/trail_ending_mail/67",
+									"raw": "{{local}}v2/organization/trail_ending_mail/67",
 									"host": [
-										"{{local}}organization"
+										"{{local}}v2"
 									],
 									"path": [
+										"organization",
 										"trail_ending_mail",
 										"67"
 									]
@@ -20020,11 +20021,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}total_user/user/count/",
+							"raw": "{{local}}v2/total_user/user/count/",
 							"host": [
-								"{{local}}total_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_user",
 								"user",
 								"count",
 								""
@@ -20065,11 +20067,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}total_user/count/",
+							"raw": "{{local}}v2/total_user/count/",
 							"host": [
-								"{{local}}total_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_user",
 								"count",
 								""
 							],
@@ -20104,11 +20107,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}total_sales_representative/count/?filter_by=week&user_type=sales_rep",
+							"raw": "{{local}}v2/total_sales_representative/count/?filter_by=week&user_type=sales_rep",
 							"host": [
-								"{{local}}total_sales_representative"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_sales_representative",
 								"count",
 								""
 							],
@@ -20146,11 +20150,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev_server}}total_facility_user/count/?filter_by=month",
+							"raw": "{{local}}v2/total_facility_user/count/?filter_by=month",
 							"host": [
-								"{{dev_server}}total_facility_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_facility_user",
 								"count",
 								""
 							],
@@ -20223,11 +20228,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}total_sales_rep_user/count/",
+							"raw": "{{local}}v2/total_sales_rep_user/count/",
 							"host": [
-								"{{local}}total_sales_rep_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_sales_rep_user",
 								"count",
 								""
 							],
@@ -20294,11 +20300,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}total_provider/count/?filter_by=year",
+							"raw": "{{local}}v2/total_provider/count/?filter_by=year",
 							"host": [
-								"{{local}}total_provider"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_provider",
 								"count",
 								""
 							],
@@ -20332,11 +20339,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}completed_ref_Sent/count/",
+							"raw": "{{local}}v2/completed_ref_Sent/count/",
 							"host": [
-								"{{local}}completed_ref_Sent"
+								"{{local}}v2"
 							],
 							"path": [
+								"completed_ref_Sent",
 								"count",
 								""
 							],
@@ -20363,7 +20371,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MDU2MzA4LCJpYXQiOjE3NTM5Njk5MDgsImp0aSI6ImU5ZGNlMmNmOTY3MjQ2MjQ4YjkwMmFhMmE3ZTg4OTk1IiwidXNlcl9pZCI6OTY3LCJlbWFpbCI6ImVjZWZAeW9wbWFpbC5jb20iLCJ1c2VyX3Blcm1pc3Npb25zIjpbeyJpZCI6MjIsInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBBV1QgUmVmZXJyYWwiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjExLCJwZXJtaXNzaW9uIjoxfSx7ImlkIjoyMywicGVybWlzc2lvbl9uYW1lIjoiU2F2ZWQgRHJhZnRzIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOnRydWUsInJvbGUiOjExLCJwZXJtaXNzaW9uIjoyfSx7ImlkIjoyNCwicGVybWlzc2lvbl9uYW1lIjoiUGVuZGluZyBBV1QgU3R1ZGllcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjN9LHsiaWQiOjI1LCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFNjb3JpbmciLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjExLCJwZXJtaXNzaW9uIjo0fSx7ImlkIjoyNiwicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIEFXVCBTdHVkaWVzIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxMSwicGVybWlzc2lvbiI6NX0seyJpZCI6MjcsInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCBSZWNlaXZlZCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjZ9LHsiaWQiOjI4LCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgUmVmZXJyYWwiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjExLCJwZXJtaXNzaW9uIjo3fSx7ImlkIjoyOSwicGVybWlzc2lvbl9uYW1lIjoiUGVuZGluZyBSZWZlcnJhbCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjExLCJwZXJtaXNzaW9uIjo4fSx7ImlkIjozMCwicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIFJlZmVycmFsIFNlbnQiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxMSwicGVybWlzc2lvbiI6OX0seyJpZCI6MzEsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2lnbmF0dXJlIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjEwfSx7ImlkIjozMiwicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIFJlY29yZHMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxMSwicGVybWlzc2lvbiI6MTF9LHsiaWQiOjMzLCJwZXJtaXNzaW9uX25hbWUiOiJEZW5pYWxzIExpc3QiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3IjpmYWxzZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjEyfSx7ImlkIjozNCwicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIERlbmlhbCBDbGFpbXMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3IjpmYWxzZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjEzfSx7ImlkIjozNSwicGVybWlzc2lvbl9uYW1lIjoiQ29tcHJlaGVuc2l2ZSBUZW1wbGF0ZSIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjE0fSx7ImlkIjozNiwicGVybWlzc2lvbl9uYW1lIjoiQVdUIFRlbXBsYXRlIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxMSwicGVybWlzc2lvbiI6MTV9LHsiaWQiOjM3LCJwZXJtaXNzaW9uX25hbWUiOiJFbWFpbCBOb3RpZmljYXRpb24gVGVtcGxhdGUiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjE2fSx7ImlkIjozOCwicGVybWlzc2lvbl9uYW1lIjoiUHJvdmlkZXJzIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjExLCJwZXJtaXNzaW9uIjoxN30seyJpZCI6MzksInBlcm1pc3Npb25fbmFtZSI6IkZhY2lsaXR5IFVzZXJzIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjExLCJwZXJtaXNzaW9uIjoxOX0seyJpZCI6NDAsInBlcm1pc3Npb25fbmFtZSI6IkFwbm9tZXRlciIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxMSwicGVybWlzc2lvbiI6MjZ9LHsiaWQiOjQxLCJwZXJtaXNzaW9uX25hbWUiOiJGQVEiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxMSwicGVybWlzc2lvbiI6Mjd9LHsiaWQiOjQyLCJwZXJtaXNzaW9uX25hbWUiOiJSYWlzZSBhIFRpY2tldCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxMSwicGVybWlzc2lvbiI6Mjh9LHsiaWQiOjE4NSwicGVybWlzc2lvbl9uYW1lIjoiU29mdHdhcmUgTGljZW5zaW5nIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTEsInBlcm1pc3Npb24iOjMxfV19.lzoInYNyCCncshusmSySult2ePxbCzlXrXEP-PjREx0",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -20371,11 +20379,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}total_active_user/count/",
+							"raw": "{{local}}v2/total_active_user/count/",
 							"host": [
-								"{{local}}total_active_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_active_user",
 								"count",
 								""
 							]
@@ -20403,11 +20412,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}total_inactive_user/count/",
+							"raw": "{{local}}v2/total_inactive_user/count/",
 							"host": [
-								"{{local}}total_inactive_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"total_inactive_user",
 								"count",
 								""
 							]
