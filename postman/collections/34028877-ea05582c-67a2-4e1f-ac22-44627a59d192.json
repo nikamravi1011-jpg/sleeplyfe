@@ -3448,14 +3448,14 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{local}}v2/lead_source/delete/3/",
+											"raw": "{{local}}v2/lead_source/delete/120/",
 											"host": [
 												"{{local}}v2"
 											],
 											"path": [
 												"lead_source",
 												"delete",
-												"3",
+												"120",
 												""
 											],
 											"query": [
