@@ -3586,11 +3586,12 @@
 											]
 										},
 										"url": {
-											"raw": "{{local}}interested/create/",
+											"raw": "{{local}}v2/interested/create/",
 											"host": [
-												"{{local}}interested"
+												"{{local}}v2"
 											],
 											"path": [
+												"interested",
 												"create",
 												""
 											]
