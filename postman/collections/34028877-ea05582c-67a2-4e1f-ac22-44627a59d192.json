@@ -3710,14 +3710,14 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{local}}v2/interested/delete/1/",
+											"raw": "{{local}}v2/interested/delete/2/",
 											"host": [
 												"{{local}}v2"
 											],
 											"path": [
 												"interested",
 												"delete",
-												"1",
+												"2",
 												""
 											],
 											"query": [
