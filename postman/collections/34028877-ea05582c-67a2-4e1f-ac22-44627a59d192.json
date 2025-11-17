@@ -1168,7 +1168,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": ""
+									"raw": "{{local}}v2/rendering_provider_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"rendering_provider_list",
+										""
+									]
 								}
 							},
 							"response": []
