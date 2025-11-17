@@ -1261,10 +1261,27 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": ""
+									"raw": "{{local}}v2/sleep_coach/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sleep_coach",
+										""
+									]
 								}
 							},
 							"response": []
