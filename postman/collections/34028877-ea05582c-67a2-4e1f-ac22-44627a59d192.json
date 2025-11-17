@@ -3579,19 +3579,18 @@
 											"formdata": [
 												{
 													"key": "interested",
-													"value": "TEST",
+													"value": "TEST21",
 													"type": "text",
 													"uuid": "79b4bb8a-4ad7-4dec-963f-90928f1de0bc"
 												}
 											]
 										},
 										"url": {
-											"raw": "{{local}}v2/interested/create/",
+											"raw": "{{local}}interested/create/",
 											"host": [
-												"{{local}}v2"
+												"{{local}}interested"
 											],
 											"path": [
-												"interested",
 												"create",
 												""
 											]
