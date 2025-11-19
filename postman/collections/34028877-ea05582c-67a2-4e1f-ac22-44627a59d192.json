@@ -5312,6 +5312,1206 @@
 				}
 			],
 			"id": "34028877-eb1a4693-ad36-437b-871f-03c293c3ed52"
+		},
+		{
+			"name": "Organization document Copy",
+			"item": [
+				{
+					"name": "Role wise module",
+					"item": [
+						{
+							"name": "role wise module list",
+							"id": "34028877-f156be98-4eb4-4e80-bcb1-2bf2467c5b89",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/rolemodule/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"rolemodule",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create role module",
+							"id": "34028877-603d99bd-2852-43ab-a631-aad753bc3ad8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"role\":1,\n    \"module\":[1,2,3]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/rolemodule/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"rolemodule",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-1afe2347-b87a-4a38-b1a3-04e420cd1df2"
+				},
+				{
+					"name": "designation",
+					"item": [
+						{
+							"name": "Designation list",
+							"id": "34028877-9e2cd9b9-20ce-4339-b300-0d975c6e751c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/organization/designation/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"designation",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add new designation",
+							"id": "34028877-6f0279ba-d519-4477-b340-a9d9795c0e65",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "designation_name",
+											"value": "New Test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/organization/designation/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"designation",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "designation wise page",
+							"id": "34028877-3e45253d-f91a-40e1-9373-79e33f58f476",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev_server}}v2/organization/designation_list/",
+									"host": [
+										"{{dev_server}}v2"
+									],
+									"path": [
+										"organization",
+										"designation_list",
+										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "designation retrive",
+							"id": "34028877-90bedc06-71ff-44c8-802c-3c3704c2b10e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/organization/designation/retrieve/3/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"designation",
+										"retrieve",
+										"3",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove designation",
+							"id": "34028877-ee080f98-2e3d-4e39-bbf5-173ffd6e16d2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/organization/designation/delete/8/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"designation",
+										"delete",
+										"8",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update designation",
+							"id": "34028877-92fa4a30-7167-4f37-9735-4f6b61151f09",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "designation_name",
+											"value": "yup",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/organization/designation/update/46/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"designation",
+										"update",
+										"46",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-8566ef2e-30ac-48f1-8b04-a54685fd5b29"
+				},
+				{
+					"name": "work schedule",
+					"item": [
+						{
+							"name": "work schedule list",
+							"id": "34028877-b2167ab2-b8c4-4abe-acd5-209dd2ab638e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/organization/work_based_option/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"work_based_option",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create work schedule",
+							"id": "34028877-fa9704e5-ac56-4316-8047-710bcfcb101e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "day_time_based_option",
+											"value": "Full Time (Mon – Sat) 12 PM – 3 PM",
+											"type": "text"
+										},
+										{
+											"key": "custom_option",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/organization/work_based_option/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"work_based_option",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "work schedule update",
+							"id": "34028877-3545adce-2581-4260-a729-6b620451a852",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/organization/work_based_option/update/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"organization",
+										"work_based_option",
+										"update",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "34028877-4083de8a-dda2-4f42-b774-4c5474c15632",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "day_time_based_option",
+											"value": "Custom Days (User selects specific days )",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}organization/work_based_option/update/6/",
+									"host": [
+										"{{local}}organization"
+									],
+									"path": [
+										"work_based_option",
+										"update",
+										"6",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-3173eb81-3e86-417d-9ee2-66c8b7d6b68e"
+				},
+				{
+					"name": "Plan",
+					"item": [
+						{
+							"name": "Subscription plan list",
+							"id": "34028877-9b660d57-d981-49b0-bd52-af92d374356f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev_server}}subscription_plan/options/",
+									"host": [
+										"{{dev_server}}subscription_plan"
+									],
+									"path": [
+										"options",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "plan retrive",
+							"id": "34028877-fe2591f1-f1ed-465a-a710-196e23c1eed2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}organization/plan/retrive/1/",
+									"host": [
+										"{{local}}organization"
+									],
+									"path": [
+										"plan",
+										"retrive",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Plan create",
+							"id": "34028877-46786e7a-e8e9-40b1-88a9-7597a0c18339",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{local}}organization/plan/create/",
+									"host": [
+										"{{local}}organization"
+									],
+									"path": [
+										"plan",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "plan update",
+							"id": "34028877-9d2e8349-7ecf-4e3d-b8c8-9f41473bbe5f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{local}}organization/plan/update/2/",
+									"host": [
+										"{{local}}organization"
+									],
+									"path": [
+										"plan",
+										"update",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-4afa6080-012b-4a32-96a7-5f1ad497b3e5"
+				},
+				{
+					"name": "list organization",
+					"id": "34028877-599cb85e-91d3-4367-90f3-729027c077c4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create organization",
+					"id": "34028877-8320767f-910b-4741-a8bc-a7c81f974610",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number_of_licenses_users\": 50,\n    \"software_name\": \"Sleeplyfe 12312\",\n    \"work_schedule\": [\n        {\n            \"work_day\": 1,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        }\n    ],\n    \"plan_info\": [\n        {\n        \"subscription_plan_name\": \"Starter\",\n        \"implementation_cost\": \"2000.00\",\n        \"implementation_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"per_month_location_npi_cost\": \"10000.00\",\n        \"per_month_location_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"additional_provider_npi_cost\": \"10454.00\",\n        \"additional_provider_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_commitment\": \"0.00\",\n        \"travel_cost\": \"0.0\",\n        \"travel_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"daily_use_of_vital_care_units\": 90.0,\n        \"awt_self_care\": 20.0,\n        \"awt_self_care_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_self_care_virtual_assistant\": 10.0,\n        \"awt_self_care_premium_live_assistant\": 20.0,\n        \"chst_test_and_report\": 0.0,\n        \"chst_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_test_and_report\": 0.0,\n        \"chap_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"ist_test_and_report\": 0.0,\n        \"ist_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"remote_monitoring\": 0.0,\n        \"remote_monitoring_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_reimbursement\": 0.0,\n        \"awt_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chst_reimbursement\": 0.0,\n        \"chst_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_reimbursement\": 0.0,\n        \"chap_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_reim\": 0.0,\n        \"apnometer_chst_ist_reim_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"sleep_rpm_reimbursement\": 0.0,\n        \"sleep_rpm_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"conversion_of_awt_to_home_test\": \"0%\",\n        \"conversion_of_awt_to_home_test_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_chst_test\": 10.0,\n        \"monthly_awt_test\": 20.0,\n        \"apnometer_chst_ist_osa_positive\": 0.0,\n        \"apnometer_chst_ist_osa_positive_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_conversion\": 0.0,\n        \"apnometer_chst_ist_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_chst_to_pap_conversion\": \"0%\",\n        \"initial_post_chst_to_pap_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_month_pap_rpm\": 0.0,\n        \"initial_post_month_pap_rpm_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"cost_per_month\": \"10.00\",\n        \"revenue_per_month\": \"0.00\",\n        \"gross_profits\": \"-10.00\",\n        \"monthly_subscription_fee\": \"0.00\",\n        \"monthly_subscription_fee_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"total_saving\": 0.0,\n        \"awt_test_ranges\": [],\n        \"overall_discount_apply\": null,\n        \"subscription_plan\": 1\n    }\n],\n\"medicaid\": 20,\n\"original_medicare\": 20,\n\"medicare_advantage\": 10,\n\"commercial_HMO\": 20,\n\"commercial_PPO_EPO\": 30,\n\"org_name\": \"Sleeplyfe test6442\",\n\"org_first_name\": \"Project\",\n\"org_last_name\": \"Sleeplyfe\",\n\"org_contact_person_designations\": 14,\n\"org_contact_person_email\": \"sleepl6542@yopmail.com\",\n\"org_contact_person_phone\": \"13242667846\"\n// \"free_trial_test\": null,\n// \"patient_volume_count\" : null\n// \"org_address_1\": \"Northeast Washington\",\n// \"org_address_2\": \"Test Data\",\n// \"org_city\": \"Washington\",\n// \"org_state\": \"DC\",\n// \"org_postal_code\": \"20002\",\n// \"org_country\": \"USA\",\n// \"secondary_org_name\": \"Sleeplyfe Project4571\",  \n// \"secondary_org_first_name\": \"Project\",\n// \"secondary_org_last_name\": \"Sleeplyfe\",\n// \"secondary_org_contact_person_designations\": 1,\n// \"secondary_org_contact_person_email\": \"sleeply098@yopmail.com\",\n// \"secondary_org_contact_person_phone\": \"13244668787\",\n// \"secondary_org_address_1\": \"Northeast Washington\",\n// \"secondary_org_address_2\": \"Test Data\",\n// \"secondary_org_city\": \"Washington\",\n// \"secondary_org_state\": \"DC\",\n// \"secondary_org_postal_code\": \"20002\",\n// \"secondary_org_country\": \"USA\",\n// \"user_type\": \"Previous_user\",\n// \"intended_usage_duration\": \"One_week\",\n// \"patient_volume\": \"Week\",\n// \"patient_volume_count\": 10,\n// \"terms_and_conditions\": false,\n// \"privacy_policy\": false,\n// \"authorized_signatory_name\": \"K. Cody Patel\",\n// \"insurance_cov_total\": 100,\n// \"speciality\": [4,5],\n// \"golive_date\": \"2025-05-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/create/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restore_left_user",
+					"id": "34028877-adcdc59d-b252-4048-9065-c3b85590eea9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/remaining/user/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"remaining",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "anonymous_user_retrieve",
+					"id": "34028877-37c14615-d3c0-4b85-886e-bdae793fdb8a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/anonymous/gAAAAABpA0XPK2kWGGsINs2X0F_avow29dePYhVUSSeSjqrAXPutForqMSZ7RgFy2wU8hwaHoT3D97cGG59813RCpEa0ot48uEbZAfqy5_3XFrzCgWFq9Qnu6pGvvmYNiEz64hNR_AFcvPrNzPBUzhjrWoyXD2Yn3_he_dOEJls9KnlnXewXaV123FRXrqV4CwcSN_EuWyRc/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"anonymous",
+								"gAAAAABpA0XPK2kWGGsINs2X0F_avow29dePYhVUSSeSjqrAXPutForqMSZ7RgFy2wU8hwaHoT3D97cGG59813RCpEa0ot48uEbZAfqy5_3XFrzCgWFq9Qnu6pGvvmYNiEz64hNR_AFcvPrNzPBUzhjrWoyXD2Yn3_he_dOEJls9KnlnXewXaV123FRXrqV4CwcSN_EuWyRc",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "anonymous_user_update",
+					"id": "34028877-6a5b6b2e-93c9-42ac-9ead-8fdd2a164d6a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "agreement_signed_file",
+									"type": "file",
+									"src": "/home/bittu/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/anonymous/update/gAAAAABoGbxurh_e8Wxbkh2GHzzvlTqlsuhzsneAsiymYn1HFhXhyylxqDkOeAK0PHB2yBnPG9K-Lqn-3DcyW-qnNbTIRQI1N5rvBRRPA1HZDgCT2ndo_KLN28RDpBZl9_VC9ZJANSXZw-Plrfk3xfixR4v8wLKXUaYILMdohQYNAbDe-CuUIwh3wQ1H2ggowzUi1Ks9rg3g/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"anonymous",
+								"update",
+								"gAAAAABoGbxurh_e8Wxbkh2GHzzvlTqlsuhzsneAsiymYn1HFhXhyylxqDkOeAK0PHB2yBnPG9K-Lqn-3DcyW-qnNbTIRQI1N5rvBRRPA1HZDgCT2ndo_KLN28RDpBZl9_VC9ZJANSXZw-Plrfk3xfixR4v8wLKXUaYILMdohQYNAbDe-CuUIwh3wQ1H2ggowzUi1Ks9rg3g",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Contract PDF",
+					"id": "34028877-df13317c-deb5-4945-853d-6d35291e66b3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"email\": \"admor@iboon.io\",\n        // \"phone_number\":\"+14848562358\",\n        // \"first_name\": \"Ruchi\",\n        // \"last_name\": \"patel\",\n        // \"middle_name\":\"A.\",\n        // \"employee_id\": \"RP8856\",\n        \"can_see_medical_group_data\": true,\n        \"is_admin\": true,\n        \"organization\":75\n\n    },\n    // \"doctor\": 12\n    \"sales_role\":\"sales rep admin\",\n    \"is_admin\": true,\n    \"can_see_facility_data\": false,\n    \"facilities\": [10]\n}"
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/contact_file/188/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"contact_file",
+								"188",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrive organization document",
+					"id": "34028877-417a5d6b-84fd-4bfa-875c-c91d84377190",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/retrive/66/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"retrive",
+								"66",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization module list",
+					"id": "34028877-af5b7655-a627-4a90-b2eb-ddc3b6d2264a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/module/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"module",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization list without pagination",
+					"id": "34028877-51620713-b09c-48bf-b032-25aca6fa2788",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/list/without_page/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"list",
+								"without_page",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin signature",
+					"id": "34028877-f2818cf0-f7ce-4b4d-89bb-95b9b80a242a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "authorized_signature",
+									"type": "file",
+									"src": "/home/bittu/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{dev_server}}v2/organization/anonymous/admin_update/gAAAAABn-M9Cr4bzgatDFfXO3RyXPsChdTtGvt7B57WfrMxXM_HavJVJ4wHgdtGL4QarqGNJRzRD-dulRoFvpc4r_cBv2xuXey7tcKC9K7G56Io_SYA9Wk_hhgg1eWjgr-8lwylKrOq2PGzdADfMWY8pkZ31WvoYp9Fs-w2vcWraezANe7NGCJk5ZXdP_Wa_UD35X_DA0Nee/",
+							"host": [
+								"{{dev_server}}v2"
+							],
+							"path": [
+								"organization",
+								"anonymous",
+								"admin_update",
+								"gAAAAABn-M9Cr4bzgatDFfXO3RyXPsChdTtGvt7B57WfrMxXM_HavJVJ4wHgdtGL4QarqGNJRzRD-dulRoFvpc4r_cBv2xuXey7tcKC9K7G56Io_SYA9Wk_hhgg1eWjgr-8lwylKrOq2PGzdADfMWY8pkZ31WvoYp9Fs-w2vcWraezANe7NGCJk5ZXdP_Wa_UD35X_DA0Nee",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send mail",
+					"id": "34028877-e7d8d7ee-a4e6-43c7-92f9-56239eef615c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/anonymous/send_mail/35/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"anonymous",
+								"send_mail",
+								"35",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update organization",
+					"id": "34028877-98b132c0-47ea-4997-8f0a-1c67c138e055",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number_of_licenses_users\": 50,\n    \"date_of_agreement\": \"2025-05-02\",\n    \"software_name\": \"Sleeplyfe\",\n    \"work_schedule\": [\n        {\n            \"work_day\": 1,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        }\n    ],\n    \"plan_info\": [\n        // {\n        //     \"subscription_plan\": 1,\n        //     \"implementation_cost\": 2000,\n        //     \"per_month_location_npi_cost\": 10000,\n        //     \"additional_provider_npi_cost\": 10454,\n        //     \"monthly_cost\": 1000,\n        //     \"daily_use_of_vital_care_units\": 90,\n        //     \"awt_self_care\": 20,\n        //     \"awt_self_care_virtual_assistant\": 10,\n        //     \"awt_self_care_premium_live_assistant\": 20,\n        //     \"chst_report\": 30,\n        //     \"chap_report\": 40,\n        //     \"ist_report\": 50,\n        //     \"sleep_remote_monitoring\": 40,\n        //     \"md_reimb_chst\": 10,\n        //     \"md_reimb_chap\": 30,\n        //     \"md_reimb_insomnia\": 50000,\n        //     \"md_reimb_sleep_rpm\": 30000,\n        //     \"conversion_of_awt_to_home_test\": \"0%\",\n        //     \"monthly_chst_test\": 10,\n        //     \"monthly_awt_test\": 20,\n        //     \"post_chst_osa_positivity_rate\": \"0%\",\n        //     \"initial_post_chst_to_pap_conversion\": \"0%\",\n        //     \"initial_post_month_pap_rpm\": 0,\n        //     \"cost_per_month\": \"10.00\",\n        //     \"revenue_per_month\": \"0.00\",\n        //     \"gross_profits\": \"-10.00\",\n        //     \"revenue_per_month_per_md\": \"0.00\",\n        //     \"travel_cost\": 0.00\n        // },\n            // {\n            //     \"subscription_plan\": 2,\n            //     \"implementation_cost\": 4500,\n            //     \"per_month_location_npi_cost\": 1000,\n            //     \"additional_provider_npi_cost\": 599,\n            //     \"monthly_cost\": 1750,\n            //     \"daily_use_of_vital_care_units\": 1,\n            //     \"awt_self_care\": 300,\n            //     \"awt_self_care_virtual_assistant\": 325,\n            //     \"awt_self_care_premium_live_assistant\": 0,\n            //     \"chst_report\": 85,\n            //     \"chap_report\": 85,\n            //     \"ist_report\": 85,\n            //     \"sleep_remote_monitoring\": 60,\n            //     \"md_reimb_chst\": 400,\n            //     \"md_reimb_chap\": 450,\n            //     \"md_reimb_insomnia\": 700,\n            //     \"md_reimb_sleep_rpm\": 157,\n            //     \"conversion_of_awt_to_home_test\": \"50%\",\n            //     \"monthly_chst_test\": 0,\n            //     \"monthly_awt_test\": 30,\n            //     \"post_chst_osa_positivity_rate\": \"90%\",\n            //     \"initial_post_chst_to_pap_conversion\": \"80%\",\n            //     \"initial_post_month_pap_rpm\": 10.8,\n            //     \"cost_per_month\": \"15223.00\",\n            //     \"revenue_per_month\": \"28114.00\",\n            //     \"gross_profits\": \"12891.00\",\n            //     \"revenue_per_month_per_md\": \"1405.70\",\n            //     \"travel_cost\": 0.00\n            // },\n            {\n                \"id\": 3,\n                \"subscription_plan\": 3,\n                \"implementation_cost\": 3500,\n                \"per_month_location_npi_cost\": 250,\n                \"additional_provider_npi_cost\": 259,\n                \"monthly_cost\": 1000,\n                \"daily_use_of_vital_care_units\": 5,\n                \"awt_self_care\": 275,\n                \"awt_self_care_virtual_assistant\": 300,\n                \"awt_self_care_premium_live_assistant\": 0,\n                \"chst_report\": 75,\n                \"chap_report\": 75,\n                \"ist_report\": 75,\n                \"sleep_remote_monitoring\": 55,\n                \"md_reimb_chst\": 400,\n                \"md_reimb_chap\": 450,\n                \"md_reimb_insomnia\": 700,\n                \"md_reimb_sleep_rpm\": 157,\n                \"conversion_of_awt_to_home_test\": \"50%\",\n                \"monthly_chst_test\": 0,\n                \"monthly_awt_test\": 100,\n                \"post_chst_osa_positivity_rate\": \"90%\",\n                \"initial_post_chst_to_pap_conversion\": \"80%\",\n                \"initial_post_month_pap_rpm\": 36,\n                \"cost_per_month\": \"41730.00\",\n                \"revenue_per_month\": \"92080.00\",\n                \"gross_profits\": \"50350.00\",\n                \"revenue_per_month_per_md\": \"4604.00\",\n                \"travel_cost\": 0.00\n            },\n            {\n                \"id\": 4,\n                \"subscription_plan\": 4,\n                \"implementation_cost\": 12000,\n                \"per_month_location_npi_cost\": 1020,\n                \"additional_provider_npi_cost\": 1200,\n                \"monthly_commitment\": 1200,\n                \"travel_cost\": \"10.00\",\n                \"daily_use_of_vital_care_units\": 100,\n                \"awt_self_care\": 2050,\n                \"awt_self_care_virtual_assistant\": 2075,\n                \"awt_self_care_premium_live_assistant\": 0,\n                \"chst_test_and_report\": 2500,\n                \"chap_test_and_report\": 2050,\n                \"ist_test_and_report\": 2500,\n                \"remote_monitoring\": 3050,\n                \"chst_reimbursement\": 500,\n                \"chap_reimbursement\": 5050,\n                \"apnometer_chst_ist_reim\": 12000,\n                \"sleep_rpm_reimbursement\": 1257,\n                \"conversion_of_awt_to_home_test\": \"70%\",\n                \"monthly_chst_test\": 30,\n                \"monthly_awt_test\": 540,\n                \"apnometer_chst_ist_osa_positive\": 120,\n                \"apnometer_chst_ist_conversion\": 180,\n                \"initial_post_chst_to_pap_conversion\": \"180%\",\n                \"initial_post_month_pap_rpm\": 172,\n                \"cost_per_month\": \"168100.00\",\n                \"revenue_per_month\": \"1183460.00\",\n                \"gross_profits\": \"1115360.00\",\n                \"monthly_subscription_fee\": 0\n            }\n    ],\n    \"medicaid\": 20,\n    \"original_medicare\": 20,\n    \"medicare_advantage\": 10,\n    \"commercial_HMO\": 20,\n    \"commercial_PPO_EPO\": 30,\n    \"admin_email_sent\":true,\n    // \"org_name\": \"Sleeplyfe Project 1345434\",\n    \"org_first_name\": \"Project\",\n    \"org_last_name\": \"Sleeplyfe\",\n    // \"org_name\": \"Rv Test31\",\n    \"org_contact_person_designations\": 1,\n    \"org_contact_person_email\": \"sleep12342@yopmail.com\",\n    \"org_contact_person_phone\": \"13244668787\",\n    \"org_address_1\": \"Northeast Washington\",\n    \"org_address_2\": \"Test Data\",\n    \"org_city\": \"Washington\",\n    \"org_state\": \"DC\",\n    \"org_postal_code\": \"20002\",\n    \"org_country\": \"USA\",\n    \"secondary_org_name\": \"Sleeplyfe Project 1345\",\n    \"secondary_org_first_name\": \"Project\",\n    \"secondary_org_last_name\": \"Sleeplyfe\",\n    \"secondary_org_contact_person_designations\": 1,\n    \"secondary_org_contact_person_email\": \"sleepl32132323@yopmail.com\",\n    \"secondary_org_contact_person_phone\": \"13244668787\",\n    \"secondary_org_address_1\": \"Northeast Washington\",\n    \"secondary_org_address_2\": \"Test Data\",\n    \"secondary_org_city\": \"Washington\",\n    \"secondary_org_state\": \"DC\",\n    \"secondary_org_postal_code\": \"20002\",\n    \"secondary_org_country\": \"USA\",\n    \"user_type\": \"New_user\",\n    // \"intended_usage_duration\": \"One_week\",\n    \"patient_volume\": \"Week\",\n    \"patient_volume_count\": 10,\n    \"terms_and_conditions\": false,\n    \"privacy_policy\": false,\n    \"authorized_signatory_name\": \"K. Cody Patel\",\n    \"insurance_cov_total\": 100,\n    \"is_organization_details\" : true,\n    // \"package_type\": \"Starter\",\n    \"speciality\": [\n        4\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/update/155/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"update",
+								"155",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_retrive",
+					"id": "34028877-362cc80d-0fa6-4986-a990-d4382864e7d6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Organization Details",
+					"id": "34028877-b0220166-439b-4b29-8242-f403f4ed67d7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_type\": \"Existing_user\",\n    \"golive_date\": \"2025-05-02\",\n    \"patient_volume\": \"Day\",\n    \"patient_volume_count\": 1200,\n    \"count_converted\": 5000,\n    \"speciality\": [\n        4,\n        5\n    ],\n    \"free_trial_test\": 2000,\n    \"trial_period\": 1200,\n    \"preferred_contact_method\": \"Email\",\n    \"work_schedule\": [\n        {\n            \"work_day\": 1,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        },\n        {\n            \"work_day\": 2,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        }\n    ],\n    \"insurance_cov_total\": 1000,\n    \"is_organization_details_filled\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}v2/organization_details/anonymous/update/gAAAAABoiXTTsWm7e27rkb-s_zk_zk3TlEi0GXfJBHk8wSMA8WI95HBFq6-5oNp-qlTqL5SQiwNE2IzIPiM9M-eSmGwNBeZXiRCDRAgADLmID4elPj6joUR9WHeiCKaTpmVylMJUFuyEM8akmy6R5TFm9KL5gIX26pZ_E1csik8Qvh9c-lpiIvRqVuuX_qUCEyPCmjls2gDT/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization_details",
+								"anonymous",
+								"update",
+								"gAAAAABoiXTTsWm7e27rkb-s_zk_zk3TlEi0GXfJBHk8wSMA8WI95HBFq6-5oNp-qlTqL5SQiwNE2IzIPiM9M-eSmGwNBeZXiRCDRAgADLmID4elPj6joUR9WHeiCKaTpmVylMJUFuyEM8akmy6R5TFm9KL5gIX26pZ_E1csik8Qvh9c-lpiIvRqVuuX_qUCEyPCmjls2gDT",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Group List",
+					"id": "34028877-47a2cc01-641b-4c4b-9e09-e355222a1f54",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/ser/org_group_list/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"ser",
+								"org_group_list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization details retrive",
+					"id": "34028877-824e1ea7-4890-42c9-b745-c60cbc92ad19",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization_details/anonymous/retrieve/gAAAAABoh1fWXOjlAHXUL81pw4m3PeRGSQlHicZedecZ1jDKHcjgObhNXhrWKEbsOzLxlIvJIRQ-IXekWONXAIkBfYPKE_0eREImqAoKT4BbwPrv0lwz_HbGCPHIbvwGGjJmPugpWzIdQRabxfBxlNOBTJT_yidyQb0jxTIEcvSvGbyuXR38dmoVEVNXMEobrcotab2ifqiy/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization_details",
+								"anonymous",
+								"retrieve",
+								"gAAAAABoh1fWXOjlAHXUL81pw4m3PeRGSQlHicZedecZ1jDKHcjgObhNXhrWKEbsOzLxlIvJIRQ-IXekWONXAIkBfYPKE_0eREImqAoKT4BbwPrv0lwz_HbGCPHIbvwGGjJmPugpWzIdQRabxfBxlNOBTJT_yidyQb0jxTIEcvSvGbyuXR38dmoVEVNXMEobrcotab2ifqiy",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anony Doctor List",
+					"id": "34028877-264d4509-0c8a-4c91-9ab0-1fde77849134",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "34028877-bb759090-88de-4816-9817-ca97a1635433",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "34028877-4b45b65f-e169-4934-9fb4-58286ddb9548"
 		}
 	],
 	"event": [
