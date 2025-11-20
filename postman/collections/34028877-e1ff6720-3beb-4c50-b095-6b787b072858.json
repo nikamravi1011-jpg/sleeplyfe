@@ -16223,13 +16223,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dev_server}}payment_order/check_payment/1229/",
+									"raw": "{{local}}v2/payment_order/check_payment/67/",
 									"host": [
-										"{{dev_server}}payment_order"
+										"{{local}}v2"
 									],
 									"path": [
+										"payment_order",
 										"check_payment",
-										"1229",
+										"67",
 										""
 									]
 								}
