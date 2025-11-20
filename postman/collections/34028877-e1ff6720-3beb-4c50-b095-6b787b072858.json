@@ -16190,12 +16190,11 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}v2/payment_order/create/",
+									"raw": "{{local}}payment_order/create/",
 									"host": [
-										"{{local}}v2"
+										"{{local}}payment_order"
 									],
 									"path": [
-										"payment_order",
 										"create",
 										""
 									]
