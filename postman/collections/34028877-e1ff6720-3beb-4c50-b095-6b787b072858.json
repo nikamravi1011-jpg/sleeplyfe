@@ -57,7 +57,7 @@
 							}
 						}
 					],
-					"id": "34028877-9ea0043c-73ca-4a54-b87d-cbd4d8067eff",
+					"id": "34028877-ac473326-6f64-4c11-b48b-3f3d3e9765e3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -137,7 +137,7 @@
 							}
 						}
 					],
-					"id": "34028877-afce8817-71d3-401d-b6d1-2bcbacb9299d",
+					"id": "34028877-615b5748-3fdf-4409-9936-cbc6e5b1b251",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -187,7 +187,7 @@
 				},
 				{
 					"name": "logout",
-					"id": "34028877-90de92f0-8184-458f-93d0-8e7169ab3ee8",
+					"id": "34028877-192e8609-75a2-4d4d-b74f-15ab87d6ccc3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -235,7 +235,7 @@
 				},
 				{
 					"name": "ForgetUsername",
-					"id": "34028877-bf284c75-df5e-4c33-a17f-89f884231b8e",
+					"id": "34028877-d75709ce-b936-4806-83f8-730be113719b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -266,7 +266,7 @@
 				},
 				{
 					"name": "SetNewpasswordRequestEmail",
-					"id": "34028877-3eba70ab-868e-4c42-b52d-0cd33351edc5",
+					"id": "34028877-dba6e125-4cae-446a-939b-337e2794a6b5",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -297,7 +297,7 @@
 				},
 				{
 					"name": "CheckNewpasswordRequestEmail",
-					"id": "34028877-7b849ee0-771f-4a13-a93d-e6d4aa81812b",
+					"id": "34028877-1af97c64-0d7d-41f9-b388-b4478d173801",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -328,7 +328,7 @@
 				},
 				{
 					"name": "SetNewpassword",
-					"id": "34028877-ed173716-540f-4633-9417-520f9362b7df",
+					"id": "34028877-cda233d4-c6b1-47bd-9375-e47c15757aee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -359,7 +359,7 @@
 				},
 				{
 					"name": "Change Password",
-					"id": "34028877-bfd56e63-fbef-4683-a80c-7e1668257d2c",
+					"id": "34028877-21623e61-fec9-4d07-88f5-a3c3a17e9e61",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -401,7 +401,7 @@
 				},
 				{
 					"name": "sales rep DashboardView",
-					"id": "34028877-512d00ec-a9ae-4d34-96d0-11fd77fdc4b1",
+					"id": "34028877-289ff698-b8e5-4f99-8119-be2af5d5f86a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -429,7 +429,7 @@
 				},
 				{
 					"name": "Doctor DashboardView",
-					"id": "34028877-8a20cd8d-b085-4a98-8076-990122618d74",
+					"id": "34028877-52ac514c-b37e-45cb-8c8c-437b9fab2b79",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -457,7 +457,7 @@
 				},
 				{
 					"name": "Admin DashboardView",
-					"id": "34028877-12e8a251-f5e4-4792-8bac-96a374362f23",
+					"id": "34028877-675a04cb-5447-4f76-95c1-805cea201f10",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -485,7 +485,7 @@
 				},
 				{
 					"name": "Audit Log",
-					"id": "34028877-4533bcd7-1571-4b72-8ba5-edd7d4c7f071",
+					"id": "34028877-fa23d54f-eea1-4d4c-81f7-ec8635176ad4",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -516,7 +516,7 @@
 				},
 				{
 					"name": "login user history",
-					"id": "34028877-ed7d0643-06fe-48fc-979a-d37f52068a6d",
+					"id": "34028877-2a7d3b30-3df2-416e-a524-b532fb282cf6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -576,7 +576,7 @@
 				},
 				{
 					"name": "Static Documents",
-					"id": "34028877-b207b03f-718a-45e3-9bfd-ab075a3968ad",
+					"id": "34028877-9dd0e217-aaee-4537-9340-5a3c70e70401",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -606,7 +606,7 @@
 					"response": []
 				}
 			],
-			"id": "34028877-7e006219-c077-4a83-b7a7-6e54b99ef764"
+			"id": "34028877-9890908b-0cb3-459e-8872-267c09fd4b29"
 		},
 		{
 			"name": "New Permission",
@@ -16182,7 +16182,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\":220,\n    \"amount\": 1800.11,\n    \"email\":true\n}",
+									"raw": "{\n    \"patient\":221,\n    \"amount\": 1800.11,\n    \"email\":true,\n    \"subscription\": true\n}",
 									"options": {
 										"raw": {
 											"language": "json"
