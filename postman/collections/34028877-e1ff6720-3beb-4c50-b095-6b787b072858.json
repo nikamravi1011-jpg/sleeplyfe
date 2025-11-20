@@ -16182,7 +16182,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\":66,\n    \"amount\": 900.11,\n    \"email\":true\n}",
+									"raw": "{\n    \"patient\":66,\n    \"amount\": 1000.11,\n    \"email\":true\n}",
 									"options": {
 										"raw": {
 											"language": "json"
