@@ -16182,7 +16182,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\":68,\n    \"amount\": 1500.11,\n    \"email\":true\n}",
+									"raw": "{\n    \"patient\":69,\n    \"amount\": 1500.11,\n    \"email\":true\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -16190,11 +16190,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}payment_order/create/",
+									"raw": "{{local}}v2/payment_order/create/",
 									"host": [
-										"{{local}}payment_order"
+										"{{local}}v2"
 									],
 									"path": [
+										"payment_order",
 										"create",
 										""
 									]
