@@ -3648,7 +3648,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 223,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\",  \n    \"email\": true,\n    \"subscription\": true\n}\n",
+									"raw": "{\n    \"patient\": 218,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\",  \n    \"email\": true,\n    \"subscription\": true\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6829,7 +6829,7 @@
 							"query": [
 								{
 									"key": "",
-									"value": null,
+									"value": "",
 									"disabled": true
 								}
 							]
@@ -7789,7 +7789,10 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				},
@@ -7875,7 +7878,10 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				},
