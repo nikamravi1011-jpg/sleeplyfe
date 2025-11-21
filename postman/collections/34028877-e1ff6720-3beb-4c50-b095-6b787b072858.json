@@ -16249,8 +16249,18 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{local}}payment/webhook/",
+									"host": [
+										"{{local}}payment"
+									],
+									"path": [
+										"webhook",
+										""
+									]
+								}
 							},
 							"response": []
 						}
