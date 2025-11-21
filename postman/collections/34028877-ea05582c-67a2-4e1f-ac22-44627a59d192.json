@@ -3726,12 +3726,11 @@
 								"method": "POST",
 								"header": [],
 								"url": {
-									"raw": "{{local}}payment/subscription/webhook/",
+									"raw": "{{local}}payment/webhook/",
 									"host": [
 										"{{local}}payment"
 									],
 									"path": [
-										"subscription",
 										"webhook",
 										""
 									]
