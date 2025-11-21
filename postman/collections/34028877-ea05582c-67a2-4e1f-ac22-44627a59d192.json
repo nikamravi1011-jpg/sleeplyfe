@@ -3723,7 +3723,7 @@
 										}
 									]
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"url": {
 									"raw": "{{local}}payment/subscription/webhook/",
