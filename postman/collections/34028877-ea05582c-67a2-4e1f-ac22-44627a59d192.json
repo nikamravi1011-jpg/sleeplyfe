@@ -3689,14 +3689,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/payment_order/check_payment/62/",
+									"raw": "{{local}}v2/payment_order/check_payment/218/",
 									"host": [
 										"{{local}}v2"
 									],
 									"path": [
 										"payment_order",
 										"check_payment",
-										"62",
+										"218",
 										""
 									]
 								}
