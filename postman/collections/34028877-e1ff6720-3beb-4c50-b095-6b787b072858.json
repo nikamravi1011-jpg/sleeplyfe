@@ -252,11 +252,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}user/forgotusername/",
+							"raw": "{{local}}v2/user/forgotusername/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"forgotusername",
 								""
 							]
@@ -283,11 +284,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}user/setnewpasswordrequest/",
+							"raw": "{{local}}v2/user/setnewpasswordrequest/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"setnewpasswordrequest",
 								""
 							]
@@ -314,11 +316,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}user/checkpasswordresetlink/",
+							"raw": "{{local}}v2/user/checkpasswordresetlink/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"checkpasswordresetlink",
 								""
 							]
@@ -345,11 +348,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}user/setnewpassword/",
+							"raw": "{{local}}v2/user/setnewpassword/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"setnewpassword",
 								""
 							]
@@ -386,9 +390,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}api/user/change_password/",
+							"raw": "{{local}}v2/user/change_password/",
 							"host": [
-								"{{local}}api"
+								"{{local}}v2"
 							],
 							"path": [
 								"user",
@@ -937,11 +941,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}user/me/",
+							"raw": "{{local}}v2/user/me/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"me",
 								""
 							]
@@ -16182,7 +16187,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\":223,\n    \"amount\": 1800.11,\n    \"email\":true,\n    \"subscription\": true\n}",
+									"raw": "{\n    \"patient\":81,\n    \"amount\": 1800.11,\n    \"email\":true\n    // \"subscription\": true\n}",
 									"options": {
 										"raw": {
 											"language": "json"
