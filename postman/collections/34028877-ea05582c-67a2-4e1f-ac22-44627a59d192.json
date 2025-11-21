@@ -3707,14 +3707,35 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "subscription plan",
 							"id": "34028877-b5b49031-bfc0-41b4-9f08-cd48b8bff85c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{local}}payment/subscription/webhook/",
+									"host": [
+										"{{local}}payment"
+									],
+									"path": [
+										"subscription",
+										"webhook",
+										""
+									]
+								}
 							},
 							"response": []
 						}
