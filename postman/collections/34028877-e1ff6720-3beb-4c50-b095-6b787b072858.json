@@ -16243,7 +16243,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "Webhook",
 							"id": "34028877-396b48de-ac3c-4a07-a8f2-b6408c83cfff",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
