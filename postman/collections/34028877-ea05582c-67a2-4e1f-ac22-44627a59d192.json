@@ -167,7 +167,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "\n{\n    \"user_id\": 269\n}\n",
+							"raw": "\n{\n    \"user_id\": 267\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -224,11 +224,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}user/logout/",
+							"raw": "{{local}}v2/user/logout/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"logout",
 								""
 							]
@@ -3651,7 +3652,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 72,\n    // \"price_id\": \"price_1SV7X5DVon5kPl6qnepMNVUy\",  \n    \"amount\":120,\n    \"email\": true\n    // \"subscription\": true\n}\n",
+									"raw": "{\n    \"patient\": 78,\n    // \"price_id\": \"price_1SV7X5DVon5kPl6qnepMNVUy\",  \n    \"amount\":120,\n    \"email\": true\n    // \"subscription\": true\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"
