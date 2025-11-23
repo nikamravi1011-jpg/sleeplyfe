@@ -778,11 +778,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}user/group_list/",
+							"raw": "{{local}}v2/user/group_list/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"group_list",
 								""
 							],
@@ -817,11 +818,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}user/org_group_list/",
+							"raw": "{{local}}v2/user/org_group_list/",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"org_group_list",
 								""
 							],
@@ -856,11 +858,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}user/permission_list/?group_id=2",
+							"raw": "{{local}}v2/user/permission_list/?group_id=2",
 							"host": [
-								"{{local}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"permission_list",
 								""
 							],
@@ -903,11 +906,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{live_dev}}user/assign_permission/",
+							"raw": "{{local}}v2/user/assign_permission/",
 							"host": [
-								"{{live_dev}}user"
+								"{{local}}v2"
 							],
 							"path": [
+								"user",
 								"assign_permission",
 								""
 							]
