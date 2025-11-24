@@ -6073,11 +6073,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}facility/list/",
+							"raw": "{{local}}v2/facility/list/",
 							"host": [
-								"{{local}}facility"
+								"{{local}}v2"
 							],
 							"path": [
+								"facility",
 								"list",
 								""
 							],
@@ -6104,6 +6105,16 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -6156,7 +6167,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4NTA0NzEzLCJpYXQiOjE3NDg0MTgzMTMsImp0aSI6ImM4MzQzMmFmYWVmYzQ3NjdiZDE5ZGJiNWQ3ODk5ODkxIiwidXNlcl9pZCI6NywiZW1haWwiOiJwb29uYW1AaWJvb250ZWNobm9sb2dpZXMuY29tIiwib3JnYW5pemF0aW9uX21vZHVsZXMiOltdfQ.DyinusnfE_iIplxsWjFWv83Hjd1mBMFTfmBt3HAGcgI",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -6214,11 +6225,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}facility/create/",
+							"raw": "{{local}}v2/facility/create/",
 							"host": [
-								"{{local}}facility"
+								"{{local}}v2"
 							],
 							"path": [
+								"facility",
 								"create",
 								""
 							]
@@ -6299,11 +6311,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}facility/update/135/",
+							"raw": "{{local}}v2/facility/update/135/",
 							"host": [
-								"{{local}}facility"
+								"{{local}}v2"
 							],
 							"path": [
+								"facility",
 								"update",
 								"135",
 								""
@@ -6332,11 +6345,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{local}}facility/delete/23/",
+							"raw": "{{local}}v2/facility/delete/23/",
 							"host": [
-								"{{local}}facility"
+								"{{local}}v2"
 							],
 							"path": [
+								"facility",
 								"delete",
 								"23",
 								""
@@ -6374,11 +6388,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{common}}bulk_facility/create/",
+							"raw": "{{local}}v2/bulk_facility/create/",
 							"host": [
-								"{{common}}bulk_facility"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulk_facility",
 								"create",
 								""
 							]
@@ -6398,7 +6413,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -6406,11 +6421,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{common}}facility/list/?name=bal",
+							"raw": "{{local}}v2/facility/list/?name=bal",
 							"host": [
-								"{{common}}facility"
+								"{{local}}v2"
 							],
 							"path": [
+								"facility",
 								"list",
 								""
 							],
@@ -16191,7 +16207,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 152,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 154,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
