@@ -829,218 +829,6 @@
 					"id": "34028877-4ab9df04-b324-4567-b68c-ae4ef9c8aae0"
 				},
 				{
-					"name": "User defined",
-					"item": [
-						{
-							"name": "User Defined Data",
-							"id": "34028877-78399476-fd92-4813-b651-c3be87be3c04",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}doctor/user_defined/",
-									"host": [
-										"{{local}}doctor"
-									],
-									"path": [
-										"user_defined",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "User Defined Create",
-							"id": "34028877-93081606-e2ac-4ab6-a945-b97b26730f81",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "user_defined_data",
-											"value": "medilive",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{local}}v2/create/user_defined/",
-									"host": [
-										"{{local}}v2"
-									],
-									"path": [
-										"create",
-										"user_defined",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update user defined",
-							"id": "34028877-ad6b7823-aa37-43f1-9510-8b8b8898c08b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "user_defined_data",
-											"value": "ravi",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{local}}update/user_defined/12/",
-									"host": [
-										"{{local}}update"
-									],
-									"path": [
-										"user_defined",
-										"12",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "User Defined Destroy",
-							"id": "34028877-aa87c2d1-8e72-48ce-bd08-1461fb7b0f3d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "DELETE",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "user_defined_data",
-											"value": "",
-											"type": "text",
-											"disabled": true
-										}
-									]
-								},
-								"url": {
-									"raw": "{{local}}delete/user_defined/11/",
-									"host": [
-										"{{local}}delete"
-									],
-									"path": [
-										"user_defined",
-										"11",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "User defined list with page",
-							"id": "34028877-4847eb22-cc28-467c-a0bf-0eaf473f86e0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}user_defined/list/?page_size=4&page=1",
-									"host": [
-										"{{local}}user_defined"
-									],
-									"path": [
-										"list",
-										""
-									],
-									"query": [
-										{
-											"key": "page_size",
-											"value": "4",
-											"type": "text"
-										},
-										{
-											"key": "page",
-											"value": "1",
-											"type": "text"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "34028877-a6da1d5f-28db-42eb-95a0-2e6ca8e0e47e"
-				},
-				{
 					"name": "Facility wise doctor",
 					"item": [
 						{
@@ -1459,7 +1247,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -1476,11 +1264,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}create/physician_practice/",
+							"raw": "{{local}}v2/create/physician_practice/",
 							"host": [
-								"{{local}}create"
+								"{{local}}v2"
 							],
 							"path": [
+								"create",
 								"physician_practice",
 								""
 							]
@@ -15649,7 +15438,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 201,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 202,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
