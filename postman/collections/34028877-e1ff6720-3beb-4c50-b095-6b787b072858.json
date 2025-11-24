@@ -1358,11 +1358,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}facility/facility_doctors_wise/",
+									"raw": "{{local}}v2/facility/facility_doctors_wise/",
 									"host": [
-										"{{local}}facility"
+										"{{local}}v2"
 									],
 									"path": [
+										"facility",
 										"facility_doctors_wise",
 										""
 									]
@@ -1396,11 +1397,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}doctor/interpret/provider/260/?type=private",
+									"raw": "{{local}}v2/doctor/interpret/provider/260/?type=private",
 									"host": [
-										"{{local}}doctor"
+										"{{local}}v2"
 									],
 									"path": [
+										"doctor",
 										"interpret",
 										"provider",
 										"260",
@@ -1436,11 +1438,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}doctor/billing/provider/260/?type=private",
+									"raw": "{{local}}v2/doctor/billing/provider/260/?type=private",
 									"host": [
-										"{{local}}doctor"
+										"{{local}}v2"
 									],
 									"path": [
+										"doctor",
 										"billing",
 										"provider",
 										"260",
@@ -1711,11 +1714,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}doctor/list/?page_size=50",
+							"raw": "{{local}}v2/doctor/list/?page_size=50",
 							"host": [
-								"{{local}}doctor"
+								"{{local}}v2"
 							],
 							"path": [
+								"doctor",
 								"list",
 								""
 							],
@@ -1769,11 +1773,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}doctor/doctor_list/?ordering=user__last_name",
+							"raw": "{{local}}v2/doctor/doctor_list/?ordering=user__last_name",
 							"host": [
-								"{{local}}doctor"
+								"{{local}}v2"
 							],
 							"path": [
+								"doctor",
 								"doctor_list",
 								""
 							],
@@ -1816,11 +1821,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}doctor/256/",
+							"raw": "{{local}}v2/doctor/256/",
 							"host": [
-								"{{local}}doctor"
+								"{{local}}v2"
 							],
 							"path": [
+								"doctor",
 								"256",
 								""
 							]
@@ -1857,11 +1863,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}doctor/create/",
+							"raw": "{{local}}v2/doctor/create/",
 							"host": [
-								"{{local}}doctor"
+								"{{local}}v2"
 							],
 							"path": [
+								"doctor",
 								"create",
 								""
 							]
@@ -1898,11 +1905,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}doctor/update/270/",
+							"raw": "{{local}}v2/doctor/update/270/",
 							"host": [
-								"{{local}}doctor"
+								"{{local}}v2"
 							],
 							"path": [
+								"doctor",
 								"update",
 								"270",
 								""
@@ -1940,11 +1948,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}doctor/delete/5000/",
+							"raw": "{{local}}v2/doctor/delete/5000/",
 							"host": [
-								"{{local}}doctor"
+								"{{local}}v2"
 							],
 							"path": [
+								"doctor",
 								"delete",
 								"5000",
 								""
@@ -6441,8 +6450,8 @@
 					"response": []
 				},
 				{
-					"name": "retrive faciltie",
-					"id": "34028877-2eafbab3-697c-4230-a595-80d8c0bff484",
+					"name": "Facility Retrieve",
+					"id": "34028877-811d1e05-cc68-4e9e-841a-9f9777a00097",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -6460,33 +6469,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}facility/148/",
+							"raw": "{{local}}v2/facility/30/",
 							"host": [
-								"{{local}}facility"
+								"{{local}}v2"
 							],
 							"path": [
-								"148",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "{{common}}facility/ay937PXs/deA0iSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmS6mVK6QCU1WbAXGDOmH+uUzQiSWqXIeBhYAmwFHgEuAtYXjKoNTEBaKcZw",
-					"id": "34028877-811d1e05-cc68-4e9e-841a-9f9777a00097",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{common}}facility/30/",
-							"host": [
-								"{{common}}facility"
-							],
-							"path": [
+								"facility",
 								"30",
 								""
 							]
@@ -6514,11 +6502,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}facility_wise/user/count/",
+							"raw": "{{local}}v2/facility_wise/user/count/",
 							"host": [
-								"{{local}}facility_wise"
+								"{{local}}v2"
 							],
 							"path": [
+								"facility_wise",
 								"user",
 								"count",
 								""
@@ -16207,7 +16196,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 154,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 156,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
