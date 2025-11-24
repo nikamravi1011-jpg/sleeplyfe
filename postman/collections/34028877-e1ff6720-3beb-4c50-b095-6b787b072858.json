@@ -1236,48 +1236,6 @@
 					"response": []
 				},
 				{
-					"name": "Physician Practice",
-					"id": "34028877-513cce62-2be6-45c6-a987-a542aafb8872",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"physician_practice\":\"add\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}v2/create/physician_practice/",
-							"host": [
-								"{{local}}v2"
-							],
-							"path": [
-								"create",
-								"physician_practice",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "doctor title",
 					"id": "34028877-0c89be13-e356-433e-b653-1fe327312c48",
 					"protocolProfileBehavior": {
@@ -15438,7 +15396,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 202,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 203,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
