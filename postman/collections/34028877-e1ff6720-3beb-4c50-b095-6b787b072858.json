@@ -781,9 +781,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{common}}doctor/prefix/",
+									"raw": "{{local}}doctor/prefix/",
 									"host": [
-										"{{common}}doctor"
+										"{{local}}doctor"
 									],
 									"path": [
 										"prefix",
@@ -965,238 +965,6 @@
 					"id": "34028877-c24f4a57-af61-4f20-839b-c3c5a1654566"
 				},
 				{
-					"name": "Doctor Group list",
-					"item": [
-						{
-							"name": "doctor group without page list",
-							"id": "34028877-f20618e4-ccf0-4caa-a03f-17d45e0b55eb",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}doctor/DoctorGroupsList/",
-									"host": [
-										"{{local}}doctor"
-									],
-									"path": [
-										"DoctorGroupsList",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "doctor_group create",
-							"id": "34028877-8a49b48b-b386-4ca1-acce-81b3d1849082",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"doctor_grp\":\"Orange wire\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{local}}doctor/create/DoctorGroupsList/",
-									"host": [
-										"{{local}}doctor"
-									],
-									"path": [
-										"create",
-										"DoctorGroupsList",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "update doctor group",
-							"id": "34028877-3138f133-0f0a-427a-b570-8f8338c9991b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "doctor_grp",
-											"value": "Orange cap",
-											"type": "text",
-											"uuid": "69c50474-0e04-4be5-8313-3b9693c4767e"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{local}}DoctorGroupslist/update/65/",
-									"host": [
-										"{{local}}DoctorGroupslist"
-									],
-									"path": [
-										"update",
-										"65",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Remove doctor group",
-							"id": "34028877-41dd5810-322a-4cab-8c91-a0dac855fe73",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{local}}DoctorGroupslist/delete/99/",
-									"host": [
-										"{{local}}DoctorGroupslist"
-									],
-									"path": [
-										"delete",
-										"99",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Retrive doctor group",
-							"id": "34028877-ef02e735-5687-4101-8bdf-98bc28695e44",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}DoctorGroupslist/retrieve/65/",
-									"host": [
-										"{{local}}DoctorGroupslist"
-									],
-									"path": [
-										"retrieve",
-										"65",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "doctor page list",
-							"id": "34028877-748ca482-2373-4667-83dd-6d1a1be1a68f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{local}}DoctorGroupslist/list/?page_size=3&page=1",
-									"host": [
-										"{{local}}DoctorGroupslist"
-									],
-									"path": [
-										"list",
-										""
-									],
-									"query": [
-										{
-											"key": "page_size",
-											"value": "3"
-										},
-										{
-											"key": "page",
-											"value": "1"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "34028877-8031eb9b-9870-4fcf-91ea-5cdb2c6573dd"
-				},
-				{
 					"name": "Get Doctor List",
 					"id": "34028877-86b03ff6-9f33-422b-9d04-404b26c1f22a",
 					"protocolProfileBehavior": {
@@ -1371,7 +1139,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTg4MzQ1LCJpYXQiOjE3Mjk1MDE5NDUsImp0aSI6ImIzNzkwY2Y5OGQzYjRmZjVhOTJjMTQyYTBiOTI2ZTVhIiwidXNlcl9pZCI6MX0.FEOcCMkhdONfTldYlhAu4utYjNdtZfeGCcqINLCAeSQ",
+											"value": "{{auth}}",
 											"type": "string"
 										}
 									]
@@ -3896,7 +3664,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -3904,9 +3672,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{common}}practise_user/list/",
+							"raw": "{{local}}practise_user/list/",
 							"host": [
-								"{{common}}practise_user"
+								"{{local}}practise_user"
 							],
 							"path": [
 								"list",
@@ -4794,7 +4562,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -4802,9 +4570,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{live_dev}}sales_rep/admin_user/",
+							"raw": "{{local}}sales_rep/admin_user/",
 							"host": [
-								"{{live_dev}}sales_rep"
+								"{{local}}sales_rep"
 							],
 							"path": [
 								"admin_user",
@@ -15397,7 +15165,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 219,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 221,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
