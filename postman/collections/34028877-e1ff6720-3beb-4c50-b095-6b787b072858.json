@@ -1417,9 +1417,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dev_server}}studies/AWT/diagnosis_code",
+									"raw": "{{local}}studies/AWT/diagnosis_code",
 									"host": [
-										"{{dev_server}}studies"
+										"{{local}}studies"
 									],
 									"path": [
 										"AWT",
@@ -1455,9 +1455,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dev_server}}studies/AWT/insurancecarrier/?search=",
+									"raw": "{{local}}studies/AWT/insurancecarrier/?search=",
 									"host": [
-										"{{dev_server}}studies"
+										"{{local}}studies"
 									],
 									"path": [
 										"AWT",
@@ -2349,7 +2349,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMTUyNzE3LCJpYXQiOjE3NTIwNjYzMTcsImp0aSI6IjRiNTI5YzE3YzE3YzRjMWQ5NTliYzUwMWZhZTFkMzEyIiwidXNlcl9pZCI6MTQ1LCJlbWFpbCI6InNvcGhpYTIzNEB5b3BtYWlsLmNvbSIsInVzZXJfcGVybWlzc2lvbnMiOlt7ImlkIjoyNiwicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIEFXVCBTdHVkaWVzIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6NX0seyJpZCI6MjcsInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCBSZWNlaXZlZCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjZ9LHsiaWQiOjI4LCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgUmVmZXJyYWwiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjd9LHsiaWQiOjI5LCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFJlZmVycmFsIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6OH0seyJpZCI6MzAsInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBSZWZlcnJhbCBTZW50IiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6OX0seyJpZCI6MzEsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2lnbmF0dXJlIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MTB9LHsiaWQiOjMyLCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgUmVjb3JkcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjExfSx7ImlkIjozMywicGVybWlzc2lvbl9uYW1lIjoiRGVuaWFscyBMaXN0IiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MTJ9LHsiaWQiOjM0LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgRGVuaWFsIENsYWltcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjEzfSx7ImlkIjozNSwicGVybWlzc2lvbl9uYW1lIjoiQ29tcHJlaGVuc2l2ZSBUZW1wbGF0ZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MTR9LHsiaWQiOjM2LCJwZXJtaXNzaW9uX25hbWUiOiJBV1QgVGVtcGxhdGUiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjE1fSx7ImlkIjozNywicGVybWlzc2lvbl9uYW1lIjoiUHJvdmlkZXJzIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjE3fSx7ImlkIjozOCwicGVybWlzc2lvbl9uYW1lIjoiQWRtaW4vU2FsZXMgUmVwIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjE4fSx7ImlkIjozOSwicGVybWlzc2lvbl9uYW1lIjoiRmFjaWxpdHkgVXNlcnMiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MTl9LHsiaWQiOjQwLCJwZXJtaXNzaW9uX25hbWUiOiJSaWdodCBEb2N1bWVudCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoyNX0seyJpZCI6NDEsInBlcm1pc3Npb25fbmFtZSI6IkFwbm9tZXRlciIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoyNn0seyJpZCI6NDMsInBlcm1pc3Npb25fbmFtZSI6IkZBUSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjI3fSx7ImlkIjo0NCwicGVybWlzc2lvbl9uYW1lIjoiUmFpc2UgYSBUaWNrZXQiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6Mjh9LHsiaWQiOjIzLCJwZXJtaXNzaW9uX25hbWUiOiJTYXZlZCBEcmFmdHMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6dHJ1ZSwicm9sZSI6NSwicGVybWlzc2lvbiI6Mn0seyJpZCI6NDIsInBlcm1pc3Npb25fbmFtZSI6IkZhY2lsaXR5IiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6dHJ1ZSwicm9sZSI6NSwicGVybWlzc2lvbiI6Mjl9LHsiaWQiOjI1LCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFNjb3JpbmciLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjo0fSx7ImlkIjoyNCwicGVybWlzc2lvbl9uYW1lIjoiUGVuZGluZyBBV1QgU3R1ZGllcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjN9LHsiaWQiOjIyNywicGVybWlzc2lvbl9uYW1lIjoiVW5maWxsZWQgRG9jdW1lbnQiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3IjpmYWxzZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MzR9LHsiaWQiOjIyLCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgQVdUIFJlZmVycmFsIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoxfV19.OpaDCAoGAM3MdGHTOsE72w0A3fBFVdSOSuz5zkOgnog",
+											"value": "{{auth}}",
 											"type": "string"
 										}
 									]
@@ -2430,7 +2430,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5NTg4MzQ1LCJpYXQiOjE3Mjk1MDE5NDUsImp0aSI6ImIzNzkwY2Y5OGQzYjRmZjVhOTJjMTQyYTBiOTI2ZTVhIiwidXNlcl9pZCI6MX0.FEOcCMkhdONfTldYlhAu4utYjNdtZfeGCcqINLCAeSQ",
+											"value": "{{auth}}",
 											"type": "string"
 										}
 									]
@@ -5334,11 +5334,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{local}}facility/list_data/",
+							"raw": "{{local}}v2/facility/list_data/",
 							"host": [
-								"{{local}}facility"
+								"{{local}}v2"
 							],
 							"path": [
+								"facility",
 								"list_data",
 								""
 							],
@@ -15396,7 +15397,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 218,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 219,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
