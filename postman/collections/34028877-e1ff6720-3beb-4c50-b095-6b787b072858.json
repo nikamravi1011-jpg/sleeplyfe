@@ -3672,11 +3672,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}practise_user/list/",
+							"raw": "{{local}}v2/practise_user/list/",
 							"host": [
-								"{{local}}practise_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"practise_user",
 								"list",
 								""
 							],
@@ -3721,12 +3722,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{live_dev}}practise_user/26/",
+							"raw": "{{local}}v2/practise_user/15/",
 							"host": [
-								"{{live_dev}}practise_user"
+								"{{local}}v2"
 							],
 							"path": [
-								"26",
+								"practise_user",
+								"15",
 								""
 							]
 						}
@@ -3762,11 +3764,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}practise_user/create/",
+							"raw": "{{local}}v2/practise_user/create/",
 							"host": [
-								"{{local}}practise_user"
+								"{{local}}v2"
 							],
 							"path": [
+								"practise_user",
 								"create",
 								""
 							]
@@ -15165,7 +15168,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 92,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 93,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
