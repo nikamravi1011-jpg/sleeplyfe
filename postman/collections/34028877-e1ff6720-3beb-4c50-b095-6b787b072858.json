@@ -21234,13 +21234,13 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}studies/apnometer_signature/10/",
+							"raw": "{{local}}studies/apnometer_signature/55/",
 							"host": [
 								"{{local}}studies"
 							],
 							"path": [
 								"apnometer_signature",
-								"10",
+								"55",
 								""
 							]
 						}
