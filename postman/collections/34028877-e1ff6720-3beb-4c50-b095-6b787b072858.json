@@ -3847,11 +3847,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}sales_rep/list/?page=1&page_size=50",
+							"raw": "{{local}}v2/sales_rep/list/?page=1&page_size=50",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
+								"sales_rep",
 								"list",
 								""
 							],
@@ -3899,11 +3900,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}sales_rep/list_data/",
+							"raw": "{{local}}v2/sales_rep/list_data/",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
+								"sales_rep",
 								"list_data",
 								""
 							]
@@ -3931,12 +3933,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}sales_rep/192/",
+							"raw": "{{local}}v2/sales_rep/162/",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
-								"192",
+								"sales_rep",
+								"162",
 								""
 							]
 						}
@@ -3972,11 +3975,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}sales_rep/create/",
+							"raw": "{{local}}v2/sales_rep/create/",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
+								"sales_rep",
 								"create",
 								""
 							]
@@ -4089,11 +4093,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}sales_rep/update/161/",
+							"raw": "{{local}}v2/sales_rep/update/161/",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
+								"sales_rep",
 								"update",
 								"161",
 								""
@@ -4131,9 +4136,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}practise_user/delete/5/",
+							"raw": "{{local}}practise_user/delete/5/",
 							"host": [
-								"{{dev_server}}practise_user"
+								"{{local}}practise_user"
 							],
 							"path": [
 								"delete",
@@ -4164,11 +4169,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}sales_rep/assign_doctor_list/56/?search_doctor=1",
+							"raw": "{{local}}v2/sales_rep/assign_doctor_list/56/?search_doctor=1",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
+								"sales_rep",
 								"assign_doctor_list",
 								"56",
 								""
@@ -4203,11 +4209,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}sales_rep/cannected_doctor/56/",
+							"raw": "{{local}}v2/sales_rep/cannected_doctor/56/",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
+								"sales_rep",
 								"cannected_doctor",
 								"56",
 								""
@@ -4243,11 +4250,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}sales_rep/admin_user/",
+							"raw": "{{local}}v2/sales_rep/admin_user/",
 							"host": [
-								"{{local}}sales_rep"
+								"{{local}}v2"
 							],
 							"path": [
+								"sales_rep",
 								"admin_user",
 								""
 							],
@@ -4299,9 +4307,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{live_dev}}Orgnization_data/facility/",
+							"raw": "{{local}}Orgnization_data/facility/",
 							"host": [
-								"{{live_dev}}Orgnization_data"
+								"{{local}}Orgnization_data"
 							],
 							"path": [
 								"facility",
@@ -21152,13 +21160,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}studies/apnometer_report_generate/10/",
+							"raw": "{{dev_server}}studies/apnometer_report_generate/46/",
 							"host": [
-								"{{local}}studies"
+								"{{dev_server}}studies"
 							],
 							"path": [
 								"apnometer_report_generate",
-								"10",
+								"46",
 								""
 							]
 						}
