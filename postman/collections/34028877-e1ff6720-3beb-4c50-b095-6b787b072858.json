@@ -20499,13 +20499,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}studies/apnometer_report_generate/45/",
+							"raw": "{{dev_server}}studies/apnometer_report_generate/35/",
 							"host": [
 								"{{dev_server}}studies"
 							],
 							"path": [
 								"apnometer_report_generate",
-								"45",
+								"35",
 								""
 							]
 						}
