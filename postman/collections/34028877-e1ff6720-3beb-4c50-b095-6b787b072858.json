@@ -19485,13 +19485,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}studies/apnometer_report_generate/35/",
+							"raw": "{{local}}studies/apnometer_report_generate/10/",
 							"host": [
-								"{{dev_server}}studies"
+								"{{local}}studies"
 							],
 							"path": [
 								"apnometer_report_generate",
-								"35",
+								"10",
 								""
 							]
 						}
