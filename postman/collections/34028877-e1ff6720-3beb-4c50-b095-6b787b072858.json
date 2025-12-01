@@ -18445,11 +18445,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}system_salesrep_role/data/",
+									"raw": "{{local}}v2/system_salesrep_role/data/",
 									"host": [
-										"{{local}}system_salesrep_role"
+										"{{local}}v2"
 									],
 									"path": [
+										"system_salesrep_role",
 										"data",
 										""
 									]
@@ -18480,11 +18481,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}system_salesrep/data/",
+							"raw": "{{local}}v2/system_salesrep/data/",
 							"host": [
-								"{{local}}system_salesrep"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_salesrep",
 								"data",
 								""
 							],
@@ -18519,11 +18521,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}system_salesrep/list/",
+							"raw": "{{local}}v2/system_salesrep/list/",
 							"host": [
-								"{{local}}system_salesrep"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_salesrep",
 								"list",
 								""
 							],
@@ -18563,11 +18566,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}system_salesrep/2/",
+							"raw": "{{local}}v2/system_salesrep/2/",
 							"host": [
-								"{{local}}system_salesrep"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_salesrep",
 								"2",
 								""
 							]
@@ -18604,11 +18608,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}system_salesrep/create/",
+							"raw": "{{local}}v2/system_salesrep/create/",
 							"host": [
-								"{{local}}system_salesrep"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_salesrep",
 								"create",
 								""
 							]
@@ -18645,11 +18650,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}system_salesrep/update/2/",
+							"raw": "{{local}}v2/system_salesrep/update/2/",
 							"host": [
-								"{{local}}system_salesrep"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_salesrep",
 								"update",
 								"2",
 								""
@@ -20851,251 +20857,6 @@
 				}
 			],
 			"id": "34028877-211d6100-711a-4fb3-a274-9a9c7f2012f0"
-		},
-		{
-			"name": "Warehouse Manager",
-			"item": [
-				{
-					"name": "Create Warehouse Manager",
-					"id": "34028877-d1598647-eb47-4ba1-a0ae-271e4c833f84",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}"
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"user\": {\n        \"first_name\": \"ware first 1\",\n        \"last_name\": \"ware last 1\",\n        \"middle_name\": \"K\",\n        \"user_title\": \"Mr.\",\n        \"email\": \"test5567@yopmail.com\",\n        \"phone_number\": \"+128649629056\",\n        \"fax_number\": \"98026077776\",\n        \"is_active\": true,\n        \"warehousemanager_role\": \"warehouse manager\",\n        \"organization\": 54\n    },\n    \"warehouse_role\": \"1\"\n    \n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}warehouse/manager/create/",
-							"host": [
-								"{{local}}warehouse"
-							],
-							"path": [
-								"manager",
-								"create",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Warehouse Role list",
-					"id": "34028877-12a3c430-b364-40eb-918d-765673e1d0d5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}v2/warehouse/role/list/",
-							"host": [
-								"{{local}}v2"
-							],
-							"path": [
-								"warehouse",
-								"role",
-								"list",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Warehouse Manager list",
-					"id": "34028877-77648f51-3100-4081-9942-bf785d898351",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}warehouse/manager/list/",
-							"host": [
-								"{{local}}warehouse"
-							],
-							"path": [
-								"manager",
-								"list",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Warehouse Manager update",
-					"id": "34028877-975ce5a1-3641-4c7c-9bec-ddf0ec2df7ba",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"user\": {\n        \"first_name\": \"rv\",\n        \"last_name\": \"nikam\",\n        \"middle_name\": \"K\",\n        \"email\": \"test5567@yopmail.com\",\n        \"phone_number\": \"+128486687056\",\n        \"fax_number\":\"98038557976\",\n        \"is_active\": true,\n        \"warehousemanager_role\": \"warehouse manager\",\n        \"organization\": 55\n    },\n    \"warehouse_role\" :2\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}warehouse/manager/update/2/",
-							"host": [
-								"{{local}}warehouse"
-							],
-							"path": [
-								"manager",
-								"update",
-								"2",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Warehouse Retrive",
-					"id": "34028877-8b3c579a-7f79-42eb-aadb-46fe5960fb2f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}warehouse/manager/2/",
-							"host": [
-								"{{local}}warehouse"
-							],
-							"path": [
-								"manager",
-								"2",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Warehouse Technician list",
-					"id": "34028877-92180ca7-b3db-43e2-a2f0-39e3fa16a4e0",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}warehouse/technician/data/",
-							"host": [
-								"{{local}}warehouse"
-							],
-							"path": [
-								"technician",
-								"data",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Technician List Without page",
-					"id": "34028877-bb0f74f2-348a-4385-83c1-0f0d17ba74e9",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				}
-			],
-			"id": "34028877-c5b9917b-8786-4f1a-8c4d-678554aa29ec"
 		}
 	],
 	"event": [
