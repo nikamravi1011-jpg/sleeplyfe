@@ -18668,203 +18668,6 @@
 			"id": "34028877-050423cd-3191-48c4-a849-633e3bd87b38"
 		},
 		{
-			"name": "Sleep Coach",
-			"item": [
-				{
-					"name": "Sleep Coach without page",
-					"id": "34028877-72325a14-00c5-4ce1-bf23-d0cfcbc25f5f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}sleep_coach/data/",
-							"host": [
-								"{{local}}sleep_coach"
-							],
-							"path": [
-								"data",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Sleep Coach list",
-					"id": "34028877-3ffba113-6706-4846-801c-bb42a57627da",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}sleep_coach/list/",
-							"host": [
-								"{{local}}sleep_coach"
-							],
-							"path": [
-								"list",
-								""
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "page_size",
-									"value": "2",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Sleep Coach retrieve",
-					"id": "34028877-5238f62e-49e7-4dc4-876f-d912028d6bf2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}sleep_coach/655/",
-							"host": [
-								"{{local}}sleep_coach"
-							],
-							"path": [
-								"655",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "System Salesrep create",
-					"id": "34028877-243b59a0-0268-482f-bf7b-0cf1035d371f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\": \"romilcmiew189@yopmail.com\",\n    \"phone_number\": \"+11599788459\",\n    \"first_name\": \"rv\",\n    \"last_name\": \"Mateging\",\n    \"middle_name\": \"K\",\n    \"fax_number\": \"345645909\",\n    \"user_title\": \"Mr.\",\n    \"is_active\":true,\n    \"organization\":125,\n    \"is_admin\" : true\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}sleep_coach/create/",
-							"host": [
-								"{{local}}sleep_coach"
-							],
-							"path": [
-								"create",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Sleep Coach Upadte",
-					"id": "34028877-76656c4c-38cf-4560-b288-a3e9897d2349",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    // \"username\": \"advin2611\",\n    \"email\": \"kuldip@shridaay.com\",\n    \"first_name\": \"Kuldip\",\n    \"last_name\": \"Ribadiyaa\",\n    \"middle_name\": null,\n    \"is_active\": true,\n    \"fax_number\": null,\n    \"phone_number\": \"07203089388\"\n    // \"is_active\":true\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}sleep_coach/update/499/",
-							"host": [
-								"{{local}}sleep_coach"
-							],
-							"path": [
-								"update",
-								"499",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "34028877-a47b56c0-70bc-45c7-b24d-a2c0da1edc51"
-		},
-		{
 			"name": "Apnometer Studies",
 			"item": [
 				{
@@ -19491,13 +19294,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}studies/apnometer_report_generate/57/",
+							"raw": "{{local}}studies/apnometer_report_generate/60/",
 							"host": [
 								"{{local}}studies"
 							],
 							"path": [
 								"apnometer_report_generate",
-								"57",
+								"60",
 								""
 							]
 						}
@@ -19752,7 +19555,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"user\": {\n        \"username\": \"systemjko\",\n        \"first_name\": \"kd\",\n        \"last_name\": \"Patel\",\n        \"middle_name\": \"K\",\n        \"email\": \"rv32545@yopmail.com\",\n        \"phone_number\": \"+17308087056\",\n        \"fax_number\":\"98034557976\",\n        \"is_active\": true\n    },\n    \"support_role\": \"system support teams\"  //technical support teams\n}",
+							"raw": "{\n    \"user\": {\n        \"username\": \"systemjko\",\n        \"first_name\": \"kd\",\n        \"last_name\": \"Patel\",\n        \"middle_name\": \"K\",\n        \"email\": \"rv32545@yopmail.com\",\n        \"phone_number\": \"+17308087056\",\n        \"fax_number\":\"98034557976\",\n        \"is_active\": true\n    },\n    \"support_user_role\": 1,\n    \"support_role\": \"technical support teams\"   //technical support teams\n}",
 							"options": {
 								"raw": {
 									"language": "json"
