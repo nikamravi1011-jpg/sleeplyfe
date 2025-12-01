@@ -19491,13 +19491,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}studies/apnometer_report_generate/10/",
+							"raw": "{{local}}studies/apnometer_report_generate/57/",
 							"host": [
 								"{{local}}studies"
 							],
 							"path": [
 								"apnometer_report_generate",
-								"10",
+								"57",
 								""
 							]
 						}
