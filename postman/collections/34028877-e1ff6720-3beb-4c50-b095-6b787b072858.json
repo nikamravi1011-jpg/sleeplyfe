@@ -19294,13 +19294,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}studies/apnometer_report_generate/60/",
+							"raw": "{{local}}studies/apnometer_report_generate/59/",
 							"host": [
 								"{{local}}studies"
 							],
 							"path": [
 								"apnometer_report_generate",
-								"60",
+								"59",
 								""
 							]
 						}
@@ -19452,11 +19452,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}system_support/list/",
+							"raw": "{{local}}v2/system_support/list/",
 							"host": [
-								"{{local}}system_support"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_support",
 								"list",
 								""
 							]
@@ -19484,11 +19485,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}system_support/data/?support_user_role=2",
+							"raw": "{{local}}v2/system_support/data/?support_user_role=2",
 							"host": [
-								"{{local}}system_support"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_support",
 								"data",
 								""
 							],
@@ -19522,11 +19524,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}system_support/4/",
+							"raw": "{{local}}v2/system_support/4/",
 							"host": [
-								"{{local}}system_support"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_support",
 								"4",
 								""
 							]
@@ -19563,11 +19566,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}system_support/create/",
+							"raw": "{{local}}v2/system_support/create/",
 							"host": [
-								"{{local}}system_support"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_support",
 								"create",
 								""
 							]
@@ -19604,11 +19608,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}system_support/update/4/",
+							"raw": "{{local}}v2/system_support/update/4/",
 							"host": [
-								"{{local}}system_support"
+								"{{local}}v2"
 							],
 							"path": [
+								"system_support",
 								"update",
 								"4",
 								""
