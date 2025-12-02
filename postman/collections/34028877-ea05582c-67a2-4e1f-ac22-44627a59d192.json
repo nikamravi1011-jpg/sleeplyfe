@@ -6,734 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "login & logout",
-			"item": [
-				{
-					"name": "login",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "b860d9bc-4a2d-4a24-bdcd-cf2234d1b7f1",
-								"exec": [
-									"// const jsonData = pm.response.json();",
-									"",
-									"// // Check if the access token is present in the response",
-									"// if (jsonData.data && jsonData.data.access) {",
-									"//     // Set the access token in a global variable",
-									"//     pm.globals.set(\"auth\", jsonData.data.access);",
-									"//     console.log(\"Access token set in global variable: \" + jsonData.data.access);",
-									"// } else {",
-									"//     console.log(\"Access token not found in response.\");",
-									"// }",
-									"// // "
-								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "bf1e7eab-865f-430a-827b-8ae389911cd6",
-								"exec": [
-									"const jsonData = pm.response.json();",
-									"",
-									"// Check if the access token is present in the response",
-									"if (jsonData.data && jsonData.data.access) {",
-									"    // Set the access token in a global variable",
-									"    pm.globals.set(\"auth\", jsonData.data.access);",
-									"    pm.collectionVariables.set(\"auth\",jsonData.data.access)",
-									"    console.log(\"Access token set in global variable: \" + jsonData.data.access);",
-									"} else {",
-									"    console.log(\"Access token not found in response.\");",
-									"}",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
-							}
-						}
-					],
-					"id": "34028877-9ea0043c-73ca-4a54-b87d-cbd4d8067eff",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "// {\n//     \"username\":\"admin\",\n//     \"password\":\"admin\"\n// }\n// {\n//     \"username\":\"admin\",\n//     \"password\":\"dWqZ893RY14ZS18N\"\n// }\n// {\n//     \"username\":\"arose\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {\n//     \"username\": \"kuldip\",\n//     \"password\": \"Rpatel@123\"\n// }\n// {\n//     \"username\":\"kaylamoats\",\n//     \"password\":\"Kayla@123\"\n// }   \n// {\n//     \"username\": \"51\",\n//     \"password\": \"Sales@2024#\"\n// }\n// {\n//     \"username\":\"ruchitaiboon\",\n//     \"password\":\"Rpatel@123\"\n// }\n// {\n//     \"username\":\"rni1kam123\",\n//     \"password\":\"Sales@2024#\"\n// }   \n// {\n//     \"username\":\"joy2373\",\n//     \"password\":\"Demo@123$\"\n// }  \n// {\n//     \"username\":\"jigar1100\",\n//     \"password\":\"Jigar@123\"\n// }   \n{\n    \"username\": \"sleeplyfeadmin\",\n    \"password\": \"Sleeplyfeteam@2025\"\n}\n// {\n//     \"username\": \"sleeplyfeadmin\",\n//     \"password\": \"Vital@1009#\"\n// }\n// {\n//     \"username\": \"providerkuldip1\",\n//     \"password\": \"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleeplyfe123\",\n//     \"password\":\"Sleeplyfe@123\"\n// }  \n// {\n//     \"username\":\"kdrightdoc\",\n//     \"password\":\"Jarvis!1138#\"\n// }  \n// {\n//     \"username\":\"testuser\",\n//     \"password\":\"Test@1138#\"\n// }\n// Admin \n// {\n//     \"username\": \"baxalygag senuruj\",\n//     \"password\": \"Ravi@1234\"\n// }\n// {\n//     \"username\": \"rv234\",\n//     \"password\": \"Welcome@2024\"\n// }\n// {\n//     \"username\":\"harsh\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"bittu@iboon\",\n//     \"password\":\"May@0203\"\n// }\n// {\n//     \"username\":\"amanda\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"kuldip11\",\n//     \"password\":\"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleepprovider2\",\n//     \"password\":\"Welcome@2025\"\n// }\n// {\n//     \"username\":\"nikamrv321\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {   \n//     \"username\":\"noratiqmark11\",\n//     \"password\":\"Welcome@2024\"\n// }\n// local org admin\n// {\n//     \"username\":\"164\",\n//     \"password\":\"Mn9-wM%9wP\"\n// }\n// broker admin\n// {\n//     \"username\" : \"kalpeshgediya1\",\n//     \"password\" : \"bF7$9s,U_C\"\n// }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}user/login/",
-							"host": [
-								"{{local}}user"
-							],
-							"path": [
-								"login",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Proxy login",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "490fa140-fa62-42ae-bc80-466c6f8a27ff",
-								"exec": [
-									"// const responseJson = pm.response.json()",
-									"// console.log(\"Access token:\", responseJson);",
-									"// pm.sendRequest(getTokenRequest, (err, response) => {",
-									"//   const jsonResponse = response.json();",
-									"//   const newAccessToken = jsonResponse.access;",
-									"//   console.log(\"Access token:\", newAccessToken);",
-									"// //   pm.variables.set('Access_Token', newAccessToken);",
-									"// });",
-									"// var jsonData = JSON.parse(responseBody);responseBody.",
-									"// console.log(\"Access token:\", jsonData);",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "b8439ec4-c735-4fff-b2b0-c02a2429353a",
-								"exec": [
-									"// Parse the JSON response",
-									"// var jsonResponse = pm.response.json();",
-									"// pm.globals.set(\"local_admin\", jsonResponse.data.access);",
-									""
-								],
-								"type": "text/javascript",
-								"packages": {},
-								"requests": {}
-							}
-						}
-					],
-					"id": "34028877-afce8817-71d3-401d-b6d1-2bcbacb9299d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "\n{\n    \"user_id\": 267\n}\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}v2/proxy_user/login/",
-							"host": [
-								"{{local}}v2"
-							],
-							"path": [
-								"proxy_user",
-								"login",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "logout",
-					"id": "34028877-90de92f0-8184-458f-93d0-8e7169ab3ee8",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n        \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NjU0OTU0NiwiaWF0IjoxNzU2NDYzMTQ2LCJqdGkiOiI2NWYyYjNiZDk0MTA0Yzk5YmZkZjY4ZjViZjA0OGRlOSIsInVzZXJfaWQiOjEsImVtYWlsIjoic2xlZXBseWZlQHlvcG1haWwuY29tIiwidXNlcl9wZXJtaXNzaW9ucyI6W119.6eC7gPX7AVsi_Igv-uXlxUq_-ViCqDc4HGdoA-etDr8\"\n    }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}v2/user/logout/",
-							"host": [
-								"{{local}}v2"
-							],
-							"path": [
-								"user",
-								"logout",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "ForgetUsername",
-					"id": "34028877-bf284c75-df5e-4c33-a17f-89f884231b8e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\":\"kuldip@shridaay.com\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}user/forgotusername/",
-							"host": [
-								"{{local}}user"
-							],
-							"path": [
-								"forgotusername",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SetNewpasswordRequestEmail",
-					"id": "34028877-3eba70ab-868e-4c42-b52d-0cd33351edc5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\":\"sleeplyfe@yopmail.com\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}user/setnewpasswordrequest/",
-							"host": [
-								"{{local}}user"
-							],
-							"path": [
-								"setnewpasswordrequest",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "CheckNewpasswordRequestEmail",
-					"id": "34028877-7b849ee0-771f-4a13-a93d-e6d4aa81812b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"token\":\"4791b72a9b0602dfb8b718cd108870bbd3681f0d4fba2495ef367c772be4d9f5\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}user/checkpasswordresetlink/",
-							"host": [
-								"{{local}}user"
-							],
-							"path": [
-								"checkpasswordresetlink",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SetNewpassword",
-					"id": "34028877-ed173716-540f-4633-9417-520f9362b7df",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"password\":\"Ravi@1234\",\n    \"token\":\"196b6f70d17f293df7a15620860a0d896af012d112a438bd1d7186830f5ad83e\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}user/setnewpassword/",
-							"host": [
-								"{{local}}user"
-							],
-							"path": [
-								"setnewpassword",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Change Password",
-					"id": "34028877-bfd56e63-fbef-4683-a80c-7e1668257d2c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{local_ravi}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"old_password\": \"Rpatel@123\",\n    \"new_password\": \"Kuldip@123\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}api/user/change_password/",
-							"host": [
-								"{{local}}api"
-							],
-							"path": [
-								"user",
-								"change_password",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "sales rep DashboardView",
-					"id": "34028877-512d00ec-a9ae-4d34-96d0-11fd77fdc4b1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}sales_dashboard",
-							"host": [
-								"{{local}}sales_dashboard"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Doctor DashboardView",
-					"id": "34028877-8a20cd8d-b085-4a98-8076-990122618d74",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}doctor_dashboard",
-							"host": [
-								"{{local}}doctor_dashboard"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Admin DashboardView",
-					"id": "34028877-12e8a251-f5e4-4792-8bac-96a374362f23",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}admin_dashboard",
-							"host": [
-								"{{local}}admin_dashboard"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Audit Log",
-					"id": "34028877-4533bcd7-1571-4b72-8ba5-edd7d4c7f071",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}audit_log/",
-							"host": [
-								"{{local}}audit_log"
-							],
-							"path": [
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "login user history",
-					"id": "34028877-ed7d0643-06fe-48fc-979a-d37f52068a6d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}user/login/history/",
-							"host": [
-								"{{local}}user"
-							],
-							"path": [
-								"login",
-								"history",
-								""
-							],
-							"query": [
-								{
-									"key": "search",
-									"value": "122.179.137.133",
-									"disabled": true
-								},
-								{
-									"key": "user",
-									"value": "5",
-									"disabled": true
-								},
-								{
-									"key": "page",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "page_size",
-									"value": "2",
-									"disabled": true
-								},
-								{
-									"key": "ordering",
-									"value": "-login_time",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Static Documents",
-					"id": "34028877-b207b03f-718a-45e3-9bfd-ab075a3968ad",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}list_documents/",
-							"host": [
-								"{{local}}list_documents"
-							],
-							"path": [
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "34028877-7e006219-c077-4a83-b7a7-6e54b99ef764"
-		},
-		{
-			"name": "Studies",
-			"item": [
-				{
-					"name": "New Folder",
-					"item": [],
-					"id": "34028877-e0ea6cc8-c33a-4932-b38d-43d7be7b2b83"
-				},
-				{
-					"name": "Apnometer Studies",
-					"item": [
-						{
-							"name": "apnometer studies list",
-							"id": "34028877-1bd13912-b19e-4640-9bbe-8acb992c5d27",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": ""
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "apnometer studies retrive",
-							"id": "34028877-0dfee7cf-1001-4cd3-8d92-86e7de563294",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": ""
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "apnometer studies create",
-							"id": "34028877-0c10362d-a64c-4619-99dc-9ae91d16baad",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"url": {
-									"raw": "{{local}}v2/studies/apnometer_studies/create/",
-									"host": [
-										"{{local}}v2"
-									],
-									"path": [
-										"studies",
-										"apnometer_studies",
-										"create",
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "34028877-df6ef48f-37cf-429f-8e8f-6d9f64a03b6c"
-				},
-				{
-					"name": "New AWT list",
-					"id": "34028877-7e517962-ae48-4b61-b37c-b33664660fce",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}v2/studies/AWT/list/?status=0",
-							"host": [
-								"{{local}}v2"
-							],
-							"path": [
-								"studies",
-								"AWT",
-								"list",
-								""
-							],
-							"query": [
-								{
-									"key": "status",
-									"value": "0"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "34028877-61a9fc81-1b37-4964-834c-d6894c9bfac9"
-		},
-		{
 			"name": "Patient",
 			"item": [
 				{
@@ -759,7 +31,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/patient/list/",
+									"raw": "{{local}}v2/patient/list/?status=undefined",
 									"host": [
 										"{{local}}v2"
 									],
@@ -767,6 +39,13 @@
 										"patient",
 										"list",
 										""
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "undefined",
+											"type": "text"
+										}
 									]
 								}
 							},
@@ -3746,7 +3025,129 @@
 		},
 		{
 			"name": "New Folder",
-			"item": [],
+			"item": [
+				{
+					"name": "Studies",
+					"item": [
+						{
+							"name": "New Folder",
+							"item": [],
+							"id": "34028877-e0ea6cc8-c33a-4932-b38d-43d7be7b2b83"
+						},
+						{
+							"name": "Apnometer Studies",
+							"item": [
+								{
+									"name": "apnometer studies list",
+									"id": "34028877-1bd13912-b19e-4640-9bbe-8acb992c5d27",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "apnometer studies retrive",
+									"id": "34028877-0dfee7cf-1001-4cd3-8d92-86e7de563294",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": ""
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "apnometer studies create",
+									"id": "34028877-0c10362d-a64c-4619-99dc-9ae91d16baad",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/studies/apnometer_studies/create/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"studies",
+												"apnometer_studies",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-df6ef48f-37cf-429f-8e8f-6d9f64a03b6c"
+						},
+						{
+							"name": "New AWT list",
+							"id": "34028877-7e517962-ae48-4b61-b37c-b33664660fce",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/studies/AWT/list/?status=0",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"studies",
+										"AWT",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-61a9fc81-1b37-4964-834c-d6894c9bfac9"
+				}
+			],
 			"id": "34028877-9961ea66-bd97-4293-bf27-1c06ed46b52a"
 		},
 		{
@@ -9765,6 +9166,5340 @@
 				}
 			],
 			"id": "34028877-9ca682c1-e3ad-418c-be95-538e983e3b75"
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "login & logout",
+					"item": [
+						{
+							"name": "login",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "b860d9bc-4a2d-4a24-bdcd-cf2234d1b7f1",
+										"exec": [
+											"// const jsonData = pm.response.json();",
+											"",
+											"// // Check if the access token is present in the response",
+											"// if (jsonData.data && jsonData.data.access) {",
+											"//     // Set the access token in a global variable",
+											"//     pm.globals.set(\"auth\", jsonData.data.access);",
+											"//     console.log(\"Access token set in global variable: \" + jsonData.data.access);",
+											"// } else {",
+											"//     console.log(\"Access token not found in response.\");",
+											"// }",
+											"// // "
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "bf1e7eab-865f-430a-827b-8ae389911cd6",
+										"exec": [
+											"const jsonData = pm.response.json();",
+											"",
+											"// Check if the access token is present in the response",
+											"if (jsonData.data && jsonData.data.access) {",
+											"    // Set the access token in a global variable",
+											"    pm.globals.set(\"auth\", jsonData.data.access);",
+											"    pm.collectionVariables.set(\"auth\",jsonData.data.access)",
+											"    console.log(\"Access token set in global variable: \" + jsonData.data.access);",
+											"} else {",
+											"    console.log(\"Access token not found in response.\");",
+											"}",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "34028877-9ea0043c-73ca-4a54-b87d-cbd4d8067eff",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "// {\n//     \"username\":\"admin\",\n//     \"password\":\"admin\"\n// }\n// {\n//     \"username\":\"admin\",\n//     \"password\":\"dWqZ893RY14ZS18N\"\n// }\n// {\n//     \"username\":\"arose\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {\n//     \"username\": \"kuldip\",\n//     \"password\": \"Rpatel@123\"\n// }\n// {\n//     \"username\":\"kaylamoats\",\n//     \"password\":\"Kayla@123\"\n// }   \n// {\n//     \"username\": \"51\",\n//     \"password\": \"Sales@2024#\"\n// }\n// {\n//     \"username\":\"ruchitaiboon\",\n//     \"password\":\"Rpatel@123\"\n// }\n// {\n//     \"username\":\"rni1kam123\",\n//     \"password\":\"Sales@2024#\"\n// }   \n// {\n//     \"username\":\"joy2373\",\n//     \"password\":\"Demo@123$\"\n// }  \n// {\n//     \"username\":\"jigar1100\",\n//     \"password\":\"Jigar@123\"\n// }   \n{\n    \"username\": \"sleeplyfeadmin\",\n    \"password\": \"Sleeplyfeteam@2025\"\n}\n// {\n//     \"username\": \"sleeplyfeadmin\",\n//     \"password\": \"Vital@1009#\"\n// }\n// {\n//     \"username\": \"providerkuldip1\",\n//     \"password\": \"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleeplyfe123\",\n//     \"password\":\"Sleeplyfe@123\"\n// }  \n// {\n//     \"username\":\"kdrightdoc\",\n//     \"password\":\"Jarvis!1138#\"\n// }  \n// {\n//     \"username\":\"testuser\",\n//     \"password\":\"Test@1138#\"\n// }\n// Admin \n// {\n//     \"username\": \"baxalygag senuruj\",\n//     \"password\": \"Ravi@1234\"\n// }\n// {\n//     \"username\": \"rv234\",\n//     \"password\": \"Welcome@2024\"\n// }\n// {\n//     \"username\":\"harsh\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"bittu@iboon\",\n//     \"password\":\"May@0203\"\n// }\n// {\n//     \"username\":\"amanda\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"kuldip11\",\n//     \"password\":\"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleepprovider2\",\n//     \"password\":\"Welcome@2025\"\n// }\n// {\n//     \"username\":\"nikamrv321\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {   \n//     \"username\":\"noratiqmark11\",\n//     \"password\":\"Welcome@2024\"\n// }\n// local org admin\n// {\n//     \"username\":\"164\",\n//     \"password\":\"Mn9-wM%9wP\"\n// }\n// broker admin\n// {\n//     \"username\" : \"kalpeshgediya1\",\n//     \"password\" : \"bF7$9s,U_C\"\n// }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/user/login/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Proxy login",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "490fa140-fa62-42ae-bc80-466c6f8a27ff",
+										"exec": [
+											"// const responseJson = pm.response.json()",
+											"// console.log(\"Access token:\", responseJson);",
+											"// pm.sendRequest(getTokenRequest, (err, response) => {",
+											"//   const jsonResponse = response.json();",
+											"//   const newAccessToken = jsonResponse.access;",
+											"//   console.log(\"Access token:\", newAccessToken);",
+											"// //   pm.variables.set('Access_Token', newAccessToken);",
+											"// });",
+											"// var jsonData = JSON.parse(responseBody);responseBody.",
+											"// console.log(\"Access token:\", jsonData);",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "b8439ec4-c735-4fff-b2b0-c02a2429353a",
+										"exec": [
+											"// Parse the JSON response",
+											"// var jsonResponse = pm.response.json();",
+											"// pm.globals.set(\"local_admin\", jsonResponse.data.access);",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "34028877-afce8817-71d3-401d-b6d1-2bcbacb9299d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "\n{\n    \"user_id\": 267\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/proxy_user/login/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"proxy_user",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"id": "34028877-90de92f0-8184-458f-93d0-8e7169ab3ee8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2Mzc5OTc3MiwiaWF0IjoxNzYzNzEzMzcyLCJqdGkiOiJjMWRhYjNkYWM4ZDg0MzY3OGIwMzkyZmUzOTJkYjIxMSIsInVzZXJfaWQiOjEsImVtYWlsIjoic2VsZnVwZGF0ZUBnbWFpbC5jb20iLCJ1c2VyX3Blcm1pc3Npb25zIjpbXX0.MlcKI35mSyvDT97Zzru3HjlTjBYGQgE0RZJE3OAp0mg\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/user/logout/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"logout",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ForgetUsername",
+							"id": "34028877-bf284c75-df5e-4c33-a17f-89f884231b8e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"kuldip@shridaay.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}user/forgotusername/",
+									"host": [
+										"{{local}}user"
+									],
+									"path": [
+										"forgotusername",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SetNewpasswordRequestEmail",
+							"id": "34028877-3eba70ab-868e-4c42-b52d-0cd33351edc5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"sleeplyfe@yopmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}user/setnewpasswordrequest/",
+									"host": [
+										"{{local}}user"
+									],
+									"path": [
+										"setnewpasswordrequest",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CheckNewpasswordRequestEmail",
+							"id": "34028877-7b849ee0-771f-4a13-a93d-e6d4aa81812b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\":\"4791b72a9b0602dfb8b718cd108870bbd3681f0d4fba2495ef367c772be4d9f5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}user/checkpasswordresetlink/",
+									"host": [
+										"{{local}}user"
+									],
+									"path": [
+										"checkpasswordresetlink",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SetNewpassword",
+							"id": "34028877-ed173716-540f-4633-9417-520f9362b7df",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\":\"Ravi@1234\",\n    \"token\":\"196b6f70d17f293df7a15620860a0d896af012d112a438bd1d7186830f5ad83e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}user/setnewpassword/",
+									"host": [
+										"{{local}}user"
+									],
+									"path": [
+										"setnewpassword",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Password",
+							"id": "34028877-bfd56e63-fbef-4683-a80c-7e1668257d2c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{local_ravi}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"old_password\": \"Rpatel@123\",\n    \"new_password\": \"Kuldip@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}api/user/change_password/",
+									"host": [
+										"{{local}}api"
+									],
+									"path": [
+										"user",
+										"change_password",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sales rep DashboardView",
+							"id": "34028877-512d00ec-a9ae-4d34-96d0-11fd77fdc4b1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}sales_dashboard",
+									"host": [
+										"{{local}}sales_dashboard"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Doctor DashboardView",
+							"id": "34028877-8a20cd8d-b085-4a98-8076-990122618d74",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}doctor_dashboard",
+									"host": [
+										"{{local}}doctor_dashboard"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin DashboardView",
+							"id": "34028877-12e8a251-f5e4-4792-8bac-96a374362f23",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}admin_dashboard",
+									"host": [
+										"{{local}}admin_dashboard"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Audit Log",
+							"id": "34028877-4533bcd7-1571-4b72-8ba5-edd7d4c7f071",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}audit_log/",
+									"host": [
+										"{{local}}audit_log"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login user history",
+							"id": "34028877-ed7d0643-06fe-48fc-979a-d37f52068a6d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/user/login/history/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"login",
+										"history",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "122.179.137.133",
+											"disabled": true
+										},
+										{
+											"key": "user",
+											"value": "5",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "ordering",
+											"value": "-login_time",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Static Documents",
+							"id": "34028877-b207b03f-718a-45e3-9bfd-ab075a3968ad",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}list_documents/",
+									"host": [
+										"{{local}}list_documents"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-7e006219-c077-4a83-b7a7-6e54b99ef764"
+				},
+				{
+					"name": "login user",
+					"item": [
+						{
+							"name": "getUserInfo",
+							"id": "34028877-27360765-6ed4-40dd-bbff-aea5f0f3699a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/user/me/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"me",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateUserInfo",
+							"id": "34028877-3a301076-4722-4020-95a3-3467fcb9b1f5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"selfupdate@gmail.com\",\n    \"first_name\":\"TestDev\",\n    \"middle_name\":\"Jc\",\n    \"last_name\":\"LCDJKL\",\n    \"phone_number\": \"635568888\",\n    \"fax_number\":\"00000888999\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}user/me/update/",
+									"host": [
+										"{{local}}user"
+									],
+									"path": [
+										"me",
+										"update",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-d13f055e-cd24-4dc4-9bf0-650bc52e0058"
+				},
+				{
+					"name": "user permission",
+					"item": [
+						{
+							"name": "GroupList",
+							"id": "34028877-54d5f5f8-1c49-41c7-b843-fbfe7e6f686e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/user/group_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"group_list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "admin",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Org Group List",
+							"id": "34028877-865536e7-4d79-4ded-981d-3c3776994aec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/user/org_group_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"org_group_list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "admin",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PermissionList",
+							"id": "34028877-38d2cf35-ddd7-42d4-b113-f32905e53efb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/user/permission_list/?group_id=2",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"permission_list",
+										""
+									],
+									"query": [
+										{
+											"key": "group_id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "assignPermission",
+							"id": "34028877-4796cd9a-0740-41de-bcb9-6a92a78eac39",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"group_id\":2,\n    \"permission_id\":[54,55,41,42,43,57,58,59]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/user/assign_permission/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"assign_permission",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-d9ee6fa0-e721-4b52-add6-2301d31e9191"
+				},
+				{
+					"name": "Doctor",
+					"item": [
+						{
+							"name": "Add New Doctor",
+							"id": "34028877-12efda52-0604-4b71-8bc3-6cc16b3c3f91",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"email\": \"ravinik12@yopmail.com\",\n        \"phone_number\": \"+19912153641\",\n        \"first_name\": \"Ravi1\",\n        \"last_name\": \"Provide5r\",\n        \"middle_name\": \"A.\",\n        \"employee_id\": \"M1539\",\n        \"fax_number\": \"+12776126871\",\n        \"can_see_medical_group_data\": true,\n        \"is_active\": true\n    },\n    \"title\": \"Mr\",\n    \"doc_group\": [4,5],\n    \"doctor_preferred_methods\": 1,\n    \"personal_Email\": \"rv24432@gmail.com\",\n    \"mobile_number\": \"1440939189\",\n    \"address_1\": \"123 Main Street\",\n    \"address_2\": \"Apt 101\",\n    \"city\": \"Phoenix\",\n    \"state\": \"California\",\n    \"postal_code\": \"43563\",\n    \"country\": \"US\",\n    \"Expiration\": \"1996-10-12\",\n    \"lead_status\": 1,\n    \"sales_funnel_status\":18,\n    \"sales_rep_user\":22,\n    \"market_representative_id\": 223456789,\n    \"phone_number_1\": \"+19679067543\",\n    \"fax_number\": \"+12344586891\",\n    \"note\": \"Elbow, Knee, Shoulder, Sports Medicine\",\n    \"npi_number\": \"2559827911\",\n    \"doctor_type\": \"1\",\n    \"can_sign_studies\": true,\n    \"is_sleep_board_certified\": true,\n    \"is_interested_interpreting\": false,\n    \"is_interested_billing\": true,\n    \"private_interpret_provider\": [\n        102,\n        103\n    ],\n    \"is_self_private_interpret_provider\": true,\n    \"is_provider_assign_to_another_entity\": true,\n    \"private_billing_provider\": [\n        102,\n        103\n    ],\n    \"is_self_billing_provider\": true,\n    \"gov_is_sleep_board_certified\": true,\n    \"gov_is_interested_interpreting\": true,\n    \"gov_is_interested_billing\": true,\n    \"gov_interpret_provider\": [\n        102,\n        103\n    ],\n    \"gov_is_self_interpret_provider\": true,\n    \"gov_provider_is_assign_to_another_entity\": true,\n    \"gov_provider_billing_provider\": [\n        102,\n        103\n    ],\n    \"gov_is_self_billing_provider\": true,\n    \"can_see_facility_da6ta\": true,\n    \"bt_doc_key\": 6111,\n    \"facilitie\": [\n        1\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/doctor/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Doctor Info",
+							"id": "34028877-0989d8aa-b5c4-4b89-b912-2924ebdd6c3b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        //\"username\": \"morris11\",\n        // \"email\":\"morris11@gmail.com\",\n        // \"phone_number\":\"+12356995511\",\n        // \"first_name\": \"morris\",\n        // \"last_name\": \"Doek\",\n        // \"middle_name\":\"modin\",\n        // \"is_active\":true,\n        // \"employee_id\": \"EP1122\",\n        // \"can_see_medical_group_data\": false\n    },\n    // \"address_1\": \"123 Main St\",\n    // \"address_2\": \"aaa\",\n    // \"city\": \"Cityville\",\n    // \"state\": \"NY\",\n    // \"postal_code\": \"12345\",\n    // \"country\": \"US\",\n    \"doc_group\": [2,3],\n        // \"Expiration\":\"1996-10-14\",\n\n    // \"market_representative_id\": 123,\n    // \"phone_number_1\": \"123-456-7890\",\n    // \"fax_number\": \"123-456-7891\",\n    // \"note\": \"Some notes about the doctor\",\n    // \"npi_number\": \"232667898\"\n    // \"doctor_type\": \"referring\",\n    // \"can_sign_studies\": true,\n    // \"is_sleep_board_certified\": true,\n    // \"is_interested_interpreting\": true,\n    // \"is_interested_billing\": true,\n    // \"is_interpret_md_available\": true,\n    // \"billing_entity_name\": \"Billing Corp\",\n    // \"can_see_facility_data\": true\n    // \"bt_doc_key\": 456,\n    \"facilitie\": [1],\n    \"is_sleep_board_certified\": true,\n    \"is_interested_interpreting\": false,\n    \"is_interested_billing\": true,\n    \"private_interpret_provider\": [102,103],\n    \"is_self_private_interpret_provider\": true,\n    \"is_provider_assign_to_another_entity\": false,\n    // \"private_billing_provider\": [102,103],\n    \"is_self_billing_provider\":true,\n\n    \"gov_is_sleep_board_certified\": true,\n    \"gov_is_interested_interpreting\": true,\n    \"gov_is_interested_billing\": true,\n    \"gov_interpret_provider\": [102,103],\n    \"gov_is_self_interpret_provider\": true,\n    \"gov_provider_is_assign_to_another_entity\": true,\n    \"gov_provider_billing_provider\": [102,103],\n    \"gov_is_self_billing_provider\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/doctor/update/270/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"update",
+										"270",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete Doctor",
+							"id": "34028877-b5ca7cc6-2a9d-4ff2-b115-8aae49f37faf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/doctor/delete/279/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"delete",
+										"279",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Contact Pre Method",
+							"id": "34028877-f6553d9a-d744-4680-bb5f-8bb7cc953aa0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}doctor/DoctorPreferredMethodList/",
+									"host": [
+										"{{local}}doctor"
+									],
+									"path": [
+										"DoctorPreferredMethodList",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Doctors List",
+							"id": "34028877-6cc3bd79-b2e7-4318-b554-7f8ed839ff34",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/doctor/list/?page_size=50",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "50"
+										},
+										{
+											"key": "search",
+											"value": "morris11",
+											"disabled": true
+										},
+										{
+											"key": "doctor_type",
+											"value": "referring",
+											"disabled": true
+										},
+										{
+											"key": "ordering",
+											"value": "-user__created_at",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Doctor By Id",
+							"id": "34028877-6a62803e-b760-46bb-b7f4-0e84740b4e21",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/doctor/256/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"256",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "doctor title",
+							"id": "34028877-0c89be13-e356-433e-b653-1fe327312c48",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}doctor/title/?user=true",
+									"host": [
+										"{{local}}doctor"
+									],
+									"path": [
+										"title",
+										""
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "doctor suffix",
+							"id": "34028877-2060bb7b-2456-4c91-a8e6-75d54b672eab",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}doctor/suffix/",
+									"host": [
+										"{{local}}doctor"
+									],
+									"path": [
+										"suffix",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user grouplist",
+							"id": "34028877-12854451-9cd0-44f2-981c-58d6a3ae23e2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/user/group_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user",
+										"group_list",
+										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "3",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-24ca43ee-2403-4a80-93b3-d823661e6f41"
+				},
+				{
+					"name": "Doctor type",
+					"item": [
+						{
+							"name": "Doctor type list",
+							"id": "34028877-77e476b7-94e9-4e43-8ce3-c12c3eb39e7a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/doctor/type/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"type",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-a67a5240-815b-48e0-868d-f57b2e45a0d6"
+				},
+				{
+					"name": "User defined",
+					"item": [
+						{
+							"name": "User Defined Data",
+							"id": "34028877-78399476-fd92-4813-b651-c3be87be3c04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/doctor/user_defined/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"user_defined",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Defined Create",
+							"id": "34028877-93081606-e2ac-4ab6-a945-b97b26730f81",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_defined_data",
+											"value": "medilive",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/create/user_defined/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"create",
+										"user_defined",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update user defined",
+							"id": "34028877-ad6b7823-aa37-43f1-9510-8b8b8898c08b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_defined_data",
+											"value": "ravi",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/update/user_defined/12/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"update",
+										"user_defined",
+										"12",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User Defined Destroy",
+							"id": "34028877-aa87c2d1-8e72-48ce-bd08-1461fb7b0f3d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_defined_data",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}delete/user_defined/11/",
+									"host": [
+										"{{local}}delete"
+									],
+									"path": [
+										"user_defined",
+										"11",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User defined list with page",
+							"id": "34028877-4847eb22-cc28-467c-a0bf-0eaf473f86e0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/user_defined/list/?page_size=4&page=1",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"user_defined",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "4"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-a6da1d5f-28db-42eb-95a0-2e6ca8e0e47e"
+				},
+				{
+					"name": "Doctor Group list",
+					"item": [
+						{
+							"name": "doctor group without page list",
+							"id": "34028877-f20618e4-ccf0-4caa-a03f-17d45e0b55eb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/doctor/DoctorGroupsList/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"DoctorGroupsList",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "doctor_group create",
+							"id": "34028877-8a49b48b-b386-4ca1-acce-81b3d1849082",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"doctor_grp\":\"Orange wire\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/doctor/create/DoctorGroupsList/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"doctor",
+										"create",
+										"DoctorGroupsList",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update doctor group",
+							"id": "34028877-3138f133-0f0a-427a-b570-8f8338c9991b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "doctor_grp",
+											"value": "Orange cap",
+											"type": "text",
+											"uuid": "69c50474-0e04-4be5-8313-3b9693c4767e"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/DoctorGroupslist/update/65/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"DoctorGroupslist",
+										"update",
+										"65",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove doctor group",
+							"id": "34028877-41dd5810-322a-4cab-8c91-a0dac855fe73",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/DoctorGroupslist/delete/99/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"DoctorGroupslist",
+										"delete",
+										"99",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retrive doctor group",
+							"id": "34028877-ef02e735-5687-4101-8bdf-98bc28695e44",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/DoctorGroupslist/retrieve/65/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"DoctorGroupslist",
+										"retrieve",
+										"65",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "doctor page list",
+							"id": "34028877-748ca482-2373-4667-83dd-6d1a1be1a68f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/DoctorGroupslist/list/?page_size=3&page=1",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"DoctorGroupslist",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "3"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-8031eb9b-9870-4fcf-91ea-5cdb2c6573dd"
+				},
+				{
+					"name": "Practise User",
+					"item": [
+						{
+							"name": "practise_user_list",
+							"id": "34028877-6ef63b7c-3168-4e8b-acfe-0c25bd8d88fe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/practise_user/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"practise_user",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "a",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "practise_user_retrieve",
+							"id": "34028877-3839f423-f8c0-4097-8e7c-c03c03615cd9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/practise_user/15/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"practise_user",
+										"15",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_practise_user",
+							"id": "34028877-3cb85e25-e822-4dec-a6a8-4c8272ebf1ed",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"username\": \"gaurav13\",\n        \"email\": \"kuldipribadiya11@gmail.com\",\n        \"phone_number\":\"+148441678650\",\n        \"first_name\": \"gaurav\",\n        \"last_name\": \"jain\",\n        \"middle_name\":\"A.\",\n        \"employee_id\": \"IB1177\",\n        \"can_see_medical_group_data\": false\n    },\n    \"doctor\": 12,\n    \"can_see_facility_data\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/practise_user/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"practise_user",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_practise_user",
+							"id": "34028877-9706bdb6-b6cf-406e-b3be-6015e836143a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"email\": \"kuldipribadiya16@gmail.com\",\n        \"phone_number\":\"+14844145519\",\n        \"first_name\": \"naresh\",\n        \"last_name\": \"prajapati\",\n        \"middle_name\":\"A.\",\n        \"employee_id\": \"EP1122\",\n        \"can_see_medical_group_data\": true\n    },\n    \"doctor\": 244,\n    \"can_see_facility_data\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/practise_user/update/15/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"practise_user",
+										"update",
+										"15",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "practise_user_delete",
+							"id": "34028877-c9233538-8c86-499a-bb54-d6a27b0af68b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE2MjU2NzI0LCJpYXQiOjE3MTMyNTY3MjQsImp0aSI6IjhiODAwOGY5MTk5MTQyMWI4Mjg4YzUwOGZmZTUyZmQwIiwidXNlcl9pZCI6MX0.nUMPVoR27rBWbbDMYVXGlucjD9Pmcg4FqNn9yR6rq80",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/practise_user/delete/15/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"practise_user",
+										"delete",
+										"15",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Physician Practice",
+							"id": "34028877-513cce62-2be6-45c6-a987-a542aafb8872",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"physician_practice\":\"add\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/create/physician_practice/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"create",
+										"physician_practice",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-9014d2ec-f035-4405-b2b2-831648c9d1fb"
+				},
+				{
+					"name": "organizations",
+					"item": [
+						{
+							"name": "organization_list",
+							"id": "34028877-efb301c2-c025-49f4-8614-b9e51c3f2f07",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/Orgnization_data/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"Orgnization_data",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "2345678934",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Orgnization Create",
+							"id": "34028877-c9298fdc-7c86-42a1-a76e-cf3829e2a610",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n            \"org_name\": \"Kalpesh Organiztion \",\n            \"org_phone\": \"2345678902\",\n            \"org_contact\": null,\n            \"org_email\": \"kalpeshorg@yopmail.com\",\n            \"org_fax\": \"2345678934\",\n            \"org_address_1\": \"fcvbnm\",\n            \"org_address_2\": \"fgjhbnm\",\n            \"org_city\": \"dfgh\",\n            \"org_state\": \"gvhb\",\n            \"org_postal_code\": \"23456\",\n            \"org_country\": null,\n            \"created_at\": \"2024-09-23T07:16:30.732001-05:00\",\n            \"updated_at\": \"2024-09-23T07:16:30.732016-05:00\",\n            \"created_by\": null,\n            \"updated_by\": null,\n            \"org_facility\": [2]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/Orgnization_data/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"Orgnization_data",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Orgnization update",
+							"id": "34028877-39d3c292-f8b7-4d66-bf60-d0b15ce438ce",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"org_name\": \"Mark Center\",\n    \"org_phone\": \"2345678902\",\n    \"org_contact\": null,\n    \"org_email\": \"Ganeah@gmail.com\",\n    \"org_fax\": \"2345678934\",\n    \"org_address_1\": \"fcvbnm\",\n    \"org_address_2\": \"fgjhbnm\",\n    \"org_city\": \"dfgh\",\n    \"org_state\": \"gvhb\",\n    \"org_postal_code\": \"86956\"\n    // \"org_country\": null,\n    // \"org_facility\": [\n    //     3\n    // ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/Orgnization_data/update/2/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"Orgnization_data",
+										"update",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Orgnization delete",
+							"id": "34028877-6c38a169-3667-426a-bf41-08589bbca434",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth3}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{common}}v2/Orgnization_data/delete/100/",
+									"host": [
+										"{{common}}v2"
+									],
+									"path": [
+										"Orgnization_data",
+										"delete",
+										"100",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Org Page wise list",
+							"id": "34028877-691de793-e2f6-4583-8d5f-37f964814158",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "page",
+										"value": "1",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "page_size",
+										"value": "1",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{local}}v2/Orgnization_data/list_page/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"Orgnization_data",
+										"list_page",
+										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Organization retrive",
+							"id": "34028877-601ce696-2af3-42b1-a4ac-fe485ebf947e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/Orgnization_data/retrieve/20/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"Orgnization_data",
+										"retrieve",
+										"20",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-c29e97be-f33d-460d-84cd-77b4a778825f"
+				},
+				{
+					"name": "intake user",
+					"item": [
+						{
+							"name": "create user intake",
+							"id": "34028877-df4f68fa-8f29-46ea-9672-6c68213c795a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        // \"username\": \"harshi912\",\n        \"first_name\": \"Intek23\",\n        \"last_name\": \"John3\",\n        \"email\": \"intekjohn254@yopmail.com\",\n        \"phone_number\": \"+19984544829\",\n        \"fax_number\":\"2345678909\"\n    },\n    \"is_admin\": true,\n    \"facilities\": [1]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/intake_user/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"intake_user",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update intake user",
+							"id": "34028877-144204ab-7a92-489d-824f-25e7c6eec305",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        // \"username\": \"harshi912\",\n        \"first_name\": \"John\",\n        \"last_name\": \"Devid\",\n        \"email\": \"harshil622@gmail.com\",\n        \"phone_number\": \"+19768344829\",\n        \"fax_number\":\"\"\n        \n    },\n    \"is_admin\": true,\n    \"facilities\": [5]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/intake_user/update/46/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"intake_user",
+										"update",
+										"46",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_intake user",
+							"id": "34028877-f8912578-4cd5-4eec-ab57-5636baf9bdf0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/intake_user/delete/1/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"intake_user",
+										"delete",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "retrive intake user",
+							"id": "34028877-21fb5e22-7b8c-482f-9682-8ef0c4d7863b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/intake_user/46/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"intake_user",
+										"46",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list intake user",
+							"id": "34028877-1487530a-66ed-45af-9ab9-c6c67c1b4314",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/intake_user/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"intake_user",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-8703efd3-007f-4d7f-8dfd-28bf6b0f260b"
+				},
+				{
+					"name": "Sales User",
+					"item": [
+						{
+							"name": "sales_rep_user_list",
+							"id": "34028877-857b7c77-99f1-4b7b-8622-28542e6d0075",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sales_rep/list/?page=1&page_size=50",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "aaa",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "50"
+										},
+										{
+											"key": "facilities__id__in",
+											"value": "24",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sales_rep_user_list_data",
+							"id": "34028877-f57d6643-11b7-46ea-81a5-0bf1cb6c27f2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sales_rep/list_data/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"list_data",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sales_rep_user_retrieve",
+							"id": "34028877-a11c1b2f-0e76-4646-a04a-30102b7bf6d5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sales_rep/162/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"162",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_sales_user",
+							"id": "34028877-0cc5346f-3576-4a1d-addf-c782c60819e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"is_active\": true,\n        \"first_name\": \"John\",\n        \"last_name\": \"Devid\",\n        \"middle_name\": \"M\",\n        \"email\": \"test01@yopmail.com\",\n        \"phone_number\": \"+14563956876\",\n        \"user_id\": 1,\n        \"employee_id\": \"4947\"\n        // \"organization\":75\n        },\n    // \"admin_sales_rep\": 22,\n    // \"organization\":1,\n    \"sales_role\":\"sales rep admin\",\n    \"is_admin\": true,\n    \"can_see_facility_data\": false,\n    \"facilities\": [5]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/sales_rep/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"create",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "34028877-05f8a983-3d2a-4473-b3c2-8a84800c2490",
+									"name": "create_sales_user",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"user\": {\n        \"username\": \"againtest\",\n        \"is_active\": true,\n        \"first_name\": \"Again\",\n        \"last_name\": \"Test\",\n        \"middle_name\": \"M\",\n        \"email\": \"ff77545@gmail.com\",\n        \"phone_number\": \"+17845909999\",\n        \"user_id\": 1,\n        \"employee_id\": \"878990\",\n        \"fax_number\":\"\"\n        \n    },\n    \"admin_sales_rep\": 22,\n    \"orgnizations\":3,\n    \"sales_role\":\"sales rep admin\",\n    \"is_admin\": true,\n    \"can_see_facility_data\": false,\n    \"facilities\": [\n            111\n        ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}sales_rep/create/",
+											"host": [
+												"{{local}}sales_rep"
+											],
+											"path": [
+												"create",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Thu, 27 Feb 2025 06:37:03 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.12.3"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "59"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"status\": true,\n    \"message\": \"Sales User created successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update_sales_rep_user",
+							"id": "34028877-83f3e7f9-375e-4a85-a6fe-de3c83145539",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"email\": \"admor@iboon.io\",\n        // \"phone_number\":\"+14848562358\",\n        // \"first_name\": \"Ruchi\",\n        // \"last_name\": \"patel\",\n        // \"middle_name\":\"A.\",\n        // \"employee_id\": \"RP8856\",\n        \"can_see_medical_group_data\": true,\n        \"is_admin\": true,\n        \"organization\":75\n\n    },\n    // \"doctor\": 12\n    \"sales_role\":\"sales rep admin\",\n    \"is_admin\": true,\n    \"can_see_facility_data\": false,\n    \"facilities\": [10]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/sales_rep/update/161/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"update",
+										"161",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sales_rep_user_delete",
+							"id": "34028877-854801ff-0f7b-4602-a3d0-e082cc4eefc4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE2MjU2NzI0LCJpYXQiOjE3MTMyNTY3MjQsImp0aSI6IjhiODAwOGY5MTk5MTQyMWI4Mjg4YzUwOGZmZTUyZmQwIiwidXNlcl9pZCI6MX0.nUMPVoR27rBWbbDMYVXGlucjD9Pmcg4FqNn9yR6rq80",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}practise_user/delete/5/",
+									"host": [
+										"{{local}}practise_user"
+									],
+									"path": [
+										"delete",
+										"5",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "assign_doctor_list",
+							"id": "34028877-8ae4478e-6c77-4c20-ab3f-c854ba9b71e1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sales_rep/assign_doctor_list/56/?search_doctor=1",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"assign_doctor_list",
+										"56",
+										""
+									],
+									"query": [
+										{
+											"key": "search_doctor",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sales_rep_cannected_doctor_list",
+							"id": "34028877-f447207c-0a46-4752-a188-a12861a81bbb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sales_rep/cannected_doctor/56/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"cannected_doctor",
+										"56",
+										""
+									],
+									"query": [
+										{
+											"key": "search_doctor",
+											"value": "1234567890",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "group wise uers",
+							"id": "34028877-039b713f-e910-41ad-b999-b06920783065",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sales_rep/admin_user/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"admin_user",
+										""
+									],
+									"query": [
+										{
+											"key": "group",
+											"value": "sales rep admin",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "organization_facility",
+							"id": "34028877-47b4175b-ca17-4503-9fd1-74c7f047e29b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth3}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "organization_id",
+										"value": "1",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n      \"organization_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}Orgnization_data/facility/",
+									"host": [
+										"{{local}}Orgnization_data"
+									],
+									"path": [
+										"facility",
+										""
+									],
+									"query": [
+										{
+											"key": "organization_id",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "salesrap_wise_facility",
+							"id": "34028877-ec2c4027-909d-4a28-a8f7-28790af5c688",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sales_rep_id\":5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/sales_rep/get_facility_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"get_facility_list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sales Rep  Create",
+							"id": "34028877-84787801-675e-4b76-9b14-102eceb6b751",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"username\": \"salesrepyop\",\n        \"is_active\": true,\n        \"first_name\": \"Zacob\",\n        \"last_name\": \"Devid\",\n        \"middle_name\": \"M\",\n        \"email\": \"testsalesrep@yopmail.com\",\n        \"phone_number\": \"+17845678098\",\n        \"user_id\": 1,\n        \"employee_id\": \"878990\",\n        \"fax_number\":\"9706578905\"\n        \n    },\n    \"admin_sales_rep\": 22,\n    \"orgnizations\":3,\n    \"sales_role\":\"sales rep admin\",\n    \"is_admin\": true,\n    \"can_see_facility_data\": false,\n    \"facilities\": [\n            111\n        ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/sales_rep/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sales_rep",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-8bf061cf-cf51-4421-9b9e-17255b76ee00"
+				},
+				{
+					"name": "faq",
+					"item": [
+						{
+							"name": "faq_q/a",
+							"item": [
+								{
+									"name": "faq_list",
+									"id": "34028877-3096038c-eacd-4cbc-b7b3-701f1853c648",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/faq/list/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq",
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "search",
+													"value": "rnftjkfytf",
+													"disabled": true
+												},
+												{
+													"key": "page_size",
+													"value": "1",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "category__name",
+													"value": "General FAQs",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_create",
+									"id": "34028877-6ec2811d-ba3a-40fc-9b45-2f523a2c901b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"question\":\"rnftjk\",\n    \"answer\":\"hrf\",\n    \"category\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/faq/create/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_update",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9afd4bf-03d6-4ff3-9d43-1c39d5896419",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "34028877-9e8aec7a-e223-4947-8355-1a4cfd1ade7d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"question\":\"rdtr\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/faq/update/1/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq",
+												"update",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_delete",
+									"id": "34028877-45c3d466-5e00-413d-96f8-35523dfc1fdc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/faq/delete/1/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq",
+												"delete",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_data",
+									"id": "34028877-18d15c66-c914-4f4f-b6fe-dab750555de1",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/faq/1/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-4d5472cb-32fa-4461-9338-8df8e98aad0a"
+						},
+						{
+							"name": "faq category",
+							"item": [
+								{
+									"name": "faq_list",
+									"id": "34028877-5d2d6871-90bf-4675-ad05-a098a3797003",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/faq_category/list/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq_category",
+												"list",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_create",
+									"id": "34028877-62b52578-992b-41d1-b9cd-88c2f59c0eef",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\":\"Technical Support\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/faq_category/create/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq_category",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_update",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a9afd4bf-03d6-4ff3-9d43-1c39d5896419",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "34028877-ce255419-4df9-4465-b8ed-1534eee10be8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}v2/faq_category/update/1/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq_category",
+												"update",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_delete",
+									"id": "34028877-63672171-85a4-4ad6-9797-2a24f884596b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/faq_category/delete/1/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq_category",
+												"delete",
+												"1",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "faq_data",
+									"id": "34028877-5ec20378-d42d-4dc4-adeb-3f853a4b8ae3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/faq_category/2/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"faq_category",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-a6efc8b7-9e66-48c5-a1f1-61ecc18e6fb7"
+						}
+					],
+					"id": "34028877-d91ebebf-bbc0-4f1b-ab91-09e1184a7607"
+				},
+				{
+					"name": "SupportTicket",
+					"item": [
+						{
+							"name": "support_ticket list",
+							"id": "34028877-b29256e9-88b1-4574-b7fb-3f8a3e06d91b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/support_ticket/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"support_ticket",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "03/05/2025",
+											"disabled": true
+										},
+										{
+											"key": "assign_to_support_role__id",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "assign_to_support_user__id__isnull",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "assign_to_support_user__id",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_support_ticket",
+							"id": "34028877-957a619d-6f47-4612-a48f-1ece0d873ef6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/support_ticket/10/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"support_ticket",
+										"10",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_support_ticket",
+							"id": "34028877-f193e600-3f58-474f-97d7-e1a153570716",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "full_name",
+											"value": "Kalpesh Patel",
+											"type": "text",
+											"uuid": "78f9c46e-454c-45b7-84b3-9190380d1166"
+										},
+										{
+											"key": "email",
+											"value": "Kalpesh@yopmail.com",
+											"type": "text",
+											"uuid": "54a67788-6f0e-47e5-bf95-f1f3cc117712"
+										},
+										{
+											"key": "phone_number",
+											"value": "14785236905",
+											"type": "text",
+											"uuid": "aef5a498-f4ce-4ec6-9d55-66df3b08f5be"
+										},
+										{
+											"key": "issue_category",
+											"value": "1",
+											"type": "text",
+											"uuid": "3feaaaca-49ea-4edd-8a4e-6edfa371ff01"
+										},
+										{
+											"key": "issue_description",
+											"value": "this is test issue discription",
+											"type": "text",
+											"uuid": "2b3b3cdc-0f32-4087-81d4-e0ed94ce4cab"
+										},
+										{
+											"key": "priority",
+											"value": "Medium",
+											"type": "text",
+											"uuid": "31a0e124-47d0-4090-8289-7b44dbb1a684"
+										},
+										{
+											"key": "attachment",
+											"type": "file",
+											"uuid": "1c8fcd2b-94a5-432d-9beb-707170133b0d",
+											"src": "/home/kuldip/Downloads/image copy 9.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/support_ticket/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"support_ticket",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_support_ticket",
+							"id": "34028877-d302e72e-90c3-42ee-ab93-9540c5e4a140",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ticket_number\": \"H250304235633\",\n    \"full_name\": \"Naresh prajapati\",\n    \"email\": \"naresh.iboon@gmail.com\",\n    \"phone_number\": \"13456789876\",\n    \"priority\": \"High\",\n    \"issue_description\": \"Test\",\n    \"issue_reply\": \"Test Reply 1234\",\n    \"status\": \"Open\",\n    \"created_at\": \"2025-03-05T05:56:33.629122Z\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/support_ticket/update/6/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"support_ticket",
+										"update",
+										"6",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Support Ticket Reply Create",
+							"id": "34028877-c7298e01-13fe-421a-a3e9-b29605307e4a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"support_ticket\": 10,\n    \"reply\": \"this is reply from admin 1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/support_ticket_reply/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"support_ticket_reply",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Support Ticket Reply List",
+							"id": "34028877-8d0a5595-4048-49a3-9d6f-cd3379dc91a1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/support_ticket_reply/list/?support_ticket_id=10",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"support_ticket_reply",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "support_ticket_id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-40b08ca8-bb6c-4097-876b-8189f66bd4c9"
+				},
+				{
+					"name": "Facility User",
+					"item": [
+						{
+							"name": "Get User Type",
+							"id": "34028877-88ccbc53-49d8-45a0-8fcd-1222213c92a0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/facility/user_type/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"facility",
+										"user_type",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_facility_user_list",
+							"id": "34028877-8b4dadf2-9cd2-4604-8bf6-7cdaefdaac4b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/facility/facility_user/?page_size=50&page=1",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"facility",
+										"facility_user",
+										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "50"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get_facility_user",
+							"id": "34028877-c88b5c4c-0a24-43b6-987f-d1df8d8faf5f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/facility/facility_user/retrive/79/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"facility",
+										"facility_user",
+										"retrive",
+										"79",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create_facility_user",
+							"id": "34028877-bd866c0b-fd17-4764-bea7-e4f5e1d352ac",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"doctor_id\": 102,\n    \"first_name\": \"SecondMonday\",\n    \"last_name\": \"MondaySecond\",\n    \"facility_user_type\": 2,\n    \"facility_user_type_name\": \"\",\n    \"mobile_no\": \"112980678534\",\n    \"fax\": \"23232323\",\n    \"facilityList\": [\n       1,14\n    ],\n    \"email\": \"second0981@yopmail.com\",\n    \"department\": \"ABC\",\n    \"doctor_type\": \"\",\n    \"contact_purpose\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}facility/facility_user/create/",
+									"host": [
+										"{{local}}facility"
+									],
+									"path": [
+										"facility_user",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update_facility_user",
+							"id": "34028877-9ae69c8a-e07e-4a0e-aa0c-7f69881c0069",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzI3NzAyLCJpYXQiOjE3NDgyNDEzMDIsImp0aSI6IjVmMTVkYzFlYmI4MjQ3ZTJiODIyMzc0ZjA5M2RjNTBkIiwidXNlcl9pZCI6MSwiZW1haWwiOiJzbGVlcGx5ZmVAeW9wbWFpbC5jb20iLCJvcmdhbml6YXRpb25fbW9kdWxlcyI6W119.6bqJ479tjECuMoVv8zJrvtSriN3L0Folzl54idHBu4M",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\": \"First\",\n        \"last_name\": \"Mc\",\n        \"first_name\": \"Normal\"\n        // \"facility_user_type\": 1,\n        // \"facility_user_type_name\": \"Nurse Practitioner\",\n        // \"doctor_id\": 189,\n        // \"doctor_full_name\": \"Alice, Griffin\",\n        // \"mobile_no\": \"1010101010\",\n        // \"fax\": \"101010101\",\n        // \"email\": \"updatebyadmin567@yopmail.com\",\n        // \"department\": \"ABC\",\n        // \"created_at\": \"2025-03-07T09:29:53.487415Z\",\n        // \"updated_at\": null,\n        // \"facility_username\": \"sham@1232\",\n        // \"username\": \"sham@1232\",\n        // \"is_active\": true,\n        // \"contact_purpose\": 1,\n        // \"facilityList\": [\n        //     10,\n        //     48\n        // ],\n        // \"contact_purpose_name\": \"Clinical\",\n        // \"facilityList_name\": [\n        //     \"ABC Hospital\",\n        //     \"ABC Urgent Care\"\n        // ]\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8002/api/facility/facility_user/update/91/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"facility",
+										"facility_user",
+										"update",
+										"91",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete_facility_user",
+							"id": "34028877-f25c9913-891d-4bd8-b302-c0e9fb8d148b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQxNDIwMDAwLCJpYXQiOjE3NDEzMzM2MDAsImp0aSI6IjdhODY5YzU5NWMyMjRjODdiZGZjNTUzZDdiNmIyZWMwIiwidXNlcl9pZCI6MX0.jf6DP0K_oLZVyBNoaSzePjK_lOlGRg2xinsySqYOV88",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}facility/facility_user/delete/3/",
+									"host": [
+										"{{local}}facility"
+									],
+									"path": [
+										"facility_user",
+										"delete",
+										"3",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-f73fc13c-bd32-44e2-b2e1-f3e7a0c662b1"
+				},
+				{
+					"name": "Warehouse Manager",
+					"item": [
+						{
+							"name": "Create Warehouse Manager",
+							"id": "34028877-d1598647-eb47-4ba1-a0ae-271e4c833f84",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"first_name\": \"ware first 1\",\n        \"last_name\": \"ware last 1\",\n        \"middle_name\": \"K\",\n        \"user_title\": \"Mr.\",\n        \"email\": \"test5567@yopmail.com\",\n        \"phone_number\": \"+128649629056\",\n        \"fax_number\": \"98026077776\",\n        \"is_active\": true,\n        \"warehousemanager_role\": \"warehouse manager\",\n        \"organization\": 54\n    },\n    \"warehouse_role\": \"1\"\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}warehouse/manager/create/",
+									"host": [
+										"{{local}}warehouse"
+									],
+									"path": [
+										"manager",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Warehouse Role list",
+							"id": "34028877-12a3c430-b364-40eb-918d-765673e1d0d5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/warehouse/role/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"warehouse",
+										"role",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Warehouse Manager list",
+							"id": "34028877-77648f51-3100-4081-9942-bf785d898351",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/warehouse/manager/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"warehouse",
+										"manager",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Warehouse Manager update",
+							"id": "34028877-975ce5a1-3641-4c7c-9bec-ddf0ec2df7ba",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"first_name\": \"rv\",\n        \"last_name\": \"nikam\",\n        \"middle_name\": \"K\",\n        \"email\": \"test5567@yopmail.com\",\n        \"phone_number\": \"+128486687056\",\n        \"fax_number\":\"98038557976\",\n        \"is_active\": true,\n        \"warehousemanager_role\": \"warehouse manager\",\n        \"organization\": 55\n    },\n    \"warehouse_role\" :2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/warehouse/manager/update/2/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"warehouse",
+										"manager",
+										"update",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Warehouse Retrive",
+							"id": "34028877-8b3c579a-7f79-42eb-aadb-46fe5960fb2f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}warehouse/manager/2/",
+									"host": [
+										"{{local}}warehouse"
+									],
+									"path": [
+										"manager",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Warehouse Technician list",
+							"id": "34028877-92180ca7-b3db-43e2-a2f0-39e3fa16a4e0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/warehouse/technician/data/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"warehouse",
+										"technician",
+										"data",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Technician List Without page",
+							"id": "34028877-bb0f74f2-348a-4385-83c1-0f0d17ba74e9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/warehouse/without_page/data/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"warehouse",
+										"without_page",
+										"data",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-c5b9917b-8786-4f1a-8c4d-678554aa29ec"
+				},
+				{
+					"name": "Sleep Coach",
+					"item": [
+						{
+							"name": "Sleep Coach without page",
+							"id": "34028877-72325a14-00c5-4ce1-bf23-d0cfcbc25f5f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sleep_coach/data/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sleep_coach",
+										"data",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sleep Coach list",
+							"id": "34028877-3ffba113-6706-4846-801c-bb42a57627da",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sleep_coach/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sleep_coach",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sleep Coach retrieve",
+							"id": "34028877-5238f62e-49e7-4dc4-876f-d912028d6bf2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/sleep_coach/655/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sleep_coach",
+										"655",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "System Salesrep create",
+							"id": "34028877-243b59a0-0268-482f-bf7b-0cf1035d371f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"romilcmiew1189241241@yopmail.com\",\n    \"phone_number\": \"+11592235459\",\n    \"first_name\": \"rv\",\n    \"last_name\": \"Mateging\",\n    \"middle_name\": \"K\",\n    \"fax_number\": \"345645909\",\n    \"user_title\": \"Mr.\",\n    \"is_active\":true,\n    \"organization\":145,\n    \"is_admin\" : true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/sleep_coach/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sleep_coach",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Sleep Coach Upadte",
+							"id": "34028877-76656c4c-38cf-4560-b288-a3e9897d2349",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"username\": \"advin2611\",\n    \"email\": \"kuldip@shridaay.com\",\n    \"first_name\": \"Kuldip\",\n    \"last_name\": \"Ribadiyaa\",\n    \"middle_name\": null,\n    \"is_active\": true,\n    \"fax_number\": null,\n    \"phone_number\": \"07203089388\"\n    // \"is_active\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/sleep_coach/update/499/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"sleep_coach",
+										"update",
+										"499",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-a47b56c0-70bc-45c7-b24d-a2c0da1edc51"
+				},
+				{
+					"name": "System Support",
+					"item": [
+						{
+							"name": "System Support Role",
+							"item": [
+								{
+									"name": "system_support_role",
+									"id": "34028877-c67fdd67-388c-455a-ab1b-f0b0763260fb",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/system_support_role/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"system_support_role",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "34028877-bd5f7252-d84e-4047-8bbc-9ad1611fd0b2"
+						},
+						{
+							"name": "Support User List",
+							"id": "34028877-6ab208d1-d72f-43ac-9b77-cd4a475f2521",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/system_support/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"system_support",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Support User data",
+							"id": "34028877-7701db16-ad48-4b42-a492-739d961df7e9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/system_support/data/?support_user_role=2",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"system_support",
+										"data",
+										""
+									],
+									"query": [
+										{
+											"key": "support_user_role",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get support user",
+							"id": "34028877-7ab4a6c0-407b-46e5-9e6f-c5a1b3f925dc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/system_support/4/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"system_support",
+										"4",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "System Support Create",
+							"id": "34028877-b2b3f247-5ffc-4a96-8379-04541a594d92",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"username\": \"systemjko\",\n        \"first_name\": \"kd\",\n        \"last_name\": \"Patel\",\n        \"middle_name\": \"K\",\n        \"email\": \"rv32545@yopmail.com\",\n        \"phone_number\": \"+17308087056\",\n        \"fax_number\":\"98034557976\",\n        \"is_active\": true\n    },\n    \"support_user_role\": 1,\n    \"support_role\": \"technical support teams\"   //technical support teams\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/system_support/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"system_support",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "System Support update",
+							"id": "34028877-cb1b7fd0-f450-4384-925f-73068aa551f3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        // \"username\": \"kuldip11\",\n        \"first_name\": \"kd\",\n        \"last_name\": \"Patel\",\n        \"middle_name\": \"K\",\n        \"email\": \"kuldip26@yopmail.com\",\n        \"phone_number\": \"+17203091085\",\n        \"is_active\": true\n    },\n    \"support_role\": \"technical support teams\"  //technical support teams\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/system_support/update/4/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"system_support",
+										"update",
+										"4",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-0c715219-1c40-4821-8b1c-8d9b4a31dbb1"
+				},
+				{
+					"name": "Broker",
+					"item": [
+						{
+							"name": "Broker User",
+							"item": [],
+							"id": "34028877-c06a2d68-696d-4129-a2ba-440aafd10ef7"
+						},
+						{
+							"name": "Broker list",
+							"id": "34028877-12bb8d37-ece3-41ad-8e11-d87e3db20656",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/broker/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "page_size",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broker Create",
+							"id": "34028877-12cc3e8d-042c-41e4-a00e-b976c4aef8df",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token YOUR_API_TOKEN"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"broker_prefix\": \"Mr.\",\n    \"broker_first_name\": \"jan\",\n    \"broker_last_name\": \"nira\",\n    \"broker_email\": \"jonyiur1211111123.da@example.com\",\n    \"broker_phone\": \"7896546789\",\n    \"broker_fax\": \"123-456\",\n    \"entity_name\":\"CBA Entity\",\n    \"address_1\": \"123 Main St\",\n    \"address_2\": \"Suite 100\",\n    \"city\": \"Metropolis\",\n    \"state\": \"NY\",\n    \"postal_code\": \"10001\",\n    \"broker_country\": \"USA\",\n    \"facilities\": [3, 6],\n    \"organization\":145,\n    \"discount_type\":\"amount\",\n    \"discount\":\"89990\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/broker/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broker anonymous admin sign update",
+							"id": "34028877-f982959f-83e9-4659-bf1c-51d158c40f17",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "broker_admin_agreement_signature",
+											"type": "file",
+											"uuid": "dbc51006-f414-4e63-8299-911682289610",
+											"src": "/home/bittu/Downloads/sign.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}broker/anonymous/admin_update/gAAAAABoLDMUeoDKinu0bnSoH6KPD3-0vXbnjy5eVHNYJAGnnyUOswMvpAgex-UV-MMfAeo_ZgcIQz0njDpfERnNYudzvVmjkO-sfPB15Bo3jwHwmdcNUbaZIWamy0oNhIaJjmnQEk05j_UXrgJn76wRiOc5-5vhVrNp0WR85hwPMKwQlr9EWEc=/",
+									"host": [
+										"{{local}}broker"
+									],
+									"path": [
+										"anonymous",
+										"admin_update",
+										"gAAAAABoLDMUeoDKinu0bnSoH6KPD3-0vXbnjy5eVHNYJAGnnyUOswMvpAgex-UV-MMfAeo_ZgcIQz0njDpfERnNYudzvVmjkO-sfPB15Bo3jwHwmdcNUbaZIWamy0oNhIaJjmnQEk05j_UXrgJn76wRiOc5-5vhVrNp0WR85hwPMKwQlr9EWEc=",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broker anonymous sign update",
+							"id": "34028877-890a1130-1226-40c7-83c4-d6d9fdd24430",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "broker_authorized_signature",
+											"type": "file",
+											"uuid": "56390cfa-62a4-4d9e-a1fa-3e532fc2e1ee",
+											"src": "/home/bittu/Downloads/sign.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}broker/anonymous/broker_update/gAAAAABoJu10C_W6CHrHWfOFIcg0rhKTnTmpWR55gpwvxtkEeCiqeuQs1gOvbpn7jP0SOkEEpeX-AgyGuSigboQxxo7KQmh2-hWZ85Dg7vmdP-n-lVsPcmR8sETO9jQgdslq3dkmp71OUpvF7VOGc6UmUZWN2-Q2apVs0FHy468512RlEuoxR1k=/",
+									"host": [
+										"{{local}}broker"
+									],
+									"path": [
+										"anonymous",
+										"broker_update",
+										"gAAAAABoJu10C_W6CHrHWfOFIcg0rhKTnTmpWR55gpwvxtkEeCiqeuQs1gOvbpn7jP0SOkEEpeX-AgyGuSigboQxxo7KQmh2-hWZ85Dg7vmdP-n-lVsPcmR8sETO9jQgdslq3dkmp71OUpvF7VOGc6UmUZWN2-Q2apVs0FHy468512RlEuoxR1k=",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "broker anonymous retrive",
+							"id": "34028877-562e5812-da0a-4bca-9ee8-fb70379efcd7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/broker/anonymous/broker_retrive/gAAAAABoJv1BnDQg5H9zIuvBqrUyH4MNjAvRUNWNUa28fD0mZ5zG0zYdEJD8AS_LtsSySYGtxPMKzTiZ1JwNZSCvsCXcIXz6YnxD5D4C7RDsyqZsPfOINbRdhX7Rnv8hbnW9HRRZ8v8eGfzzdMgmTpsaN7BeTeTiVLNol44C9GmSr6TazTKwYl5J43xdqLXWHAAR7jKgv4ZI/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"anonymous",
+										"broker_retrive",
+										"gAAAAABoJv1BnDQg5H9zIuvBqrUyH4MNjAvRUNWNUa28fD0mZ5zG0zYdEJD8AS_LtsSySYGtxPMKzTiZ1JwNZSCvsCXcIXz6YnxD5D4C7RDsyqZsPfOINbRdhX7Rnv8hbnW9HRRZ8v8eGfzzdMgmTpsaN7BeTeTiVLNol44C9GmSr6TazTKwYl5J43xdqLXWHAAR7jKgv4ZI",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broker retrive",
+							"id": "34028877-12c4ed6a-1ab1-4604-a512-60e123d9dae1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/broker/retrive/15/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"retrive",
+										"15",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broker delete",
+							"id": "34028877-3960700a-6922-4633-940c-488ce4bb1283",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/broker/delete/1/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"delete",
+										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broker without page list",
+							"id": "34028877-07b9fb8a-b28d-4190-84e9-dcc003dd93eb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/broker/without_page_list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"without_page_list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Broker update",
+							"id": "34028877-ef096cde-b7f6-4466-b7ba-d248d869d047",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token YOUR_AUTH_TOKEN"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"facilities\": [1],\n     \"organization\" : 1,\n     \"discount_type\": \"percentage\",\n     \"discount\":\"5\",\n     \"broker_email\":\"jony.daie67@example.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/broker/update/99/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"update",
+										"99",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend mail",
+							"id": "34028877-4c941c5d-f22c-4ad0-8961-ab2b3a4ea59c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/broker/send_mail/71/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"send_mail",
+										"71",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "broker user list",
+							"id": "34028877-3c9d710d-d5ef-49ae-b329-5ba5aa1ca111",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/brokerusers/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"brokerusers",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-700e5670-aa85-4155-9549-a67ea66c0306"
+				},
+				{
+					"name": "Scoring Tech",
+					"item": [
+						{
+							"name": "scoring tech list",
+							"id": "34028877-dd1a58b9-60fa-4430-be0a-c19535992eb1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/scoring_tech/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"scoring_tech",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "scoring tech list_data",
+							"id": "34028877-d3fce183-0f18-44a2-b417-eba1c16f1af4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/scoring_tech/list_data/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"scoring_tech",
+										"list_data",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "scoring tech retrieve",
+							"id": "34028877-b833437c-c909-4ff7-8812-15ae537719f6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/scoring_tech/retrieve/16/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"scoring_tech",
+										"retrieve",
+										"16",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create scoring tech",
+							"id": "34028877-409e0216-1471-4138-af6b-7a03a8bebbbc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"Milan\",\n    \"last_name\": \"Ribadiya\",\n    \"middle_name\": \"A\",\n    \"email\": \"milan111@yopmail.com\",\n    \"phone_number\": \"+17428655498\",\n    \"fax_number\":\"98034557976\",\n    \"is_active\": true,\n    \"organization\": 54\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/scoring_tech/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"scoring_tech",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create scoring tech update",
+							"id": "34028877-7acc88b3-f370-4d68-889b-e612ca085e43",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\": \"kd\",\n    \"last_name\": \"Patel\",\n    \"middle_name\": \"K\",\n    // \"email\": \"kuldip3811@yopmail.com\",\n    \"phone_number\": \"+17358087056\",\n    \"fax_number\":\"98034557976\",\n    \"is_active\": true,\n    \"organization\": 54\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/scoring_tech/update/16/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"scoring_tech",
+										"update",
+										"16",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-0f3a601c-c980-4bff-8528-a8fd58e38a2e"
+				}
+			],
+			"id": "34028877-a6d04cbc-e545-4dda-8c7c-7e071a8d0650"
 		}
 	],
 	"event": [
