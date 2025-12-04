@@ -635,11 +635,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}permission_role/",
+							"raw": "{{local}}v2/permission_role/",
 							"host": [
-								"{{local}}permission_role"
+								"{{local}}v2"
 							],
 							"path": [
+								"permission_role",
 								""
 							]
 						}
@@ -666,11 +667,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}permission_list/11/",
+							"raw": "{{local}}v2/permission_list/11/",
 							"host": [
-								"{{local}}permission_list"
+								"{{local}}v2"
 							],
 							"path": [
+								"permission_list",
 								"11",
 								""
 							]
@@ -13938,7 +13940,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 138,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n     \"months\": 3\n    // \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 138,\n    // \"amount\": 35.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"months\": 3\n    // \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
