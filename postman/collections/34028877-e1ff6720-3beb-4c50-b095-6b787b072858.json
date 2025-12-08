@@ -13795,7 +13795,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\": 160,\n    \"amount\": 132.11,\n    \"email\": true\n    // \"subscription\": true,\n    // \"months\": 2\n    // \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
+									"raw": "{\n    \"patient\": 169,\n    // \"amount\": 188.11,\n    // \"email\": true\n    \"subscription\": true,\n    \"months\": 2\n    // \"price_id\": \"price_1SV7WrDVon5kPl6qY3IYgkmd\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
