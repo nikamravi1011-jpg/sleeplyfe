@@ -13354,7 +13354,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"call_type_id\":1\n}",
+											"raw": "{\n    // \"call_type_id\":1\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -13626,14 +13626,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}patient/call_summary_notes/patient_id_wise_summary_notes/215/",
+											"raw": "{{local}}patient/call_summary_notes/patient_id_wise_summary_notes/216/",
 											"host": [
 												"{{local}}patient"
 											],
 											"path": [
 												"call_summary_notes",
 												"patient_id_wise_summary_notes",
-												"215",
+												"216",
 												""
 											]
 										}
@@ -13660,22 +13660,15 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}patient/call_summary_notes/calltype_id_wise_summary_notes/2/?patient_id=60",
+											"raw": "{{local}}patient/call_summary_notes/calltype_id_wise_summary_notes/216/",
 											"host": [
 												"{{local}}patient"
 											],
 											"path": [
 												"call_summary_notes",
 												"calltype_id_wise_summary_notes",
-												"2",
+												"216",
 												""
-											],
-											"query": [
-												{
-													"key": "patient_id",
-													"value": "60",
-													"type": "text"
-												}
 											]
 										}
 									},
