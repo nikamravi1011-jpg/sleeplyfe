@@ -14659,49 +14659,6 @@
 					"response": []
 				},
 				{
-					"name": "Short update patient Copy",
-					"id": "34028877-aa76eb4b-940f-48ee-8073-6dc534505890",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n   \"WIP_state\":1,\n   \"WIP_assigned_to\":\"name of assign to\",\n   \"call_notes\": \"some call_notes....\",\n   \"outcome\": \"data\",\n   \"service_marked_cancelled\":true,\n   \"objections\":[]\n\n}\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{local}}patient/short_update/1490/",
-							"host": [
-								"{{local}}patient"
-							],
-							"path": [
-								"short_update",
-								"1490",
-								""
-							]
-						},
-						"description": "The HTTP PATCH request to update a patient's information is used to modify the details of a specific patient. The request should be made to the endpoint `{{local}}patient/update/7/` with the payload containing the updated information.\n\n### Response\n\nThe response of this request can be represented as a JSON schema. The structure of the response will depend on the specific fields that are updated, and the API will return the modified patient information in the form of a JSON object."
-					},
-					"response": []
-				},
-				{
 					"name": "destroy patient",
 					"id": "34028877-318dba32-59b2-4dea-bf20-37d326734f1c",
 					"protocolProfileBehavior": {
