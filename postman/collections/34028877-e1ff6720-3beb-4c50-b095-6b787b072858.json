@@ -3221,11 +3221,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}awt_record/history/",
+							"raw": "{{local}}v2/awt_record/history/",
 							"host": [
-								"{{local}}awt_record"
+								"{{local}}v2"
 							],
 							"path": [
+								"awt_record",
 								"history",
 								""
 							]
@@ -13394,14 +13395,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}patient/call_type/retrieve/61/",
+											"raw": "{{local}}patient/call_type/retrieve/216/",
 											"host": [
 												"{{local}}patient"
 											],
 											"path": [
 												"call_type",
 												"retrieve",
-												"61",
+												"216",
 												""
 											]
 										}
