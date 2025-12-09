@@ -3365,11 +3365,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}count/new_referral/detail/",
+							"raw": "{{local}}v2/count/new_referral/detail/",
 							"host": [
-								"{{local}}count"
+								"{{local}}v2"
 							],
 							"path": [
+								"count",
 								"new_referral",
 								"detail",
 								""
