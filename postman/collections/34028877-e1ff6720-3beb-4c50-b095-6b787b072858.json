@@ -13197,14 +13197,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}patient/call_script/retrieve/1/",
+											"raw": "{{local}}patient/call_script/retrieve/223/",
 											"host": [
 												"{{local}}patient"
 											],
 											"path": [
 												"call_script",
 												"retrieve",
-												"1",
+												"223",
 												""
 											]
 										}
