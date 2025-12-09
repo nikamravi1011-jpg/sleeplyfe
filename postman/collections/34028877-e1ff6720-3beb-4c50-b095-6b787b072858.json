@@ -13396,14 +13396,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}patient/call_type/retrieve/216/",
+											"raw": "{{local}}patient/call_type/retrieve/219/",
 											"host": [
 												"{{local}}patient"
 											],
 											"path": [
 												"call_type",
 												"retrieve",
-												"216",
+												"219",
 												""
 											]
 										}
