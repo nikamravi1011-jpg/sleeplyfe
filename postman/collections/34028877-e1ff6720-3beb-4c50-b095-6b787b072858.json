@@ -13624,14 +13624,14 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}patient/call_summary_notes/patient_id_wise_summary_notes/61/",
+											"raw": "{{local}}patient/call_summary_notes/patient_id_wise_summary_notes/66/",
 											"host": [
 												"{{local}}patient"
 											],
 											"path": [
 												"call_summary_notes",
 												"patient_id_wise_summary_notes",
-												"61",
+												"66",
 												""
 											]
 										}
