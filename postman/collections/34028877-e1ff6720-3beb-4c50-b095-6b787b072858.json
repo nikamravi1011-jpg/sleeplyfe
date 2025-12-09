@@ -1731,14 +1731,14 @@
 										{
 											"key": "file",
 											"type": "file",
-											"src": "/home/kuldip/Downloads/SO 228649.docx"
+											"src": "/Users/ravi/Downloads/8 night Report experiment Night 1 (1).docx"
 										}
 									]
 								},
 								"url": {
-									"raw": "{{local}}apnometer/upload/",
+									"raw": "{{dev_server}}apnometer/upload/",
 									"host": [
-										"{{local}}apnometer"
+										"{{dev_server}}apnometer"
 									],
 									"path": [
 										"upload",
@@ -14637,13 +14637,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}patient/short_update/1490/",
+							"raw": "{{local}}patient/short_update/63/",
 							"host": [
 								"{{local}}patient"
 							],
 							"path": [
 								"short_update",
-								"1490",
+								"63",
 								""
 							]
 						},
