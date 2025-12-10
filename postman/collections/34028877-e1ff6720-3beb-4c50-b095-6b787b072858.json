@@ -12167,53 +12167,6 @@
 					"id": "34028877-75c36bf1-1da5-4376-aefa-9e61ff12b36d"
 				},
 				{
-					"name": "OCR Copy",
-					"item": [
-						{
-							"name": "OCR Request",
-							"id": "34028877-b6903b85-874f-4b2b-9f6a-bf4565cbd957",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{auth3}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "file",
-											"type": "file",
-											"src": "/home/kuldip/Downloads/fax2.pdf"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{dev_server}}OCR_request/",
-									"host": [
-										"{{dev_server}}OCR_request"
-									],
-									"path": [
-										""
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "34028877-4dc3bda5-faf8-47c9-ba41-6bc540cbd303"
-				},
-				{
 					"name": "Appointment Patient",
 					"item": [
 						{
