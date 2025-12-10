@@ -12752,6 +12752,339 @@
 					"id": "34028877-5443c649-4fbf-467b-8ba3-a64062d97f18"
 				},
 				{
+					"name": "patient_consent Copy",
+					"item": [
+						{
+							"name": "patient consent create",
+							"id": "34028877-22a8235f-c9af-457d-beb6-02a5bf85b95e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_first_name",
+											"value": "Bitu",
+											"type": "text"
+										},
+										{
+											"key": "patient_last_name",
+											"value": "Rajput",
+											"type": "text"
+										},
+										{
+											"key": "patient_email",
+											"value": "bitu@iboon.io",
+											"type": "text"
+										},
+										{
+											"key": "patient_phone_number",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "patient_consent_send",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "patient_consent_form_send",
+											"type": "file",
+											"src": "/home/kuldip/Downloads/mcwn_lab.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dev_server}}patient/patient_consent/create/",
+									"host": [
+										"{{dev_server}}patient"
+									],
+									"path": [
+										"patient_consent",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patient retrive consent",
+							"id": "34028877-8cf76b78-6106-4710-a6d0-4396c2fed3ce",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev_server}}patient/patient_consent/retrive/27/",
+									"host": [
+										"{{dev_server}}patient"
+									],
+									"path": [
+										"patient_consent",
+										"retrive",
+										"27",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend patient consent form",
+							"id": "34028877-edbb34ff-dc10-4081-8ac2-e0c824d3ae1a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}patient/send_patient_consent_form/7/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"send_patient_consent_form",
+										"7",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "email patient retrive consent",
+							"id": "34028877-c43e8cb9-9ccc-4b66-9fb1-16c6609bd264",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev_server}}patient/patient_consent/email_retrive/e5395c6d647fcbf84b98e4bfeac4005b62ede51789db5924b649e5195aafdb85/",
+									"host": [
+										"{{dev_server}}patient"
+									],
+									"path": [
+										"patient_consent",
+										"email_retrive",
+										"e5395c6d647fcbf84b98e4bfeac4005b62ede51789db5924b649e5195aafdb85",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patiant consent update",
+							"id": "34028877-52cc04a0-24e6-4eaa-8a5a-52c2a795870f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_consent_form_receive",
+											"type": "file",
+											"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+											"filesNotInWorkingDirectory": [
+												"/home/dell/Downloads/1.jpg"
+											],
+											"value": null
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}patient/patient_consent/update/2/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"patient_consent",
+										"update",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend patiant consent update",
+							"id": "34028877-0a09a462-f2a6-44dc-ab47-981fbf6a413d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_consent_form_receive",
+											"type": "file",
+											"src": "/home/kuldip/Downloads/fax_file.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}patient/patient_consent_recive/update/c9d8deb5af28409e61cb916e4f1bb8f89041d674396e4b74e68ef1275c5f63be/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"patient_consent_recive",
+										"update",
+										"c9d8deb5af28409e61cb916e4f1bb8f89041d674396e4b74e68ef1275c5f63be",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list",
+							"id": "34028877-d532c050-0eb2-4b1d-8274-ee58d61209a9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}patient/consent/rightDocumentList/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"consent",
+										"rightDocumentList",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patient consent history",
+							"id": "34028877-76c1f88e-34ef-403b-96fb-6315badb8787",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}patient/consent/history/?patient_id=10",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"consent",
+										"history",
+										""
+									],
+									"query": [
+										{
+											"key": "patient_id",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-2e55e97b-e67b-4a6a-81fb-9efec331ae53"
+				},
+				{
 					"name": "work in progres",
 					"item": [
 						{
