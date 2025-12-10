@@ -16032,15 +16032,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/organization/anonymous/send_mail/35/",
+							"raw": "{{local}}organization/anonymous/send_mail/104/",
 							"host": [
-								"{{local}}v2"
+								"{{local}}organization"
 							],
 							"path": [
-								"organization",
 								"anonymous",
 								"send_mail",
-								"35",
+								"104",
 								""
 							]
 						}
