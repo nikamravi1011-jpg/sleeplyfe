@@ -889,11 +889,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dev_server}}studies/AWT/clinic_history",
+									"raw": "{{local}}v2/studies/AWT/clinic_history",
 									"host": [
-										"{{dev_server}}studies"
+										"{{local}}v2"
 									],
 									"path": [
+										"studies",
 										"AWT",
 										"clinic_history"
 									]
@@ -1867,11 +1868,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}studies/AWT/template/?page=2",
+									"raw": "{{local}}v2/studies/AWT/template/?page=2",
 									"host": [
-										"{{local}}studies"
+										"{{local}}v2"
 									],
 									"path": [
+										"studies",
 										"AWT",
 										"template",
 										""
@@ -8681,11 +8683,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}bulkupload/leadstatus/",
+							"raw": "{{local}}v2/bulkupload/leadstatus/",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"leadstatus",
 								""
 							],
@@ -8713,7 +8716,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU1NjAwNDM0LCJpYXQiOjE3NTU1MTQwMzQsImp0aSI6IjM1OTNjNDM3MjFjNTRjYjdiMTJhYTdmNjU2ZGQzMDhjIiwidXNlcl9pZCI6MSwiZW1haWwiOiJzbGVlcGx5ZmVAeW9wbWFpbC5jb20iLCJ1c2VyX3Blcm1pc3Npb25zIjpbXX0.Ze45r_nRk6wVvbp-z2LK16rGl0Rq5XOk4G8KCK4QleU",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -8721,11 +8724,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}bulkupload/salesfunnelstatus/?lead_status=Referral",
+							"raw": "{{local}}v2/bulkupload/salesfunnelstatus/?lead_status=Referral",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"salesfunnelstatus",
 								""
 							],
@@ -8792,7 +8796,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU1NjAwNDM0LCJpYXQiOjE3NTU1MTQwMzQsImp0aSI6IjM1OTNjNDM3MjFjNTRjYjdiMTJhYTdmNjU2ZGQzMDhjIiwidXNlcl9pZCI6MSwiZW1haWwiOiJzbGVlcGx5ZmVAeW9wbWFpbC5jb20iLCJ1c2VyX3Blcm1pc3Npb25zIjpbXX0.Ze45r_nRk6wVvbp-z2LK16rGl0Rq5XOk4G8KCK4QleU",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -8809,11 +8813,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}bulkupload/salesfunnel/?lead_status=Lead",
+							"raw": "{{local}}v2/bulkupload/salesfunnel/?lead_status=Lead",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"salesfunnel",
 								""
 							],
@@ -9147,7 +9152,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9164,11 +9169,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}bulkupload/Note/update/21/",
+							"raw": "{{local}}v2/bulkupload/Note/update/21/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"update",
 								"21",
@@ -9198,11 +9204,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{common}}bulkupload/Note/delete/5/",
+							"raw": "{{common}}v2/bulkupload/Note/delete/5/",
 							"host": [
-								"{{common}}bulkupload"
+								"{{common}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"delete",
 								"5",
@@ -9232,11 +9239,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev_server}}bulkupload/Note/user/",
+							"raw": "{{local}}v2/bulkupload/Note/user/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"user",
 								""
@@ -9265,11 +9273,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev_server}}bulkupload/Note/retrieve/19/",
+							"raw": "{{local}}v2/bulkupload/Note/retrieve/19/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"retrieve",
 								"19",
@@ -9308,11 +9317,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}bulkupload/Note/id_wise_note/103/",
+							"raw": "{{local}}v2/bulkupload/Note/id_wise_note/103/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"id_wise_note",
 								"103",
@@ -9354,11 +9364,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev_server}}bulkupload/Note/id_wise_note/103/",
+							"raw": "{{local}}v2/bulkupload/Note/id_wise_note/103/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"id_wise_note",
 								"103",
@@ -9425,7 +9436,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU1NTk0OTA3LCJpYXQiOjE3NTU1MDg1MDcsImp0aSI6ImIyNGVmNzU4MjU1NDQ4NDlhOWQ3ZjMxZGIzYmQ1OWM1IiwidXNlcl9pZCI6MSwiZW1haWwiOiJzbGVlcGx5ZmVAeW9wbWFpbC5jb20iLCJ1c2VyX3Blcm1pc3Npb25zIjpbXX0.UnZ0L9naHcjWdCmQ8cyG9WvN5xMR_RxeflngzaWem9I",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9442,11 +9453,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}bulkupload/Note/Sales_rap_wise_note_/22/",
+							"raw": "{{local}}v2/bulkupload/Note/Sales_rap_wise_note_/22/",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"Sales_rap_wise_note_",
 								"22",
@@ -9654,9 +9666,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{common}}bulkupload/Note/note_id_wise_list/33/",
+							"raw": "{{local}}bulkupload/Note/note_id_wise_list/33/",
 							"host": [
-								"{{common}}bulkupload"
+								"{{local}}bulkupload"
 							],
 							"path": [
 								"Note",
