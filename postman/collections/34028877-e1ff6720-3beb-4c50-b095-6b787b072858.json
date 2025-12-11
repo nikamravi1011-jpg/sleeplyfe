@@ -78,7 +78,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "// {\n//     \"username\":\"admin\",\n//     \"password\":\"admin\"\n// }\n// {\n//     \"username\":\"admin\",\n//     \"password\":\"dWqZ893RY14ZS18N\"\n// }\n// {\n//     \"username\":\"arose\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {\n//     \"username\": \"kuldip\",\n//     \"password\": \"Rpatel@123\"\n// }\n// {\n//     \"username\":\"kaylamoats\",\n//     \"password\":\"Kayla@123\"\n// }   \n// {\n//     \"username\": \"51\",\n//     \"password\": \"Sales@2024#\"\n// }\n// {\n//     \"username\":\"ruchitaiboon\",\n//     \"password\":\"Rpatel@123\"\n// }\n// {\n//     \"username\":\"rni1kam123\",\n//     \"password\":\"Sales@2024#\"\n// }   \n// {\n//     \"username\":\"joy2373\",\n//     \"password\":\"Demo@123$\"\n// }  \n// {\n//     \"username\":\"jigar1100\",\n//     \"password\":\"Jigar@123\"\n// }   \n{\n    \"username\": \"sleeplyfeadmin\",\n    \"password\": \"Sleeplyfeteam@2025\"\n}\n// {\n//     \"username\": \"sleeplyfeadmin\",\n//     \"password\": \"Vital@1009#\"\n// }\n// {\n//     \"username\": \"providerkuldip1\",\n//     \"password\": \"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleeplyfe123\",\n//     \"password\":\"Sleeplyfe@123\"\n// }  \n// {\n//     \"username\":\"kdrightdoc\",\n//     \"password\":\"Jarvis!1138#\"\n// }  \n// {\n//     \"username\":\"testuser\",\n//     \"password\":\"Test@1138#\"\n// }\n// Admin \n// {\n//     \"username\": \"baxalygag senuruj\",\n//     \"password\": \"Ravi@1234\"\n// }\n// {\n//     \"username\": \"rv234\",\n//     \"password\": \"Welcome@2024\"\n// }\n// {\n//     \"username\":\"harsh\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"bittu@iboon\",\n//     \"password\":\"May@0203\"\n// }\n// {\n//     \"username\":\"amanda\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"kuldip11\",\n//     \"password\":\"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleepprovider2\",\n//     \"password\":\"Welcome@2025\"\n// }\n// {\n//     \"username\":\"nikamrv321\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {   \n//     \"username\":\"noratiqmark11\",\n//     \"password\":\"Welcome@2024\"\n// }\n// local org admin\n// {\n//     \"username\":\"164\",\n//     \"password\":\"Mn9-wM%9wP\"\n// }\n// broker admin\n// {\n//     \"username\" : \"kalpeshgediya1\",\n//     \"password\" : \"bF7$9s,U_C\"\n// }",
+							"raw": "// {\n//     \"username\":\"admin\",\n//     \"password\":\"admin\"\n// }\n// {\n//     \"username\":\"admin\",\n//     \"password\":\"dWqZ893RY14ZS18N\"\n// }\n// {\n//     \"username\":\"arose\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {\n//     \"username\": \"kuldip\",\n//     \"password\": \"Rpatel@123\"\n// }\n// {\n//     \"username\":\"kaylamoats\",\n//     \"password\":\"Kayla@123\"\n// }   \n// {\n//     \"username\": \"51\",\n//     \"password\": \"Sales@2024#\"\n// }\n// {\n//     \"username\":\"ruchitaiboon\",\n//     \"password\":\"Rpatel@123\"\n// }\n// {\n//     \"username\":\"rni1kam123\",\n//     \"password\":\"Sales@2024#\"\n// }   \n// {\n//     \"username\":\"joy2373\",\n//     \"password\":\"Demo@123$\"\n// }  \n// {\n//     \"username\":\"jigar1100\",\n//     \"password\":\"Jigar@123\"\n// }   \n{\n    \"username\": \"Brown\",\n    \"password\": \"Sleeplyfeteam@2025\"\n}\n// {\n//     \"username\": \"sleeplyfeadmin\",\n//     \"password\": \"Vital@1009#\"\n// }\n// {\n//     \"username\": \"providerkuldip1\",\n//     \"password\": \"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleeplyfe123\",\n//     \"password\":\"Sleeplyfe@123\"\n// }  \n// {\n//     \"username\":\"kdrightdoc\",\n//     \"password\":\"Jarvis!1138#\"\n// }  \n// {\n//     \"username\":\"testuser\",\n//     \"password\":\"Test@1138#\"\n// }\n// Admin \n// {\n//     \"username\": \"baxalygag senuruj\",\n//     \"password\": \"Ravi@1234\"\n// }\n// {\n//     \"username\": \"rv234\",\n//     \"password\": \"Welcome@2024\"\n// }\n// {\n//     \"username\":\"harsh\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"bittu@iboon\",\n//     \"password\":\"May@0203\"\n// }\n// {\n//     \"username\":\"amanda\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"kuldip11\",\n//     \"password\":\"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleepprovider2\",\n//     \"password\":\"Welcome@2025\"\n// }\n// {\n//     \"username\":\"nikamrv321\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {   \n//     \"username\":\"noratiqmark11\",\n//     \"password\":\"Welcome@2024\"\n// }\n// local org admin\n// {\n//     \"username\":\"164\",\n//     \"password\":\"Mn9-wM%9wP\"\n// }\n// broker admin\n// {\n//     \"username\" : \"kalpeshgediya1\",\n//     \"password\" : \"bF7$9s,U_C\"\n// }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8259,7 +8259,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -8267,11 +8267,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}bulkupload/contact_types/?is_user=true",
+							"raw": "{{local}}v2/bulkupload/contact_types/?is_user=true",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"contact_types",
 								""
 							],
@@ -8607,7 +8608,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"sales_rap\": 30,\n    \"doctor_id\":58,\n    \"salesfunnelstatus\": 1,\n    \"referral_start_date\": \"2024-12-23\",\n    \"created_at\": \"2024-08-21T07:12:43.033793Z\",\n    \"updated_at\": \"2024-08-21T07:12:43.033812Z\",\n    \"Exclude_from_auto_sale_funnel\": false,\n    \"lead_start_date\": \"2024-11-24\" \n}\n",
+							"raw": "{\n    \"sales_rap\": 30,\n    \"doctor_id\":102,\n    \"salesfunnelstatus\": 7,\n    \"referral_start_date\": \"2024-12-23\",\n    \"created_at\": \"2024-08-21T07:12:43.033793Z\",\n    \"updated_at\": \"2024-08-21T07:12:43.033812Z\",\n    \"Exclude_from_auto_sale_funnel\": false,\n    \"lead_start_date\": \"2024-11-24\" \n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8615,14 +8616,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}bulkupload/brightsales/update/254/",
+							"raw": "{{local}}v2/bulkupload/brightsales/update/33/",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"brightsales",
 								"update",
-								"254",
+								"33",
 								""
 							]
 						}
