@@ -5593,7 +5593,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/studies/report/?is_physician_signature=true&H_P_physician_signature=true&doctor__id=205",
+							"raw": "{{local}}v2/studies/report/?doctor__id=164",
 							"host": [
 								"{{local}}v2"
 							],
@@ -5605,11 +5605,13 @@
 							"query": [
 								{
 									"key": "is_physician_signature",
-									"value": "true"
+									"value": "true",
+									"disabled": true
 								},
 								{
 									"key": "H_P_physician_signature",
-									"value": "true"
+									"value": "true",
+									"disabled": true
 								},
 								{
 									"key": "ordering",
@@ -5633,7 +5635,7 @@
 								},
 								{
 									"key": "doctor__id",
-									"value": "205"
+									"value": "164"
 								}
 							]
 						}
