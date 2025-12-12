@@ -10677,11 +10677,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}get_synergy_data/",
+							"raw": "{{local}}v2/get_synergy_data/",
 							"host": [
-								"{{local}}get_synergy_data"
+								"{{local}}v2"
 							],
 							"path": [
+								"get_synergy_data",
 								""
 							]
 						}
