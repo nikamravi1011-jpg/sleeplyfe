@@ -11086,11 +11086,12 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{local}}patient/insurance/delete/1/",
+									"raw": "{{local}}v2/patient/insurance/delete/1/",
 									"host": [
-										"{{local}}patient"
+										"{{local}}v2"
 									],
 									"path": [
+										"patient",
 										"insurance",
 										"delete",
 										"1",
