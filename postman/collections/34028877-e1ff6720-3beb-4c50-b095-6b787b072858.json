@@ -3429,13 +3429,56 @@
 							]
 						},
 						"url": {
-							"raw": "{{dev_server}}bulkupload/doctor_data/",
+							"raw": "{{local}}v2/bulkupload/doctor_data",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
+								"doctor_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bulk_upload_doctor without pagination",
+					"id": "34028877-89f527dc-94bc-4640-b725-6df447bb6b50",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/kalpesh/Downloads/Book.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/bulkupload/doctor_data/list_without_pagination",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"bulkupload",
 								"doctor_data",
-								""
+								"list_without_pagination"
 							]
 						}
 					},
