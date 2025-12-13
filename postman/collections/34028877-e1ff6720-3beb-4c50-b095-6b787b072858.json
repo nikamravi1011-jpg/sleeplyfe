@@ -13474,7 +13474,7 @@
 									"response": []
 								},
 								{
-									"name": "New Request",
+									"name": "Patient wise call type",
 									"id": "34028877-aba73b5a-3d03-4669-bbeb-e19a11096b54",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
