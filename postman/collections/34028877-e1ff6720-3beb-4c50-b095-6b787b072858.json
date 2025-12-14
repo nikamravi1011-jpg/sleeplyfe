@@ -6532,7 +6532,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{local_admin}}",
+									"value": "{{proxy_token}}",
 									"type": "string"
 								}
 							]
