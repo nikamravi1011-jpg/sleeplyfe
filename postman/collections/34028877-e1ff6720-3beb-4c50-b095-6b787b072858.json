@@ -13734,16 +13734,37 @@
 										},
 										"method": "GET",
 										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
 										"url": {
-											"raw": "{{local}}patient/call_summary_notes/calltype_id_wise_summary_notes/216/",
+											"raw": "{{local}}v2/patient/call_summary_notes/calltype_id_wise_summary_notes/2/?patient_id=225",
 											"host": [
-												"{{local}}patient"
+												"{{local}}v2"
 											],
 											"path": [
+												"patient",
 												"call_summary_notes",
 												"calltype_id_wise_summary_notes",
-												"216",
+												"2",
 												""
+											],
+											"query": [
+												{
+													"key": "patient_id",
+													"value": "225"
+												},
+												{
+													"key": "call_type_id",
+													"value": "11/",
+													"disabled": true
+												}
 											]
 										}
 									},
