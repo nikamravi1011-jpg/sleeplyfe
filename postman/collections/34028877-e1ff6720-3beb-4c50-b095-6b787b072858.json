@@ -7820,11 +7820,12 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{local}}denial/export_denial_records/?ids=46,47,48,49,52,53",
+							"raw": "{{local}}v2/denial/export_denial_records/?ids=46,47,48,49,52,53",
 							"host": [
-								"{{local}}denial"
+								"{{local}}v2"
 							],
 							"path": [
+								"denial",
 								"export_denial_records",
 								""
 							],
@@ -7847,8 +7848,7 @@
 								},
 								{
 									"key": "ids",
-									"value": "46,47,48,49,52,53",
-									"type": "text"
+									"value": "46,47,48,49,52,53"
 								}
 							]
 						}
