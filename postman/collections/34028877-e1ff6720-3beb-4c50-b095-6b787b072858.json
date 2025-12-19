@@ -859,6 +859,30 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "34028877-1f334580-abcd-4fd1-ab63-d5a57b0ba03f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "34028877-21e723a1-ddf3-4020-95ba-dcd0d6819be2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "34028877-d8698a29-7e15-4889-9d6d-bfe3e7a86adc"
@@ -6654,6 +6678,51 @@
 							"path": [
 								"history",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook Study",
+					"id": "34028877-3c8c3e0d-b523-4312-9a63-c3a356dc11e7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"UPLOAD_PROCESSED\",\n    \"study_id\": \"185337\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bfe2cb68fb0c.ngrok-free.app/api/synergy/webhook",
+							"protocol": "https",
+							"host": [
+								"bfe2cb68fb0c",
+								"ngrok-free",
+								"app"
+							],
+							"path": [
+								"api",
+								"synergy",
+								"webhook"
 							]
 						}
 					},
