@@ -2468,8 +2468,30 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/awt_record/history/370/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"awt_record",
+										"history",
+										"370",
+										""
+									]
+								}
 							},
 							"response": []
 						}
