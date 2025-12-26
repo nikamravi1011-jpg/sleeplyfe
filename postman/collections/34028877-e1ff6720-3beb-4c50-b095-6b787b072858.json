@@ -1892,20 +1892,20 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/studies/AWT/template/?page=2",
+									"raw": "{{local}}v2/studies/AWT/template",
 									"host": [
 										"{{local}}v2"
 									],
 									"path": [
 										"studies",
 										"AWT",
-										"template",
-										""
+										"template"
 									],
 									"query": [
 										{
 											"key": "page",
-											"value": "2"
+											"value": "2",
+											"disabled": true
 										}
 									]
 								}
@@ -1933,7 +1933,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"user\": 1,\n    \"chief_complaint\": {\n        \"symptom1\": \"description\",\n        \"symptom2\": \"description\"\n    },\n    \"clinic_history\": {\n        \"condition1\": \"details\",\n        \"condition2\": \"details\"\n    },\n    \"medical_clinic_history\": {\n        \"history1\": \"details\",\n        \"history2\": \"details\"\n    },\n    \"family_history\": true,\n    \"other\": \"Additional notes or comments\",\n    \"vital_signs_BP\": \"120/80\",\n    \"vital_signs_HR\": \"72\",\n    \"vital_signs_Temp\": \"98.6\",\n    \"vital_signs_RR\": \"16\",\n    \"physical_examination_general\": {\n        \"finding1\": \"description\",\n        \"finding2\": \"description\"\n    }\n}",
+									"raw": "{\n    \"user\": 1,\n    \"doctor\":201,\n    \"chief_complaint\": {\n        \"symptom1\": \"description\",\n        \"symptom2\": \"description\"\n    },\n    \"clinic_history\": {\n        \"condition1\": \"details\",\n        \"condition2\": \"details\"\n    },\n    \"medical_clinic_history\": {\n        \"history1\": \"details\",\n        \"history2\": \"details\"\n    },\n    \"family_history\": true,\n    \"other\": \"Additional notes or comments\",\n    \"vital_signs_BP\": \"120/80\",\n    \"vital_signs_HR\": \"72\",\n    \"vital_signs_Temp\": \"98.6\",\n    \"vital_signs_RR\": \"16\",\n    \"physical_examination_general\": {\n        \"finding1\": \"description\",\n        \"finding2\": \"description\"\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2518,11 +2518,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}studies/NewAWT/list/",
+							"raw": "{{local}}v2/studies/NewAWT/list/",
 							"host": [
-								"{{local}}studies"
+								"{{local}}v2"
 							],
 							"path": [
+								"studies",
 								"NewAWT",
 								"list",
 								""
@@ -3360,11 +3361,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}count/awt&referral/detail/",
+							"raw": "{{local}}v2/count/awt&referral/detail/",
 							"host": [
-								"{{local}}count"
+								"{{local}}v2"
 							],
 							"path": [
+								"count",
 								"awt&referral",
 								"detail",
 								""
@@ -6047,7 +6049,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1Nzk2MTA4LCJpYXQiOjE3NjU3MDk3MDgsImp0aSI6IjBkZWUyNjZlM2E4ZTRmNmNhNGVlZDk4ZDdmN2E2ZWY5IiwidXNlcl9pZCI6NzYxLCJlbWFpbCI6ImNvZHlwYXRlbDAxQHlvcG1haWwuY29tIiwidXNlcl9wZXJtaXNzaW9ucyI6W3siaWQiOjEyOSwicGVybWlzc2lvbl9uYW1lIjoiUGVuZGluZyBBV1QgU3R1ZGllcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjozfSx7ImlkIjoxMzAsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2NvcmluZyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo0fSx7ImlkIjoxMzEsInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBBV1QgU3R1ZGllcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo1fSx7ImlkIjoxMzIsInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCBSZWNlaXZlZCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo2fSx7ImlkIjoxMzQsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgUmVmZXJyYWwiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6OH0seyJpZCI6MTM1LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgUmVmZXJyYWwgU2VudCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo5fSx7ImlkIjoxMzYsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2lnbmF0dXJlIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MTB9LHsiaWQiOjEzNywicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIFJlY29yZHMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MTF9LHsiaWQiOjEzOCwicGVybWlzc2lvbl9uYW1lIjoiRGVuaWFscyBMaXN0IiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjEyfSx7ImlkIjoxMzksInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBEZW5pYWwgQ2xhaW1zIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjEzfSx7ImlkIjoxNDAsInBlcm1pc3Npb25fbmFtZSI6IkNvbXByZWhlbnNpdmUgVGVtcGxhdGUiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoxNH0seyJpZCI6MTQxLCJwZXJtaXNzaW9uX25hbWUiOiJBV1QgVGVtcGxhdGUiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoxNX0seyJpZCI6MTQyLCJwZXJtaXNzaW9uX25hbWUiOiJQcm92aWRlcnMiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjE3fSx7ImlkIjoxNDMsInBlcm1pc3Npb25fbmFtZSI6IkFkbWluL1NhbGVzIFJlcCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MTh9LHsiaWQiOjE0NCwicGVybWlzc2lvbl9uYW1lIjoiRmFjaWxpdHkgVXNlcnMiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjE5fSx7ImlkIjoxNDUsInBlcm1pc3Npb25fbmFtZSI6IlJpZ2h0IERvY3VtZW50IiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoyNX0seyJpZCI6MTQ3LCJwZXJtaXNzaW9uX25hbWUiOiJGYWNpbGl0eSIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOnRydWUsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoyOX0seyJpZCI6MTQ5LCJwZXJtaXNzaW9uX25hbWUiOiJSYWlzZSBhIFRpY2tldCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6Mjh9LHsiaWQiOjE0OCwicGVybWlzc2lvbl9uYW1lIjoiRkFRIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjI3fSx7ImlkIjoxMjgsInBlcm1pc3Npb25fbmFtZSI6IlNhdmVkIERyYWZ0cyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjp0cnVlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6Mn0seyJpZCI6MTI3LCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgQVdUIFJlZmVycmFsIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MX0seyJpZCI6MTQ2LCJwZXJtaXNzaW9uX25hbWUiOiJBcG5vbWV0ZXIiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjI2fSx7ImlkIjoxMzMsInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6N30seyJpZCI6NTM4LCJwZXJtaXNzaW9uX25hbWUiOiJJbnRha2UgVXNlciIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MjB9LHsiaWQiOjUzOSwicGVybWlzc2lvbl9uYW1lIjoiU2xlZXAgQ29hY2giLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjIxfSx7ImlkIjo1NDAsInBlcm1pc3Npb25fbmFtZSI6IlNjb3JpbmcgVGVjaG5vbG9naXN0IiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoyM31dfQ.t8l8nW_f65vwmTL2E_ocj23vkbInz3PlkrVWfjFZOJk",
 									"type": "string"
 								}
 							]
@@ -6210,11 +6212,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{common}}standard_supplemental_notes_update/542/",
+							"raw": "{{local}}v2/standard_supplemental_notes_update/542/",
 							"host": [
-								"{{common}}standard_supplemental_notes_update"
+								"{{local}}v2"
 							],
 							"path": [
+								"standard_supplemental_notes_update",
 								"542",
 								""
 							]
@@ -6557,7 +6560,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -6565,13 +6568,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{common}}order_form/retrieve/498/",
+							"raw": "{{local}}v2/order_form/retrieve/741/",
 							"host": [
-								"{{common}}order_form"
+								"{{local}}v2"
 							],
 							"path": [
+								"order_form",
 								"retrieve",
-								"498",
+								"741",
 								""
 							]
 						}
@@ -7864,11 +7868,12 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{dev_server}}denial/recordlist/",
+							"raw": "{{local}}v2/denial/recordlist/",
 							"host": [
-								"{{dev_server}}denial"
+								"{{local}}v2"
 							],
 							"path": [
+								"denial",
 								"recordlist",
 								""
 							],
@@ -8248,7 +8253,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\":\"rvnikadm\",\n    \"first_name\": \"Ranima mic\",\n    \"last_name\": \"Sikai\",\n    \"email\": \"sidkwj@gmail.com\",\n    \"state\": \"ca\",\n    \"contact_type\": 1,\n    \"doctor_id\": 5,\n    \"department\": \"Medicine\",   \n    \"mobile_no\": \"9140567898\",\n    \"fax_number\": \"12121221\"\n    // \"contact_purpose\":2\n}",
+							"raw": "{\n    \"username\":\"rvnikraqdm\",\n    \"first_name\": \"Ranima mic\",\n    \"last_name\": \"Sikai\",\n    \"email\": \"sidkwqrej@gmail.com\",\n    \"state\": \"ca\",\n    \"contact_type\": 1,\n    \"doctor_id\": 102,\n    \"department\": \"Medicine\",   \n    \"mobile_no\": \"9140567898\",\n    \"fax_number\": \"12121221\"\n    // \"contact_purpose\":2\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8256,11 +8261,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}bulkupload/contact/create/",
+							"raw": "{{local}}v2/bulkupload/contact/create/",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"contact",
 								"create",
 								""
@@ -8535,7 +8541,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -8549,11 +8555,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{dev_server}}bulkupload/contact_purpose/",
+							"raw": "{{local}}v2/bulkupload/contact_purpose/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"contact_purpose",
 								""
 							],
@@ -8668,14 +8675,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{local}}bulkupload/brightsales/sales_rap/249/",
+							"raw": "{{local}}v2/bulkupload/brightsales/sales_rap/102/",
 							"host": [
-								"{{local}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"brightsales",
 								"sales_rap",
-								"249",
+								"102",
 								""
 							],
 							"query": [
@@ -9040,7 +9048,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9048,11 +9056,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev_server}}bulkupload/NoteStatus/",
+							"raw": "{{local}}v2/bulkupload/NoteStatus/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"NoteStatus",
 								""
 							]
@@ -9215,7 +9224,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9223,11 +9232,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev_server}}bulkupload/Note/",
+							"raw": "{{local}}v2/bulkupload/Note/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								""
 							],
@@ -9261,7 +9271,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9278,11 +9288,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}bulkupload/Note/create/",
+							"raw": "{{local}}v2/bulkupload/Note/create/",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}v2"
 							],
 							"path": [
+								"bulkupload",
 								"Note",
 								"create",
 								""
@@ -9416,7 +9427,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9451,7 +9462,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9507,7 +9518,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9800,7 +9811,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9935,7 +9946,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n \"receiver_email\": \"ankit.patel@iboon.io\",\n \"filter{revoke}\": false,\n  \"study_admin_grant\": [186132]\n    }",
+											"raw": "{\n    \"receiver_email\": \"ankit.patel@iboon.io\",\n    \"filter{revoke}\": false,\n    \"study_admin_grant\": [\n        186132\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -11484,7 +11495,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{auth3}}",
+											"value": "{{auth}}",
 											"type": "string"
 										}
 									]
@@ -11492,11 +11503,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{dev_server}}patient/document/retrive/86/",
+									"raw": "{{local}}v2/patient/document/retrive/86/",
 									"host": [
-										"{{dev_server}}patient"
+										"{{local}}v2"
 									],
 									"path": [
+										"patient",
 										"document",
 										"retrive",
 										"86",
@@ -16229,15 +16241,19 @@
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": {
-							"raw": "{{local}}organization/anonymous/send_mail/104/",
+							"raw": "{{local}}organization/anonymous/send_mail/188/",
 							"host": [
 								"{{local}}organization"
 							],
 							"path": [
 								"anonymous",
 								"send_mail",
-								"104",
+								"188",
 								""
 							]
 						}
@@ -18751,11 +18767,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}studies/apnometer/file_upload/list/?apnometer_study__id=10",
+									"raw": "{{local}}v2/studies/apnometer/file_upload/list/?apnometer_study__id=10",
 									"host": [
-										"{{local}}studies"
+										"{{local}}v2"
 									],
 									"path": [
+										"studies",
 										"apnometer",
 										"file_upload",
 										"list",
@@ -18764,8 +18781,7 @@
 									"query": [
 										{
 											"key": "apnometer_study__id",
-											"value": "10",
-											"type": "text"
+											"value": "10"
 										}
 									]
 								}
@@ -19051,11 +19067,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}studies/apnometer_studies/list/",
+							"raw": "{{local}}v2/studies/apnometer_studies/list/",
 							"host": [
-								"{{local}}studies"
+								"{{local}}v2"
 							],
 							"path": [
+								"studies",
 								"apnometer_studies",
 								"list",
 								""
@@ -19310,13 +19327,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}studies/apnometer_report_get/20/",
+							"raw": "{{local}}studies/apnometer_report_get/10/",
 							"host": [
-								"{{dev_server}}studies"
+								"{{local}}studies"
 							],
 							"path": [
 								"apnometer_report_get",
-								"20",
+								"10",
 								""
 							]
 						}
@@ -19553,11 +19570,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}version/list/",
+							"raw": "{{local}}v2/version/list/",
 							"host": [
-								"{{local}}version"
+								"{{local}}v2"
 							],
 							"path": [
+								"version",
 								"list",
 								""
 							],
