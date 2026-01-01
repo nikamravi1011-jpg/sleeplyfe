@@ -6765,6 +6765,51 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Webhook Study Copy",
+					"id": "34028877-f2e1654c-1c07-4b8c-8cbc-c7fed3882ec8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"UPLOAD_PROCESSED\",\n    \"study_id\": \"185337\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bfe2cb68fb0c.ngrok-free.app/api/synergy/webhook",
+							"protocol": "https",
+							"host": [
+								"bfe2cb68fb0c",
+								"ngrok-free",
+								"app"
+							],
+							"path": [
+								"api",
+								"synergy",
+								"webhook"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "34028877-ed220f51-0f81-4d49-ab26-05cd0cc0c4e0"
