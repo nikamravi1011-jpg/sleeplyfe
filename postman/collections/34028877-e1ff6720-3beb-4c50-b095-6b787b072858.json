@@ -19922,6 +19922,18 @@
 				}
 			],
 			"id": "34028877-211d6100-711a-4fb3-a274-9a9c7f2012f0"
+		},
+		{
+			"name": "New Request",
+			"id": "34028877-3a40d9c0-d528-4be0-b0e6-55bf0801f8f6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"event": [
