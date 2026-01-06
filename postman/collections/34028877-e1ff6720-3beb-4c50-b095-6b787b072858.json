@@ -19934,6 +19934,39 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "{{local}}v2/free_trial_days/list/",
+			"id": "34028877-c4482165-a3c0-4117-8586-0222bd0324e3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{auth}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}v2/free_trial_days/list/",
+					"host": [
+						"{{local}}v2"
+					],
+					"path": [
+						"free_trial_days",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
