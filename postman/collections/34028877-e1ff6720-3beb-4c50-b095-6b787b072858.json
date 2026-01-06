@@ -15909,7 +15909,53 @@
 				},
 				{
 					"name": "organization days",
-					"item": [],
+					"item": [
+						{
+							"name": "{{local}}v2/free_trial_days/list/",
+							"id": "34028877-4c1e4292-5b88-487f-b48c-403f27f974ea",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/free_trial_days/list/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"free_trial_days",
+										"list",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "34028877-472ae6d1-051e-425e-b2df-d02ed1c7a472",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "34028877-e336b589-7e6a-451e-8462-474de04b8356"
 				},
 				{
@@ -16466,18 +16512,6 @@
 				{
 					"name": "Anony Doctor List",
 					"id": "34028877-2d587d51-ecb6-4305-b5d4-5ffc1452763a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "New Request",
-					"id": "34028877-472ae6d1-051e-425e-b2df-d02ed1c7a472",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
