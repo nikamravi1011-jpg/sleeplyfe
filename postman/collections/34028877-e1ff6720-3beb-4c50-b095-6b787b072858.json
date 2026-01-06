@@ -15911,7 +15911,7 @@
 					"name": "organization days",
 					"item": [
 						{
-							"name": "{{local}}v2/free_trial_days/list/",
+							"name": "free_trail_days_list",
 							"id": "34028877-4c1e4292-5b88-487f-b48c-403f27f974ea",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
