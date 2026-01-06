@@ -15944,7 +15944,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "anonymous_days_list",
 							"id": "34028877-472ae6d1-051e-425e-b2df-d02ed1c7a472",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
