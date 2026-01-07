@@ -9190,7 +9190,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{auth3}}",
+									"value": "{{auth}}",
 									"type": "string"
 								}
 							]
@@ -9207,9 +9207,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev_server}}bulkupload/NoteReason/?search=Superior   Follow Up Visit",
+							"raw": "{{local}}bulkupload/NoteReason/?is_lead_fields=true",
 							"host": [
-								"{{dev_server}}bulkupload"
+								"{{local}}bulkupload"
 							],
 							"path": [
 								"NoteReason",
@@ -9217,8 +9217,15 @@
 							],
 							"query": [
 								{
+									"key": "is_lead_fields",
+									"value": "true",
+									"type": "text"
+								},
+								{
 									"key": "search",
-									"value": "Superior   Follow Up Visit"
+									"value": "Follow-Up",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						}
