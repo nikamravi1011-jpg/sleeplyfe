@@ -5747,6 +5747,75 @@
 					"response": []
 				},
 				{
+					"name": "Active Status Update",
+					"id": "34028877-036f796c-aaf1-4e3f-a021-e6a0b2c0005a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1NTQ5NDMyLCJpYXQiOjE3NjU0NjMwMzIsImp0aSI6IjA2N2M2YzFmNTZlZTQxZjU5MTBjOWVjMjAyMjM5MDVlIiwidXNlcl9pZCI6MjY1LCJlbWFpbCI6IkJyb3duMDVAeW9wbWFpbC5jb20iLCJ1c2VyX3Blcm1pc3Npb25zIjpbeyJpZCI6MTM1LCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIEFXVCBTdHVkaWVzIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjozfSx7ImlkIjoxNDgsInBlcm1pc3Npb25fbmFtZSI6IkVtYWlsIE5vdGlmaWNhdGlvbiBUZW1wbGF0ZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjcsInBlcm1pc3Npb24iOjE2fSx7ImlkIjoxMzQsInBlcm1pc3Npb25fbmFtZSI6IlNhdmVkIERyYWZ0cyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjp0cnVlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoyfSx7ImlkIjoxMzYsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2NvcmluZyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6NH0seyJpZCI6MTM3LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgQVdUIFN0dWRpZXMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjcsInBlcm1pc3Npb24iOjV9LHsiaWQiOjEzOCwicGVybWlzc2lvbl9uYW1lIjoiTmV3IFJlZmVycmFsIFJlY2VpdmVkIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjo2fSx7ImlkIjoxMzksInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6N30seyJpZCI6MTQwLCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFJlZmVycmFsIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjo4fSx7ImlkIjoxNDEsInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBSZWZlcnJhbCBTZW50IiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6OX0seyJpZCI6MTQyLCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFNpZ25hdHVyZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6MTB9LHsiaWQiOjE0MywicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIFJlY29yZHMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxMX0seyJpZCI6MTQ0LCJwZXJtaXNzaW9uX25hbWUiOiJEZW5pYWxzIExpc3QiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxMn0seyJpZCI6MTQ1LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgRGVuaWFsIENsYWltcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjcsInBlcm1pc3Npb24iOjEzfSx7ImlkIjoxNDYsInBlcm1pc3Npb25fbmFtZSI6IkNvbXByZWhlbnNpdmUgVGVtcGxhdGUiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxNH0seyJpZCI6MTQ3LCJwZXJtaXNzaW9uX25hbWUiOiJBV1QgVGVtcGxhdGUiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxNX0seyJpZCI6MTUwLCJwZXJtaXNzaW9uX25hbWUiOiJSYWlzZSBhIFRpY2tldCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoyOH0seyJpZCI6MTQ5LCJwZXJtaXNzaW9uX25hbWUiOiJGQVEiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoyN30seyJpZCI6MTMzLCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgQVdUIFJlZmVycmFsIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxfV19.z0oN5QEhclk_mQGnosVG92m7Wg9dLlBAKgvPGzi6oTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/studies/report/?doctor__id=164",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"studies",
+								"report",
+								""
+							],
+							"query": [
+								{
+									"key": "is_physician_signature",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "H_P_physician_signature",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "patient_name",
+									"disabled": true
+								},
+								{
+									"key": "record_status",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-08-05",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-12-01",
+									"disabled": true
+								},
+								{
+									"key": "doctor__id",
+									"value": "164"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "all_studies_report_list",
 					"id": "34028877-998e49f4-a335-4577-90d1-255eca61bd48",
 					"protocolProfileBehavior": {
