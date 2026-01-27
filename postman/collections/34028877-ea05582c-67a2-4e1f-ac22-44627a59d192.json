@@ -31,7 +31,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/patient/list/?status=undefined",
+									"raw": "{{local}}v2/patient/list/?organization_id=74",
 									"host": [
 										"{{local}}v2"
 									],
@@ -42,9 +42,24 @@
 									],
 									"query": [
 										{
-											"key": "status",
-											"value": "undefined",
-											"type": "text"
+											"key": "organization_id",
+											"value": "74"
+										},
+										{
+											"key": "facility_id",
+											"value": "3",
+											"disabled": true
+										},
+										{
+											"key": "doctor_id",
+											"value": "104",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "insurance_carrier_id",
+											"value": "[3,1,295]",
+											"disabled": true
 										}
 									]
 								}
@@ -173,6 +188,50 @@
 								"url": {
 									"raw": ""
 								}
+							},
+							"response": []
+						},
+						{
+							"name": "Short update patient Copy",
+							"id": "34028877-aa76eb4b-940f-48ee-8073-6dc534505890",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"WIP_state\":2,\n   \"WIP_assigned_to\":\"name of assign to\",\n   \"call_notes\": \"some call_notes....\",\n   \"outcome\": \"data\",\n   \"service_marked_cancelled\":true,\n   \"objections\":[]\n\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/short_update/60/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"short_update",
+										"60",
+										""
+									]
+								},
+								"description": "The HTTP PATCH request to update a patient's information is used to modify the details of a specific patient. The request should be made to the endpoint `{{local}}patient/update/7/` with the payload containing the updated information.\n\n### Response\n\nThe response of this request can be represented as a JSON schema. The structure of the response will depend on the specific fields that are updated, and the API will return the modified patient information in the form of a JSON object."
 							},
 							"response": []
 						}
@@ -385,6 +444,53 @@
 										""
 									]
 								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroy patient",
+							"id": "34028877-c9a9e2cd-2c4a-47ad-bb55-1baac0da8b49",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/insurance/delete/168/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"insurance",
+										"delete",
+										"168",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "34028877-8c8aab49-bbf9-4912-be74-6e1eca6e27bc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
 							},
 							"response": []
 						}
@@ -1493,6 +1599,39 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "New Appointment list data",
+							"id": "34028877-c1123a5f-c545-416b-a689-afffac92a60c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/appointment_status/list_data/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"appointment_status",
+										"list_data",
+										""
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "34028877-959cde3d-429c-4894-a508-3d867a34ec6a"
@@ -1604,14 +1743,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/responsibility/retrieve/198/",
+									"raw": "{{local}}v2/responsibility/retrieve/3367/",
 									"host": [
 										"{{local}}v2"
 									],
 									"path": [
 										"responsibility",
 										"retrieve",
-										"198",
+										"3367",
 										""
 									]
 								}
@@ -1746,7 +1885,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient\" : 203,\n    \"items\": [1,2,3,4,5,6]\n}",
+									"raw": "{\n    \"patient\" : 3359,\n    \"items\": [1]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2110,6 +2249,40 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "Call Type Patient wise",
+									"id": "34028877-79186c98-f5be-4018-8d08-f6e920af24da",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{auth}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}v2/patient_wise/call_type/66/",
+											"host": [
+												"{{local}}v2"
+											],
+											"path": [
+												"patient_wise",
+												"call_type",
+												"66",
+												""
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "34028877-4565e026-302e-4a6b-a807-3f62ee736a8e"
@@ -2398,7 +2571,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{local}}v2/patient/call_summary_notes/calltype_id_wise_summary_notes/61/",
+											"raw": "{{local}}v2/patient/call_summary_notes/calltype_id_wise_summary_notes/216/",
 											"host": [
 												"{{local}}v2"
 											],
@@ -2406,7 +2579,7 @@
 												"patient",
 												"call_summary_notes",
 												"calltype_id_wise_summary_notes",
-												"61",
+												"216",
 												""
 											],
 											"query": [
@@ -2611,7 +2784,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"patient_id\": \"216\",\n    \"message\": \"this is testing SleepLyfe TEST\"\n}",
+									"raw": "{\n    \"patient_id\": \"3365\",\n    \"message\": \"this is testing SleepLyfe TEST\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3016,97 +3189,153 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Webhook",
+							"id": "34028877-225a553f-d6be-4b64-9918-76db4cff46de",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{local}}payment/webhook/",
+									"host": [
+										"{{local}}payment"
+									],
+									"path": [
+										"webhook",
+										""
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "34028877-6eed6fc2-a651-4143-a483-923f45ff0c96"
-				}
-			],
-			"id": "34028877-4c1d5701-f566-4f1a-a878-b614df718d71"
-		},
-		{
-			"name": "New Folder",
-			"item": [
+				},
 				{
-					"name": "Studies",
+					"name": "OCR Copy",
 					"item": [
 						{
-							"name": "New Folder",
-							"item": [],
-							"id": "34028877-e0ea6cc8-c33a-4932-b38d-43d7be7b2b83"
-						},
-						{
-							"name": "Apnometer Studies",
-							"item": [
-								{
-									"name": "apnometer studies list",
-									"id": "34028877-1bd13912-b19e-4640-9bbe-8acb992c5d27",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": ""
+							"name": "OCR Request",
+							"id": "34028877-b6903b85-874f-4b2b-9f6a-bf4565cbd957",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
 										}
-									},
-									"response": []
+									]
 								},
-								{
-									"name": "apnometer studies retrive",
-									"id": "34028877-0dfee7cf-1001-4cd3-8d92-86e7de563294",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": ""
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/ravi/Downloads/Yash Latest Resume (1).pdf"
 										}
-									},
-									"response": []
+									]
 								},
-								{
-									"name": "apnometer studies create",
-									"id": "34028877-0c10362d-a64c-4619-99dc-9ae91d16baad",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"auth": {
-											"type": "bearer",
-											"bearer": [
-												{
-													"key": "token",
-													"value": "{{auth}}",
-													"type": "string"
-												}
-											]
-										},
-										"method": "POST",
-										"header": [],
-										"url": {
-											"raw": "{{local}}v2/studies/apnometer_studies/create/",
-											"host": [
-												"{{local}}v2"
-											],
-											"path": [
-												"studies",
-												"apnometer_studies",
-												"create",
-												""
-											]
-										}
-									},
-									"response": []
+								"url": {
+									"raw": "{{local}}OCR_request/",
+									"host": [
+										"{{local}}OCR_request"
+									],
+									"path": [
+										""
+									]
 								}
-							],
-							"id": "34028877-df6ef48f-37cf-429f-8e8f-6d9f64a03b6c"
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-4dc3bda5-faf8-47c9-ba41-6bc540cbd303"
+				},
+				{
+					"name": "patient_consent Copy",
+					"item": [
+						{
+							"name": "patient consent create",
+							"id": "34028877-22a8235f-c9af-457d-beb6-02a5bf85b95e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_first_name",
+											"value": "Bitu",
+											"type": "text"
+										},
+										{
+											"key": "patient_last_name",
+											"value": "Rajput",
+											"type": "text"
+										},
+										{
+											"key": "patient_email",
+											"value": "bitu@iboon.io",
+											"type": "text"
+										},
+										{
+											"key": "patient_phone_number",
+											"value": "1234567890",
+											"type": "text"
+										},
+										{
+											"key": "patient_consent_send",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "patient_consent_form_send",
+											"type": "file",
+											"src": "/Users/ravi/Downloads/OrderForm_1519.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dev_server}}patient/patient_consent/create/",
+									"host": [
+										"{{dev_server}}patient"
+									],
+									"path": [
+										"patient_consent",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
 						},
 						{
-							"name": "New AWT list",
-							"id": "34028877-7e517962-ae48-4b61-b37c-b33664660fce",
+							"name": "patient retrive consent",
+							"id": "34028877-8cf76b78-6106-4710-a6d0-4396c2fed3ce",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -3124,20 +3353,254 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/studies/AWT/list/?status=0",
+									"raw": "{{local}}v2/patient/patient_consent/retrive/182/",
 									"host": [
 										"{{local}}v2"
 									],
 									"path": [
-										"studies",
-										"AWT",
-										"list",
+										"patient",
+										"patient_consent",
+										"retrive",
+										"182",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend patient consent form",
+							"id": "34028877-edbb34ff-dc10-4081-8ac2-e0c824d3ae1a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}patient/send_patient_consent_form/182/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"send_patient_consent_form",
+										"182",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "email patient retrive consent",
+							"id": "34028877-c43e8cb9-9ccc-4b66-9fb1-16c6609bd264",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dev_server}}patient/patient_consent/email_retrive/e5395c6d647fcbf84b98e4bfeac4005b62ede51789db5924b649e5195aafdb85/",
+									"host": [
+										"{{dev_server}}patient"
+									],
+									"path": [
+										"patient_consent",
+										"email_retrive",
+										"e5395c6d647fcbf84b98e4bfeac4005b62ede51789db5924b649e5195aafdb85",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patiant consent update",
+							"id": "34028877-52cc04a0-24e6-4eaa-8a5a-52c2a795870f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_consent_form_receive",
+											"type": "file",
+											"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+											"filesNotInWorkingDirectory": [
+												"/home/dell/Downloads/1.jpg"
+											],
+											"src": "/Users/ravi/Downloads/B-111 Accountancy 2022 - BED-3.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}v2/patient/patient_consent/update/182/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"patient_consent",
+										"update",
+										"182",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resend patiant consent update",
+							"id": "34028877-0a09a462-f2a6-44dc-ab47-981fbf6a413d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "patient_consent_form_receive",
+											"type": "file",
+											"src": "/home/kuldip/Downloads/fax_file.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}patient/patient_consent_recive/update/c9d8deb5af28409e61cb916e4f1bb8f89041d674396e4b74e68ef1275c5f63be/",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"patient_consent_recive",
+										"update",
+										"c9d8deb5af28409e61cb916e4f1bb8f89041d674396e4b74e68ef1275c5f63be",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list",
+							"id": "34028877-d532c050-0eb2-4b1d-8274-ee58d61209a9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/patient/consent/rightDocumentList/?page_size=3&page=1",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"patient",
+										"consent",
+										"rightDocumentList",
 										""
 									],
 									"query": [
 										{
-											"key": "status",
-											"value": "0"
+											"key": "page_size",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "patient consent history",
+							"id": "34028877-76c1f88e-34ef-403b-96fb-6315badb8787",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}patient/consent/history/?patient_id=10",
+									"host": [
+										"{{local}}patient"
+									],
+									"path": [
+										"consent",
+										"history",
+										""
+									],
+									"query": [
+										{
+											"key": "patient_id",
+											"value": "10",
+											"type": "text"
 										}
 									]
 								}
@@ -3145,9 +3608,56 @@
 							"response": []
 						}
 					],
-					"id": "34028877-61a9fc81-1b37-4964-834c-d6894c9bfac9"
+					"id": "34028877-2e55e97b-e67b-4a6a-81fb-9efec331ae53"
+				},
+				{
+					"name": "Patient_validation",
+					"id": "34028877-e7ccae50-0bcb-461a-b62a-97a2c954b06d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"field_name\": \"patient_email\",\n    \"value\": \"john@example.com\",\n    \"instance_id\": 61\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}v2/patient/value_validation/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"patient",
+								"value_validation",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			],
+			"id": "34028877-4c1d5701-f566-4f1a-a878-b614df718d71"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
 			"id": "34028877-9961ea66-bd97-4293-bf27-1c06ed46b52a"
 		},
 		{
@@ -4557,7 +5067,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "{{auth}}",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1NzE5MDYyLCJpYXQiOjE3NjU2MzI2NjIsImp0aSI6ImFhZmQzMzhmNGVhYzRlOTE4NzI0YzA4YzlmM2NlYjM4IiwidXNlcl9pZCI6MTY5LCJlbWFpbCI6ImRpYnVraWZ5QG1haWxpbmF0b3IuY29tIiwidXNlcl9wZXJtaXNzaW9ucyI6W3siaWQiOjM5LCJwZXJtaXNzaW9uX25hbWUiOiJGYWNpbGl0eSBVc2VycyIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoxOX0seyJpZCI6NDAsInBlcm1pc3Npb25fbmFtZSI6IlJpZ2h0IERvY3VtZW50IiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjI1fSx7ImlkIjo0MSwicGVybWlzc2lvbl9uYW1lIjoiQXBub21ldGVyIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjI2fSx7ImlkIjo0MiwicGVybWlzc2lvbl9uYW1lIjoiRmFjaWxpdHkiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjp0cnVlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoyOX0seyJpZCI6NDQsInBlcm1pc3Npb25fbmFtZSI6IlJhaXNlIGEgVGlja2V0IiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjI4fSx7ImlkIjo0MywicGVybWlzc2lvbl9uYW1lIjoiRkFRIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6Mjd9LHsiaWQiOjI2LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgQVdUIFN0dWRpZXMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjV9LHsiaWQiOjI1LCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFNjb3JpbmciLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjR9LHsiaWQiOjI4LCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgUmVmZXJyYWwiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjd9LHsiaWQiOjI5LCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFJlZmVycmFsIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjo4fSx7ImlkIjozMCwicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIFJlZmVycmFsIFNlbnQiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjo5fSx7ImlkIjozMSwicGVybWlzc2lvbl9uYW1lIjoiUGVuZGluZyBTaWduYXR1cmUiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoxMH0seyJpZCI6MzIsInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBSZWNvcmRzIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MTF9LHsiaWQiOjMzLCJwZXJtaXNzaW9uX25hbWUiOiJEZW5pYWxzIExpc3QiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoxMn0seyJpZCI6MzYsInBlcm1pc3Npb25fbmFtZSI6IkFXVCBUZW1wbGF0ZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjE1fSx7ImlkIjozNSwicGVybWlzc2lvbl9uYW1lIjoiQ29tcHJlaGVuc2l2ZSBUZW1wbGF0ZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjE0fSx7ImlkIjozNCwicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIERlbmlhbCBDbGFpbXMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoxM30seyJpZCI6MzgsInBlcm1pc3Npb25fbmFtZSI6IkFkbWluL1NhbGVzIFJlcCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjoxOH0seyJpZCI6MjQsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgQVdUIFN0dWRpZXMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjN9LHsiaWQiOjI3LCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgUmVmZXJyYWwgUmVjZWl2ZWQiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo1LCJwZXJtaXNzaW9uIjo2fSx7ImlkIjozNywicGVybWlzc2lvbl9uYW1lIjoiUHJvdmlkZXJzIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjE3fSx7ImlkIjoyMiwicGVybWlzc2lvbl9uYW1lIjoiTmV3IEFXVCBSZWZlcnJhbCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MX0seyJpZCI6MjI3LCJwZXJtaXNzaW9uX25hbWUiOiJVbmZpbGxlZCBEb2N1bWVudCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjUsInBlcm1pc3Npb24iOjM0fSx7ImlkIjoyNTYsInBlcm1pc3Npb25fbmFtZSI6IkVtYWlsIE5vdGlmaWNhdGlvbiBUZW1wbGF0ZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NSwicGVybWlzc2lvbiI6MTZ9LHsiaWQiOjIzLCJwZXJtaXNzaW9uX25hbWUiOiJTYXZlZCBEcmFmdHMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6dHJ1ZSwicm9sZSI6NSwicGVybWlzc2lvbiI6Mn1dfQ.9GP_eqzI08LvNroPplnTSQ7WMn12NcBBy2rhsBbLeCQ",
 											"type": "string"
 										}
 									]
@@ -4565,7 +5075,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/lead_master/list/",
+									"raw": "{{local}}v2/lead_master/list/?page=1&page_size=30",
 									"host": [
 										"{{local}}v2"
 									],
@@ -4582,7 +5092,7 @@
 										},
 										{
 											"key": "first_name",
-											"value": "Project",
+											"value": "Ben",
 											"disabled": true
 										},
 										{
@@ -4635,6 +5145,14 @@
 											"key": "follow_up_time__empty",
 											"value": "true",
 											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "page_size",
+											"value": "30"
 										}
 									]
 								}
@@ -5954,6 +6472,205 @@
 					"response": []
 				},
 				{
+					"name": "Upload Document",
+					"id": "34028877-e78c42f7-b07a-4261-9127-3f1434fe11c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"uuid": "935e660a-3cdc-4b72-b7d6-978a19a77e27",
+									"src": "postman-cloud:///1ef7ef62-5d02-4fb0-8f53-801c9fefed7e"
+								},
+								{
+									"key": "organization_id",
+									"value": "196",
+									"type": "text",
+									"uuid": "91fa8abb-196b-4ed7-bbab-def302832335"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/document/upload/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"document",
+								"upload",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Uploaded Document",
+					"id": "34028877-9d1605b7-e8f4-44a9-aead-8038ff77b259",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/document/list_by_organization/196/?page=1&page_size=2",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"document",
+								"list_by_organization",
+								"196",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Uploaded Document",
+					"id": "34028877-dd44c41e-2103-4e82-a244-0a5367eecf38",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/document/delete/2/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"document",
+								"delete",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download Document",
+					"id": "34028877-0b8eaf3c-a8cc-46ca-ae77-0c58f0486754",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/document/download/1/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"document",
+								"download",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "create organization",
 					"id": "34028877-8320767f-910b-4741-a8bc-a7c81f974610",
 					"protocolProfileBehavior": {
@@ -5974,7 +6691,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"number_of_licenses_users\": 50,\n    \"software_name\": \"Sleeplyfe 12312\",\n    \"work_schedule\": [\n        {\n            \"work_day\": 1,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        }\n    ],\n    \"plan_info\": [\n        {\n        \"subscription_plan_name\": \"Starter\",\n        \"implementation_cost\": \"2000.00\",\n        \"implementation_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"per_month_location_npi_cost\": \"10000.00\",\n        \"per_month_location_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"additional_provider_npi_cost\": \"10454.00\",\n        \"additional_provider_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_commitment\": \"0.00\",\n        \"travel_cost\": \"0.0\",\n        \"travel_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"daily_use_of_vital_care_units\": 90.0,\n        \"awt_self_care\": 20.0,\n        \"awt_self_care_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_self_care_virtual_assistant\": 10.0,\n        \"awt_self_care_premium_live_assistant\": 20.0,\n        \"chst_test_and_report\": 0.0,\n        \"chst_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_test_and_report\": 0.0,\n        \"chap_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"ist_test_and_report\": 0.0,\n        \"ist_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"remote_monitoring\": 0.0,\n        \"remote_monitoring_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_reimbursement\": 0.0,\n        \"awt_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chst_reimbursement\": 0.0,\n        \"chst_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_reimbursement\": 0.0,\n        \"chap_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_reim\": 0.0,\n        \"apnometer_chst_ist_reim_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"sleep_rpm_reimbursement\": 0.0,\n        \"sleep_rpm_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"conversion_of_awt_to_home_test\": \"0%\",\n        \"conversion_of_awt_to_home_test_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_chst_test\": 10.0,\n        \"monthly_awt_test\": 20.0,\n        \"apnometer_chst_ist_osa_positive\": 0.0,\n        \"apnometer_chst_ist_osa_positive_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_conversion\": 0.0,\n        \"apnometer_chst_ist_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_chst_to_pap_conversion\": \"0%\",\n        \"initial_post_chst_to_pap_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_month_pap_rpm\": 0.0,\n        \"initial_post_month_pap_rpm_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"cost_per_month\": \"10.00\",\n        \"revenue_per_month\": \"0.00\",\n        \"gross_profits\": \"-10.00\",\n        \"monthly_subscription_fee\": \"0.00\",\n        \"monthly_subscription_fee_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"total_saving\": 0.0,\n        \"awt_test_ranges\": [],\n        \"overall_discount_apply\": null,\n        \"subscription_plan\": 1\n    }\n],\n\"medicaid\": 20,\n\"original_medicare\": 20,\n\"medicare_advantage\": 10,\n\"commercial_HMO\": 20,\n\"commercial_PPO_EPO\": 30,\n\"org_name\": \"Sleeplyfe test6442\",\n\"org_first_name\": \"Project\",\n\"org_last_name\": \"Sleeplyfe\",\n\"org_contact_person_designations\": 14,\n\"org_contact_person_email\": \"sleepl6542@yopmail.com\",\n\"org_contact_person_phone\": \"13242667846\"\n// \"free_trial_test\": null,\n// \"patient_volume_count\" : null\n// \"org_address_1\": \"Northeast Washington\",\n// \"org_address_2\": \"Test Data\",\n// \"org_city\": \"Washington\",\n// \"org_state\": \"DC\",\n// \"org_postal_code\": \"20002\",\n// \"org_country\": \"USA\",\n// \"secondary_org_name\": \"Sleeplyfe Project4571\",  \n// \"secondary_org_first_name\": \"Project\",\n// \"secondary_org_last_name\": \"Sleeplyfe\",\n// \"secondary_org_contact_person_designations\": 1,\n// \"secondary_org_contact_person_email\": \"sleeply098@yopmail.com\",\n// \"secondary_org_contact_person_phone\": \"13244668787\",\n// \"secondary_org_address_1\": \"Northeast Washington\",\n// \"secondary_org_address_2\": \"Test Data\",\n// \"secondary_org_city\": \"Washington\",\n// \"secondary_org_state\": \"DC\",\n// \"secondary_org_postal_code\": \"20002\",\n// \"secondary_org_country\": \"USA\",\n// \"user_type\": \"Previous_user\",\n// \"intended_usage_duration\": \"One_week\",\n// \"patient_volume\": \"Week\",\n// \"patient_volume_count\": 10,\n// \"terms_and_conditions\": false,\n// \"privacy_policy\": false,\n// \"authorized_signatory_name\": \"K. Cody Patel\",\n// \"insurance_cov_total\": 100,\n// \"speciality\": [4,5],\n// \"golive_date\": \"2025-05-02\"\n}",
+							"raw": "{\n    \"number_of_licenses_users\": 50,\n    \"software_name\": \"Sleeplyfe 1231245\",\n    \"work_schedule\": [\n        {\n            \"work_day\": 1,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        }\n    ],\n    \"plan_info\": [\n        {\n        \"subscription_plan_name\": \"Starter\",\n        \"implementation_cost\": \"2000.00\",\n        \"implementation_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"per_month_location_npi_cost\": \"10000.00\",\n        \"per_month_location_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"additional_provider_npi_cost\": \"10454.00\",\n        \"additional_provider_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_commitment\": \"0.00\",\n        \"travel_cost\": \"0.0\",\n        \"travel_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"daily_use_of_vital_care_units\": 90.0,\n        \"awt_self_care\": 20.0,\n        \"awt_self_care_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_self_care_virtual_assistant\": 10.0,\n        \"awt_self_care_premium_live_assistant\": 20.0,\n        \"chst_test_and_report\": 0.0,\n        \"chst_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_test_and_report\": 0.0,\n        \"chap_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"ist_test_and_report\": 0.0,\n        \"ist_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"remote_monitoring\": 0.0,\n        \"remote_monitoring_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_reimbursement\": 0.0,\n        \"awt_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chst_reimbursement\": 0.0,\n        \"chst_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_reimbursement\": 0.0,\n        \"chap_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_reim\": 0.0,\n        \"apnometer_chst_ist_reim_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"sleep_rpm_reimbursement\": 0.0,\n        \"sleep_rpm_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"conversion_of_awt_to_home_test\": \"0%\",\n        \"conversion_of_awt_to_home_test_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_chst_test\": 10.0,\n        \"monthly_awt_test\": 20.0,\n        \"apnometer_chst_ist_osa_positive\": 0.0,\n        \"apnometer_chst_ist_osa_positive_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_conversion\": 0.0,\n        \"apnometer_chst_ist_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_chst_to_pap_conversion\": \"0%\",\n        \"initial_post_chst_to_pap_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_month_pap_rpm\": 0.0,\n        \"initial_post_month_pap_rpm_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"cost_per_month\": \"10.00\",\n        \"revenue_per_month\": \"0.00\",\n        \"gross_profits\": \"-10.00\",\n        \"monthly_subscription_fee\": \"0.00\",\n        \"monthly_subscription_fee_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"total_saving\": 0.0,\n        \"awt_test_ranges\": [],\n        \"overall_discount_apply\": null,\n        \"subscription_plan\": 1\n    }\n],\n\"medicaid\": 20,\n\"original_medicare\": 20,\n\"medicare_advantage\": 10,\n\"commercial_HMO\": 20,\n\"commercial_PPO_EPO\": 30,\n\"org_name\": \"Sleeplyfenew test6442567890\",\n\"org_first_name\": \"Project new167890\",\n\"org_last_name\": \"Sleeplyfe new167890\",\n\"org_contact_person_designations\": 14,\n\"org_contact_person_email\": \"sleepl65425fg67890@yopmail.com\",\n\"org_contact_person_phone\": \"13247767846\",\n// \"free_trial_test\": null,\n// \"patient_volume_count\" : null\n\"org_address_1\": \"Northeast Washington\",\n\"org_address_2\": \"Test Data\",\n\"org_city\": \"Washington\",\n\"org_state\": \"DC\",\n\"org_postal_code\": \"20002\",\n\"org_country\": \"USA\"\n// \"secondary_org_name\": \"Sleeplyfe Project4571\",  \n// \"secondary_org_first_name\": \"Project\",\n// \"secondary_org_last_name\": \"Sleeplyfe\",\n// \"secondary_org_contact_person_designations\": 1,\n// \"secondary_org_contact_person_email\": \"sleeply098@yopmail.com\",\n// \"secondary_org_contact_person_phone\": \"13244668787\",\n// \"secondary_org_address_1\": \"Northeast Washington\",\n// \"secondary_org_address_2\": \"Test Data\",\n// \"secondary_org_city\": \"Washington\",\n// \"secondary_org_state\": \"DC\",\n// \"secondary_org_postal_code\": \"20002\",\n// \"secondary_org_country\": \"USA\",\n// \"user_type\": \"Previous_user\",\n// \"intended_usage_duration\": \"One_week\",\n// \"patient_volume\": \"Week\",\n// \"patient_volume_count\": 10,\n// \"terms_and_conditions\": false,\n// \"privacy_policy\": false,\n// \"authorized_signatory_name\": \"K. Cody Patel\",\n// \"insurance_cov_total\": 100,\n// \"speciality\": [4,5],\n// \"golive_date\": \"2025-05-02\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -5990,6 +6707,48 @@
 								"organization",
 								"create",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Organization Pdf",
+					"id": "34028877-c1909c54-5c28-4757-b76b-be1427356e67",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/download_pdf/203",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"download_pdf",
+								"203"
 							]
 						}
 					},
@@ -6086,6 +6845,123 @@
 								"anonymous",
 								"update",
 								"gAAAAABoGbxurh_e8Wxbkh2GHzzvlTqlsuhzsneAsiymYn1HFhXhyylxqDkOeAK0PHB2yBnPG9K-Lqn-3DcyW-qnNbTIRQI1N5rvBRRPA1HZDgCT2ndo_KLN28RDpBZl9_VC9ZJANSXZw-Plrfk3xfixR4v8wLKXUaYILMdohQYNAbDe-CuUIwh3wQ1H2ggowzUi1Ks9rg3g",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Plan Id Is Select True",
+					"id": "34028877-8f04ab9f-2a4f-473e-a19f-e1a4f0e073bf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "admin_signature_date",
+									"value": "2025-12-31T18:30:00.000Z",
+									"type": "text",
+									"uuid": "c056316d-d9f4-4373-8ebd-53965082d4da"
+								},
+								{
+									"key": "client_signature_date",
+									"value": "2026-01-01T18:30:00.000Z",
+									"type": "text",
+									"uuid": "a6fe5cc7-a1c1-48ff-82de-6eccefcdddaf"
+								},
+								{
+									"key": "plan_id",
+									"value": "2",
+									"type": "text",
+									"uuid": "8f891276-23fd-47ed-b588-6f8865bc28e1"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/anonymous/update_credentials/220/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"anonymous",
+								"update_credentials",
+								"220",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Email For Create Username Password",
+					"id": "34028877-7d026d12-e782-4a9f-853d-0aa051124e4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "agreement_signed_file",
+									"type": "file",
+									"src": "/home/bittu/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/anonymous/update/197/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"anonymous",
+								"update",
+								"197",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReSend Email For Create Username Password",
+					"id": "34028877-3070e0ae-db25-4577-af4b-11995b4b4449",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "agreement_signed_file",
+									"type": "file",
+									"src": "/home/bittu/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/organization/resend_password_email/203/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"resend_password_email",
+								"203",
 								""
 							]
 						}
@@ -6293,7 +7169,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/organization/anonymous/send_mail/35/",
+							"raw": "{{local}}v2/organization/anonymous/send_mail/203/",
 							"host": [
 								"{{local}}v2"
 							],
@@ -6301,7 +7177,75 @@
 								"organization",
 								"anonymous",
 								"send_mail",
-								"35",
+								"203",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send reset Password",
+					"id": "34028877-de59c436-4a25-46e8-b8e7-6cf71bfb4965",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/reset_mail/203/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"reset_mail",
+								"203",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send reset Password Copy",
+					"id": "34028877-c098b32e-23f6-49b3-a257-8b2207f90fe9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/organization/resend_password_email/203/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization",
+								"resend_password_email",
+								"203",
 								""
 							]
 						}
@@ -6479,16 +7423,36 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Organization Id wise Sign Date",
 					"id": "34028877-bb759090-88de-4816-9817-ca97a1635433",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": ""
+							"raw": "{{local}}v2/organization_idwise/signature_date/list/203/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"organization_idwise",
+								"signature_date",
+								"list",
+								"203",
+								""
+							]
 						}
 					},
 					"response": []
@@ -6613,7 +7577,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/list/?page_size=30&page=2",
+							"raw": "{{local}}v2/right_document/patient_consent/list/?page_size=30&page=1",
 							"host": [
 								"{{local}}v2"
 							],
@@ -6630,7 +7594,7 @@
 								},
 								{
 									"key": "page",
-									"value": "2"
+									"value": "1"
 								}
 							]
 						}
@@ -6693,28 +7657,290 @@
 							"formdata": [
 								{
 									"key": "patient_first_name",
-									"value": "jhon",
+									"value": "jockyji",
 									"type": "text"
 								},
 								{
 									"key": "patient_last_name",
-									"value": "whik",
+									"value": "namkesddd",
 									"type": "text"
 								},
 								{
 									"key": "patient_email",
-									"value": "siddhant.iboon@gmail.com",
+									"value": "testdraft123475@yopmail.com",
 									"type": "text"
 								},
 								{
 									"key": "patient_phone_number",
-									"value": "97537858011",
+									"value": "97892958011",
 									"type": "text"
 								},
 								{
 									"key": "document_type",
-									"value": "7",
+									"value": "2",
 									"type": "text"
+								},
+								{
+									"key": "sales_order_number",
+									"value": "0123456",
+									"type": "text"
+								},
+								{
+									"key": "customer_id",
+									"value": "8520369",
+									"type": "text"
+								},
+								{
+									"key": "customer_name",
+									"value": "kd patel",
+									"type": "text"
+								},
+								{
+									"key": "billing_address_1",
+									"value": "a/21",
+									"type": "text"
+								},
+								{
+									"key": "billing_address_2",
+									"value": "Maple street",
+									"type": "text"
+								},
+								{
+									"key": "billing_city",
+									"value": "Houston",
+									"type": "text"
+								},
+								{
+									"key": "billing_state",
+									"value": "TX",
+									"type": "text"
+								},
+								{
+									"key": "billing_postal_code",
+									"value": "77005",
+									"type": "text"
+								},
+								{
+									"key": "billing_country",
+									"value": "US",
+									"type": "text"
+								},
+								{
+									"key": "delivery_address_1",
+									"value": "2121",
+									"type": "text"
+								},
+								{
+									"key": "delivery_address_2",
+									"value": "Maple street",
+									"type": "text"
+								},
+								{
+									"key": "delivery_city",
+									"value": "Houston",
+									"type": "text"
+								},
+								{
+									"key": "delivery_state",
+									"value": "TX",
+									"type": "text"
+								},
+								{
+									"key": "delivery_postal_code",
+									"value": "77005",
+									"type": "text"
+								},
+								{
+									"key": "delivery_country",
+									"value": "US",
+									"type": "text"
+								},
+								{
+									"key": "patient_phone_number",
+									"value": "7412589630",
+									"type": "text"
+								},
+								{
+									"key": "insurance_carrier",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "doctor",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "delivery_ticket_date",
+									"value": "2024-11-11",
+									"type": "text"
+								},
+								{
+									"key": "CSR",
+									"value": "123546",
+									"type": "text"
+								},
+								{
+									"key": "form_signature",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/home/kuldip/Downloads/sign.png"
+									],
+									"src": "/home/kuldip/Downloads/sign.png"
+								},
+								{
+									"key": "print_name",
+									"value": "weq",
+									"type": "text"
+								},
+								{
+									"key": "need_personal_representative",
+									"value": "True",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "personal_representative_name",
+									"value": "ewq",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "personal_representative_email",
+									"value": "abhishek@vitalushealth.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description_of_personal_representative_authority",
+									"value": "weqwwwwwwwww",
+									"type": "text"
+								},
+								{
+									"key": "authorized_person",
+									"value": "weq",
+									"type": "text"
+								},
+								{
+									"key": "for_the_specific_purpose",
+									"value": "weq",
+									"type": "text"
+								},
+								{
+									"key": "patient_relationship",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_draft",
+									"value": "True",
+									"type": "text",
+									"uuid": "44e10978-bfcb-4eba-9244-df2cf858f509"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/right_document/patient_consent/create/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"right_document",
+								"patient_consent",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "right document retrive",
+					"id": "34028877-7646de8f-54d4-46e9-a1cc-91c7f668591b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/right_document/patient_consent/retrive/361/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"right_document",
+								"patient_consent",
+								"retrive",
+								"361",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RIGHT DOCUMENT UPDATE",
+					"id": "34028877-0e46c03c-b898-4e7a-b456-1149810d4de8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patient_first_name",
+									"value": "jhock clink",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "patient_last_name",
+									"value": "whiksky",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "patient_email",
+									"value": "johnywhicks@yopmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "patient_phone_number",
+									"value": "97898758011",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "document_type",
+									"value": "7",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "sales_order_number",
@@ -6815,83 +8041,125 @@
 								{
 									"key": "insurance_carrier",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "doctor",
 									"value": "1",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "delivery_ticket_date",
 									"value": "2024-11-11",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "CSR",
 									"value": "123546",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "print_name",
+									"value": "weq",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "need_personal_representative",
+									"value": "True",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "personal_representative_name",
+									"value": "ewq",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "personal_representative_email",
+									"value": "abhishek@yopmail.com",
 									"type": "text"
+								},
+								{
+									"key": "description_of_personal_representative_authority",
+									"value": "weqwwwwwwwww",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "authorized_person",
+									"value": "weq",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "for_the_specific_purpose",
+									"value": "weq",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "patient_relationship",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "is_draft",
+									"value": "True",
+									"type": "text"
+								},
+								{
+									"key": "patient_signature",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/home/kuldip/Downloads/sign (1).png"
+									],
+									"src": "/home/iboon_laptop_18/Pictures/sign.png",
+									"disabled": true
 								},
 								{
 									"key": "form_signature",
 									"type": "file",
 									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
 									"filesNotInWorkingDirectory": [
-										"/home/kuldip/Downloads/sign.png"
+										"/home/kuldip/Downloads/sign (1).png"
 									],
-									"src": "/home/kuldip/Downloads/sign.png"
+									"src": "/home/iboon_laptop_18/Pictures/sign.png",
+									"disabled": true
 								},
 								{
-									"key": "print_name",
-									"value": "weq",
-									"type": "text"
+									"key": "beneficiary_signature",
+									"type": "file",
+									"uuid": "ddf067ab-a800-4885-9712-ef4e7b737529",
+									"value": null,
+									"disabled": true
 								},
 								{
-									"key": "need_personal_representative",
-									"value": "False",
-									"type": "text"
-								},
-								{
-									"key": "personal_representative_name",
-									"value": "ewq",
-									"type": "text"
-								},
-								{
-									"key": "personal_representative_email",
-									"value": "kd patel",
-									"type": "text"
-								},
-								{
-									"key": "description_of_personal_representative_authority",
-									"value": "weqwwwwwwwww",
-									"type": "text"
-								},
-								{
-									"key": "authorized_person",
-									"value": "weq",
-									"type": "text"
-								},
-								{
-									"key": "for_the_specific_purpose",
-									"value": "weq",
-									"type": "text"
-								},
-								{
-									"key": "patient_relationship",
-									"value": "1",
-									"type": "text"
+									"key": "patient_height",
+									"value": "23",
+									"type": "text",
+									"uuid": "d53cf498-85bd-4757-aa1a-ca9d1e5d52bb",
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/create/",
+							"raw": "{{local}}v2/right_document/patient_consent/update/358/",
 							"host": [
 								"{{local}}v2"
 							],
 							"path": [
 								"right_document",
 								"patient_consent",
-								"create",
+								"update",
+								"358",
 								""
 							]
 						}
@@ -6899,8 +8167,8 @@
 					"response": []
 				},
 				{
-					"name": "right document retrive",
-					"id": "34028877-7646de8f-54d4-46e9-a1cc-91c7f668591b",
+					"name": "Right Document Send Draft",
+					"id": "34028877-9da3fb25-b16d-4b87-8bad-f363843ec74d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -6915,42 +8183,7 @@
 								}
 							]
 						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/retrive/295/",
-							"host": [
-								"{{local}}v2"
-							],
-							"path": [
-								"right_document",
-								"patient_consent",
-								"retrive",
-								"295",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "RIGHT DOCUMENT UPDATE",
-					"id": "34028877-0e46c03c-b898-4e7a-b456-1149810d4de8",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{auth}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "formdata",
@@ -6962,7 +8195,8 @@
 									"filesNotInWorkingDirectory": [
 										"/home/kuldip/Downloads/sign (1).png"
 									],
-									"src": "/home/iboon_laptop_18/Pictures/sign.png"
+									"src": "/home/iboon_laptop_18/Pictures/sign.png",
+									"disabled": true
 								},
 								{
 									"key": "form_signature",
@@ -6971,7 +8205,8 @@
 									"filesNotInWorkingDirectory": [
 										"/home/kuldip/Downloads/sign (1).png"
 									],
-									"src": "/home/iboon_laptop_18/Pictures/sign.png"
+									"src": "/home/iboon_laptop_18/Pictures/sign.png",
+									"disabled": true
 								},
 								{
 									"key": "agency_assistance_explanation",
@@ -6990,15 +8225,15 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/update/259/",
+							"raw": "{{local}}v2/right_document/patient_consent/send_draft/357/",
 							"host": [
 								"{{local}}v2"
 							],
 							"path": [
 								"right_document",
 								"patient_consent",
-								"update",
-								"259",
+								"send_draft",
+								"357",
 								""
 							]
 						}
@@ -7082,7 +8317,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/list/",
+							"raw": "{{local}}v2/right_document/patient_consent/list/?page_size=10&page=1",
 							"host": [
 								"{{local}}v2"
 							],
@@ -7095,8 +8330,11 @@
 							"query": [
 								{
 									"key": "page_size",
-									"value": "5",
-									"disabled": true
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
 								}
 							]
 						}
@@ -8002,11 +9240,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}dashboard/awt_data/",
+							"raw": "{{local}}v2/dashboard/awt_data/",
 							"host": [
-								"{{local}}dashboard"
+								"{{local}}v2"
 							],
 							"path": [
+								"dashboard",
 								"awt_data",
 								""
 							],
@@ -8477,11 +9716,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}patient_growth/count/?page_size=100",
+							"raw": "{{local}}v2/patient_growth/count/",
 							"host": [
-								"{{local}}patient_growth"
+								"{{local}}v2"
 							],
 							"path": [
+								"patient_growth",
 								"count",
 								""
 							],
@@ -8489,7 +9729,7 @@
 								{
 									"key": "page_size",
 									"value": "100",
-									"type": "text"
+									"disabled": true
 								},
 								{
 									"key": "page",
@@ -9333,7 +10573,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "\n{\n    \"user_id\": 267\n}\n",
+									"raw": "\n{\n    \"user_id\": 76\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -10051,7 +11291,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"user\": {\n        \"email\": \"ravinik12@yopmail.com\",\n        \"phone_number\": \"+19912153641\",\n        \"first_name\": \"Ravi1\",\n        \"last_name\": \"Provide5r\",\n        \"middle_name\": \"A.\",\n        \"employee_id\": \"M1539\",\n        \"fax_number\": \"+12776126871\",\n        \"can_see_medical_group_data\": true,\n        \"is_active\": true\n    },\n    \"title\": \"Mr\",\n    \"doc_group\": [4,5],\n    \"doctor_preferred_methods\": 1,\n    \"personal_Email\": \"rv24432@gmail.com\",\n    \"mobile_number\": \"1440939189\",\n    \"address_1\": \"123 Main Street\",\n    \"address_2\": \"Apt 101\",\n    \"city\": \"Phoenix\",\n    \"state\": \"California\",\n    \"postal_code\": \"43563\",\n    \"country\": \"US\",\n    \"Expiration\": \"1996-10-12\",\n    \"lead_status\": 1,\n    \"sales_funnel_status\":18,\n    \"sales_rep_user\":22,\n    \"market_representative_id\": 223456789,\n    \"phone_number_1\": \"+19679067543\",\n    \"fax_number\": \"+12344586891\",\n    \"note\": \"Elbow, Knee, Shoulder, Sports Medicine\",\n    \"npi_number\": \"2559827911\",\n    \"doctor_type\": \"1\",\n    \"can_sign_studies\": true,\n    \"is_sleep_board_certified\": true,\n    \"is_interested_interpreting\": false,\n    \"is_interested_billing\": true,\n    \"private_interpret_provider\": [\n        102,\n        103\n    ],\n    \"is_self_private_interpret_provider\": true,\n    \"is_provider_assign_to_another_entity\": true,\n    \"private_billing_provider\": [\n        102,\n        103\n    ],\n    \"is_self_billing_provider\": true,\n    \"gov_is_sleep_board_certified\": true,\n    \"gov_is_interested_interpreting\": true,\n    \"gov_is_interested_billing\": true,\n    \"gov_interpret_provider\": [\n        102,\n        103\n    ],\n    \"gov_is_self_interpret_provider\": true,\n    \"gov_provider_is_assign_to_another_entity\": true,\n    \"gov_provider_billing_provider\": [\n        102,\n        103\n    ],\n    \"gov_is_self_billing_provider\": true,\n    \"can_see_facility_da6ta\": true,\n    \"bt_doc_key\": 6111,\n    \"facilitie\": [\n        1\n    ]\n}",
+									"raw": "{\n    \"user\": {\n        \"email\": \"ravinik1234@yopmail.com\",\n        \"phone_number\": \"+11112228889\",\n        \"first_name\": \"Ravi1\",\n        \"last_name\": \"Provide5r\",\n        \"middle_name\": \"A.\",\n        \"employee_id\": \"M153946\",\n        \"fax_number\": \"+12779129871\",\n        \"can_see_medical_group_data\": true,\n        \"is_active\": true\n    },\n    \"title\": \"Mr\",\n    \"doc_group\": [4,5],\n    \"doctor_preferred_methods\": 1,\n    \"personal_Email\": \"rv24432@gmail.com\",\n    \"mobile_number\": \"1112228889\",\n    \"address_1\": \"123 Main Street\",\n    \"address_2\": \"Apt 101\",\n    \"city\": \"Phoenix\",\n    \"state\": \"California\",\n    \"postal_code\": \"43563\",\n    \"country\": \"US\",\n    \"Expiration\": \"1996-10-12\",\n    \"lead_status\": 1,\n    \"sales_funnel_status\":18,\n    \"sales_rep_user\":22,\n    \"market_representative_id\": 223456789,\n    \"phone_number_1\": \"+19679067543\",\n    \"fax_number\": \"+12344586891\",\n    \"note\": \"Elbow, Knee, Shoulder, Sports Medicine\",\n    \"npi_number\": \"255982791107\",\n    \"doctor_type\": \"1\",\n    \"can_sign_studies\": true,\n    \"is_sleep_board_certified\": true,\n    \"is_interested_interpreting\": false,\n    \"is_interested_billing\": true,\n    \"private_interpret_provider\": [\n        102,\n        103\n    ],\n    \"is_self_private_interpret_provider\": true,\n    \"is_provider_assign_to_another_entity\": true,\n    \"private_billing_provider\": [\n        102,\n        103\n    ],\n    \"is_self_billing_provider\": true,\n    \"gov_is_sleep_board_certified\": true,\n    \"gov_is_interested_interpreting\": true,\n    \"gov_is_interested_billing\": true,\n    \"gov_interpret_provider\": [\n        102,\n        103\n    ],\n    \"gov_is_self_interpret_provider\": true,\n    \"gov_provider_is_assign_to_another_entity\": true,\n    \"gov_provider_billing_provider\": [\n        102,\n        103\n    ],\n    \"gov_is_self_billing_provider\": true,\n    \"can_see_facility_da6ta\": true,\n    \"bt_doc_key\": 6111,\n    \"facilitie\": [\n        1\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -12749,7 +13989,7 @@
 										},
 										{
 											"key": "email",
-											"value": "Kalpesh@yopmail.com",
+											"value": "kalpesh_patel@yopmail.com",
 											"type": "text",
 											"uuid": "54a67788-6f0e-47e5-bf95-f1f3cc117712"
 										},
@@ -12767,7 +14007,7 @@
 										},
 										{
 											"key": "issue_description",
-											"value": "this is test issue discription",
+											"value": "this is test issue discription after add modules for v2 module",
 											"type": "text",
 											"uuid": "2b3b3cdc-0f32-4087-81d4-e0ed94ce4cab"
 										},
@@ -12820,7 +14060,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ticket_number\": \"H250304235633\",\n    \"full_name\": \"Naresh prajapati\",\n    \"email\": \"naresh.iboon@gmail.com\",\n    \"phone_number\": \"13456789876\",\n    \"priority\": \"High\",\n    \"issue_description\": \"Test\",\n    \"issue_reply\": \"Test Reply 1234\",\n    \"status\": \"Open\",\n    \"created_at\": \"2025-03-05T05:56:33.629122Z\"\n}",
+									"raw": "{\n    \"ticket_number\": \"H250304235633\",\n    \"full_name\": \"Naresh prajapati\",\n    \"email\": \"kalpesh_patel@yopmail.com\",\n    \"phone_number\": \"13456789876\",\n    \"priority\": \"High\",\n    \"issue_description\": \"Test\",\n    \"issue_reply\": \"Test Reply 1234\",\n    \"status\": \"Closed\",\n    \"created_at\": \"2025-03-05T05:56:33.629122Z\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -12828,14 +14068,14 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}v2/support_ticket/update/6/",
+									"raw": "{{local}}v2/support_ticket/update/53/",
 									"host": [
 										"{{local}}v2"
 									],
 									"path": [
 										"support_ticket",
 										"update",
-										"6",
+										"53",
 										""
 									]
 								}
@@ -13070,7 +14310,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"doctor_id\": 102,\n    \"first_name\": \"SecondMonday\",\n    \"last_name\": \"MondaySecond\",\n    \"facility_user_type\": 2,\n    \"facility_user_type_name\": \"\",\n    \"mobile_no\": \"112980678534\",\n    \"fax\": \"23232323\",\n    \"facilityList\": [\n       1,14\n    ],\n    \"email\": \"second0981@yopmail.com\",\n    \"department\": \"ABC\",\n    \"doctor_type\": \"\",\n    \"contact_purpose\": \"1\"\n}",
+									"raw": "{\n    \"doctor_id\": 102,\n    \"first_name\": \"SecondMonday\",\n    \"last_name\": \"MondaySecond\",\n    \"facility_user_type\": 2,\n    \"facility_user_type_name\": \"\",\n    \"mobile_no\": \"112980678534\",\n    \"fax\": \"23232323\",\n    \"facilityList\": [\n       1,14\n    ],\n    \"email\": \"second0981123245678@yopmail.com\",\n    \"department\": \"ABC\",\n    \"doctor_type\": \"\",\n    \"contact_purpose\": \"1\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -13078,11 +14318,12 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}facility/facility_user/create/",
+									"raw": "{{local}}v2/facility/facility_user/create/",
 									"host": [
-										"{{local}}facility"
+										"{{local}}v2"
 									],
 									"path": [
+										"facility",
 										"facility_user",
 										"create",
 										""
@@ -13103,7 +14344,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ4MzI3NzAyLCJpYXQiOjE3NDgyNDEzMDIsImp0aSI6IjVmMTVkYzFlYmI4MjQ3ZTJiODIyMzc0ZjA5M2RjNTBkIiwidXNlcl9pZCI6MSwiZW1haWwiOiJzbGVlcGx5ZmVAeW9wbWFpbC5jb20iLCJvcmdhbml6YXRpb25fbW9kdWxlcyI6W119.6bqJ479tjECuMoVv8zJrvtSriN3L0Folzl54idHBu4M",
+											"value": "{{auth}}",
 											"type": "string"
 										}
 									]
@@ -13112,7 +14353,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n        \"name\": \"First\",\n        \"last_name\": \"Mc\",\n        \"first_name\": \"Normal\"\n        // \"facility_user_type\": 1,\n        // \"facility_user_type_name\": \"Nurse Practitioner\",\n        // \"doctor_id\": 189,\n        // \"doctor_full_name\": \"Alice, Griffin\",\n        // \"mobile_no\": \"1010101010\",\n        // \"fax\": \"101010101\",\n        // \"email\": \"updatebyadmin567@yopmail.com\",\n        // \"department\": \"ABC\",\n        // \"created_at\": \"2025-03-07T09:29:53.487415Z\",\n        // \"updated_at\": null,\n        // \"facility_username\": \"sham@1232\",\n        // \"username\": \"sham@1232\",\n        // \"is_active\": true,\n        // \"contact_purpose\": 1,\n        // \"facilityList\": [\n        //     10,\n        //     48\n        // ],\n        // \"contact_purpose_name\": \"Clinical\",\n        // \"facilityList_name\": [\n        //     \"ABC Hospital\",\n        //     \"ABC Urgent Care\"\n        // ]\n    }",
+									"raw": "{\n    \"name\": \"Physician, Assistant\",\n    \"last_name\": \"Physician1\",\n    \"first_name\": \"Assistant1\",\n    \"facility_user_type\": 4,\n    \"doctor_id\": 271,\n    \"doctor_full_name\": \"Johnson, Steve\",\n    \"mobile_no\": \"14354355641\",\n    \"fax\": \"15657457751\",\n    \"fax_number\": \"15657457754\",\n    \"email\": \"physicianassistant1@yopmail.com\",\n    \"department\": \"Physician\",\n    \"created_at\": \"2025-12-13T05:23:10.110772Z\",\n    \"updated_at\": null,\n    \"facility_username\": \"assistantphysician\",\n    \"is_active\": true,\n    \"contact_purpose\": 2,\n    \"facilityList\": [\n        10\n    ],\n    \"contact_purpose_name\": \"Marketing\",\n    \"facilityList_name\": [\n        \"CIMS Hospital\"\n    ],\n    \"organization\": 146,\n    // \"orgnizations_name\": \"Sleeplyfe test6442\",\n    \"username\": \"assistantphysician\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -13120,17 +14361,11 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8002/api/facility/facility_user/update/91/",
-									"protocol": "http",
+									"raw": "{{local}}v2/facility/facility_user/update/91/",
 									"host": [
-										"127",
-										"0",
-										"0",
-										"1"
+										"{{local}}v2"
 									],
-									"port": "8002",
 									"path": [
-										"api",
 										"facility",
 										"facility_user",
 										"update",
@@ -13583,7 +14818,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\": \"romilcmiew1189241241@yopmail.com\",\n    \"phone_number\": \"+11592235459\",\n    \"first_name\": \"rv\",\n    \"last_name\": \"Mateging\",\n    \"middle_name\": \"K\",\n    \"fax_number\": \"345645909\",\n    \"user_title\": \"Mr.\",\n    \"is_active\":true,\n    \"organization\":145,\n    \"is_admin\" : true\n}",
+									"raw": "{\n    \"email\": \"romilcmiew1189241241@yopmail.com\",\n    \"phone_number\": \"+11592235459\",\n    \"first_name\": \"rv\",\n    \"last_name\": \"Mateging\",\n    \"middle_name\": \"K\",\n    \"fax_number\": \"345645909\",\n    \"user_title\": \"Mr.\",\n    \"is_active\":true,\n    \"organization\":145,\n    \"is_admin\" : true\n} ",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -13962,7 +15197,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"broker_prefix\": \"Mr.\",\n    \"broker_first_name\": \"jan\",\n    \"broker_last_name\": \"nira\",\n    \"broker_email\": \"jonyiur1211111123.da@example.com\",\n    \"broker_phone\": \"7896546789\",\n    \"broker_fax\": \"123-456\",\n    \"entity_name\":\"CBA Entity\",\n    \"address_1\": \"123 Main St\",\n    \"address_2\": \"Suite 100\",\n    \"city\": \"Metropolis\",\n    \"state\": \"NY\",\n    \"postal_code\": \"10001\",\n    \"broker_country\": \"USA\",\n    \"facilities\": [3, 6],\n    \"organization\":145,\n    \"discount_type\":\"amount\",\n    \"discount\":\"89990\"\n}",
+									"raw": "{\n    \"broker_prefix\": \"Mr.\",\n    \"broker_first_name\": \"jann\",\n    \"broker_last_name\": \"niraa\",\n    \"broker_email\": \"jaannn123@yopmail.com\",\n    \"broker_phone\": \"7896546789\",\n    \"broker_fax\": \"123-456\",\n    \"entity_name\":\"CBA Entity\",\n    \"address_1\": \"123 Main St\",\n    \"address_2\": \"Suite 100\",\n    \"city\": \"Metropolis\",\n    \"state\": \"NY\",\n    \"postal_code\": \"10001\",\n    \"broker_country\": \"USA\",\n    \"facilities\": [3, 6],\n    \"organization\":145,\n    \"discount_type\":\"amount\",\n    \"discount\":\"89990\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -14004,14 +15239,13 @@
 									]
 								},
 								"url": {
-									"raw": "{{local}}broker/anonymous/admin_update/gAAAAABoLDMUeoDKinu0bnSoH6KPD3-0vXbnjy5eVHNYJAGnnyUOswMvpAgex-UV-MMfAeo_ZgcIQz0njDpfERnNYudzvVmjkO-sfPB15Bo3jwHwmdcNUbaZIWamy0oNhIaJjmnQEk05j_UXrgJn76wRiOc5-5vhVrNp0WR85hwPMKwQlr9EWEc=/",
+									"raw": "{{local}}broker/anonymous/admin_update/",
 									"host": [
 										"{{local}}broker"
 									],
 									"path": [
 										"anonymous",
 										"admin_update",
-										"gAAAAABoLDMUeoDKinu0bnSoH6KPD3-0vXbnjy5eVHNYJAGnnyUOswMvpAgex-UV-MMfAeo_ZgcIQz0njDpfERnNYudzvVmjkO-sfPB15Bo3jwHwmdcNUbaZIWamy0oNhIaJjmnQEk05j_UXrgJn76wRiOc5-5vhVrNp0WR85hwPMKwQlr9EWEc=",
 										""
 									]
 								}
@@ -14034,19 +15268,19 @@
 											"key": "broker_authorized_signature",
 											"type": "file",
 											"uuid": "56390cfa-62a4-4d9e-a1fa-3e532fc2e1ee",
-											"src": "/home/bittu/Downloads/sign.png"
+											"src": "postman-cloud:///1ef6b681-b777-4880-9a1b-c377ffee32c2"
 										}
 									]
 								},
 								"url": {
-									"raw": "{{local}}broker/anonymous/broker_update/gAAAAABoJu10C_W6CHrHWfOFIcg0rhKTnTmpWR55gpwvxtkEeCiqeuQs1gOvbpn7jP0SOkEEpeX-AgyGuSigboQxxo7KQmh2-hWZ85Dg7vmdP-n-lVsPcmR8sETO9jQgdslq3dkmp71OUpvF7VOGc6UmUZWN2-Q2apVs0FHy468512RlEuoxR1k=/",
+									"raw": "{{local}}broker/anonymous/broker_update/gAAAAABpLpF4-SLTyqj9IfE7SQiHN2t-XT2RQv4xvBruV-B8ki9ol1Zgvi6aOZsgDIdz8BUnPJoWr4LVCKVqoa9oYEErEipbeAS1eKpX7wvggjENdBReh1ZMlVee9RUKS5eWmxTCeTuPIjU2MKpyiDEshW-GDElkLFpC5Jv1JmFdTsa5qU9Y268=/",
 									"host": [
 										"{{local}}broker"
 									],
 									"path": [
 										"anonymous",
 										"broker_update",
-										"gAAAAABoJu10C_W6CHrHWfOFIcg0rhKTnTmpWR55gpwvxtkEeCiqeuQs1gOvbpn7jP0SOkEEpeX-AgyGuSigboQxxo7KQmh2-hWZ85Dg7vmdP-n-lVsPcmR8sETO9jQgdslq3dkmp71OUpvF7VOGc6UmUZWN2-Q2apVs0FHy468512RlEuoxR1k=",
+										"gAAAAABpLpF4-SLTyqj9IfE7SQiHN2t-XT2RQv4xvBruV-B8ki9ol1Zgvi6aOZsgDIdz8BUnPJoWr4LVCKVqoa9oYEErEipbeAS1eKpX7wvggjENdBReh1ZMlVee9RUKS5eWmxTCeTuPIjU2MKpyiDEshW-GDElkLFpC5Jv1JmFdTsa5qU9Y268=",
 										""
 									]
 								}
@@ -14073,7 +15307,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/broker/anonymous/broker_retrive/gAAAAABoJv1BnDQg5H9zIuvBqrUyH4MNjAvRUNWNUa28fD0mZ5zG0zYdEJD8AS_LtsSySYGtxPMKzTiZ1JwNZSCvsCXcIXz6YnxD5D4C7RDsyqZsPfOINbRdhX7Rnv8hbnW9HRRZ8v8eGfzzdMgmTpsaN7BeTeTiVLNol44C9GmSr6TazTKwYl5J43xdqLXWHAAR7jKgv4ZI/",
+									"raw": "{{local}}v2/broker/anonymous/broker_retrive/gAAAAABpOtZpOoXwtQmS5TG_ttLVZmlwNzuBSTpeU5zoCAfx1KPhaZZXACLwVmeMQWReo3jG8FWFwjF7o9v83ypyiOCpWMNTsojUhQz8womCCHv0VT-WinuurF26h_ES7--w8ze59SjvUqs-HA8My8VXlef5gIe51xQMrUkrVjcFj-fZPV_UNvo=",
 									"host": [
 										"{{local}}v2"
 									],
@@ -14081,8 +15315,7 @@
 										"broker",
 										"anonymous",
 										"broker_retrive",
-										"gAAAAABoJv1BnDQg5H9zIuvBqrUyH4MNjAvRUNWNUa28fD0mZ5zG0zYdEJD8AS_LtsSySYGtxPMKzTiZ1JwNZSCvsCXcIXz6YnxD5D4C7RDsyqZsPfOINbRdhX7Rnv8hbnW9HRRZ8v8eGfzzdMgmTpsaN7BeTeTiVLNol44C9GmSr6TazTKwYl5J43xdqLXWHAAR7jKgv4ZI",
-										""
+										"gAAAAABpOtZpOoXwtQmS5TG_ttLVZmlwNzuBSTpeU5zoCAfx1KPhaZZXACLwVmeMQWReo3jG8FWFwjF7o9v83ypyiOCpWMNTsojUhQz8womCCHv0VT-WinuurF26h_ES7--w8ze59SjvUqs-HA8My8VXlef5gIe51xQMrUkrVjcFj-fZPV_UNvo="
 									]
 								}
 							},
@@ -14265,6 +15498,49 @@
 										"broker",
 										"send_mail",
 										"71",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Resend Passwrod Reset Link",
+							"id": "34028877-af58a06c-1b38-40bc-9072-730f012af993",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"broker_id\":33\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/broker/anonymous/resend_reset_link/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"broker",
+										"anonymous",
+										"resend_reset_link",
 										""
 									]
 								}
@@ -14497,9 +15773,2366 @@
 						}
 					],
 					"id": "34028877-0f3a601c-c980-4bff-8528-a8fd58e38a2e"
+				},
+				{
+					"name": "New Permission",
+					"item": [
+						{
+							"name": "Permission Role",
+							"id": "34028877-a2f22ded-298c-44cf-a0e6-b0ffa11af121",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/permission_role/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"permission_role",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Permission List",
+							"id": "34028877-a01f3825-bed0-4ea5-9436-7de431fd026d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/permission_list/11/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"permission_list",
+										"11",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Permission Control List",
+							"id": "34028877-35e5ea4e-673b-4cc3-9c33-544ac70c77a3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/permission_control/list/2/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"permission_control",
+										"list",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Permission Control (create & update)",
+							"id": "34028877-112772a6-0d8b-4702-9af3-a7ed80a06ccb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n        {\n            \"is_create\": true,\n            \"is_view\": false,\n            \"is_update\": false,\n            \"is_delete\": false,\n            \"role\": 2,\n            \"permission\": 1\n        },\n        {\n            \"is_create\": false,\n            \"is_view\": true,\n            \"is_update\": true,\n            \"is_delete\": false,\n            \"role\": 2,\n            \"permission\": 2\n        }\n    ]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/permission_control/bulk_upsert/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"permission_control",
+										"bulk_upsert",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-c25ec422-fe4b-44b8-b6fc-cd55430a2c8f"
 				}
 			],
 			"id": "34028877-a6d04cbc-e545-4dda-8c7c-7e071a8d0650"
+		},
+		{
+			"name": "Studies",
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "34028877-e0ea6cc8-c33a-4932-b38d-43d7be7b2b83"
+				},
+				{
+					"name": "Apnometer Studies",
+					"item": [
+						{
+							"name": "apnometer studies list",
+							"id": "34028877-1bd13912-b19e-4640-9bbe-8acb992c5d27",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "apnometer studies retrive",
+							"id": "34028877-0dfee7cf-1001-4cd3-8d92-86e7de563294",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "apnometer studies create",
+							"id": "34028877-0c10362d-a64c-4619-99dc-9ae91d16baad",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"patient_first_name\": \"Advin Test13\",\n    \"patient_last_name\": \"Doe Demo12\",\n    \"patient_middle_name\": \"A\",\n    \"patient_date_of_birth\": \"1985-07-15\",\n    \"patient_phone_number\": \"+17204081095\",\n    \"patient_email\": \"john.doe12@example.com\",\n    \"patient_gender\": \"M\",\n    \"patient_height\": 175.5,\n    \"patient_weight\": 70.2,\n    \"weight_unit\": \"lb\",\n    \"height_unit\": \"ft\",\n    \"BMI\": 22.8,\n    \"study_date\": \"2025-04-02\",\n    \"referring_provider\": 289, //The doctor whose name will appear in the record, but whose ID will remain hidden.\n    \"insurance_types\": 0,\n    \"interpreted_provider\": 219,\n    \"referring_physician\": 243 // referring physician is also the billing provider, we will display that referring physician here.\n}\n ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}v2/studies/apnometer_studies/create/",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"studies",
+										"apnometer_studies",
+										"create",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-df6ef48f-37cf-429f-8e8f-6d9f64a03b6c"
+				},
+				{
+					"name": "New AWT list",
+					"id": "34028877-7e517962-ae48-4b61-b37c-b33664660fce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/studies/AWT/list/?status=0",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"studies",
+								"AWT",
+								"list",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "34028877-61a9fc81-1b37-4964-834c-d6894c9bfac9"
+		},
+		{
+			"name": "Apnometer Studies Copy",
+			"item": [
+				{
+					"name": "Apnometer File Upload",
+					"item": [
+						{
+							"name": "File Upload List",
+							"id": "34028877-bce21592-b109-4e2e-8fc8-4b968c80e5e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}v2/studies/apnometer/file_upload/list/?apnometer_study__id=10",
+									"host": [
+										"{{local}}v2"
+									],
+									"path": [
+										"studies",
+										"apnometer",
+										"file_upload",
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "apnometer_study__id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Retrieve File Upload List",
+							"id": "34028877-02386ff2-fedd-46e2-9353-c725e012e8a1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{local}}studies/apnometer/file_upload/55/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"apnometer",
+										"file_upload",
+										"55",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "File Upload",
+							"id": "34028877-637a67f1-02f9-4a75-b836-29791d86f7c8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"uuid": "72704393-f600-471e-a788-74406965fa90",
+											"src": "/home/kuldip/Downloads/Doe Demo1 John Test Sleep Summary Report 10.docx"
+										},
+										{
+											"key": "apnometer_study",
+											"value": "10",
+											"type": "text",
+											"uuid": "116455b6-a588-4be2-9028-8a1f7d3a8b02"
+										},
+										{
+											"key": "notes",
+											"value": "aa",
+											"type": "text",
+											"uuid": "5ca37987-4010-4689-aa0d-ccce8ada0f6b"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}studies/apnometer/file_upload/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"apnometer",
+										"file_upload",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload file delete",
+							"id": "34028877-73c76779-c907-4f2b-a3a5-27765e63423d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{local}}studies/apnometer/file_upload/delete/14/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"apnometer",
+										"file_upload",
+										"delete",
+										"14",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload file email send",
+							"id": "34028877-8a7a09eb-4691-47a6-94c1-e790323dbfaf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{auth}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{local}}studies/apnometer/files/send_email/28/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"apnometer",
+										"files",
+										"send_email",
+										"28",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-1a1f673e-2c12-43d2-9417-9fe7a203deaf"
+				},
+				{
+					"name": "Apnometer Signature",
+					"item": [
+						{
+							"name": "Apnometer email Retrive",
+							"id": "34028877-dee58f21-cc37-47f3-bc9b-8d2c35f5aa13",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "apnometer_signature",
+											"type": "file",
+											"uuid": "99175973-8639-426b-9b27-7d181eca843d",
+											"value": null,
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}studies/apnometer/email_retrieve/gAAAAABoOErbUPRqdu-u3vMu2CM-gU73uIR_dTKf73y2l57q6Oiab3oWJ7q__CMykuqGMIUO-vCVYLX37NSPkAsDPGT8p_IHS0CNqp5eI2UueDNs_JYuJ1pIDHBIKn_sxvnJQ9AUPr5DQD6WiDadpro0-flMsmgylrhOb9ofgZ-rlFYlEty2xF8=/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"apnometer",
+										"email_retrieve",
+										"gAAAAABoOErbUPRqdu-u3vMu2CM-gU73uIR_dTKf73y2l57q6Oiab3oWJ7q__CMykuqGMIUO-vCVYLX37NSPkAsDPGT8p_IHS0CNqp5eI2UueDNs_JYuJ1pIDHBIKn_sxvnJQ9AUPr5DQD6WiDadpro0-flMsmgylrhOb9ofgZ-rlFYlEty2xF8=",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Apnometer email update",
+							"id": "34028877-c746e6e2-3f0a-4d4c-8c41-10f46b55980f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "apnometer_signature",
+											"type": "file",
+											"uuid": "99175973-8639-426b-9b27-7d181eca843d",
+											"src": "/home/kuldip/Downloads/signimage.png"
+										},
+										{
+											"key": "reply",
+											"value": "true",
+											"type": "text",
+											"uuid": "3b59d1da-94e7-4fc8-8083-7e8c7f0869da"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{local}}studies/apnometer/email_reply/gAAAAABoOErbUPRqdu-u3vMu2CM-gU73uIR_dTKf73y2l57q6Oiab3oWJ7q__CMykuqGMIUO-vCVYLX37NSPkAsDPGT8p_IHS0CNqp5eI2UueDNs_JYuJ1pIDHBIKn_sxvnJQ9AUPr5DQD6WiDadpro0-flMsmgylrhOb9ofgZ-rlFYlEty2xF8=/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"apnometer",
+										"email_reply",
+										"gAAAAABoOErbUPRqdu-u3vMu2CM-gU73uIR_dTKf73y2l57q6Oiab3oWJ7q__CMykuqGMIUO-vCVYLX37NSPkAsDPGT8p_IHS0CNqp5eI2UueDNs_JYuJ1pIDHBIKn_sxvnJQ9AUPr5DQD6WiDadpro0-flMsmgylrhOb9ofgZ-rlFYlEty2xF8=",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "34028877-456c57e8-501d-4fd4-80a1-aa67a6e982ff"
+				},
+				{
+					"name": "List Anometer Studies",
+					"id": "34028877-129dc4d7-a722-466a-8cad-0eb522ba8519",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/studies/apnometer_studies/list/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"studies",
+								"apnometer_studies",
+								"list",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page_size",
+									"value": "50",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Apnometer Studies",
+					"id": "34028877-14763048-efd2-420d-a55e-28ef1bb82091",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_first_name\": \"Advin Test12\",\n    \"patient_last_name\": \"Doe Demo12\",\n    \"patient_middle_name\": \"A\",\n    \"patient_date_of_birth\": \"1985-07-15\",\n    \"patient_phone_number\": \"+17204081095\",\n    \"patient_email\": \"john.doe1@example.com\",\n    \"patient_gender\": \"M\",\n    \"patient_height\": 175.5,\n    \"patient_weight\": 70.2,\n    \"weight_unit\": \"lb\",\n    \"height_unit\": \"ft\",\n    \"BMI\": 22.8,\n    \"study_date\": \"2025-04-02\",\n    \"referring_provider\": 260, //The doctor whose name will appear in the record, but whose ID will remain hidden.\n    \"insurance_types\": 0,\n    \"interpreted_provider\": 219,\n    \"referring_physician\": 243 // referring physician is also the billing provider, we will display that referring physician here.\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}studies/apnometer_studies/create/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"apnometer_studies",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Apnometer Studies",
+					"id": "34028877-db138714-f30f-476b-8845-f98aff45859f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}studies/apnometer_studies/get/60/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"apnometer_studies",
+								"get",
+								"60",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "34028877-217679fa-c2a8-4724-b7b0-38fb5bf1968a",
+							"name": "get Apnometer Studies",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local}}studies/apnometer_studies/get/25/",
+									"host": [
+										"{{local}}studies"
+									],
+									"path": [
+										"apnometer_studies",
+										"get",
+										"25",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 09:11:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.16"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"status\": true,\n    \"message\": \"Your Data is ready to Scored.\",\n    \"need_call_auto_scored\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Apnometer auto scored synergy data",
+					"id": "34028877-72d20cae-d7e9-405a-88a6-94aa111c07f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"need_to_process\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dev_server}}studies/apnometer_auto_scored_synergy_data/20/",
+							"host": [
+								"{{dev_server}}studies"
+							],
+							"path": [
+								"apnometer_auto_scored_synergy_data",
+								"20",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apnometer Report Get",
+					"id": "34028877-998abb0b-dc9f-487b-a60c-116bf81e1290",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"need_call_generate_report\": true,\n    \"need_to_process\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}studies/apnometer_report_get/10/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"apnometer_report_get",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apnometer Report generate",
+					"id": "34028877-ccc1ec8e-086f-48e9-b154-bcd2fa0ef4ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\n//     \"send_email\":true\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}studies/apnometer_report_generate/10/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"apnometer_report_generate",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "local Apnometer email Retrive",
+					"id": "34028877-fa063df2-b60c-41c3-b69e-896298e9a04a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apnometer_signature",
+									"type": "file",
+									"uuid": "99175973-8639-426b-9b27-7d181eca843d",
+									"src": "/home/kuldip/Downloads/signimage.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}studies/apnometer/email_retrieve/gAAAAABoNaL1MAvT6TAXnVMf5GV9hW3JsKnW18-g9M6af4hU4IN7UVoCP7UrYKixXOf1arKha8gc8jRVc0ek0aZLM43gVUz68U4DwokOJCHKucHzz5Ca76yeIyCqi_2ATsFGZi_NsnJrDa-WA8Coin-W6hB0ynr_1iUGwwase3fJM1jjiX8uq1EUFTNZb7W0O533h2ktPrS3oCQnOU7aORZ-jVotzJhiVxoD3ALH29PWQD3hZLQUVzfUDlRlvo4CcM_K1Bwlwm8T/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"apnometer",
+								"email_retrieve",
+								"gAAAAABoNaL1MAvT6TAXnVMf5GV9hW3JsKnW18-g9M6af4hU4IN7UVoCP7UrYKixXOf1arKha8gc8jRVc0ek0aZLM43gVUz68U4DwokOJCHKucHzz5Ca76yeIyCqi_2ATsFGZi_NsnJrDa-WA8Coin-W6hB0ynr_1iUGwwase3fJM1jjiX8uq1EUFTNZb7W0O533h2ktPrS3oCQnOU7aORZ-jVotzJhiVxoD3ALH29PWQD3hZLQUVzfUDlRlvo4CcM_K1Bwlwm8T",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apnometer Signature",
+					"id": "34028877-32a5b8b5-d17d-4959-861b-89203b4851d5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apnometer_signature",
+									"type": "file",
+									"uuid": "99175973-8639-426b-9b27-7d181eca843d",
+									"src": "/home/kuldip/Downloads/signimage.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}studies/apnometer_signature/10/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"apnometer_signature",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "34028877-4ce810a7-081d-40c6-9a9d-43b5bdbf73e8"
+		},
+		{
+			"name": "Studies form",
+			"item": [
+				{
+					"name": "Bulk Upload",
+					"id": "34028877-c863353f-8128-469d-8983-9cdeccfd73de",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/kuldip/Downloads/denial_records_20250211_031823.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}upload/report/",
+							"host": [
+								"{{local}}upload"
+							],
+							"path": [
+								"report",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pending_list_report",
+					"id": "34028877-e68b1d4f-ee9d-42e3-98ee-c6a38dc352b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}pending_list/report/?record_status=0",
+							"host": [
+								"{{local}}pending_list"
+							],
+							"path": [
+								"report",
+								""
+							],
+							"query": [
+								{
+									"key": "doctor_search",
+									"value": "poonam kansara",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "doctor__id",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "page_size",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "record_status",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Is Active status Update",
+					"id": "34028877-e7aaae35-7d33-4fea-9149-2741646c5b1c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_ids\":[137,138]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}v2/studies/report_data/status_update/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"studies",
+								"report_data",
+								"status_update",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "studies_report_list",
+					"id": "34028877-bf8bfcbb-d7e4-40f1-9023-92d0f6b2b9a4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1NTQ5NDMyLCJpYXQiOjE3NjU0NjMwMzIsImp0aSI6IjA2N2M2YzFmNTZlZTQxZjU5MTBjOWVjMjAyMjM5MDVlIiwidXNlcl9pZCI6MjY1LCJlbWFpbCI6IkJyb3duMDVAeW9wbWFpbC5jb20iLCJ1c2VyX3Blcm1pc3Npb25zIjpbeyJpZCI6MTM1LCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIEFXVCBTdHVkaWVzIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjozfSx7ImlkIjoxNDgsInBlcm1pc3Npb25fbmFtZSI6IkVtYWlsIE5vdGlmaWNhdGlvbiBUZW1wbGF0ZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjcsInBlcm1pc3Npb24iOjE2fSx7ImlkIjoxMzQsInBlcm1pc3Npb25fbmFtZSI6IlNhdmVkIERyYWZ0cyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjp0cnVlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoyfSx7ImlkIjoxMzYsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2NvcmluZyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6NH0seyJpZCI6MTM3LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgQVdUIFN0dWRpZXMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjcsInBlcm1pc3Npb24iOjV9LHsiaWQiOjEzOCwicGVybWlzc2lvbl9uYW1lIjoiTmV3IFJlZmVycmFsIFJlY2VpdmVkIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjo2fSx7ImlkIjoxMzksInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6N30seyJpZCI6MTQwLCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFJlZmVycmFsIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjo4fSx7ImlkIjoxNDEsInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBSZWZlcnJhbCBTZW50IiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6OX0seyJpZCI6MTQyLCJwZXJtaXNzaW9uX25hbWUiOiJQZW5kaW5nIFNpZ25hdHVyZSIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6NywicGVybWlzc2lvbiI6MTB9LHsiaWQiOjE0MywicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIFJlY29yZHMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxMX0seyJpZCI6MTQ0LCJwZXJtaXNzaW9uX25hbWUiOiJEZW5pYWxzIExpc3QiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxMn0seyJpZCI6MTQ1LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgRGVuaWFsIENsYWltcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjcsInBlcm1pc3Npb24iOjEzfSx7ImlkIjoxNDYsInBlcm1pc3Npb25fbmFtZSI6IkNvbXByZWhlbnNpdmUgVGVtcGxhdGUiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxNH0seyJpZCI6MTQ3LCJwZXJtaXNzaW9uX25hbWUiOiJBV1QgVGVtcGxhdGUiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxNX0seyJpZCI6MTUwLCJwZXJtaXNzaW9uX25hbWUiOiJSYWlzZSBhIFRpY2tldCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoyOH0seyJpZCI6MTQ5LCJwZXJtaXNzaW9uX25hbWUiOiJGQVEiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoyN30seyJpZCI6MTMzLCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgQVdUIFJlZmVycmFsIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjo3LCJwZXJtaXNzaW9uIjoxfV19.z0oN5QEhclk_mQGnosVG92m7Wg9dLlBAKgvPGzi6oTY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/studies/report/?doctor__id=164",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"studies",
+								"report",
+								""
+							],
+							"query": [
+								{
+									"key": "is_physician_signature",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "H_P_physician_signature",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "patient_name",
+									"disabled": true
+								},
+								{
+									"key": "record_status",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-08-05",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-12-01",
+									"disabled": true
+								},
+								{
+									"key": "doctor__id",
+									"value": "164"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_studies_report_list",
+					"id": "34028877-998e49f4-a335-4577-90d1-255eca61bd48",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/studies/report/all/?is_physician_signature=false&H_P_physician_signature=false&is_active=false",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"studies",
+								"report",
+								"all",
+								""
+							],
+							"query": [
+								{
+									"key": "is_physician_signature",
+									"value": "false"
+								},
+								{
+									"key": "H_P_physician_signature",
+									"value": "false"
+								},
+								{
+									"key": "doctor__id",
+									"value": "118",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "patient_name",
+									"disabled": true
+								},
+								{
+									"key": "record_status",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-07-23",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-07-23",
+									"disabled": true
+								},
+								{
+									"key": "is_active",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all_studies_report_list",
+					"id": "34028877-7ecebccc-c7ca-46e9-9ceb-971e8315543b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_ids\":[173,172]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}studies/report_data/status_update/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"report_data",
+								"status_update",
+								""
+							],
+							"query": [
+								{
+									"key": "doctor__id",
+									"value": "118",
+									"disabled": true
+								},
+								{
+									"key": "ordering",
+									"value": "patient_name",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2024-07-23",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2024-07-23",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "completed_list_report",
+					"id": "34028877-ba18ca8b-4700-4460-9195-815e420687e8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dev_server}}completed_list/report/?is_physician_signature=true&H_P_physician_signature=true&doctor__id=48&page=1&page_size=10",
+							"host": [
+								"{{dev_server}}completed_list"
+							],
+							"path": [
+								"report",
+								""
+							],
+							"query": [
+								{
+									"key": "is_physician_signature",
+									"value": "true"
+								},
+								{
+									"key": "H_P_physician_signature",
+									"value": "true"
+								},
+								{
+									"key": "doctor__id",
+									"value": "48"
+								},
+								{
+									"key": "doctor_search",
+									"value": "kuldeep",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "page_size",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unassign_studies",
+					"id": "34028877-e0ba37f7-93e4-4128-813a-2d72ee77c54c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}unassignstudies/report/",
+							"host": [
+								"{{local}}unassignstudies"
+							],
+							"path": [
+								"report",
+								""
+							],
+							"query": [
+								{
+									"key": "doctor__id=",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bulk sign form",
+					"id": "34028877-dbdb6a09-c0ac-4ccb-94a5-440478f9333d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth3}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ids",
+									"value": "[333]",
+									"type": "text"
+								},
+								{
+									"key": "signature",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/home/kuldip/Downloads/sign.png"
+									],
+									"src": "/home/kuldip/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{common}}sign_now/report/",
+							"host": [
+								"{{common}}sign_now"
+							],
+							"path": [
+								"report",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View PDF",
+					"id": "34028877-792a3b53-54c5-457c-8e92-26e68acbb4e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":356\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}view/pdf/",
+							"host": [
+								"{{local}}view"
+							],
+							"path": [
+								"pdf",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve_supplemental_form",
+					"id": "34028877-b0474b4e-4bf3-4745-a94f-18fec39f1f0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth3}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{common}}standard_supplemental_notes/503/",
+							"host": [
+								"{{common}}standard_supplemental_notes"
+							],
+							"path": [
+								"503",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Standard_Supplemental_Note",
+					"id": "34028877-b09cb801-856e-428b-8cf6-0c6e9c0bbb3f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY1Nzk2MTA4LCJpYXQiOjE3NjU3MDk3MDgsImp0aSI6IjBkZWUyNjZlM2E4ZTRmNmNhNGVlZDk4ZDdmN2E2ZWY5IiwidXNlcl9pZCI6NzYxLCJlbWFpbCI6ImNvZHlwYXRlbDAxQHlvcG1haWwuY29tIiwidXNlcl9wZXJtaXNzaW9ucyI6W3siaWQiOjEyOSwicGVybWlzc2lvbl9uYW1lIjoiUGVuZGluZyBBV1QgU3R1ZGllcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjozfSx7ImlkIjoxMzAsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2NvcmluZyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo0fSx7ImlkIjoxMzEsInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBBV1QgU3R1ZGllcyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo1fSx7ImlkIjoxMzIsInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCBSZWNlaXZlZCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo2fSx7ImlkIjoxMzQsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgUmVmZXJyYWwiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6OH0seyJpZCI6MTM1LCJwZXJtaXNzaW9uX25hbWUiOiJDb21wbGV0ZWQgUmVmZXJyYWwgU2VudCIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjo5fSx7ImlkIjoxMzYsInBlcm1pc3Npb25fbmFtZSI6IlBlbmRpbmcgU2lnbmF0dXJlIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MTB9LHsiaWQiOjEzNywicGVybWlzc2lvbl9uYW1lIjoiQ29tcGxldGVkIFJlY29yZHMiLCJpc19jcmVhdGUiOmZhbHNlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MTF9LHsiaWQiOjEzOCwicGVybWlzc2lvbl9uYW1lIjoiRGVuaWFscyBMaXN0IiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjEyfSx7ImlkIjoxMzksInBlcm1pc3Npb25fbmFtZSI6IkNvbXBsZXRlZCBEZW5pYWwgQ2xhaW1zIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjEzfSx7ImlkIjoxNDAsInBlcm1pc3Npb25fbmFtZSI6IkNvbXByZWhlbnNpdmUgVGVtcGxhdGUiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoxNH0seyJpZCI6MTQxLCJwZXJtaXNzaW9uX25hbWUiOiJBV1QgVGVtcGxhdGUiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6ZmFsc2UsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoxNX0seyJpZCI6MTQyLCJwZXJtaXNzaW9uX25hbWUiOiJQcm92aWRlcnMiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjE3fSx7ImlkIjoxNDMsInBlcm1pc3Npb25fbmFtZSI6IkFkbWluL1NhbGVzIFJlcCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MTh9LHsiaWQiOjE0NCwicGVybWlzc2lvbl9uYW1lIjoiRmFjaWxpdHkgVXNlcnMiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjE5fSx7ImlkIjoxNDUsInBlcm1pc3Npb25fbmFtZSI6IlJpZ2h0IERvY3VtZW50IiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoyNX0seyJpZCI6MTQ3LCJwZXJtaXNzaW9uX25hbWUiOiJGYWNpbGl0eSIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOnRydWUsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoyOX0seyJpZCI6MTQ5LCJwZXJtaXNzaW9uX25hbWUiOiJSYWlzZSBhIFRpY2tldCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6Mjh9LHsiaWQiOjE0OCwicGVybWlzc2lvbl9uYW1lIjoiRkFRIiwiaXNfY3JlYXRlIjpmYWxzZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjpmYWxzZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjI3fSx7ImlkIjoxMjgsInBlcm1pc3Npb25fbmFtZSI6IlNhdmVkIERyYWZ0cyIsImlzX2NyZWF0ZSI6ZmFsc2UsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjp0cnVlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6Mn0seyJpZCI6MTI3LCJwZXJtaXNzaW9uX25hbWUiOiJOZXcgQVdUIFJlZmVycmFsIiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOmZhbHNlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MX0seyJpZCI6MTQ2LCJwZXJtaXNzaW9uX25hbWUiOiJBcG5vbWV0ZXIiLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjI2fSx7ImlkIjoxMzMsInBlcm1pc3Npb25fbmFtZSI6Ik5ldyBSZWZlcnJhbCIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6N30seyJpZCI6NTM4LCJwZXJtaXNzaW9uX25hbWUiOiJJbnRha2UgVXNlciIsImlzX2NyZWF0ZSI6dHJ1ZSwiaXNfdmlldyI6dHJ1ZSwiaXNfdXBkYXRlIjp0cnVlLCJpc19kZWxldGUiOmZhbHNlLCJyb2xlIjoxOSwicGVybWlzc2lvbiI6MjB9LHsiaWQiOjUzOSwicGVybWlzc2lvbl9uYW1lIjoiU2xlZXAgQ29hY2giLCJpc19jcmVhdGUiOnRydWUsImlzX3ZpZXciOnRydWUsImlzX3VwZGF0ZSI6dHJ1ZSwiaXNfZGVsZXRlIjpmYWxzZSwicm9sZSI6MTksInBlcm1pc3Npb24iOjIxfSx7ImlkIjo1NDAsInBlcm1pc3Npb25fbmFtZSI6IlNjb3JpbmcgVGVjaG5vbG9naXN0IiwiaXNfY3JlYXRlIjp0cnVlLCJpc192aWV3Ijp0cnVlLCJpc191cGRhdGUiOnRydWUsImlzX2RlbGV0ZSI6ZmFsc2UsInJvbGUiOjE5LCJwZXJtaXNzaW9uIjoyM31dfQ.t8l8nW_f65vwmTL2E_ocj23vkbInz3PlkrVWfjFZOJk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "H_and_P_form",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "date_of_visit",
+									"value": "06-08-2024",
+									"type": "text"
+								},
+								{
+									"key": "present_complaint",
+									"value": "Headache and nausea",
+									"type": "text"
+								},
+								{
+									"key": "visit_diagnoses",
+									"value": "Migraine",
+									"type": "text"
+								},
+								{
+									"key": "patient_complain_about_sleep_issue",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "patients_complaint",
+									"value": "Difficulty sleeping",
+									"type": "text"
+								},
+								{
+									"key": "sleep_evalution_with_patient",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "high_risk_of_sleep_apnea",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "high_risk_of_sleep_apnea_note",
+									"value": "high risk of sleep apnea note",
+									"type": "text"
+								},
+								{
+									"key": "complaints_symptoms_diagnoses",
+									"value": "[\"Somnolence\", \"Obstructive Sleep Apnea\", \"Abnormal head movements\", \"Insomnia, unspecified\", \"Diabetes\", \"Difficulty Sleeping\", \"Dry Mouth / Sore Throat\", \"Excessive Daytime Sleepiness\", \"Frequent Awakening\", \"Sleep Disordered Breathing Gasping / Choking\", \"Non-Restorative Sleep\", \"Hypertension\", \"Insomnia\", \"Irritability, Depression, Anxiety\", \"Loud Snoring\", \"Morbid Obesity (BMI>30)\", \"Morning Headaches\", \"Oral Appliance Assessment\", \"PTSD\", \"TBI\", \"Other\"]",
+									"type": "text"
+								},
+								{
+									"key": "osa",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "verified_patient_Verified_any_following",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "psg",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "psg_nots",
+									"value": "psg nots",
+									"type": "text"
+								},
+								{
+									"key": "reason_for_multi_night_hss",
+									"value": "reason for multi night hss",
+									"type": "text"
+								},
+								{
+									"key": "mitigate_sleep_issues",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "mitigate_sleep_issues_note",
+									"value": "Advised sleep hygiene practices",
+									"type": "text"
+								},
+								{
+									"key": "undiagnosed_sleep_apena_or_insomnia",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "undiagnosed_sleep_apena_or_insomnia_note",
+									"value": "undiagnosed sleep apena or insomnia note",
+									"type": "text"
+								},
+								{
+									"key": "mitigate_sleep_problems",
+									"value": "mitigate sleep problems note",
+									"type": "text"
+								},
+								{
+									"key": "other_complaints",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "symptoms_of_complaint",
+									"value": "Pain in lower back",
+									"type": "text"
+								},
+								{
+									"key": "presented_symptoms",
+									"value": "Stiffness and pain",
+									"type": "text"
+								},
+								{
+									"key": "past_history",
+									"value": "No significant history",
+									"type": "text"
+								},
+								{
+									"key": "social_history",
+									"value": "Non-smoker, occasional alcohol",
+									"type": "text"
+								},
+								{
+									"key": "education",
+									"value": "High school",
+									"type": "text"
+								},
+								{
+									"key": "activities_of_daily_living",
+									"value": "Independent",
+									"type": "text"
+								},
+								{
+									"key": "diagnosis_code",
+									"value": "[\"Obstructive Sleep Apnea (G47.33)\",\"Abnormal head movements (R25.0)\",\"Somnolence (R40.0)\",\"Insomnia, unspecified (G47.0)\",\"Other\"]",
+									"type": "text"
+								},
+								{
+									"key": "order_date",
+									"value": "06-11-2024",
+									"type": "text"
+								},
+								{
+									"key": "signature",
+									"type": "file",
+									"src": "/home/kuldip/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}v2/standard_supplemental_notes_update/542/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"standard_supplemental_notes_update",
+								"542",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sign_supplemental_form",
+					"id": "34028877-985f504f-32ca-4915-af9e-bdbbffdd3904",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ids",
+									"value": "[333]",
+									"type": "text"
+								},
+								{
+									"key": "signature",
+									"type": "file",
+									"src": "/home/kuldip/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{docker}}sign_supplemental_form/pdf/",
+							"host": [
+								"{{docker}}sign_supplemental_form"
+							],
+							"path": [
+								"pdf",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view_Standard_Supplemental_Note",
+					"id": "34028877-53628196-793c-41a0-a2d9-5bce7349666a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{production}}standard_supplemental_notes_PDF/301/",
+							"host": [
+								"{{production}}standard_supplemental_notes_PDF"
+							],
+							"path": [
+								"301",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Both_form_sign_now",
+					"id": "34028877-65ba87a0-a8f3-4ea4-a4f5-110550cb0063",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ids",
+									"value": "[30]",
+									"type": "text"
+								},
+								{
+									"key": "signature",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/home/kuldip/Downloads/sign.png"
+									],
+									"src": "/home/kuldip/Downloads/sign.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}bothform_sign_now/report/",
+							"host": [
+								"{{local}}bothform_sign_now"
+							],
+							"path": [
+								"report",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_form",
+					"id": "34028877-45dab668-48ab-4194-ba01-380c6e4eea84",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"patient_last_name\": \"John Doe\",\n    \"patient_first_name\": \"John Doe\",\n    \"patient_name\":\"John Doe\",\n    \"date_of_birth\": \"1985-07-24\",\n    \"patient_email\": \"john.doe@example.com\",\n    \"patient_phone_number\": \"+1234567890\",\n    \"patient_neck_size\": 16.5,\n    \"weight\": 180.5,\n    \"height\": 70.5,\n    \"BMI\": 25.5,\n    \"sleep_epworth_score\": 12,\n    \"clinical_and_sleep_history\": [\"Chronic insomnia\", \"Sleep apnea\"],\n    \"carrently_prescribed\": [\"Medication A\", \"Medication B\"],\n    \"CHST_codes1\": [\"Code1\", \"Code2\"],\n    \"CHST_codes2\": [\"Code3\", \"Code4\"],\n    \"Chst_clinical_justification\": \"Patient requires treatment due to severe sleep apnea.\",\n    \"AWT_check\": true,\n    \"CHST_check\": false,\n    \"IST_check\": true,\n    \"studies_type\": 1,\n    \"AWT_CHST_IST_Check\": [\"AWT\", \"IST\"],\n    \"physician_name\": \"Dr. Jane Smith\",\n    \"NPI\": \"1234567890\",\n    \"office_contact\": \"+0987654321\",\n    \"office_number\": \"+0987654321\",\n    \"fax_contact\": \"+0987654322\",\n    \"physician_contact_number\": \"+0987654323\",\n    \"pap_diagnosis_code\": [\"PAP123\", \"PAP456\"],\n    \"length_of_need\": \"6 months\",\n    \"pap_equipment\": [\"Equipment1\", \"Equipment2\"],\n    \"pap_minimum\": 4.5,\n    \"pap_maximum\": 12.5,\n    \"bipap_minimum\": 5.5,\n    \"bipap_maximum\": 15.5,\n    \"cpap_minimum\": 6.5,\n    \"pap_supplies_or_monitoring\": [\"Supply1\", \"Monitoring1\"],\n    \"chap_code\": [\"CHAP1\", \"CHAP2\"],\n    \"follow_up_after_30_days_of_treatment\": [\"Review1\", \"Review2\"],\n    \"follow_up_after_6_months_of_treatment\": [\"Review3\", \"Review4\"],\n    \"home_sleep_test_procedure\": [\"Procedure1\", \"Procedure2\"],\n    \"home_sleep_apne_test_codes\": [\"HSTC1\", \"HSTC2\"],\n    \"home_sleep_apne_test_check\": [\"Check1\", \"Check2\"],\n    \"facilities\":1,\n    \"secoundary_insurance_carrier\": 1,\n    \"secoundary_insurance_policy_id\": \"sdgfh\",\n    \"secoundary_insurance_group_id\":\"dfd\",\n    \"sales_user\":1\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}order_form/create/",
+							"host": [
+								"{{local}}order_form"
+							],
+							"path": [
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "studies_assign",
+					"id": "34028877-4355ecaa-0668-4f84-acdd-7376b8e8f972",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"doctor\":1,\n    \"sales_user\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}studies/assign/2/",
+							"host": [
+								"{{local}}studies"
+							],
+							"path": [
+								"assign",
+								"2",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list order form",
+					"id": "34028877-b2c9db95-6971-4860-99fd-76af2ae29cf5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth3}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{common}}order_form/list/",
+							"host": [
+								"{{common}}order_form"
+							],
+							"path": [
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order form update",
+					"id": "34028877-02c11057-3715-4f9d-9232-af4b2927e3c2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{local_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": 0 ,\n  \"doctor\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}order_form/update/64/",
+							"host": [
+								"{{local}}order_form"
+							],
+							"path": [
+								"update",
+								"64",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bulk_list",
+					"id": "34028877-23c7d90b-e051-4219-b197-0103267477e4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{local_admin}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}order_form/bulk_list/",
+							"host": [
+								"{{local}}order_form"
+							],
+							"path": [
+								"bulk_list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrive order form",
+					"id": "34028877-e3ce3527-1976-41ea-b6c5-fe68ed8f9395",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/order_form/retrieve/741/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"order_form",
+								"retrieve",
+								"741",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update order form",
+					"id": "34028877-c23f0b86-d49c-493b-8da1-67951549fcfe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{proxy_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{local}}order_form/update/63/",
+							"host": [
+								"{{local}}order_form"
+							],
+							"path": [
+								"update",
+								"63",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mutiple order form download",
+					"id": "34028877-021f3de0-d51c-4115-8b25-5183f7102808",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":[853]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local}}multiple/view/pdf/",
+							"host": [
+								"{{local}}multiple"
+							],
+							"path": [
+								"view",
+								"pdf",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "history of referral patient",
+					"id": "34028877-a5b78f76-9964-4615-996c-53141b7f5eac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}referrals/history/",
+							"host": [
+								"{{local}}referrals"
+							],
+							"path": [
+								"history",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "h&p form history",
+					"id": "34028877-246856de-2658-483f-9821-f633600e9624",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{local}}h&p/history/",
+							"host": [
+								"{{local}}h&p"
+							],
+							"path": [
+								"history",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook Study",
+					"id": "34028877-3c8c3e0d-b523-4312-9a63-c3a356dc11e7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"UPLOAD_PROCESSED\",\n    \"study_id\": \"185337\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bfe2cb68fb0c.ngrok-free.app/api/synergy/webhook",
+							"protocol": "https",
+							"host": [
+								"bfe2cb68fb0c",
+								"ngrok-free",
+								"app"
+							],
+							"path": [
+								"api",
+								"synergy",
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Webhook Study Copy",
+					"id": "34028877-f2e1654c-1c07-4b8c-8cbc-c7fed3882ec8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"UPLOAD_PROCESSED\",\n    \"study_id\": \"185337\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bfe2cb68fb0c.ngrok-free.app/api/synergy/webhook",
+							"protocol": "https",
+							"host": [
+								"bfe2cb68fb0c",
+								"ngrok-free",
+								"app"
+							],
+							"path": [
+								"api",
+								"synergy",
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "34028877-ed220f51-0f81-4d49-ab26-05cd0cc0c4e0"
 		}
 	],
 	"event": [
