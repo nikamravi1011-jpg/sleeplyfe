@@ -490,7 +490,10 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": ""
+								}
 							},
 							"response": []
 						}
@@ -8317,7 +8320,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/list/?page_size=10&page=1",
+							"raw": "{{local}}v2/right_document/patient_consent/list/?search=cello steel",
 							"host": [
 								"{{local}}v2"
 							],
@@ -8330,11 +8333,17 @@
 							"query": [
 								{
 									"key": "page_size",
-									"value": "10"
+									"value": "10",
+									"disabled": true
 								},
 								{
 									"key": "page",
-									"value": "1"
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "cello steel"
 								}
 							]
 						}
@@ -13918,7 +13927,7 @@
 										},
 										{
 											"key": "assign_to_support_user__id",
-											"value": null,
+											"value": "",
 											"disabled": true
 										}
 									]
@@ -17224,7 +17233,7 @@
 							"query": [
 								{
 									"key": "doctor__id=",
-									"value": null,
+									"value": "",
 									"type": "text",
 									"disabled": true
 								}
