@@ -5833,8 +5833,29 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{local}}v2/leads/total_lead/",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"leads",
+								"total_lead",
+								""
+							]
+						}
 					},
 					"response": []
 				}
