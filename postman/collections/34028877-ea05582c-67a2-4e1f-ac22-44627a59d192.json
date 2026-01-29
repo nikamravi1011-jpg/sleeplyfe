@@ -8767,7 +8767,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/total_lead/count/?filter_by=day",
+									"raw": "{{local}}v2/total_lead/count/?start_date=2026-01-01&end_date=2026-01-31",
 									"host": [
 										"{{local}}v2"
 									],
@@ -8779,7 +8779,18 @@
 									"query": [
 										{
 											"key": "filter_by",
-											"value": "day"
+											"value": "day",
+											"disabled": true
+										},
+										{
+											"key": "start_date",
+											"value": "2026-01-01",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2026-01-31",
+											"type": "text"
 										}
 									]
 								}
