@@ -5878,6 +5878,23 @@
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_date",
+									"value": "2025-08-05",
+									"type": "text",
+									"uuid": "de6ad6fa-8b9f-42c5-a24e-7ed5341e0a22"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-12-01",
+									"type": "text",
+									"uuid": "b91e9f32-04c6-42ae-a39d-eb6067e092be"
+								}
+							]
+						},
 						"url": {
 							"raw": "{{local}}v2/total_lead_perfomer/count/",
 							"host": [
@@ -6772,7 +6789,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"number_of_licenses_users\": 50,\n    \"software_name\": \"Sleeplyfe 1231245\",\n    \"work_schedule\": [\n        {\n            \"work_day\": 1,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        }\n    ],\n    \"plan_info\": [\n        {\n        \"subscription_plan_name\": \"Starter\",\n        \"implementation_cost\": \"2000.00\",\n        \"implementation_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"per_month_location_npi_cost\": \"10000.00\",\n        \"per_month_location_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"additional_provider_npi_cost\": \"10454.00\",\n        \"additional_provider_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_commitment\": \"0.00\",\n        \"travel_cost\": \"0.0\",\n        \"travel_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"daily_use_of_vital_care_units\": 90.0,\n        \"awt_self_care\": 20.0,\n        \"awt_self_care_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_self_care_virtual_assistant\": 10.0,\n        \"awt_self_care_premium_live_assistant\": 20.0,\n        \"chst_test_and_report\": 0.0,\n        \"chst_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_test_and_report\": 0.0,\n        \"chap_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"ist_test_and_report\": 0.0,\n        \"ist_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"remote_monitoring\": 0.0,\n        \"remote_monitoring_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_reimbursement\": 0.0,\n        \"awt_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chst_reimbursement\": 0.0,\n        \"chst_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_reimbursement\": 0.0,\n        \"chap_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_reim\": 0.0,\n        \"apnometer_chst_ist_reim_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"sleep_rpm_reimbursement\": 0.0,\n        \"sleep_rpm_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"conversion_of_awt_to_home_test\": \"0%\",\n        \"conversion_of_awt_to_home_test_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_chst_test\": 10.0,\n        \"monthly_awt_test\": 20.0,\n        \"apnometer_chst_ist_osa_positive\": 0.0,\n        \"apnometer_chst_ist_osa_positive_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_conversion\": 0.0,\n        \"apnometer_chst_ist_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_chst_to_pap_conversion\": \"0%\",\n        \"initial_post_chst_to_pap_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_month_pap_rpm\": 0.0,\n        \"initial_post_month_pap_rpm_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"cost_per_month\": \"10.00\",\n        \"revenue_per_month\": \"0.00\",\n        \"gross_profits\": \"-10.00\",\n        \"monthly_subscription_fee\": \"0.00\",\n        \"monthly_subscription_fee_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"total_saving\": 0.0,\n        \"awt_test_ranges\": [],\n        \"overall_discount_apply\": null,\n        \"subscription_plan\": 1\n    }\n],\n\"medicaid\": 20,\n\"original_medicare\": 20,\n\"medicare_advantage\": 10,\n\"commercial_HMO\": 20,\n\"commercial_PPO_EPO\": 30,\n\"org_name\": \"Sleeplyfenew test6442567890\",\n\"org_first_name\": \"Project new167890\",\n\"org_last_name\": \"Sleeplyfe new167890\",\n\"org_contact_person_designations\": 14,\n\"org_contact_person_email\": \"sleepl65425fg67890@yopmail.com\",\n\"org_contact_person_phone\": \"13247767846\",\n// \"free_trial_test\": null,\n// \"patient_volume_count\" : null\n\"org_address_1\": \"Northeast Washington\",\n\"org_address_2\": \"Test Data\",\n\"org_city\": \"Washington\",\n\"org_state\": \"DC\",\n\"org_postal_code\": \"20002\",\n\"org_country\": \"USA\"\n// \"secondary_org_name\": \"Sleeplyfe Project4571\",  \n// \"secondary_org_first_name\": \"Project\",\n// \"secondary_org_last_name\": \"Sleeplyfe\",\n// \"secondary_org_contact_person_designations\": 1,\n// \"secondary_org_contact_person_email\": \"sleeply098@yopmail.com\",\n// \"secondary_org_contact_person_phone\": \"13244668787\",\n// \"secondary_org_address_1\": \"Northeast Washington\",\n// \"secondary_org_address_2\": \"Test Data\",\n// \"secondary_org_city\": \"Washington\",\n// \"secondary_org_state\": \"DC\",\n// \"secondary_org_postal_code\": \"20002\",\n// \"secondary_org_country\": \"USA\",\n// \"user_type\": \"Previous_user\",\n// \"intended_usage_duration\": \"One_week\",\n// \"patient_volume\": \"Week\",\n// \"patient_volume_count\": 10,\n// \"terms_and_conditions\": false,\n// \"privacy_policy\": false,\n// \"authorized_signatory_name\": \"K. Cody Patel\",\n// \"insurance_cov_total\": 100,\n// \"speciality\": [4,5],\n// \"golive_date\": \"2025-05-02\"\n}",
+							"raw": "{\n    \"number_of_licenses_users\": 50,\n    \"software_name\": \"Sleeplyfe 1231245\",\n    \"work_schedule\": [\n        {\n            \"work_day\": 1,\n            \"start_time\": \"14:30\",\n            \"end_time\": \"18:30\"\n        }\n    ],\n    \"plan_info\": [\n        {\n        \"subscription_plan_name\": \"Starter\",\n        \"implementation_cost\": \"2000.00\",\n        \"implementation_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"per_month_location_npi_cost\": \"10000.00\",\n        \"per_month_location_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"additional_provider_npi_cost\": \"10454.00\",\n        \"additional_provider_npi_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_commitment\": \"0.00\",\n        \"travel_cost\": \"0.0\",\n        \"travel_cost_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"daily_use_of_vital_care_units\": 90.0,\n        \"awt_self_care\": 20.0,\n        \"awt_self_care_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_self_care_virtual_assistant\": 10.0,\n        \"awt_self_care_premium_live_assistant\": 20.0,\n        \"chst_test_and_report\": 0.0,\n        \"chst_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_test_and_report\": 0.0,\n        \"chap_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"ist_test_and_report\": 0.0,\n        \"ist_test_and_report_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"remote_monitoring\": 0.0,\n        \"remote_monitoring_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"awt_reimbursement\": 0.0,\n        \"awt_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chst_reimbursement\": 0.0,\n        \"chst_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"chap_reimbursement\": 0.0,\n        \"chap_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_reim\": 0.0,\n        \"apnometer_chst_ist_reim_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"sleep_rpm_reimbursement\": 0.0,\n        \"sleep_rpm_reimbursement_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"conversion_of_awt_to_home_test\": \"0%\",\n        \"conversion_of_awt_to_home_test_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"monthly_chst_test\": 10.0,\n        \"monthly_awt_test\": 20.0,\n        \"apnometer_chst_ist_osa_positive\": 0.0,\n        \"apnometer_chst_ist_osa_positive_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"apnometer_chst_ist_conversion\": 0.0,\n        \"apnometer_chst_ist_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_chst_to_pap_conversion\": \"0%\",\n        \"initial_post_chst_to_pap_conversion_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"initial_post_month_pap_rpm\": 0.0,\n        \"initial_post_month_pap_rpm_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"cost_per_month\": \"10.00\",\n        \"revenue_per_month\": \"0.00\",\n        \"gross_profits\": \"-10.00\",\n        \"monthly_subscription_fee\": \"0.00\",\n        \"monthly_subscription_fee_discount\": {\n            \"type\": \"$\",\n            \"value\": \"0\"\n        },\n        \"total_saving\": 0.0,\n        \"awt_test_ranges\": [],\n        \"overall_discount_apply\": null,\n        \"subscription_plan\": 1\n    }\n],\n\"medicaid\": 20,\n\"original_medicare\": 20,\n\"medicare_advantage\": 10,\n\"commercial_HMO\": 20,\n\"commercial_PPO_EPO\": 30,\n\"org_name\": \"Sleeplyfenew test6442567890\",\n\"org_first_name\": \"Project new167890\",\n\"org_last_name\": \"Sleeplyfe new167890\",\n\"org_contact_person_designations\": 14,\n\"org_contact_person_email\": \"sleepl65425fg67890@yopmail.com\",\n\"org_contact_person_phone\": \"13247767846\",\n// \"free_trial_test\": null,\n// \"patient_volume_count\" : null\n\"org_address_1\": \"Northeast Washington\",\n\"org_address_2\": \"Test Data\",\n\"org_city\": \"Washington\",\n\"org_state\": \"DC\",\n\"org_postal_code\": \"20002\",\n\"org_country\": \"USA\",\n\"lead_id\":60\n// \"secondary_org_name\": \"Sleeplyfe Project4571\",  \n// \"secondary_org_first_name\": \"Project\",\n// \"secondary_org_last_name\": \"Sleeplyfe\",\n// \"secondary_org_contact_person_designations\": 1,\n// \"secondary_org_contact_person_email\": \"sleeply098@yopmail.com\",\n// \"secondary_org_contact_person_phone\": \"13244668787\",\n// \"secondary_org_address_1\": \"Northeast Washington\",\n// \"secondary_org_address_2\": \"Test Data\",\n// \"secondary_org_city\": \"Washington\",\n// \"secondary_org_state\": \"DC\",\n// \"secondary_org_postal_code\": \"20002\",\n// \"secondary_org_country\": \"USA\",\n// \"user_type\": \"Previous_user\",\n// \"intended_usage_duration\": \"One_week\",\n// \"patient_volume\": \"Week\",\n// \"patient_volume_count\": 10,\n// \"terms_and_conditions\": false,\n// \"privacy_policy\": false,\n// \"authorized_signatory_name\": \"K. Cody Patel\",\n// \"insurance_cov_total\": 100,\n// \"speciality\": [4,5],\n// \"golive_date\": \"2025-05-02\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7738,17 +7755,17 @@
 							"formdata": [
 								{
 									"key": "patient_first_name",
-									"value": "jockyji",
+									"value": "test",
 									"type": "text"
 								},
 								{
 									"key": "patient_last_name",
-									"value": "namkesddd",
+									"value": "ravi",
 									"type": "text"
 								},
 								{
 									"key": "patient_email",
-									"value": "testdraft123475@yopmail.com",
+									"value": "nikamravi1011@gmail.com",
 									"type": "text"
 								},
 								{
@@ -7758,7 +7775,7 @@
 								},
 								{
 									"key": "document_type",
-									"value": "2",
+									"value": "7",
 									"type": "text"
 								},
 								{
@@ -8276,8 +8293,7 @@
 									"filesNotInWorkingDirectory": [
 										"/home/kuldip/Downloads/sign (1).png"
 									],
-									"src": "/home/iboon_laptop_18/Pictures/sign.png",
-									"disabled": true
+									"src": "/home/iboon_laptop_18/Pictures/sign.png"
 								},
 								{
 									"key": "form_signature",
@@ -8306,7 +8322,7 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/send_draft/357/",
+							"raw": "{{local}}v2/right_document/patient_consent/send_draft/353/",
 							"host": [
 								"{{local}}v2"
 							],
@@ -8314,7 +8330,7 @@
 								"right_document",
 								"patient_consent",
 								"send_draft",
-								"357",
+								"353",
 								""
 							]
 						}
@@ -8448,7 +8464,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/right_document/patient_consent/email_send/21/?send_to_technician=True",
+							"raw": "{{local}}v2/right_document/patient_consent/email_send/352/?send_to_patient=True",
 							"host": [
 								"{{local}}v2"
 							],
@@ -8456,7 +8472,7 @@
 								"right_document",
 								"patient_consent",
 								"email_send",
-								"21",
+								"352",
 								""
 							],
 							"query": [
@@ -8467,12 +8483,12 @@
 								},
 								{
 									"key": "send_to_patient",
-									"value": "True",
-									"disabled": true
+									"value": "True"
 								},
 								{
 									"key": "send_to_technician",
-									"value": "True"
+									"value": "True",
+									"disabled": true
 								}
 							]
 						}
