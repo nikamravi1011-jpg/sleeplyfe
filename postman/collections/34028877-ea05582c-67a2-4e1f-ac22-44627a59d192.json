@@ -5802,11 +5802,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{local}}lead_master/assign_to_user_list/",
+							"raw": "{{local}}v2/lead_master/assign_to_user_list/",
 							"host": [
-								"{{local}}lead_master"
+								"{{local}}v2"
 							],
 							"path": [
+								"lead_master",
 								"assign_to_user_list",
 								""
 							]
@@ -5821,8 +5822,66 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/event-stream",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{local}}v2/leads/export/?stream=yes&start_date=2026-01-28&end_date=2026-01-28",
+							"host": [
+								"{{local}}v2"
+							],
+							"path": [
+								"leads",
+								"export",
+								""
+							],
+							"query": [
+								{
+									"key": "stream",
+									"value": "yes"
+								},
+								{
+									"key": "priority",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "assigned_to__username",
+									"value": "lopiliers",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2026-01-28"
+								},
+								{
+									"key": "end_date",
+									"value": "2026-01-28"
+								},
+								{
+									"key": "lead_status__lead_status",
+									"value": "New",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -7540,15 +7599,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{local}}v2/organization_idwise/signature_date/list/220/",
+							"raw": "{{local}}v2/free_trial_days/anonymous/gAAAAABpA0FXNdm8QBgycHlSe-FMVwqw3M213DK0O-clN_jLWOFnQZH5kCFe55kmTmEwf_hJ6IrgFAYGfxZPgtpzuXHvS2Yl4_fobJpAOQkyZd7ZjPcSaOfAgM4t8o0uj4bwDN7O231vWE-b0906zZGfkMYc_pAdjeANKH90Gw3nsk7PwgyGtYzeIHEfc7QeYzVhCo5rC_UA/",
 							"host": [
 								"{{local}}v2"
 							],
 							"path": [
-								"organization_idwise",
-								"signature_date",
-								"list",
-								"220",
+								"free_trial_days",
+								"anonymous",
+								"gAAAAABpA0FXNdm8QBgycHlSe-FMVwqw3M213DK0O-clN_jLWOFnQZH5kCFe55kmTmEwf_hJ6IrgFAYGfxZPgtpzuXHvS2Yl4_fobJpAOQkyZd7ZjPcSaOfAgM4t8o0uj4bwDN7O231vWE-b0906zZGfkMYc_pAdjeANKH90Gw3nsk7PwgyGtYzeIHEfc7QeYzVhCo5rC_UA",
 								""
 							]
 						}
@@ -8816,7 +8874,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{local}}v2/total_lead/count/?start_date=2026-01-01&end_date=2026-01-31",
+									"raw": "{{local}}v2/total_lead/count/",
 									"host": [
 										"{{local}}v2"
 									],
@@ -8834,12 +8892,12 @@
 										{
 											"key": "start_date",
 											"value": "2026-01-01",
-											"type": "text"
+											"disabled": true
 										},
 										{
 											"key": "end_date",
 											"value": "2026-01-31",
-											"type": "text"
+											"disabled": true
 										}
 									]
 								}
@@ -8985,6 +9043,42 @@
 										"lead_management",
 										"count",
 										""
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2025-12-30",
+											"disabled": true
+										},
+										{
+											"key": "end_date",
+											"value": "2026-01-28",
+											"disabled": true
+										},
+										{
+											"key": "assigned_to__username",
+											"value": "jaymehta",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "lead_status__lead_status",
+											"value": "New",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page_size",
+											"value": "50",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
 									]
 								}
 							},
