@@ -18285,15 +18285,14 @@
 							}
 						},
 						"url": {
-							"raw": "https://devapi-v2.sleeplyfe.com/api/synergy/webhook",
+							"raw": "https://api.sleeplyfe.com/synergy/webhook",
 							"protocol": "https",
 							"host": [
-								"devapi-v2",
+								"api",
 								"sleeplyfe",
 								"com"
 							],
 							"path": [
-								"api",
 								"synergy",
 								"webhook"
 							]
