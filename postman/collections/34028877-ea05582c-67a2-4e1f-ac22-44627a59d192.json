@@ -10691,7 +10691,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "// {\n//     \"username\":\"admin\",\n//     \"password\":\"admin\"\n// }\n// {\n//     \"username\":\"admin\",\n//     \"password\":\"dWqZ893RY14ZS18N\"\n// }\n// {\n//     \"username\":\"arose\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {\n//     \"username\": \"kuldip\",\n//     \"password\": \"Rpatel@123\"\n// }\n// {\n//     \"username\":\"kaylamoats\",\n//     \"password\":\"Kayla@123\"\n// }   \n// {\n//     \"username\": \"51\",\n//     \"password\": \"Sales@2024#\"\n// }\n// {\n//     \"username\":\"ruchitaiboon\",\n//     \"password\":\"Rpatel@123\"\n// }\n// {\n//     \"username\":\"rni1kam123\",\n//     \"password\":\"Sales@2024#\"\n// }   \n// {\n//     \"username\":\"joy2373\",\n//     \"password\":\"Demo@123$\"\n// }  \n// {\n//     \"username\":\"jigar1100\",\n//     \"password\":\"Jigar@123\"\n// }   \n{\n    \"username\": \"sleeplyfeadmin\",\n    \"password\": \"Sleeplyfeteam@2025\"\n}\n// {\n//     \"username\": \"sleeplyfeadmin\",\n//     \"password\": \"Vital@1009#\"\n// }\n// {\n//     \"username\": \"providerkuldip1\",\n//     \"password\": \"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleeplyfe123\",\n//     \"password\":\"Sleeplyfe@123\"\n// }  \n// {\n//     \"username\":\"kdrightdoc\",\n//     \"password\":\"Jarvis!1138#\"\n// }  \n// {\n//     \"username\":\"testuser\",\n//     \"password\":\"Test@1138#\"\n// }\n// Admin \n// {\n//     \"username\": \"baxalygag senuruj\",\n//     \"password\": \"Ravi@1234\"\n// }\n// {\n//     \"username\": \"rv234\",\n//     \"password\": \"Welcome@2024\"\n// }\n// {\n//     \"username\":\"harsh\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"bittu@iboon\",\n//     \"password\":\"May@0203\"\n// }\n// {\n//     \"username\":\"amanda\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"kuldip11\",\n//     \"password\":\"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleepprovider2\",\n//     \"password\":\"Welcome@2025\"\n// }\n// {\n//     \"username\":\"nikamrv321\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {   \n//     \"username\":\"noratiqmark11\",\n//     \"password\":\"Welcome@2024\"\n// }\n// local org admin\n// {\n//     \"username\":\"164\",\n//     \"password\":\"Mn9-wM%9wP\"\n// }\n// broker admin\n// {\n//     \"username\" : \"kalpeshgediya1\",\n//     \"password\" : \"bF7$9s,U_C\"\n// }",
+									"raw": "// {\n//     \"username\":\"admin\",\n//     \"password\":\"admin\"\n// }\n// {\n//     \"username\":\"admin\",\n//     \"password\":\"dWqZ893RY14ZS18N\"\n// }\n// {\n//     \"username\":\"arose\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {\n//     \"username\": \"kuldip\",\n//     \"password\": \"Rpatel@123\"\n// }\n// {\n//     \"username\":\"kaylamoats\",\n//     \"password\":\"Kayla@123\"\n// }   \n// {\n//     \"username\": \"51\",\n//     \"password\": \"Sales@2024#\"\n// }\n// {\n//     \"username\":\"ruchitaiboon\",\n//     \"password\":\"Rpatel@123\"\n// }\n// {\n//     \"username\":\"rni1kam123\",\n//     \"password\":\"Sales@2024#\"\n// }   \n// {\n//     \"username\":\"joy2373\",\n//     \"password\":\"Demo@123$\"\n// } \n// {\n//     \"username\":\"sonutest11\",\n//     \"password\":\"Sleeplyfeteam@2025\"\n// } \n// dev - system sales rep  \n// {\n//     \"username\":\"rtuhislo\",\n//     \"password\":\"Sleeplyfeteam@2025\"\n// }  \n// {\n//     \"username\": \"mondaysecondesecondmondaye2\",\n//     \"password\": \"Sleeplyfeteam@2025\"\n// }\n\n\n// {\n//     \"username\":\"laurenhill\",\n//     \"password\":\"Sleeplyfeteam@2025\"\n// } \n\n\n{\n    \"username\": \"sleeplyfeadmin\",\n    \"password\": \"Sleeplyfeteam@2025\"\n}\n\n// {\n//     \"username\": \"sleeplyfeadmin\",\n//     \"password\": \"Dev@min25\"\n// }\n\n// stage admin\n\n// {\n//         \"username\": \"sleeplyfeadmin\",\n//         \"password\": \"SlpStag@dmin25\"\n// }\n\n\n// {\n//     \"username\": \"sleeplyfeadmin\",\n//     \"password\": \"Vital@1009#\"\n// }\n// {\n//     \"username\": \"providerkuldip1\",\n//     \"password\": \"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleeplyfe123\",\n//     \"password\":\"Sleeplyfe@123\"\n// }  \n// {\n//     \"username\":\"kdrightdoc\",\n//     \"password\":\"Jarvis!1138#\"\n// }  \n// {\n//     \"username\":\"testuser\",\n//     \"password\":\"Test@1138#\"\n// }\n// Admin \n// {\n//     \"username\": \"baxalygag senuruj\",\n//     \"password\": \"Ravi@1234\"\n// }\n// {\n//     \"username\": \"rv234\",\n//     \"password\": \"Welcome@2024\"\n// }\n// {\n//     \"username\":\"harsh\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"bittu@iboon\",\n//     \"password\":\"May@0203\"\n// }\n// {\n//     \"username\":\"amanda\",\n//     \"password\":\"Welcome@2024\"\n// }\n// {\n//     \"username\":\"kuldip11\",\n//     \"password\":\"Jarvis!1138#\"\n// }\n// {\n//     \"username\":\"sleepprovider2\",\n//     \"password\":\"Welcome@2025\"\n// }\n// {\n//     \"username\":\"nikamrv321\",\n//     \"password\":\"Welcome@1234\"\n// }\n// {   \n//     \"username\":\"noratiqmark11\",\n//     \"password\":\"Welcome@2024\"\n// }\n// local org admin\n// {\n//     \"username\":\"164\",\n//     \"password\":\"Mn9-wM%9wP\"\n// }\n// broker admin\n// {\n//     \"username\" : \"kalpeshgediya1\",\n//     \"password\" : \"bF7$9s,U_C\"\n// }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -14518,7 +14518,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"doctor_id\": 102,\n    \"first_name\": \"SecondMonday\",\n    \"last_name\": \"MondaySecond\",\n    \"facility_user_type\": 2,\n    \"facility_user_type_name\": \"\",\n    \"mobile_no\": \"112980678534\",\n    \"fax\": \"23232323\",\n    \"facilityList\": [\n       1,14\n    ],\n    \"email\": \"second0981123245678@yopmail.com\",\n    \"department\": \"ABC\",\n    \"doctor_type\": \"\",\n    \"contact_purpose\": \"1\"\n}",
+									"raw": "{\n    \"doctor_id\": 102,\n    \"first_name\": \"mobilecheck\",\n    \"last_name\": \"MondaySecond\",\n    \"facility_user_type\": 2,\n    \"facility_user_type_name\": \"\",\n    \"mobile_no\": \"112980678534\",\n    \"mobile_no_2\":\"112980678534\",\n    \"fax\": \"23232323\",\n    \"facilityList\": [\n       1,14\n    ],\n    \"email\": \"second8io0789@yopmail.com\",\n    \"department\": \"ABC\",\n    \"doctor_type\": \"\",\n    \"contact_purpose\": \"1\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -14557,7 +14557,7 @@
 										}
 									]
 								},
-								"method": "PATCH",
+								"method": "GET",
 								"header": [],
 								"body": {
 									"mode": "raw",
@@ -14569,16 +14569,23 @@
 									}
 								},
 								"url": {
-									"raw": "{{local}}v2/facility/facility_user/update/91/",
+									"raw": "{{local}}v2/zipcode-lookup/?country_code=&zip_code=01000",
 									"host": [
 										"{{local}}v2"
 									],
 									"path": [
-										"facility",
-										"facility_user",
-										"update",
-										"91",
+										"zipcode-lookup",
 										""
+									],
+									"query": [
+										{
+											"key": "country_code",
+											"value": ""
+										},
+										{
+											"key": "zip_code",
+											"value": "01000"
+										}
 									]
 								}
 							},
@@ -18278,12 +18285,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://bfe2cb68fb0c.ngrok-free.app/api/synergy/webhook",
+							"raw": "https://devapi-v2.sleeplyfe.com/api/synergy/webhook",
 							"protocol": "https",
 							"host": [
-								"bfe2cb68fb0c",
-								"ngrok-free",
-								"app"
+								"devapi-v2",
+								"sleeplyfe",
+								"com"
 							],
 							"path": [
 								"api",
@@ -18341,6 +18348,79 @@
 				}
 			],
 			"id": "34028877-ed220f51-0f81-4d49-ab26-05cd0cc0c4e0"
+		},
+		{
+			"name": "http://192.168.1.14:8002/api/v2/facility/facility_user/create/",
+			"id": "34028877-dad747ab-cf74-4ed6-99c7-51aa2ec8f58d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY5MDYxNTEwLCJpYXQiOjE3Njg5NzUxMTAsImp0aSI6ImRmOGQ2YzY1ZTU4ZTQ4YmNhNzkxZmI1YTE1MTk1NDMwIiwidXNlcl9pZCI6MSwiZW1haWwiOiJzbGVlcGx5dGVhbUB5b3BtYWlsLmNvbSIsInVzZXJfcGVybWlzc2lvbnMiOltdfQ.ZYl5UA-SAVADEbwEwF0HpvEF03CLbEjkNgT5l39mpbk"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:3000"
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:3000/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"doctor_id\": 288,\n    \"first_name\": \"Fsefsetyfs\",\n    \"last_name\": \"Fdgtydg\",\n    \"contact_type\": \"\",\n    \"contact_type_name\": \"\",\n    \"mobile_no\": \"12567890987\",\n    \"fax\": \"\",\n    \"facilityList\": [\n        133\n    ],\n    \"email\": \"sfesfty@yopmail.com\",\n    \"department\": \"\",\n    \"doctor_type\": \"\",\n    \"organization\": 166,\n    \"facility_user_type\": 1,\n    \"contact_purpose\": \"1\",\n    \"facility_user_type_name\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.14:8002/api/v2/facility/facility_user/create/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"14"
+					],
+					"port": "8002",
+					"path": [
+						"api",
+						"v2",
+						"facility",
+						"facility_user",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
